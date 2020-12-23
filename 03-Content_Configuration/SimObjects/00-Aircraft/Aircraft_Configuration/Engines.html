@@ -1,0 +1,2188 @@
+<!DOCTYPE html><html><head>
+  <style>
+    /*! ADAPTED
+    Typeplate : Starter Kit
+    URL ........... http://typeplate.com
+    Version ....... 3.0.2
+    Github ........ https://github.com/typeplate/starter-kit
+    Authors ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
+    License ....... Creative Commmons Attribution 3.0
+    License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
+    */
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      text-rendering: optimizeLegibility;
+      line-height: 1;
+      margin-top: 0;
+      color: #222;
+    }
+
+    blockquote+figcaption cite {
+      display: block;
+      font-size: inherit;
+      text-align: right;
+    }
+
+    body {
+      word-wrap: break-word;
+    }
+
+    pre code {
+      word-wrap: normal;
+    }
+
+    body {
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+      hyphens: auto;
+      color: #444;
+    }
+	
+	figcaption {
+		text-align: center;
+	}
+
+    h1 {
+      font-size: 2em;
+      /* 2*16 = 32 */
+    }
+
+    h2 {
+      font-size: 1.5em;
+      /* 1.5*16 = 24 */
+    }
+
+    h3 {
+      font-size: 1.17em;
+      /* 1.17*16 = 18.72 */
+    }
+
+    h4 {
+      font-size: 1em;
+      /* 1*16 = 16 */
+    }
+
+    h5 {
+      font-size: 0.83em;
+      /* 0.83*16 = 13.28 */
+    }
+
+    h6 {
+      font-size: 0.75em;
+      /* 0.75*16 = 12 */
+    }
+
+    h1 {
+      margin: 2.42424rem 0 1.454544rem;
+    }
+
+    h2 {
+      margin: 2.0202rem 0 1.21212rem;
+    }
+
+    h3 {
+      margin: 1.61616rem 0 1rem;
+    }
+
+    h4 {
+      margin: 1.21212rem 0 1;
+    }
+
+    h5 {
+      margin: 0.80808rem 0;
+    }
+
+    h6 {
+      margin: 0.70707rem 0;
+    }
+
+    p {
+      margin: auto auto 1.5rem;
+    }
+
+    small {
+      font-size: 65%;
+    }
+
+    input,
+    abbr,
+    acronym,
+    blockquote,
+    code,
+    kbd,
+    q,
+    samp,
+    var {
+      -webkit-hyphens: none;
+      -ms-hyphens: none;
+      hyphens: none;
+    }
+
+    pre {
+      white-space: pre;
+    }
+
+    pre code {
+      white-space: -moz-pre-wrap;
+      white-space: pre-wrap;
+    }
+
+    code {
+      white-space: pre;
+      font-family: SF Mono, Consolas, Dejavu Sans Mono, Menlo, monospace;
+    }
+
+    abbr {
+      -webkit-font-variant: small-caps;
+      -moz-font-variant: small-caps;
+      -ms-font-variant: small-caps;
+      font-variant: small-caps;
+      font-weight: 600;
+      text-transform: lowercase;
+      color: gray;
+    }
+
+    abbr[title]:hover {
+      cursor: help;
+    }
+
+    /* FROM http://purecss.io/layouts/side-menu/  adapted to remove pure classes*/
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      color: #444;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: auto;
+    }
+
+    code,
+    pre {
+      background-color: #f5f5f5;
+      color: #444;
+      border-radius: 2px;
+      text-shadow: 0px 1px 0px white;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    }
+
+    pre code {
+      border: none;
+      box-shadow: none;
+    }
+
+    pre {
+      padding: 0.5em;
+    }
+
+    code {
+      display: inline-block;
+      padding: 0 0.5em;
+      line-height: 1.4;
+      font-size: 0.9em;
+    }
+
+    table {
+      border-spacing: 0;
+      margin-bottom: 1.5rem;
+    }
+
+    table th,
+    table td {
+      padding: 0.3em 0.7em;
+    }
+
+    table th {
+      background-color: #f4f4f4;
+      border-bottom: 2px solid #444;
+    }
+
+    table td {
+      border: 1px solid #f5f5f5;
+    }
+
+    /* Add transition to containers so they can push in and out. */
+
+    #layout,
+    #menu,
+    .menu-link {
+      -webkit-transition: all 0.2s ease-out;
+      -moz-transition: all 0.2s ease-out;
+      -ms-transition: all 0.2s ease-out;
+      -o-transition: all 0.2s ease-out;
+      transition: all 0.2s ease-out;
+    }
+
+    /* This is the parent `<div>` that contains the menu and the content area. */
+
+    #layout {
+      position: relative;
+      padding-left: 0;
+    }
+
+    #layout.active #menu {
+      left: 300px;
+      width: 300px;
+    }
+
+    #layout.active .menu-link {
+      left: 300px;
+    }
+
+    /* The content `<div>` is where all your content goes. */
+
+    .content {
+      margin: 50px auto;
+      padding: 0;
+      max-width: 60%;
+      line-height: 1.6em;
+    }
+
+    /*
+    The `#menu` `<div>` is the parent `<div>` that contains the menu that
+    appears on the left side of the page.
+    */
+
+    #menu {
+      margin-left: -300px;
+      /* "#menu" width */
+      width: 300px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 1000;
+      /* so the menu or its navicon stays above all content */
+      background: #f4f4f4;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      font-size: 0.9em;
+    }
+
+    a,
+    a * {
+      text-decoration: none;
+      color: #2483cc;
+    }
+
+    a:visited {
+      text-decoration: none;
+      color: #2483cc;
+    }
+
+    /* All anchors inside the menu should be styled like this. */
+
+    #menu a {
+      display: inline-block;
+      padding: 0.1em 0.5em;
+    }
+
+    #menu a:first-letter {
+      text-transform: capitalize;
+    }
+
+    #menu ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0em 0.5em;
+    }
+
+    #menu ul ul {
+      margin-top: 0em;
+      margin-left: 0.6em;
+      border-left: 1px dotted rgb(64, 64, 64);
+	  padding-left: 0.5em;
+    }
+
+    /* Change color of the anchor links on hover/focus. */
+
+    #menu li a:hover,
+    #menu li a:focus {
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    /* This styles the selected menu item `<li>`. */
+
+    #menu li a.active {
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    /* This styles a link within a selected menu item `<li>`. */
+
+    #menu li a.active {
+      color: #222;
+    }
+
+    /* This styles the menu heading. */
+
+    #menu li.heading {
+      font-size: 0.9em;
+      /*text-transform: uppercase;*/
+      color: #000;
+    }
+
+    #menu li.heading>* {
+      padding: 0.1em 0.5em;
+      display: block;
+    }
+
+    #menu li.heading a {
+      color: #0c68af;
+    }
+
+    /* -- Dynamic Button For Responsive Menu -------------------------------------*/
+
+    /*
+    `.menu-link` represents the responsive menu toggle that shows/hides on
+    small screens.
+    */
+
+    .menu-link {
+      position: fixed;
+      display: block;
+      /* show this only on small screens */
+      top: 0;
+      left: 0;
+      /* "#menu width" */
+      background: #f4f4f4;
+      font-size: 10px;
+      /* change this value to increase/decrease button size */
+      z-index: 10;
+      width: 2em;
+      height: auto;
+      padding: 1.6em 1.2em;
+      border-radius: 0 2px 2px 0;
+    }
+
+    .menu-link:hover {
+      background: /* #f4f4f4 * 0.8 */
+      #eee;
+    }
+
+    .menu-link span {
+      position: relative;
+      display: block;
+    }
+
+    .menu-link span,
+    .menu-link span:before,
+    .menu-link span:after {
+      background-color: #555;
+      width: 100%;
+      height: 0.2em;
+      border-radius: 1em;
+    }
+
+    .menu-link span:before,
+    .menu-link span:after {
+      position: absolute;
+      margin-top: -0.6em;
+      content: " ";
+    }
+
+    .menu-link span:after {
+      margin-top: 0.6em;
+    }
+
+    @media (max-width: 1300px) {       
+	  .content.active {
+		  margin-left: 310px;
+	  }
+    }
+	
+	@media (max-width: 800px) {
+		.content {
+		  max-width: 98%;
+	  }
+	}
+
+	#menu li span {
+		padding: 0.1em 0.5em;
+	}
+	
+	li.collapsible {
+		cursor: pointer;
+		font-weight:bold;
+	}
+	
+	li.collapsible span.collapser:before {
+		display:inline-block;
+		width:0.5em;
+	}
+	
+	li.collapsible span.collapser:before {
+		content: "-";
+	}
+	
+	li.collapsed span.collapser:before {
+		content: "+";
+	}
+	
+	li.collapsed + ul {
+		display:none;
+	}
+
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <!--script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script-->
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <div id="layout" class="active">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link active">
+      <!-- Hamburger icon -->
+      <span></span>
+    </a>
+    <nav id="menu" class="active">
+<ul>
+<li class="heading"><a href="..\..\..\..\index.html">Home</a></li>
+<li class="heading"><a href="..\..\..\..\01-Getting_Started\index.html">Getting Started</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\..\01-Getting_Started\01-SDK_Overview.html">SDK Overview</a></li>
+<li class="heading"><a href="..\..\..\..\01-Getting_Started\02-FAQ.html">FAQ</a></li>
+<li class="heading"><a href="..\..\..\..\01-Getting_Started\03-Roadmap.html">Roadmap</a></li>
+<li class="heading"><span>Samples</span></li>
+<ul>
+<li class="heading"><a href="..\..\..\..\01-Getting_Started\Samples\Aircraft\index.html">Aircraft</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\..\01-Getting_Started\Samples\Aircraft\GaugeAircraft\index.html">GaugeAircraft</a></li>
+<li class="heading"><a href="..\..\..\..\01-Getting_Started\Samples\Aircraft\GdiplusAircraft\index.html">GdiplusAircraft</a></li>
+<li class="heading"><a href="..\..\..\..\01-Getting_Started\Samples\Aircraft\MouseAircraft\index.html">MouseAircraft</a></li>
+<li class="heading"><a href="..\..\..\..\01-Getting_Started\Samples\Aircraft\SimpleAircraft\index.html">SimpleAircraft</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\..\01-Getting_Started\Samples\SimpleAerial\index.html">SimpleAerial</a></li>
+<li class="heading"><a href="..\..\..\..\01-Getting_Started\Samples\SimpleAirport\index.html">SimpleAirport</a></li>
+<li class="heading"><a href="..\..\..\..\01-Getting_Started\Samples\SimpleBiomes\index.html">SimpleBiomes</a></li>
+<li class="heading"><a href="..\..\..\..\01-Getting_Started\Samples\SimpleNavData\index.html">SimpleNavData</a></li>
+<li class="heading"><a href="..\..\..\..\01-Getting_Started\Samples\SimpleScenery\index.html">SimpleScenery</a></li>
+<li class="heading"><a href="..\..\..\..\01-Getting_Started\Samples\SimvarWatcher\index.html">SimvarWatcher</a></li>
+<li class="heading"><a href="..\..\..\..\01-Getting_Started\Samples\WwiseSampleProject\index.html">WwiseSampleProject</a></li>
+</ul>
+<li class="heading"><span>Tutorials</span></li>
+<ul>
+<li class="heading"><a href="..\..\..\..\01-Getting_Started\Tutorials\01-Placing_An_Add-on_Airport\index.html">Placing An Add-on Airport</a></li>
+<li class="heading"><a href="..\..\..\..\01-Getting_Started\Tutorials\02-Flight_model_definition\index.html">Flight model definition</a></li>
+</ul>
+</ul>
+<li class="heading"><span>Asset Creation</span></li>
+<ul>
+<li class="heading"><a href="..\..\..\..\02-Asset_Creation\3D_Models\index.html">3D Models</a></li>
+<ul>
+<li class="heading"><span>Modeling Practices</span></li>
+<ul>
+<li class="heading"><a href="..\..\..\..\02-Asset_Creation\3D_Models\Modeling_Practices\01-Aircraft_Modeling.html">Aircraft Modeling</a></li>
+<li class="heading"><a href="..\..\..\..\02-Asset_Creation\3D_Models\Modeling_Practices\02-Levels_of_Detail.html">Levels of Detail</a></li>
+<li class="heading"><a href="..\..\..\..\02-Asset_Creation\3D_Models\Modeling_Practices\03-Aircraft_Texture_Mapping.html">Aircraft Texture Mapping</a></li>
+<li class="heading"><a href="..\..\..\..\02-Asset_Creation\3D_Models\Modeling_Practices\04-Collisions.html">Collisions</a></li>
+</ul>
+</ul>
+<li class="heading"><a href="..\..\..\..\02-Asset_Creation\Lighting_Model\index.html">Lighting Model</a></li>
+<li class="heading"><a href="..\..\..\..\02-Asset_Creation\Sounds\index.html">Sounds</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\..\02-Asset_Creation\Sounds\01-Master_Mixer_Hierarchy.html">Master Mixer Hierarchy</a></li>
+<li class="heading"><a href="..\..\..\..\02-Asset_Creation\Sounds\02-Shared_Game_Parameters.html">Shared Game Parameters</a></li>
+<li class="heading"><a href="..\..\..\..\02-Asset_Creation\Sounds\03-Shared_States_and_Switches.html">Shared States and Switches</a></li>
+<li class="heading"><a href="..\..\..\..\02-Asset_Creation\Sounds\04-Shared_Attenuation_Shareset.html">Shared Attenuation Shareset</a></li>
+<li class="heading"><a href="..\..\..\..\02-Asset_Creation\Sounds\05-Mix_your_Aircraft.html">Mix your Aircraft</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\..\02-Asset_Creation\Textures\index.html">Textures</a></li>
+<li class="heading"><a href="..\..\..\..\02-Asset_Creation\glTF_Materials.html">glTF Materials</a></li>
+</ul>
+<li class="heading"><span>Content Configuration</span></li>
+<ul>
+<li class="heading"><a href="..\..\..\Cameras\index.html">Cameras</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\Cameras\Camera_Configuration.html">Camera Configuration</a></li>
+<li class="heading"><a href="..\..\..\Cameras\RTC\index.html">RTC</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\Cameras\RTC\Examples.html">Examples</a></li>
+<li class="heading"><a href="..\..\..\Cameras\RTC\Using_RTCs.html">Using RTCs</a></li>
+<li class="heading"><a href="..\..\..\Cameras\RTC\XML_Definition.html">XML Definition</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\Cameras\Wow-effect.html">Wow-effect</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\Environment\index.html">Environment</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\Environment\Airports_And_Facilities\index.html">Airports And Facilities</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\Environment\Airports_And_Facilities\Airports.html">Airports</a></li>
+<li class="heading"><a href="..\..\..\Environment\Airports_And_Facilities\Jetways.html">Jetways</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\Environment\File_Formats\index.html">File Formats</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\Environment\File_Formats\BGL.html">BGL</a></li>
+<li class="heading"><a href="..\..\..\Environment\File_Formats\CGL.html">CGL</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\Environment\Living_World\index.html">Living World</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\Environment\Living_World\AirportServices\index.html">AirportServices</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\Environment\Living_World\AirportServices\XMLdefs.html">XMLdefs</a></li>
+<li class="heading"><a href="..\..\..\Environment\Living_World\AirportServices\examples.html">examples</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\Environment\Living_World\LivingWorld_Config\index.html">LivingWorld Config</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\Environment\Living_World\LivingWorld_Config\XMLdefs.html">XMLdefs</a></li>
+<li class="heading"><a href="..\..\..\Environment\Living_World\LivingWorld_Config\examples.html">examples</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\Environment\Living_World\Traffic\index.html">Traffic</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\Environment\Scenery_Objects\index.html">Scenery Objects</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\Environment\Scenery_Objects\Effects.html">Effects</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\Environment\Terrain\index.html">Terrain</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\Environment\Terrain\Aerial_Imagery\index.html">Aerial Imagery</a></li>
+<li class="heading"><a href="..\..\..\Environment\Terrain\DEM\index.html">DEM</a></li>
+<li class="heading"><a href="..\..\..\Environment\Terrain\Vector_Shapes\index.html">Vector Shapes</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\Environment\Vegetation\index.html">Vegetation</a></li>
+<li class="heading"><a href="..\..\..\Environment\Weather\index.html">Weather</a></li>
+<li class="heading"><a href="..\..\..\Environment\World_Positioning_Systems\index.html">World Positioning Systems</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\Environment\World_Positioning_Systems\Bing_Maps_Tile_System.html">Bing Maps Tile System</a></li>
+<li class="heading"><a href="..\..\..\Environment\World_Positioning_Systems\Lat_Long_Alt.html">Lat Long Alt</a></li>
+<li class="heading"><a href="..\..\..\Environment\World_Positioning_Systems\QMID.html">QMID</a></li>
+</ul>
+</ul>
+<li class="heading"><a href="..\..\..\Flights_And_Missions\index.html">Flights And Missions</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\Flights_And_Missions\Flight_Files.html">Flight Files</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\Localization\index.html">Localization</a></li>
+<li class="heading"><span>SimObjects</span></li>
+<ul>
+<li class="heading"><a href="..\index.html">Aircraft</a></li>
+<ul>
+<li class="heading"><a href=".\index.html">Aircraft Configuration</a></li>
+<ul>
+<li class="heading"><a href=".\00-General.html">General</a></li>
+<li class="heading"><a href=".\AI.html">AI</a></li>
+<li class="heading"><a href=".\Cameras.html">Cameras</a></li>
+<li class="heading"><a href=".\Cockpit.html">Cockpit</a></li>
+<li class="heading"><a href=".\Engines.html">Engines</a></li>
+<li class="heading"><a href=".\Flight_Model.html">Flight Model</a></li>
+<li class="heading"><a href=".\Gameplay.html">Gameplay</a></li>
+<li class="heading"><a href=".\InteractivePoints.html">InteractivePoints</a></li>
+<li class="heading"><a href=".\Systems_Configuration_File.html">Systems Configuration File</a></li>
+<li class="heading"><a href=".\Target_Performances_Configuration_File.html">Target Performances Configuration File</a></li>
+</ul>
+<li class="heading"><a href="..\Flight_Model.html">Flight Model</a></li>
+</ul>
+<li class="heading"><a href="..\..\01-Other_SimObjects\index.html">Other SimObjects</a></li>
+<ul>
+<li class="heading"><a href="..\..\01-Other_SimObjects\Animals.html">Animals</a></li>
+<li class="heading"><a href="..\..\01-Other_SimObjects\Boats.html">Boats</a></li>
+<li class="heading"><a href="..\..\01-Other_SimObjects\GroundVehicles\index.html">GroundVehicles</a></li>
+<ul>
+<li class="heading"><a href="..\..\01-Other_SimObjects\GroundVehicles\BaggageCart.html">BaggageCart</a></li>
+<li class="heading"><a href="..\..\01-Other_SimObjects\GroundVehicles\BaggageLoader.html">BaggageLoader</a></li>
+<li class="heading"><a href="..\..\01-Other_SimObjects\GroundVehicles\BoardingRamp.html">BoardingRamp</a></li>
+<li class="heading"><a href="..\..\01-Other_SimObjects\GroundVehicles\CateringTruck.html">CateringTruck</a></li>
+<li class="heading"><a href="..\..\01-Other_SimObjects\GroundVehicles\FuelTruck.html">FuelTruck</a></li>
+<li class="heading"><a href="..\..\01-Other_SimObjects\GroundVehicles\GroundPowerUnit.html">GroundPowerUnit</a></li>
+<li class="heading"><a href="..\..\01-Other_SimObjects\GroundVehicles\Pushback.html">Pushback</a></li>
+</ul>
+<li class="heading"><a href="..\..\01-Other_SimObjects\Humans.html">Humans</a></li>
+<li class="heading"><a href="..\..\01-Other_SimObjects\SimObject_Configuration.html">SimObject Configuration</a></li>
+<li class="heading"><a href="..\..\01-Other_SimObjects\StaticObjects.html">StaticObjects</a></li>
+</ul>
+<li class="heading"><a href="..\..\Checklists\index.html">Checklists</a></li>
+<ul>
+<li class="heading"><a href="..\..\Checklists\01-Examples.html">Examples</a></li>
+<li class="heading"><a href="..\..\Checklists\02-XML_Definition.html">XML Definition</a></li>
+</ul>
+<li class="heading"><a href="..\..\Instruments\index.html">Instruments</a></li>
+<ul>
+<li class="heading"><a href="..\..\Instruments\3D_Instruments\index.html">3D Instruments</a></li>
+<li class="heading"><a href="..\..\Instruments\C_Gauges\index.html">C Gauges</a></li>
+<ul>
+<li class="heading"><span>Graphics</span></li>
+<ul>
+<li class="heading"><a href="..\..\Instruments\C_Gauges\Graphics\GDI_Plus.html">GDI Plus</a></li>
+</ul>
+</ul>
+<li class="heading"><a href="..\..\Instruments\HTML_Gauges\index.html">HTML Gauges</a></li>
+<li class="heading"><a href="..\..\Instruments\Panels.html">Panels</a></li>
+<li class="heading"><a href="..\..\Instruments\XML_Gauges\index.html">XML Gauges</a></li>
+</ul>
+<li class="heading"><a href="..\..\Models\index.html">Models</a></li>
+<ul>
+<li class="heading"><a href="..\..\Models\AnimGraph.html">AnimGraph</a></li>
+<li class="heading"><a href="..\..\Models\Levels_of_Detail_(LODs).html">Levels of Detail (LODs)</a></li>
+<li class="heading"><a href="..\..\Models\Model_Behaviors\index.html">Model Behaviors</a></li>
+<ul>
+<li class="heading"><a href="..\..\Models\Model_Behaviors\XML_Definition.html">XML Definition</a></li>
+</ul>
+</ul>
+<li class="heading"><a href="..\..\Sounds\index.html">Sounds</a></li>
+<ul>
+<li class="heading"><a href="..\..\Sounds\backwards_compatibility.html">backwards compatibility</a></li>
+<li class="heading"><a href="..\..\Sounds\sound_categories.html">sound categories</a></li>
+<li class="heading"><a href="..\..\Sounds\xml_definition.html">xml definition</a></li>
+<li class="heading"><a href="..\..\Sounds\xml_wavedata.html">xml wavedata</a></li>
+</ul>
+<li class="heading"><a href="..\..\Textures\index.html">Textures</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\UI\index.html">UI</a></li>
+<li class="heading"><a href="..\..\..\Variable_Lists\index.html">Variable Lists</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\Variable_Lists\Event_IDs.html">Event IDs</a></li>
+<li class="heading"><a href="..\..\..\Variable_Lists\Misc_Enums.html">Misc Enums</a></li>
+<li class="heading"><a href="..\..\..\Variable_Lists\Simulation_Variables.html">Simulation Variables</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\Visual_Effects\index.html">Visual Effects</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\Visual_Effects\visual_fx_file.html">visual fx file</a></li>
+</ul>
+</ul>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\index.html">Developer Tools</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\00-Developer_Mode\index.html">Developer Mode</a></li>
+<li class="heading"><span>3DS Max Tools</span></li>
+<ul>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\3DS_Max_Tools\FlightSim_Lights.html">FlightSim Lights</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\3DS_Max_Tools\FlightSim_Material.html">FlightSim Material</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\3DS_Max_Tools\FlightSim_multiExporter.html">FlightSim multiExporter</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\3DS_Max_Tools\FlightSim_versionDifferences.html">FlightSim versionDifferences</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\3DS_Max_Tools\glTF_Exporter.html">glTF Exporter</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\Aircraft_Editor\index.html">Aircraft Editor</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\Aircraft_Editor\Debug_Windows.html">Debug Windows</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\Command_Line_Interface.html">Command Line Interface</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\Launcher_Tool\index.html">Launcher Tool</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\Material_Editor\index.html">Material Editor</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\Mission_Editor\index.html">Mission Editor</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\Package_Tool\index.html">Package Tool</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\Package_Tool\Concepts.html">Concepts</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\Package_Tool\XMLReference.html">XMLReference</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\Project_editor\index.html">Project editor</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\Project_editor\Content_Manager_Data.html">Content Manager Data</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\Project_editor\Export_Window.html">Export Window</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\Project_editor\Marketplace_Data.html">Marketplace Data</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\Scenery_Editor\index.html">Scenery Editor</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\SimConnect\index.html">SimConnect</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\SimConnect\SimConnect_Reference.html">SimConnect Reference</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\SimConnect\SimConnect_Status_of_Functions.html">SimConnect Status of Functions</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\SimConnect\SimConnect_Status_of_Input_Events.html">SimConnect Status of Input Events</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\SimConnect\SimConnect_Status_of_SimEvents.html">SimConnect Status of SimEvents</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\SimConnect\SimConnect_Status_of_Simulation_Variables.html">SimConnect Status of Simulation Variables</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\SimConnect\SimConnect_Status_of_System_Events.html">SimConnect Status of System Events</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\WebAssembly\index.html">WebAssembly</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\WebAssembly\01-Platform_Toolset.html">Platform Toolset</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\WebAssembly\02-Gauge_API.html">Gauge API</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\WebAssembly\Graphics\index.html">Graphics</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\WebAssembly\Graphics\GDI_Plus.html">GDI Plus</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\WebAssembly\Graphics\Low_Level_API.html">Low Level API</a></li>
+</ul>
+</ul>
+</ul>
+<li class="heading"><span>Scripting Languages</span></li>
+<ul>
+<li class="heading"><a href="..\..\..\..\05-Scripting_Languages\CFG.html">CFG</a></li>
+<li class="heading"><a href="..\..\..\..\05-Scripting_Languages\Reverse_Polish_Notation.html">Reverse Polish Notation</a></li>
+</ul>
+</ul>
+    </nav>
+    <article id="main" class="content active">
+      <h1 id="engines-configuration-file">Engines Configuration File</h1>
+      <!-- START doctoc generated TOC please keep comment here to allow auto update -->
+      <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+      <ul>
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#sections">Sections</a>
+      <ul>
+      <li><a href="#version"><code>[VERSION]</code></a></li>
+      <li><a href="#generalenginedata"><code>[GENERALENGINEDATA]</code></a></li>
+      <li><a href="#turbopropengine"><code>[TURBOPROP_ENGINE]</code></a></li>
+      </ul></li>
+      </ul>
+      <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+      <h2 id="introduction">Introduction</h2>
+      <p>The engines configuration file is an optional file; the sections described here may be defined in the <code>aircraft.cfg</code> as well. If used, it should be named <code>engines.cfg</code> and located in the root directory of the aircraft, next to the <code>aircraft.cfg</code>.</p>
+      <p>This documentation is not yet complete. For now, please look at the <a href="https://msdn.microsoft.com/en-us/library/cc526949.aspx"><code>ESP documentation</code></a>‘s <a href="https://docs.microsoft.com/en-us/previous-versions/microsoft-esp/cc526949(v=msdn.10)"><code>Aircraft Configuration File</code></a> for missing sections’ parameters. Most (if not all) of the parameters described there are valid for Microsoft Flight Simulator.</p>
+      <h2 id="sections">Sections</h2>
+      <h3 id="version"><code>[VERSION]</code></h3>
+      <p>This version section provides information on version of the configuration file. The major version must be 1 or greater and equal to the version of the <code>aircraft.cfg</code>.</p>
+      <table>
+      <thead>
+      <tr class="header">
+      <th>Property</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Unit</th>
+      <th>Range</th>
+      <th>Mandatory</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td>major</td>
+      <td>Major CFG file version number</td>
+      <td>Integer</td>
+      <td>Number</td>
+      <td>&gt;= 1</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td>minor</td>
+      <td>Minor CFG file version number</td>
+      <td>Integer</td>
+      <td>Number</td>
+      <td>&gt;= 1</td>
+      <td>Yes</td>
+      </tr>
+      </tbody>
+      </table>
+      <h3 id="generalenginedata"><code>[GENERALENGINEDATA]</code></h3>
+      <p>Every type of aircraft, even a glider, should have this section in the <code>engines.cfg</code> file. Basically, this section describes the type of engine, the number of engines, where the engines are located, and a fuel flow scalar to modify how much fuel the engine requires to produce the calculated power.</p>
+      <table style="width:100%;">
+      <colgroup>
+      <col style="width: 16%">
+      <col style="width: 16%">
+      <col style="width: 16%">
+      <col style="width: 16%">
+      <col style="width: 16%">
+      <col style="width: 16%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Property</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Unit</th>
+      <th>Range</th>
+      <th>Mandatory</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td>engine_type</td>
+      <td>Integer that identifies what type of engine is on the aircraft. 0 = piston, 1 = Jet, 2 = None, 3 = Helo-turbine, 4 = Rocket (not supported) 5 = Turboprop.</td>
+      <td>Integer</td>
+      <td>Enum</td>
+      <td>Between 0 and 5</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td>fuel_flow_scalar</td>
+      <td>Scalar for modifying the fuel flow required by the engine(s). A value of less than 1.0 causes a slower fuel consumption for a given power setting, a value greater than 1.0 causes the aircraft to burn more fuel for a given power setting.</td>
+      <td>Float</td>
+      <td>No unit</td>
+      <td>&gt; 0</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td>min_throttle_limit</td>
+      <td>Defines the minimum throttle position (percent of max). Normally 0 for piston aircraft and -0.25 for turbine airplane engines with reverse thrust.</td>
+      <td>Float</td>
+      <td>Percentage</td>
+      <td>Between -1 and 1</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td>master_ignition_switch</td>
+      <td>1=Available, 0=Not Available (default). If available, this switch must be on for the ignition circuit, and thus the engines, to be operable. Turning it off will stop all engines.</td>
+      <td>Integer</td>
+      <td>Enum</td>
+      <td>0 or 1</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>starter_type</td>
+      <td>Stater type 0=Electric, 1=Manual</td>
+      <td>Integer</td>
+      <td>Enum</td>
+      <td>0 or 1</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>max_contrail_temperature</td>
+      <td>Ambient temperature in which engine vapor contrails will turn on. The default value is about -39 degrees celsius for turbine engines. For piston engines, the contrail effect is turned off unless a temperature value is set here.</td>
+      <td>Float</td>
+      <td>Celsius degrees</td>
+      <td></td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>Engine.i</td>
+      <td>Offset of the engine i from the datum reference point. z (longitudinal), x (lateral), y (vertical) distance from datum reference. Each engine location specified increases the engine count (maximum of four engines allowed i.e <code>i</code> is between 0 and 3)</td>
+      <td>1D table, 3 floats</td>
+      <td>Feet</td>
+      <td></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td>ThrustAnglesPitchHeading.i</td>
+      <td>Thrust pitch and heading angles for engine number i</td>
+      <td>1D table, 2 floats</td>
+      <td>&lt; 0 for pitch down, &gt; 0 for heading right</td>
+      <td>Degrees</td>
+      <td>No</td>
+      </tr>
+      </tbody>
+      </table>
+      <h4 id="pistonengine"><code>[PISTON_ENGINE]</code></h4>
+      <p>A piston engine’s power can be determined through a series of equations that represent the Otto cycle of a four-stroke piston engine, multiplied by the number of pistons available. This section contains all the information needed to be able to determine how much power the engines are capable of producing. Power can also be scaled from the calculated values generated for piston engines with the �power_scalar� property.</p>
+      <table style="width:100%;">
+      <colgroup>
+      <col style="width: 16%">
+      <col style="width: 16%">
+      <col style="width: 16%">
+      <col style="width: 16%">
+      <col style="width: 16%">
+      <col style="width: 16%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Property</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Unit</th>
+      <th>Range</th>
+      <th>Mandatory</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td>power_scalar</td>
+      <td>Changing this value affects the amount of power delivered by the engine to the propellor shaft</td>
+      <td>Float</td>
+      <td>No unit</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>cylinder_displacement</td>
+      <td></td>
+      <td>Float</td>
+      <td>Feet</td>
+      <td></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td>compression_ratio</td>
+      <td>Compression ratio of each cylinder</td>
+      <td>Float</td>
+      <td>No unit</td>
+      <td>&gt; 0</td>
+      <td></td>
+      </tr>
+      <tr class="even">
+      <td>number_of_cylinders</td>
+      <td>Number of cylinders</td>
+      <td>Integer</td>
+      <td>Number</td>
+      <td>&gt; 0</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td>max_rated_rpm</td>
+      <td>Maximum rated revolutions per minute (RPM) of the engine (red line)</td>
+      <td>Float</td>
+      <td>Revolutions per minute RPM</td>
+      <td>&gt; 0</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td>max_rated_hp</td>
+      <td>Maximum rated brake horsepower output of the engine</td>
+      <td>Float</td>
+      <td>Horse power = 746 kW</td>
+      <td>&gt; 0</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td>min_cruise_rpm</td>
+      <td></td>
+      <td>RPM</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      </tr>
+      <tr class="even">
+      <td>max_cruise_rpm</td>
+      <td></td>
+      <td>RPM</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      </tr>
+      <tr class="odd">
+      <td>max_indicated_rpm</td>
+      <td>UI parameter or instrument display. No influence on flight moedl</td>
+      <td>Float</td>
+      <td>RPM&gt; 0</td>
+      <td>No</td>
+      <td></td>
+      </tr>
+      <tr class="even">
+      <td>fuel_metering_type=</td>
+      <td>Integer value indicating the fuel metering type, one of: 0=Fuel Injected, 1=Gravity Carburetor, 2=Aerobatic Carburetor</td>
+      <td>Integer</td>
+      <td>Enum</td>
+      <td>Between 0 and 2</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>cooling_type</td>
+      <td>Integer value indicating the method of engine cooling: 0 = air cooled, 1 = liquid cooled.</td>
+      <td>Integer</td>
+      <td>Enum</td>
+      <td>0 or 1</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>normalized_starter_torque</td>
+      <td>This value can be modified to increase/decrease the torque supplied by the starter to get the prop turning. Increase this value for a greater torque effect, decrease it for a lower torque setting</td>
+      <td>Float</td>
+      <td>No unit</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>turbocharged</td>
+      <td>Boolean to indicate if the engine is turbocharged; 0 = FALSE, 1 = TRUE.</td>
+      <td>Integer</td>
+      <td>Boolean</td>
+      <td>No</td>
+      <td></td>
+      </tr>
+      <tr class="even">
+      <td>max_design_mp</td>
+      <td>If a turbocharger is present, this value indicates the maximum design manifold pressure supplied by the turbocharger</td>
+      <td>Float</td>
+      <td>inHg</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>min_design_mp</td>
+      <td>If a turbocharger is present, this value indicates the minimum design manifold pressure supplied by the turbocharger</td>
+      <td>Float</td>
+      <td>inHg</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>critical_altitude</td>
+      <td>Altitude to which the turbocharger, if present, will provide the maximum design manifold pressure</td>
+      <td>Float</td>
+      <td>Feet</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>emergency_boost_type</td>
+      <td>Integer value indicating the emergency boost type available, one of: 0 = None 1 = Water Injection 2 = Methanol/Water Injection 3 = War Emergency Power, (typically used in WWII combat aircraft)</td>
+      <td>Integer</td>
+      <td>Enum</td>
+      <td>Between 0 and 3</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>emergency_boost_mp_offset</td>
+      <td>Additional manifold pressure supplied by emergency boost, if available</td>
+      <td>Float</td>
+      <td>inHg</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>emergency_boost_gain_offset</td>
+      <td>Multiplier on manifold pressure due to emergency boost</td>
+      <td>Float</td>
+      <td>No unit</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>fuel_air_auto_mixture</td>
+      <td>Is automixture available? 0=FALSE, 1=TRUE</td>
+      <td>Integer</td>
+      <td>Boolean</td>
+      <td>0 or 1</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>auto_ignition</td>
+      <td>Is auto-ignition available? 0=FALSE, 1=TRUE</td>
+      <td>Integer</td>
+      <td>Boolean</td>
+      <td>0 or 1</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>max_rpm_mechanical_efficiency_scalar</td>
+      <td>Scalar value that can be modified to tune the mechanical efficiency of the engine at maximum rpm. Increase this value to increase the mechanical efficiency, decrease it to decrease the mechanical efficiency</td>
+      <td>Float</td>
+      <td>No unit</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>idle_rpm_mechanical_efficiency_scalar</td>
+      <td>Scalar value that can be modified to tune the mechanical efficiency of the engine at idle rpm. Increase this value to increase the mechanical efficiency, decrease it to decrease the mechanical efficiency</td>
+      <td>Float</td>
+      <td>No unit</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>max_rpm_friction_scalar</td>
+      <td>Scalar value that can be modified to tune the internal friction of the engine at maximum rpm. Increase this value to increase the friction, decrease it to decrease the friction</td>
+      <td>Float</td>
+      <td>No unit</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>idle_rpm_friction_scalar</td>
+      <td>Scalar value that can be modified to tune the internal friction of the engine at idle rpm. Increase this value to increase the friction, decrease it to decrease the friction, (can be used to tune the rpm at which the engine idles)</td>
+      <td>Float</td>
+      <td>No unit</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>BestPowerSpecificFuelConsumption</td>
+      <td>Specific fuel comsumption at best power mixture ratio</td>
+      <td>Float</td>
+      <td>No unit</td>
+      <td>&gt; 0</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td>egt_tuning_constant</td>
+      <td>Exhaust gaz temperature (EGT) tuning coefficient</td>
+      <td>Float</td>
+      <td>No unit</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>egt_peak_temperature</td>
+      <td>Exhaust gaz temperature (EGT) peak temperature (typical 1200 degF + 460)</td>
+      <td>Rankine</td>
+      <td>Yes</td>
+      <td></td>
+      <td></td>
+      </tr>
+      <tr class="odd">
+      <td>egt_tc</td>
+      <td>Exhaust Gaz Temperature (EGT) time constant</td>
+      <td>Float</td>
+      <td>Seconds</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>cht_tuning_constant</td>
+      <td>Cylinder Head Temperature (CHT) tuning constant</td>
+      <td>Float</td>
+      <td>No unit</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>cht_cooling_constant</td>
+      <td>Cylinder Head Temperature (CHT) cooling constant</td>
+      <td>Float</td>
+      <td></td>
+      <td>&gt; 0</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td>cht_heating_constant</td>
+      <td>Cylinder Head Temperature (CHT) constant</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      </tr>
+      <tr class="odd">
+      <td>cht_tc</td>
+      <td>Cylinder Head Temperature (CHT) time constant</td>
+      <td>Float</td>
+      <td>Seconds</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>oil_press_tuning_constant</td>
+      <td>Oil pressure tuning constant</td>
+      <td>Float</td>
+      <td>No unit</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>oil_press_max</td>
+      <td>Max oil pressure</td>
+      <td>Float</td>
+      <td>pounds per square feet (psf)</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>oil_press_tc</td>
+      <td>Oil pressure time constant</td>
+      <td>Float</td>
+      <td>Seconds</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>oil_temp_tuning_constant</td>
+      <td>Oil temperature tuning constant</td>
+      <td>Float</td>
+      <td>No unit</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>oil_temp_cooling_constant</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      </tr>
+      <tr class="odd">
+      <td>oil_temp_heating_constant</td>
+      <td>Max oil temperature</td>
+      <td>Float</td>
+      <td>Rankine</td>
+      <td></td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>oil_temp_tc</td>
+      <td>Oil temperature time constant</td>
+      <td>Float</td>
+      <td>Seconds</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>radiator_temp_tuning_constant</td>
+      <td>Radiator temperature tuning constant</td>
+      <td>Float</td>
+      <td>No unit</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>radiator_temp_cooling_constant</td>
+      <td>Radiator temperature cooling constant</td>
+      <td>Float</td>
+      <td>No unit</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>radiator_temp_max</td>
+      <td>Max radiator temperature</td>
+      <td>Float</td>
+      <td>Rankine</td>
+      <td></td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>radiator_temp_tc</td>
+      <td>Radiator temperature time constant</td>
+      <td>Float</td>
+      <td>Seconds</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>radiator_cooling_constant</td>
+      <td>Radiatorcooling constant</td>
+      <td>Float</td>
+      <td>No unit</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>radiator_heating_constant</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      </tr>
+      <tr class="odd">
+      <td>radiator_tc</td>
+      <td>Radiator time constant</td>
+      <td>Float</td>
+      <td>Seconds</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>radiator_tuning_constant</td>
+      <td></td>
+      <td>Float</td>
+      <td>No unit</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>fuel_press_tuning_constant</td>
+      <td>Fuel pressure tuning coefficient</td>
+      <td>Float</td>
+      <td>No unit</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>fuel_press_max</td>
+      <td>Max fuel pressure</td>
+      <td>Float</td>
+      <td>Pounds per square feet (psf)</td>
+      <td>&gt; 0</td>
+      <td>yes</td>
+      </tr>
+      <tr class="odd">
+      <td>fuel_press_tc</td>
+      <td>Fuel pressure time constant</td>
+      <td>Float</td>
+      <td>Seconds</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>engine_mechanical_efficiency_table</td>
+      <td>Mechanical efficiency coefficient v.s engine rotation speed (RPM)</td>
+      <td>1D table, floats</td>
+      <td>Mechanical efficiency coefficient has no unit, RPM for engine rotation speeds</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>engine_friction_table</td>
+      <td>Engine friction torque function of engine rotation speed</td>
+      <td>1D table, floats</td>
+      <td>lbs.feet for torques, RPM for engine rotation speeds</td>
+      <td></td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>two_stroke_cycle</td>
+      <td>Is two stroke cyle engine? 0= FALSE, 1=TRUE</td>
+      <td>Integer</td>
+      <td>Boolean</td>
+      <td>0 or 1</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>supercharged</td>
+      <td>Is engine supercharged? 0= FALSE, 1=TRUE</td>
+      <td>Integer</td>
+      <td>Boolean</td>
+      <td>0 or 1</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>number_of_magnetos</td>
+      <td>Number of magnetos</td>
+      <td>Integer</td>
+      <td>Number</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>magneto_order_left_right_both</td>
+      <td>Sets the order of the magneto switch direction</td>
+      <td>Integer</td>
+      <td>Enum</td>
+      <td>0 or 1</td>
+      <td>No</td>
+      </tr>
+      </tbody>
+      </table>
+      <h4 id="propeller"><code>[PROPELLER]</code></h4>
+      <table style="width:100%;">
+      <colgroup>
+      <col style="width: 16%">
+      <col style="width: 16%">
+      <col style="width: 16%">
+      <col style="width: 16%">
+      <col style="width: 16%">
+      <col style="width: 16%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Property</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Unit</th>
+      <th>Range</th>
+      <th>Mandatory</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td>thrust_scalar</td>
+      <td>Propeller thrust scalar</td>
+      <td>Float</td>
+      <td>No unit</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>propeller_type</td>
+      <td>Propeller type 0=Constant Speed, 1=Fixed Pitch</td>
+      <td>integer</td>
+      <td>Enum</td>
+      <td>0 or 1</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td>propeller_diameter</td>
+      <td>Diameter of propeller blades, tip to tip</td>
+      <td>Float</td>
+      <td>Feet</td>
+      <td>&gt; 0</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td>propeller_blades</td>
+      <td>Integer value indicating the number of blades on the propeller</td>
+      <td>Integer</td>
+      <td>Number</td>
+      <td>2, 3 or 4</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td>propeller_moi</td>
+      <td>Propeller moment of inertia</td>
+      <td>Float</td>
+      <td>Pounds . Squared Feet (lbs.ft.ft)</td>
+      <td>&gt; 0</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td>beta_max = 0</td>
+      <td>Maximum blade pitch angle for constant speed prop (Not used if fixed pitch.)</td>
+      <td>Float</td>
+      <td>Degrees</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>beta_min</td>
+      <td>Minimum blade pitch angle for constant speed prop (Not used if fixed pitch.</td>
+      <td>Float</td>
+      <td>Degrees</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>min_gov_rpm</td>
+      <td>The minimum rpm controlled by the governor for a constant speed prop</td>
+      <td>Float</td>
+      <td>RPM</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>prop_tc</td>
+      <td>Propeller time-constant</td>
+      <td>Float</td>
+      <td>Seconds</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>gear_reduction_ratio</td>
+      <td>The reduction ratio from the engine output RPM to prop RPM</td>
+      <td>Float</td>
+      <td>Ratio</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>fixed_pitch_beta</td>
+      <td>Blade pitch angle for fixed pitch propeller</td>
+      <td>Float</td>
+      <td>Degrees</td>
+      <td>&gt;0</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>low_speed_theory_limit</td>
+      <td>The speed at which low-speed propeller theory gets blended into the high speed propeller theory</td>
+      <td>Flota</td>
+      <td>Feet per second</td>
+      <td>Generally 80</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>prop_sync_available</td>
+      <td>Boolean to indicate if propeller-sync is available (twin engine aircraft); 0 = FALSE, 1 = TRUE</td>
+      <td>Integer</td>
+      <td>Boolean</td>
+      <td>0 or 1</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>prop_deice_available</td>
+      <td>Boolean to indicate if propeller de-icing is available; 0 = FALSE, 1 = TRUE</td>
+      <td>Integer</td>
+      <td>Boolean</td>
+      <td>0 or 1</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>prop_feathering_available</td>
+      <td>Boolean to indicate if propeller feathering is available; 0 = FALSE, 1 = TRUE</td>
+      <td>Integer</td>
+      <td>Boolean</td>
+      <td>0 or 1</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>prop_auto_feathering_available</td>
+      <td>Boolean to indicate if propeller zuto-feathering is available; 0 = FALSE, 1 = TRUE</td>
+      <td>Integer</td>
+      <td>Boolean</td>
+      <td>0 or 1</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>min_rpm_for_feather</td>
+      <td>Minimum rpm at which the prop will feather (if feathering is available)</td>
+      <td>Float</td>
+      <td>RPM</td>
+      <td>&gt;0</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>beta_feather</td>
+      <td>Propeller pitch angle when feathered</td>
+      <td>Float</td>
+      <td>Degrees</td>
+      <td>&gt;0</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>power_absorbed_cf</td>
+      <td>Coefficient of friction for power absorbed by propeller</td>
+      <td>Float</td>
+      <td>No unit</td>
+      <td>Between 0 and 1</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>defeathering_accumulators_available</td>
+      <td>Boolean to indicate if de-feathering accumulators are available; 0 = FALSE, 1 = TRUE</td>
+      <td>Integer</td>
+      <td>Boolean</td>
+      <td>0 or 1</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>prop_reverse_available</td>
+      <td>Specifies the scalar on the calculated propeller reverser effect. A value of 0 will cause no reverse thrust to be available. A value of 1.0 will cause the theoretical normal thrust to be available. Other values will scale the normal calculated value accordingly</td>
+      <td>Float</td>
+      <td>No Unit</td>
+      <td>Between 0 and 1</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>minimum_on_ground_beta</td>
+      <td>Minimum blade pitch angle when the aircraft is on the ground</td>
+      <td>Float</td>
+      <td>Degrees</td>
+      <td>&gt;0</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>minimum_reverse_beta</td>
+      <td>Minimum blade pitch angle when the propeller is in reverse</td>
+      <td>Float</td>
+      <td>Degrees</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>prop_efficiency_table</td>
+      <td></td>
+      <td>nD-table</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      </tr>
+      <tr class="odd">
+      <td>prop_power_cf</td>
+      <td></td>
+      <td>nD-table</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      </tr>
+      </tbody>
+      </table>
+      <h4 id="turbineenginedata"><code>[TURBINEENGINEDATA]</code></h4>
+      <table style="width:100%;">
+      <colgroup>
+      <col style="width: 16%">
+      <col style="width: 16%">
+      <col style="width: 16%">
+      <col style="width: 16%">
+      <col style="width: 16%">
+      <col style="width: 16%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Property</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Unit</th>
+      <th>Range</th>
+      <th>Mandatory</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td>fuel_flow_gain</td>
+      <td>Fuel flow gain constant</td>
+      <td>Float</td>
+      <td>No unit</td>
+      <td>&gt; 0</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td>inlet_area</td>
+      <td>Engine nacelle inlet area</td>
+      <td>Float</td>
+      <td>Square feet (sqft)</td>
+      <td>&gt; 0</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td>rated_N2_rpm</td>
+      <td>Second stage compressor rated revolution per minute</td>
+      <td>Float</td>
+      <td>RPM</td>
+      <td>&gt; 0</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td>static_thrust</td>
+      <td>Max rated static thrust at Sea Level</td>
+      <td>Float</td>
+      <td>LBS</td>
+      <td>&gt; 0</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td>reverser_available</td>
+      <td>Is reverser available 0=FALSE, 1=TRUE</td>
+      <td>Integer</td>
+      <td>Boolean</td>
+      <td>0 or 1</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>reverser_mach_controlled</td>
+      <td>Is reverser mach controlled 0=FALSE, 1=TRUE</td>
+      <td>Integer</td>
+      <td>Boolean</td>
+      <td>0 or 1</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>afterburner_available</td>
+      <td>A number, indicating the number of afterburner stages available</td>
+      <td>Integer</td>
+      <td>Number</td>
+      <td>Greater of equal 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>afterburner_throttle_threshold</td>
+      <td>Percentage of throttle range when the afterburner engages</td>
+      <td>Float</td>
+      <td>Percentage</td>
+      <td>Between 0 and 1</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>ThrustSpecificFuelConsumption</td>
+      <td>Jet thrust specific fuel consumption. The ratio of fuel used in pounds per hour, to thrust in pounds. Applies at all speeds</td>
+      <td>Float</td>
+      <td>Percentage</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>AfterBurnThrustSpecificFuelConsumption</td>
+      <td>Jet thrust specific fuel consumption. The ratio of fuel used in pounds per hour, to thrust in pounds. Applies only when the afterburner is active</td>
+      <td>Float</td>
+      <td>Percentage</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>mach_0_corrected_commanded_ne_table</td>
+      <td></td>
+      <td>nD-Table</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      </tr>
+      <tr class="even">
+      <td>mach_hi_corrected_commanded_ne_table</td>
+      <td></td>
+      <td>nD-Table</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      </tr>
+      <tr class="odd">
+      <td>corrected_n2_from_ff_table</td>
+      <td></td>
+      <td>2D Floats Table</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      </tr>
+      <tr class="even">
+      <td>n1_and_mach_on_thrust_table</td>
+      <td></td>
+      <td>nD Floats Table</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      </tr>
+      <tr class="odd">
+      <td>corrected_airflow_table</td>
+      <td></td>
+      <td>nD Floats Table</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      </tr>
+      <tr class="even">
+      <td>epr_max</td>
+      <td>Max Engine Pressure Ratio (EPR)</td>
+      <td>Float</td>
+      <td>Percentage</td>
+      <td>&gt; 0</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td>epr_tc</td>
+      <td>Max Engine Pressure Ratio (EPR) time constant</td>
+      <td>Float</td>
+      <td>Seconds</td>
+      <td>&gt; 0</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td>epr_tuning_constant</td>
+      <td>Engine Pressure Ratio (EPR) tuning constant</td>
+      <td>Float</td>
+      <td>No unit</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>oil_temp_tuning_constant</td>
+      <td>Oil temperature tuning constant</td>
+      <td>Float</td>
+      <td>No unit</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>oil_temp_cooling_constant</td>
+      <td>Oil temperature cooling constant</td>
+      <td>Float</td>
+      <td>No unit</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>oil_temp_heating_constant</td>
+      <td>Oil temperature heating constant</td>
+      <td>Float</td>
+      <td>No unit</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>oil_temp_tc</td>
+      <td>Oil temperature time constant</td>
+      <td>Float</td>
+      <td>Seconds</td>
+      <td>&gt; 0</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td>oil_press_tuning_constant</td>
+      <td>Oil pressure tuning constant</td>
+      <td>Float</td>
+      <td>No unit</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>oil_press_max</td>
+      <td>Max oil pressure</td>
+      <td>Float</td>
+      <td>Pounds per square feet (psf)</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>oil_press_tc</td>
+      <td>Oil pressure time constant</td>
+      <td>Float</td>
+      <td>Seconds</td>
+      <td>&gt; 0</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td>itt_peak_temperature</td>
+      <td>Interstage turbine temperature (ITT) peak temperature</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      </tr>
+      <tr class="odd">
+      <td>itt_tc</td>
+      <td>Interstage turbine temperature (ITT) time constant</td>
+      <td>Float</td>
+      <td>Seconds</td>
+      <td>&gt; 0</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td>itt_tuning_constant</td>
+      <td>Interstage turbine temperature (ITT) tuning</td>
+      <td>Float</td>
+      <td>No unit</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>egt_tuning_constant</td>
+      <td>Exhaust gaz temperature (EGT) tuning coefficient</td>
+      <td>Float</td>
+      <td>No unit</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>egt_peak_temperature</td>
+      <td>Exhaust gaz temperature (EGT) typical peak temperature</td>
+      <td>Float</td>
+      <td>Rankine</td>
+      <td>1200 degF + 460</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>egt_tc</td>
+      <td>Exhaust Gaz Temperature (EGT) time constant</td>
+      <td>Float</td>
+      <td>Seconds</td>
+      <td>&gt; 0</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td>fuel_press_tuning_constant</td>
+      <td>Fuel pressure tuning constant</td>
+      <td>Float</td>
+      <td>No unit</td>
+      <td>&gt; 0</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td>fuel_press_max</td>
+      <td>Max fuel pressure</td>
+      <td>Float</td>
+      <td>Pounds per square feet (psf)</td>
+      <td>&gt; 0</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td>fuel_press_tc</td>
+      <td>Fuel pressure time constant</td>
+      <td>Float</td>
+      <td>Seconds</td>
+      <td>&gt; 0</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>variable_inlet</td>
+      <td>Is variable inlet activated 0=FALSE 1=TRUE</td>
+      <td>Integer</td>
+      <td>Boolean</td>
+      <td>0 or 1</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>primary_nozzle_available</td>
+      <td>Is primary nozzle activated 0=FALSE 1=TRUE</td>
+      <td>Integer</td>
+      <td>Boolean</td>
+      <td>0 or 1</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td>primary_nozzle_afterburner_offset</td>
+      <td></td>
+      <td>Float</td>
+      <td>Feet</td>
+      <td></td>
+      <td></td>
+      </tr>
+      <tr class="even">
+      <td>primary_nozzle_n1_mach_to_nozzle_pos</td>
+      <td></td>
+      <td>nD Floats Table</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      </tr>
+      <tr class="odd">
+      <td>density_on_torque_table</td>
+      <td></td>
+      <td>2D Floats Table</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      </tr>
+      </tbody>
+      </table>
+      <h3 id="turbopropengine"><code>[TURBOPROP_ENGINE]</code></h3>
+      <table>
+      <thead>
+      <tr class="header">
+      <th>Property</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Unit</th>
+      <th>Range</th>
+      <th>Mandatory</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td>power_scalar</td>
+      <td>Scalar on Turboprop power</td>
+      <td>adimensional</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      </tr>
+      <tr class="even">
+      <td>maximum_torque</td>
+      <td>Maximum torque available</td>
+      <td>ft-lbs</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      </tr>
+      <tr class="odd">
+      <td>engine_friction_table</td>
+      <td></td>
+      <td>2D-table</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      </tr>
+      <tr class="even">
+      <td>n1_to_shaft_torque_table</td>
+      <td></td>
+      <td>2D-table</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      </tr>
+      <tr class="odd">
+      <td>rated_shaft_hp</td>
+      <td></td>
+      <td>Float</td>
+      <td>Percentage</td>
+      <td>&gt; 0</td>
+      <td></td>
+      </tr>
+      <tr class="even">
+      <td>PowerSpecificFuelConsumption</td>
+      <td></td>
+      <td>Float</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      </tr>
+      </tbody>
+      </table>
+    </article>
+  </div>
+  <script>
+	function detectIE() {
+	  var ua = window.navigator.userAgent;
+
+	  // Test values; Uncomment to check result …
+
+	  // IE 10
+	  // ua = 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)';
+
+	  // IE 11
+	  // ua = 'Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko';
+
+	  // Edge 12 (Spartan)
+	  // ua = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36 Edge/12.0';
+
+	  // Edge 13
+	  // ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Safari/537.36 Edge/13.10586';
+
+	  var msie = ua.indexOf('MSIE ');
+	  if (msie > 0) {
+		// IE 10 or older => return version number
+		return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+	  }
+
+	  var trident = ua.indexOf('Trident/');
+	  if (trident > 0) {
+		// IE 11 => return version number
+		var rv = ua.indexOf('rv:');
+		return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+	  }
+
+	  var edge = ua.indexOf('Edge/');
+	  if (edge > 0) {
+		// Edge (IE 12+) => return version number
+		return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+	  }
+
+	  // other browser
+	  return false;
+	}
+
+	var bIsIE = (detectIE() !== false);
+
+	function setData(name, value)
+	{
+		if (bIsIE)
+		{
+			if (localStorage !== undefined)
+			{
+				if (value === null)
+					localStorage.removeItem(name);
+				else
+					localStorage.setItem(name, value);
+			}
+			/*var d = new Date();
+			d.setTime(d.getTime() + (24*60*60));
+			var expires = "expires="+ d.toUTCString();
+			document.cookie = name + "=" + value + ";" + expires + ";path=/";
+			*/
+		}
+		else
+		{
+			if (value === null)
+				sessionStorage.removeItem(name);
+			else
+				sessionStorage.setItem(name, value);
+		}
+	}
+	
+	function getData(name)
+	{
+		var value = null;
+		if (bIsIE)
+		{
+			/*var cname = name + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for(var i = 0; i <ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) == ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(cname) == 0) {
+					return c.substring(cname.length, c.length);
+				}
+			}
+			return null;*/
+			if (localStorage !== undefined)
+			{
+				value = localStorage.getItem(name);
+			}
+			if (value === 'undefined')
+				value = null;
+		}
+		else
+		{
+			value = sessionStorage.getItem(name);
+			if (value === 'undefined')
+				value = null;
+		}
+		return value;
+	}
+	
+    // FROM http://purecss.io/js/ui.js
+    (function (window, document) {
+
+	
+      var content = document.getElementById('main'),
+		layout = document.getElementById('layout'),
+        menu = document.getElementById('menu'),
+        menuLink = document.getElementById('menuLink');
+		
+      function toggleClass(element, className) {
+        var classes = element.className.split(/\s+/),
+          length = classes.length,
+          i = 0;
+
+        for (; i < length; i++) {
+          if (classes[i] === className) {
+            classes.splice(i, 1);
+            break;
+          }
+        }
+        // The className is not found
+        if (length === classes.length) {
+          classes.push(className);
+        }
+
+        element.className = classes.join(' ');
+      }
+
+      function hasClass(element, className) {
+        var classes = element.className.split(/\s+/),
+          length = classes.length,
+          i = 0;
+
+        for (; i < length; i++) {
+          if (classes[i] === className) {
+            return true;
+          }
+        }
+		return false;
+      }
+
+      menuLink.onclick = function (e) {
+        var active = 'active';
+
+        e.preventDefault();
+		toggleClass(content, active);
+        toggleClass(layout, active);
+        toggleClass(menu, active);
+        toggleClass(menuLink, active);
+      };
+	  
+	  // Save menu scroll level when user click on link
+	  var a_links = document.getElementsByTagName('a');
+	  for (var i = 0 ; i < a_links.length ; i++) {
+	    var link = a_links[i];
+		if(menu.contains(link)) {
+			link.onclick = function () {
+				try {
+					setData('navScroll', link.offsetTop - link.getBoundingClientRect().top);
+					var root = menu.getElementsByTagName('ul')[0];
+					var li_elems = root.getElementsByTagName('li');
+					for (var i = 0; i<li_elems.length; i++)
+					{
+						if (!hasClass(li_elems[i],'collapsed'))
+							setData('liexp' + i, true);
+						else
+							setData('liexp' + i);
+					}
+					setData('liexp', true);
+				}
+				catch (error) {
+					console.error(error);
+				}
+				return true;
+			};
+		}
+	  };
+	  
+		var root = menu.getElementsByTagName('ul')[0];
+		// Remove empty ul
+		var ul_elems = root.getElementsByTagName('ul');
+		for (var i = ul_elems.length-1; i>=0; i--)
+		{
+			if (ul_elems[i].childElementCount == 0)
+			{
+				ul_elems[i].parentNode.removeChild(ul_elems[i]);
+			}
+		}
+		// Restore side menu state
+		var saved_state = (getData('liexp')!== null);
+		var li_elems = root.getElementsByTagName('li');
+		for (var i = 0; i<li_elems.length; i++)
+		{
+			var l = li_elems[i];
+			if (hasClass(l,'heading'))
+				toggleClass(l,'heading');
+			if ((l.nextElementSibling) && (l.nextElementSibling.nodeName=="UL"))
+			{
+				toggleClass(l,'collapsible');
+				var collapser = document.createElement('span');
+				var inserted = l.insertBefore(collapser, l.firstChild);
+				toggleClass(inserted,'collapser');
+				var inserted = l.insertBefore(collapser, l.firstChild);
+				inserted.addEventListener('click', function() { toggleClass(this.parentNode, 'collapsed') });
+				if (saved_state)
+				{
+					if (getData('liexp' + i) === null)
+					{
+						toggleClass(l,'collapsed');
+					}
+				}
+				else
+				{
+					if (l.parentNode != root)
+					{
+						toggleClass(l,'collapsed');
+					}
+				}
+			}
+		}
+		// Restore menu scroll level if defined
+		if(getData('navScroll') != null)
+			document.getElementById('menu').scrollTop = getData('navScroll');
+
+   }(this, this.document));
+  </script>
+
+
+</body></html>

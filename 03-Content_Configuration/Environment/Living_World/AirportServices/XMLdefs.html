@@ -1,0 +1,2324 @@
+<!DOCTYPE html><html><head>
+  <style>
+    /*! ADAPTED
+    Typeplate : Starter Kit
+    URL ........... http://typeplate.com
+    Version ....... 3.0.2
+    Github ........ https://github.com/typeplate/starter-kit
+    Authors ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
+    License ....... Creative Commmons Attribution 3.0
+    License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
+    */
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      text-rendering: optimizeLegibility;
+      line-height: 1;
+      margin-top: 0;
+      color: #222;
+    }
+
+    blockquote+figcaption cite {
+      display: block;
+      font-size: inherit;
+      text-align: right;
+    }
+
+    body {
+      word-wrap: break-word;
+    }
+
+    pre code {
+      word-wrap: normal;
+    }
+
+    body {
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+      hyphens: auto;
+      color: #444;
+    }
+	
+	figcaption {
+		text-align: center;
+	}
+
+    h1 {
+      font-size: 2em;
+      /* 2*16 = 32 */
+    }
+
+    h2 {
+      font-size: 1.5em;
+      /* 1.5*16 = 24 */
+    }
+
+    h3 {
+      font-size: 1.17em;
+      /* 1.17*16 = 18.72 */
+    }
+
+    h4 {
+      font-size: 1em;
+      /* 1*16 = 16 */
+    }
+
+    h5 {
+      font-size: 0.83em;
+      /* 0.83*16 = 13.28 */
+    }
+
+    h6 {
+      font-size: 0.75em;
+      /* 0.75*16 = 12 */
+    }
+
+    h1 {
+      margin: 2.42424rem 0 1.454544rem;
+    }
+
+    h2 {
+      margin: 2.0202rem 0 1.21212rem;
+    }
+
+    h3 {
+      margin: 1.61616rem 0 1rem;
+    }
+
+    h4 {
+      margin: 1.21212rem 0 1;
+    }
+
+    h5 {
+      margin: 0.80808rem 0;
+    }
+
+    h6 {
+      margin: 0.70707rem 0;
+    }
+
+    p {
+      margin: auto auto 1.5rem;
+    }
+
+    small {
+      font-size: 65%;
+    }
+
+    input,
+    abbr,
+    acronym,
+    blockquote,
+    code,
+    kbd,
+    q,
+    samp,
+    var {
+      -webkit-hyphens: none;
+      -ms-hyphens: none;
+      hyphens: none;
+    }
+
+    pre {
+      white-space: pre;
+    }
+
+    pre code {
+      white-space: -moz-pre-wrap;
+      white-space: pre-wrap;
+    }
+
+    code {
+      white-space: pre;
+      font-family: SF Mono, Consolas, Dejavu Sans Mono, Menlo, monospace;
+    }
+
+    abbr {
+      -webkit-font-variant: small-caps;
+      -moz-font-variant: small-caps;
+      -ms-font-variant: small-caps;
+      font-variant: small-caps;
+      font-weight: 600;
+      text-transform: lowercase;
+      color: gray;
+    }
+
+    abbr[title]:hover {
+      cursor: help;
+    }
+
+    /* FROM http://purecss.io/layouts/side-menu/  adapted to remove pure classes*/
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      color: #444;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: auto;
+    }
+
+    code,
+    pre {
+      background-color: #f5f5f5;
+      color: #444;
+      border-radius: 2px;
+      text-shadow: 0px 1px 0px white;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    }
+
+    pre code {
+      border: none;
+      box-shadow: none;
+    }
+
+    pre {
+      padding: 0.5em;
+    }
+
+    code {
+      display: inline-block;
+      padding: 0 0.5em;
+      line-height: 1.4;
+      font-size: 0.9em;
+    }
+
+    table {
+      border-spacing: 0;
+      margin-bottom: 1.5rem;
+    }
+
+    table th,
+    table td {
+      padding: 0.3em 0.7em;
+    }
+
+    table th {
+      background-color: #f4f4f4;
+      border-bottom: 2px solid #444;
+    }
+
+    table td {
+      border: 1px solid #f5f5f5;
+    }
+
+    /* Add transition to containers so they can push in and out. */
+
+    #layout,
+    #menu,
+    .menu-link {
+      -webkit-transition: all 0.2s ease-out;
+      -moz-transition: all 0.2s ease-out;
+      -ms-transition: all 0.2s ease-out;
+      -o-transition: all 0.2s ease-out;
+      transition: all 0.2s ease-out;
+    }
+
+    /* This is the parent `<div>` that contains the menu and the content area. */
+
+    #layout {
+      position: relative;
+      padding-left: 0;
+    }
+
+    #layout.active #menu {
+      left: 300px;
+      width: 300px;
+    }
+
+    #layout.active .menu-link {
+      left: 300px;
+    }
+
+    /* The content `<div>` is where all your content goes. */
+
+    .content {
+      margin: 50px auto;
+      padding: 0;
+      max-width: 60%;
+      line-height: 1.6em;
+    }
+
+    /*
+    The `#menu` `<div>` is the parent `<div>` that contains the menu that
+    appears on the left side of the page.
+    */
+
+    #menu {
+      margin-left: -300px;
+      /* "#menu" width */
+      width: 300px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 1000;
+      /* so the menu or its navicon stays above all content */
+      background: #f4f4f4;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      font-size: 0.9em;
+    }
+
+    a,
+    a * {
+      text-decoration: none;
+      color: #2483cc;
+    }
+
+    a:visited {
+      text-decoration: none;
+      color: #2483cc;
+    }
+
+    /* All anchors inside the menu should be styled like this. */
+
+    #menu a {
+      display: inline-block;
+      padding: 0.1em 0.5em;
+    }
+
+    #menu a:first-letter {
+      text-transform: capitalize;
+    }
+
+    #menu ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0em 0.5em;
+    }
+
+    #menu ul ul {
+      margin-top: 0em;
+      margin-left: 0.6em;
+      border-left: 1px dotted rgb(64, 64, 64);
+	  padding-left: 0.5em;
+    }
+
+    /* Change color of the anchor links on hover/focus. */
+
+    #menu li a:hover,
+    #menu li a:focus {
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    /* This styles the selected menu item `<li>`. */
+
+    #menu li a.active {
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    /* This styles a link within a selected menu item `<li>`. */
+
+    #menu li a.active {
+      color: #222;
+    }
+
+    /* This styles the menu heading. */
+
+    #menu li.heading {
+      font-size: 0.9em;
+      /*text-transform: uppercase;*/
+      color: #000;
+    }
+
+    #menu li.heading>* {
+      padding: 0.1em 0.5em;
+      display: block;
+    }
+
+    #menu li.heading a {
+      color: #0c68af;
+    }
+
+    /* -- Dynamic Button For Responsive Menu -------------------------------------*/
+
+    /*
+    `.menu-link` represents the responsive menu toggle that shows/hides on
+    small screens.
+    */
+
+    .menu-link {
+      position: fixed;
+      display: block;
+      /* show this only on small screens */
+      top: 0;
+      left: 0;
+      /* "#menu width" */
+      background: #f4f4f4;
+      font-size: 10px;
+      /* change this value to increase/decrease button size */
+      z-index: 10;
+      width: 2em;
+      height: auto;
+      padding: 1.6em 1.2em;
+      border-radius: 0 2px 2px 0;
+    }
+
+    .menu-link:hover {
+      background: /* #f4f4f4 * 0.8 */
+      #eee;
+    }
+
+    .menu-link span {
+      position: relative;
+      display: block;
+    }
+
+    .menu-link span,
+    .menu-link span:before,
+    .menu-link span:after {
+      background-color: #555;
+      width: 100%;
+      height: 0.2em;
+      border-radius: 1em;
+    }
+
+    .menu-link span:before,
+    .menu-link span:after {
+      position: absolute;
+      margin-top: -0.6em;
+      content: " ";
+    }
+
+    .menu-link span:after {
+      margin-top: 0.6em;
+    }
+
+    @media (max-width: 1300px) {       
+	  .content.active {
+		  margin-left: 310px;
+	  }
+    }
+	
+	@media (max-width: 800px) {
+		.content {
+		  max-width: 98%;
+	  }
+	}
+
+	#menu li span {
+		padding: 0.1em 0.5em;
+	}
+	
+	li.collapsible {
+		cursor: pointer;
+		font-weight:bold;
+	}
+	
+	li.collapsible span.collapser:before {
+		display:inline-block;
+		width:0.5em;
+	}
+	
+	li.collapsible span.collapser:before {
+		content: "-";
+	}
+	
+	li.collapsed span.collapser:before {
+		content: "+";
+	}
+	
+	li.collapsed + ul {
+		display:none;
+	}
+
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <!--script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script-->
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <div id="layout" class="active">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link active">
+      <!-- Hamburger icon -->
+      <span></span>
+    </a>
+    <nav id="menu" class="active">
+<ul>
+<li class="heading"><a href="..\..\..\..\index.html">Home</a></li>
+<li class="heading"><a href="..\..\..\..\01-Getting_Started\index.html">Getting Started</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\..\01-Getting_Started\01-SDK_Overview.html">SDK Overview</a></li>
+<li class="heading"><a href="..\..\..\..\01-Getting_Started\02-FAQ.html">FAQ</a></li>
+<li class="heading"><a href="..\..\..\..\01-Getting_Started\03-Roadmap.html">Roadmap</a></li>
+<li class="heading"><span>Samples</span></li>
+<ul>
+<li class="heading"><a href="..\..\..\..\01-Getting_Started\Samples\Aircraft\index.html">Aircraft</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\..\01-Getting_Started\Samples\Aircraft\GaugeAircraft\index.html">GaugeAircraft</a></li>
+<li class="heading"><a href="..\..\..\..\01-Getting_Started\Samples\Aircraft\GdiplusAircraft\index.html">GdiplusAircraft</a></li>
+<li class="heading"><a href="..\..\..\..\01-Getting_Started\Samples\Aircraft\MouseAircraft\index.html">MouseAircraft</a></li>
+<li class="heading"><a href="..\..\..\..\01-Getting_Started\Samples\Aircraft\SimpleAircraft\index.html">SimpleAircraft</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\..\01-Getting_Started\Samples\SimpleAerial\index.html">SimpleAerial</a></li>
+<li class="heading"><a href="..\..\..\..\01-Getting_Started\Samples\SimpleAirport\index.html">SimpleAirport</a></li>
+<li class="heading"><a href="..\..\..\..\01-Getting_Started\Samples\SimpleBiomes\index.html">SimpleBiomes</a></li>
+<li class="heading"><a href="..\..\..\..\01-Getting_Started\Samples\SimpleNavData\index.html">SimpleNavData</a></li>
+<li class="heading"><a href="..\..\..\..\01-Getting_Started\Samples\SimpleScenery\index.html">SimpleScenery</a></li>
+<li class="heading"><a href="..\..\..\..\01-Getting_Started\Samples\SimvarWatcher\index.html">SimvarWatcher</a></li>
+<li class="heading"><a href="..\..\..\..\01-Getting_Started\Samples\WwiseSampleProject\index.html">WwiseSampleProject</a></li>
+</ul>
+<li class="heading"><span>Tutorials</span></li>
+<ul>
+<li class="heading"><a href="..\..\..\..\01-Getting_Started\Tutorials\01-Placing_An_Add-on_Airport\index.html">Placing An Add-on Airport</a></li>
+<li class="heading"><a href="..\..\..\..\01-Getting_Started\Tutorials\02-Flight_model_definition\index.html">Flight model definition</a></li>
+</ul>
+</ul>
+<li class="heading"><span>Asset Creation</span></li>
+<ul>
+<li class="heading"><a href="..\..\..\..\02-Asset_Creation\3D_Models\index.html">3D Models</a></li>
+<ul>
+<li class="heading"><span>Modeling Practices</span></li>
+<ul>
+<li class="heading"><a href="..\..\..\..\02-Asset_Creation\3D_Models\Modeling_Practices\01-Aircraft_Modeling.html">Aircraft Modeling</a></li>
+<li class="heading"><a href="..\..\..\..\02-Asset_Creation\3D_Models\Modeling_Practices\02-Levels_of_Detail.html">Levels of Detail</a></li>
+<li class="heading"><a href="..\..\..\..\02-Asset_Creation\3D_Models\Modeling_Practices\03-Aircraft_Texture_Mapping.html">Aircraft Texture Mapping</a></li>
+<li class="heading"><a href="..\..\..\..\02-Asset_Creation\3D_Models\Modeling_Practices\04-Collisions.html">Collisions</a></li>
+</ul>
+</ul>
+<li class="heading"><a href="..\..\..\..\02-Asset_Creation\Lighting_Model\index.html">Lighting Model</a></li>
+<li class="heading"><a href="..\..\..\..\02-Asset_Creation\Sounds\index.html">Sounds</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\..\02-Asset_Creation\Sounds\01-Master_Mixer_Hierarchy.html">Master Mixer Hierarchy</a></li>
+<li class="heading"><a href="..\..\..\..\02-Asset_Creation\Sounds\02-Shared_Game_Parameters.html">Shared Game Parameters</a></li>
+<li class="heading"><a href="..\..\..\..\02-Asset_Creation\Sounds\03-Shared_States_and_Switches.html">Shared States and Switches</a></li>
+<li class="heading"><a href="..\..\..\..\02-Asset_Creation\Sounds\04-Shared_Attenuation_Shareset.html">Shared Attenuation Shareset</a></li>
+<li class="heading"><a href="..\..\..\..\02-Asset_Creation\Sounds\05-Mix_your_Aircraft.html">Mix your Aircraft</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\..\02-Asset_Creation\Textures\index.html">Textures</a></li>
+<li class="heading"><a href="..\..\..\..\02-Asset_Creation\glTF_Materials.html">glTF Materials</a></li>
+</ul>
+<li class="heading"><span>Content Configuration</span></li>
+<ul>
+<li class="heading"><a href="..\..\..\Cameras\index.html">Cameras</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\Cameras\Camera_Configuration.html">Camera Configuration</a></li>
+<li class="heading"><a href="..\..\..\Cameras\RTC\index.html">RTC</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\Cameras\RTC\Examples.html">Examples</a></li>
+<li class="heading"><a href="..\..\..\Cameras\RTC\Using_RTCs.html">Using RTCs</a></li>
+<li class="heading"><a href="..\..\..\Cameras\RTC\XML_Definition.html">XML Definition</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\Cameras\Wow-effect.html">Wow-effect</a></li>
+</ul>
+<li class="heading"><a href="..\..\index.html">Environment</a></li>
+<ul>
+<li class="heading"><a href="..\..\Airports_And_Facilities\index.html">Airports And Facilities</a></li>
+<ul>
+<li class="heading"><a href="..\..\Airports_And_Facilities\Airports.html">Airports</a></li>
+<li class="heading"><a href="..\..\Airports_And_Facilities\Jetways.html">Jetways</a></li>
+</ul>
+<li class="heading"><a href="..\..\File_Formats\index.html">File Formats</a></li>
+<ul>
+<li class="heading"><a href="..\..\File_Formats\BGL.html">BGL</a></li>
+<li class="heading"><a href="..\..\File_Formats\CGL.html">CGL</a></li>
+</ul>
+<li class="heading"><a href="..\index.html">Living World</a></li>
+<ul>
+<li class="heading"><a href=".\index.html">AirportServices</a></li>
+<ul>
+<li class="heading"><a href=".\XMLdefs.html">XMLdefs</a></li>
+<li class="heading"><a href=".\examples.html">examples</a></li>
+</ul>
+<li class="heading"><a href="..\LivingWorld_Config\index.html">LivingWorld Config</a></li>
+<ul>
+<li class="heading"><a href="..\LivingWorld_Config\XMLdefs.html">XMLdefs</a></li>
+<li class="heading"><a href="..\LivingWorld_Config\examples.html">examples</a></li>
+</ul>
+<li class="heading"><a href="..\Traffic\index.html">Traffic</a></li>
+</ul>
+<li class="heading"><a href="..\..\Scenery_Objects\index.html">Scenery Objects</a></li>
+<ul>
+<li class="heading"><a href="..\..\Scenery_Objects\Effects.html">Effects</a></li>
+</ul>
+<li class="heading"><a href="..\..\Terrain\index.html">Terrain</a></li>
+<ul>
+<li class="heading"><a href="..\..\Terrain\Aerial_Imagery\index.html">Aerial Imagery</a></li>
+<li class="heading"><a href="..\..\Terrain\DEM\index.html">DEM</a></li>
+<li class="heading"><a href="..\..\Terrain\Vector_Shapes\index.html">Vector Shapes</a></li>
+</ul>
+<li class="heading"><a href="..\..\Vegetation\index.html">Vegetation</a></li>
+<li class="heading"><a href="..\..\Weather\index.html">Weather</a></li>
+<li class="heading"><a href="..\..\World_Positioning_Systems\index.html">World Positioning Systems</a></li>
+<ul>
+<li class="heading"><a href="..\..\World_Positioning_Systems\Bing_Maps_Tile_System.html">Bing Maps Tile System</a></li>
+<li class="heading"><a href="..\..\World_Positioning_Systems\Lat_Long_Alt.html">Lat Long Alt</a></li>
+<li class="heading"><a href="..\..\World_Positioning_Systems\QMID.html">QMID</a></li>
+</ul>
+</ul>
+<li class="heading"><a href="..\..\..\Flights_And_Missions\index.html">Flights And Missions</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\Flights_And_Missions\Flight_Files.html">Flight Files</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\Localization\index.html">Localization</a></li>
+<li class="heading"><span>SimObjects</span></li>
+<ul>
+<li class="heading"><a href="..\..\..\SimObjects\00-Aircraft\index.html">Aircraft</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\SimObjects\00-Aircraft\Aircraft_Configuration\index.html">Aircraft Configuration</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\SimObjects\00-Aircraft\Aircraft_Configuration\00-General.html">General</a></li>
+<li class="heading"><a href="..\..\..\SimObjects\00-Aircraft\Aircraft_Configuration\AI.html">AI</a></li>
+<li class="heading"><a href="..\..\..\SimObjects\00-Aircraft\Aircraft_Configuration\Cameras.html">Cameras</a></li>
+<li class="heading"><a href="..\..\..\SimObjects\00-Aircraft\Aircraft_Configuration\Cockpit.html">Cockpit</a></li>
+<li class="heading"><a href="..\..\..\SimObjects\00-Aircraft\Aircraft_Configuration\Engines.html">Engines</a></li>
+<li class="heading"><a href="..\..\..\SimObjects\00-Aircraft\Aircraft_Configuration\Flight_Model.html">Flight Model</a></li>
+<li class="heading"><a href="..\..\..\SimObjects\00-Aircraft\Aircraft_Configuration\Gameplay.html">Gameplay</a></li>
+<li class="heading"><a href="..\..\..\SimObjects\00-Aircraft\Aircraft_Configuration\InteractivePoints.html">InteractivePoints</a></li>
+<li class="heading"><a href="..\..\..\SimObjects\00-Aircraft\Aircraft_Configuration\Systems_Configuration_File.html">Systems Configuration File</a></li>
+<li class="heading"><a href="..\..\..\SimObjects\00-Aircraft\Aircraft_Configuration\Target_Performances_Configuration_File.html">Target Performances Configuration File</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\SimObjects\00-Aircraft\Flight_Model.html">Flight Model</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\SimObjects\01-Other_SimObjects\index.html">Other SimObjects</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\SimObjects\01-Other_SimObjects\Animals.html">Animals</a></li>
+<li class="heading"><a href="..\..\..\SimObjects\01-Other_SimObjects\Boats.html">Boats</a></li>
+<li class="heading"><a href="..\..\..\SimObjects\01-Other_SimObjects\GroundVehicles\index.html">GroundVehicles</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\SimObjects\01-Other_SimObjects\GroundVehicles\BaggageCart.html">BaggageCart</a></li>
+<li class="heading"><a href="..\..\..\SimObjects\01-Other_SimObjects\GroundVehicles\BaggageLoader.html">BaggageLoader</a></li>
+<li class="heading"><a href="..\..\..\SimObjects\01-Other_SimObjects\GroundVehicles\BoardingRamp.html">BoardingRamp</a></li>
+<li class="heading"><a href="..\..\..\SimObjects\01-Other_SimObjects\GroundVehicles\CateringTruck.html">CateringTruck</a></li>
+<li class="heading"><a href="..\..\..\SimObjects\01-Other_SimObjects\GroundVehicles\FuelTruck.html">FuelTruck</a></li>
+<li class="heading"><a href="..\..\..\SimObjects\01-Other_SimObjects\GroundVehicles\GroundPowerUnit.html">GroundPowerUnit</a></li>
+<li class="heading"><a href="..\..\..\SimObjects\01-Other_SimObjects\GroundVehicles\Pushback.html">Pushback</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\SimObjects\01-Other_SimObjects\Humans.html">Humans</a></li>
+<li class="heading"><a href="..\..\..\SimObjects\01-Other_SimObjects\SimObject_Configuration.html">SimObject Configuration</a></li>
+<li class="heading"><a href="..\..\..\SimObjects\01-Other_SimObjects\StaticObjects.html">StaticObjects</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\SimObjects\Checklists\index.html">Checklists</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\SimObjects\Checklists\01-Examples.html">Examples</a></li>
+<li class="heading"><a href="..\..\..\SimObjects\Checklists\02-XML_Definition.html">XML Definition</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\SimObjects\Instruments\index.html">Instruments</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\SimObjects\Instruments\3D_Instruments\index.html">3D Instruments</a></li>
+<li class="heading"><a href="..\..\..\SimObjects\Instruments\C_Gauges\index.html">C Gauges</a></li>
+<ul>
+<li class="heading"><span>Graphics</span></li>
+<ul>
+<li class="heading"><a href="..\..\..\SimObjects\Instruments\C_Gauges\Graphics\GDI_Plus.html">GDI Plus</a></li>
+</ul>
+</ul>
+<li class="heading"><a href="..\..\..\SimObjects\Instruments\HTML_Gauges\index.html">HTML Gauges</a></li>
+<li class="heading"><a href="..\..\..\SimObjects\Instruments\Panels.html">Panels</a></li>
+<li class="heading"><a href="..\..\..\SimObjects\Instruments\XML_Gauges\index.html">XML Gauges</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\SimObjects\Models\index.html">Models</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\SimObjects\Models\AnimGraph.html">AnimGraph</a></li>
+<li class="heading"><a href="..\..\..\SimObjects\Models\Levels_of_Detail_(LODs).html">Levels of Detail (LODs)</a></li>
+<li class="heading"><a href="..\..\..\SimObjects\Models\Model_Behaviors\index.html">Model Behaviors</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\SimObjects\Models\Model_Behaviors\XML_Definition.html">XML Definition</a></li>
+</ul>
+</ul>
+<li class="heading"><a href="..\..\..\SimObjects\Sounds\index.html">Sounds</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\SimObjects\Sounds\backwards_compatibility.html">backwards compatibility</a></li>
+<li class="heading"><a href="..\..\..\SimObjects\Sounds\sound_categories.html">sound categories</a></li>
+<li class="heading"><a href="..\..\..\SimObjects\Sounds\xml_definition.html">xml definition</a></li>
+<li class="heading"><a href="..\..\..\SimObjects\Sounds\xml_wavedata.html">xml wavedata</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\SimObjects\Textures\index.html">Textures</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\UI\index.html">UI</a></li>
+<li class="heading"><a href="..\..\..\Variable_Lists\index.html">Variable Lists</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\Variable_Lists\Event_IDs.html">Event IDs</a></li>
+<li class="heading"><a href="..\..\..\Variable_Lists\Misc_Enums.html">Misc Enums</a></li>
+<li class="heading"><a href="..\..\..\Variable_Lists\Simulation_Variables.html">Simulation Variables</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\Visual_Effects\index.html">Visual Effects</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\Visual_Effects\visual_fx_file.html">visual fx file</a></li>
+</ul>
+</ul>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\index.html">Developer Tools</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\00-Developer_Mode\index.html">Developer Mode</a></li>
+<li class="heading"><span>3DS Max Tools</span></li>
+<ul>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\3DS_Max_Tools\FlightSim_Lights.html">FlightSim Lights</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\3DS_Max_Tools\FlightSim_Material.html">FlightSim Material</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\3DS_Max_Tools\FlightSim_multiExporter.html">FlightSim multiExporter</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\3DS_Max_Tools\FlightSim_versionDifferences.html">FlightSim versionDifferences</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\3DS_Max_Tools\glTF_Exporter.html">glTF Exporter</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\Aircraft_Editor\index.html">Aircraft Editor</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\Aircraft_Editor\Debug_Windows.html">Debug Windows</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\Command_Line_Interface.html">Command Line Interface</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\Launcher_Tool\index.html">Launcher Tool</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\Material_Editor\index.html">Material Editor</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\Mission_Editor\index.html">Mission Editor</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\Package_Tool\index.html">Package Tool</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\Package_Tool\Concepts.html">Concepts</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\Package_Tool\XMLReference.html">XMLReference</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\Project_editor\index.html">Project editor</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\Project_editor\Content_Manager_Data.html">Content Manager Data</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\Project_editor\Export_Window.html">Export Window</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\Project_editor\Marketplace_Data.html">Marketplace Data</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\Scenery_Editor\index.html">Scenery Editor</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\SimConnect\index.html">SimConnect</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\SimConnect\SimConnect_Reference.html">SimConnect Reference</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\SimConnect\SimConnect_Status_of_Functions.html">SimConnect Status of Functions</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\SimConnect\SimConnect_Status_of_Input_Events.html">SimConnect Status of Input Events</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\SimConnect\SimConnect_Status_of_SimEvents.html">SimConnect Status of SimEvents</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\SimConnect\SimConnect_Status_of_Simulation_Variables.html">SimConnect Status of Simulation Variables</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\SimConnect\SimConnect_Status_of_System_Events.html">SimConnect Status of System Events</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\WebAssembly\index.html">WebAssembly</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\WebAssembly\01-Platform_Toolset.html">Platform Toolset</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\WebAssembly\02-Gauge_API.html">Gauge API</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\WebAssembly\Graphics\index.html">Graphics</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\WebAssembly\Graphics\GDI_Plus.html">GDI Plus</a></li>
+<li class="heading"><a href="..\..\..\..\04-Developer_Tools\WebAssembly\Graphics\Low_Level_API.html">Low Level API</a></li>
+</ul>
+</ul>
+</ul>
+<li class="heading"><span>Scripting Languages</span></li>
+<ul>
+<li class="heading"><a href="..\..\..\..\05-Scripting_Languages\CFG.html">CFG</a></li>
+<li class="heading"><a href="..\..\..\..\05-Scripting_Languages\Reverse_Polish_Notation.html">Reverse Polish Notation</a></li>
+</ul>
+</ul>
+    </nav>
+    <article id="main" class="content active">
+      <h1 id="airport-services-xml-definitions">Airport Services - XML Definitions</h1>
+      <!-- START doctoc generated TOC please keep comment here to allow auto update -->
+      <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+      <ul>
+      <li><a href="#servicesxml">Services.xml</a>
+      <ul>
+      <li><a href="#simbasedocument"><code>&lt;SimBase.Document&gt;</code></a></li>
+      <li><a href="#serviceparkingspaceservices"><code>&lt;Service.ParkingSpaceServices&gt;</code></a></li>
+      <li><a href="#parkingspace"><code>&lt;ParkingSpace&gt;</code></a></li>
+      <li><a href="#parkingtypes"><code>&lt;ParkingTypes&gt;</code></a></li>
+      <li><a href="#parkingentry"><code>&lt;ParkingEntry&gt;</code></a></li>
+      <li><a href="#idleworkers"><code>&lt;IdleWorkers&gt;</code></a></li>
+      <li><a href="#spot"><code>&lt;Spot&gt;</code></a></li>
+      <li><a href="#idleworker"><code>&lt;IdleWorker&gt;</code></a></li>
+      <li><a href="#parking-services">Parking <code>&lt;Services&gt;</code></a></li>
+      <li><a href="#parking-service">Parking <code>&lt;Service&gt;</code></a></li>
+      <li><a href="#sleepingactivities"><code>&lt;SleepingActivities&gt;</code></a></li>
+      <li><a href="#sleepingairlinerservices"><code>&lt;SleepingAirlinerServices&gt;</code></a></li>
+      <li><a href="#sleepingsmallplanerefueling"><code>&lt;SleepingSmallPlaneRefueling&gt;</code></a></li>
+      <li><a href="#serviceairportservices"><code>&lt;Service.AirportServices&gt;</code></a></li>
+      <li><a href="#airport-services">Airport <code>&lt;Services&gt;</code></a></li>
+      <li><a href="#airport-service">Airport <code>&lt;Service&gt;</code></a></li>
+      </ul></li>
+      <li><a href="#service-and-idleworker-script-files">Service and IdleWorker script files</a>
+      <ul>
+      <li><a href="#script-simbasedocument">Script <code>&lt;SimBase.Document&gt;</code></a></li>
+      <li><a href="#worldbaseflight"><code>&lt;WorldBase.Flight&gt;</code></a></li>
+      <li><a href="#servicegroundservice"><code>&lt;Service.GroundService&gt;</code></a></li>
+      <li><a href="#states"><code>&lt;States&gt;</code></a></li>
+      <li><a href="#state"><code>&lt;State&gt;</code></a></li>
+      <li><a href="#state-objectreferencelist">State <code>&lt;ObjectReferenceList&gt;</code></a></li>
+      <li><a href="#state-objectreference">State <code>&lt;ObjectReference&gt;</code></a></li>
+      <li><a href="#simmissionsendmessagetoaiaction"><code>&lt;SimMission.SendMessageToAIAction&gt;</code></a></li>
+      <li><a href="#sendmessagetoaiaction-objectreferencelist">SendMessageToAIAction <code>&lt;ObjectReferenceList&gt;</code></a></li>
+      <li><a href="#sendmessagetoaiaction-objectreference">SendMessageToAIAction <code>&lt;ObjectReference&gt;</code></a></li>
+      <li><a href="#simcontaincontainer"><code>&lt;SimContain.Container&gt;</code></a></li>
+      <li><a href="#humanpilotai"><code>&lt;HumanPilotAI&gt;</code></a></li>
+      <li><a href="#idleworkerai"><code>&lt;IdleWorkerAI&gt;</code></a></li>
+      <li><a href="#attachedworldobject"><code>&lt;AttachedWorldObject&gt;</code></a></li>
+      <li><a href="#attachedworldobject-objectreference">AttachedWorldObject <code>&lt;ObjectReference&gt;</code></a></li>
+      <li><a href="#waypointlist"><code>&lt;WaypointList&gt;</code></a></li>
+      </ul></li>
+      </ul>
+      <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+      <p>Here are defined the specifications of the Services files, by first considering the main file Services.xml, and then specificities of Service and IdleWorker script files</p>
+      <h2 id="servicesxml">Services.xml</h2>
+      <h3 id="simbasedocument"><code>&lt;SimBase.Document&gt;</code></h3>
+      <p>Base of an xml document.</p>
+      <table>
+      <thead>
+      <tr class="header">
+      <th>Element</th>
+      <th>Description</th>
+      <th>Quantity</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><a href="#service.parkingspaceservices"><code>&lt;Service.ParkingSpaceServices&gt;</code></a></td>
+      <td>List of the parking space services</td>
+      <td>0-1</td>
+      </tr>
+      <tr class="even">
+      <td><a href="#service.airportservices"><code>&lt;Service.AirportServices&gt;</code></a></td>
+      <td>List of the global airport services</td>
+      <td>0-1</td>
+      </tr>
+      </tbody>
+      </table>
+      <h3 id="serviceparkingspaceservices"><code>&lt;Service.ParkingSpaceServices&gt;</code></h3>
+      <p>List of the parking space services</p>
+      <table>
+      <colgroup>
+      <col style="width: 33%">
+      <col style="width: 33%">
+      <col style="width: 33%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Element</th>
+      <th>Description</th>
+      <th>Quantity</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><a href="#parkingspace"><code>&lt;ParkingSpace&gt;</code></a></td>
+      <td>An entry of parking space definition, with one or several parking types.</td>
+      <td>1+</td>
+      </tr>
+      </tbody>
+      </table>
+      <p>Note that each parking type must appear in at most one of the <code>ParkingSpace</code> in the list.</p>
+      <h3 id="parkingspace"><code>&lt;ParkingSpace&gt;</code></h3>
+      <p>A description of a general category of parking space, including one or several types.</p>
+      <table>
+      <thead>
+      <tr class="header">
+      <th>Element</th>
+      <th>Description</th>
+      <th>Quantity</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><a href="#parkingtypes"><code>&lt;ParkingTypes&gt;</code></a></td>
+      <td>List of parking types corresponding to this entry</td>
+      <td>1</td>
+      </tr>
+      <tr class="even">
+      <td><a href="#idleworkers"><code>&lt;IdleWorkers&gt;</code></a></td>
+      <td>List of IdleWorkers for this entry</td>
+      <td>0-1</td>
+      </tr>
+      <tr class="odd">
+      <td><a href="#parking-services"><code>&lt;Services&gt;</code></a></td>
+      <td>List of Services for this entry</td>
+      <td>0-1</td>
+      </tr>
+      <tr class="even">
+      <td><a href="#sleepingactivities"><code>&lt;SleepingActivities&gt;</code></a></td>
+      <td>Parameters for ParkedAircrafts activities</td>
+      <td>0-1</td>
+      </tr>
+      </tbody>
+      </table>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>name</code></td>
+      <td>Name of this ParkingSpace entry</td>
+      <td>String</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>MinParkingSpaces</code></td>
+      <td>Minimum number of parkings (of any type) on the airport to take this into account. Useful to avoid having services on micro-airports with only 1 parking.</td>
+      <td>Integer</td>
+      <td>No</td>
+      </tr>
+      </tbody>
+      </table>
+      <h3 id="parkingtypes"><code>&lt;ParkingTypes&gt;</code></h3>
+      <p>Lists the types of parking corresponding to this <code>ParkingSpace</code>.</p>
+      <table>
+      <thead>
+      <tr class="header">
+      <th>Element</th>
+      <th>Description</th>
+      <th>Quantity</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><a href="#parkingentry"><code>&lt;ParkingEntry&gt;</code></a></td>
+      <td>A single parking type</td>
+      <td>1+</td>
+      </tr>
+      </tbody>
+      </table>
+      <h3 id="parkingentry"><code>&lt;ParkingEntry&gt;</code></h3>
+      <p>A single parking type.</p>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>ParkingType</code></td>
+      <td>Enum of a parking type (see <a href="../../Airports_And_Facilities/Airports.html#taxiwayparking">TaxiwayParkings</a></td>
+      <td>Enum</td>
+      <td>Yes</td>
+      </tr>
+      </tbody>
+      </table>
+      <h3 id="idleworkers"><code>&lt;IdleWorkers&gt;</code></h3>
+      <p>List of IdleWorkers for this <code>ParkingSpace</code>.</p>
+      <table>
+      <colgroup>
+      <col style="width: 33%">
+      <col style="width: 33%">
+      <col style="width: 33%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Element</th>
+      <th>Description</th>
+      <th>Quantity</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><a href="#spot"><code>&lt;Spot&gt;</code></a></td>
+      <td>A position to spawn one IdleWorker script among several available</td>
+      <td>0+</td>
+      </tr>
+      </tbody>
+      </table>
+      <h3 id="spot"><code>&lt;Spot&gt;</code></h3>
+      <table>
+      <thead>
+      <tr class="header">
+      <th>Element</th>
+      <th>Description</th>
+      <th>Quantity</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><a href="#idleworker"><code>&lt;IdleWorker&gt;</code></a></td>
+      <td>A IdleWorker script that can be placed in this Spot</td>
+      <td>1+</td>
+      </tr>
+      </tbody>
+      </table>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>Frequency</code></td>
+      <td>Frequency (0.0-1.0) at which an IdleWorker will be created at this Spot</td>
+      <td>Float</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>SpawnDistanceParkingRadiusFactor</code></td>
+      <td>Determines the spawning position of the Spot by multiplying this factor by the radius of the parking</td>
+      <td>Float</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td><code>SpawnDistanceAdditionalOffset</code></td>
+      <td>Determines the spawning position of the Spot by adding this offset in meters (can be negative to be inside the parking)</td>
+      <td>Float</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>SpawnAngleFromParking</code></td>
+      <td>Determines the spawning position of the Spot by determining at which angle from the parking to move the specified distance.</td>
+      <td>Float</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td><code>HeadingFromParkingHeading</code></td>
+      <td>Determines the heading of the spawned IdleWorker, relative to parking heading (and not North)</td>
+      <td>Float</td>
+      <td>Yes</td>
+      </tr>
+      </tbody>
+      </table>
+      <p>Each parking in each airport is represented by a circle (with center and radius), a type, and a heading (orientation relative to North) . From this, the spawning position of an IdleWorker Spot is determined by three parameters. First, this position will be at a distance from the center of the parking equal to <code>SpawnDistanceParkingRadiusFactor</code> * (radius of current parking) + <code>SpawnDistanceAdditionalOffset</code>. Then, the position will be computed from the center of parking and distance by moving along a line determined by an angle <code>SpawnAngleFromParking</code> from the parking heading. See the <a href="./examples.html">examples</a> chapter for more clarity.</p>
+      <h3 id="idleworker"><code>&lt;IdleWorker&gt;</code></h3>
+      <p>Defines one of the several IdleWorker scripts that can be used for this <code>Spot</code>, along with its relative weight.</p>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>Filename</code></td>
+      <td>Name of the script file. Should be the full path from the Airport_Services root folder (not included in the path), and not include the file extension.</td>
+      <td>String</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>EntryWeight</code></td>
+      <td>Relative weight determining how likely it is to be chosen over other scripts for this <code>Spot</code> (higher weight means more likely to be chosen)</td>
+      <td>Integer</td>
+      <td>Yes</td>
+      </tr>
+      </tbody>
+      </table>
+      <h3 id="parking-services">Parking <code>&lt;Services&gt;</code></h3>
+      <p>List of Services for this <code>ParkingSpace</code></p>
+      <table>
+      <thead>
+      <tr class="header">
+      <th>Element</th>
+      <th>Description</th>
+      <th>Quantity</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><a href="#parking-service"><code>&lt;Service&gt;</code></a></td>
+      <td>A service along with its spawning parameters</td>
+      <td>0+</td>
+      </tr>
+      </tbody>
+      </table>
+      <h3 id="parking-service">Parking <code>&lt;Service&gt;</code></h3>
+      <p>A single Service to create at this parking.</p>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>name</code></td>
+      <td>Informal name of the Service</td>
+      <td>String</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>Filename</code></td>
+      <td>Name of the script file. Should be the full path from the Airport_Services root folder (not included in the path), and not include the file extension.</td>
+      <td>String</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td><code>AIType</code></td>
+      <td>Enum corresponding to the <a href="../../../Variable_Lists/Misc_Enums.html#aitype">AI Type</a> of the main object in this Service.</td>
+      <td>Enum</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>Frequency</code></td>
+      <td>Frequency (0.0-1.0) at which this Service will be created</td>
+      <td>Float</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td><code>SpawnDistanceParkingRadiusFactor</code></td>
+      <td>Determines the spawning position of the Service by multiplying this factor by the radius of the parking</td>
+      <td>Float</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>SpawnDistanceAdditionalOffset</code></td>
+      <td>Determines the spawning position of the Service by adding this offset in meters (can be negative to be inside the parking)</td>
+      <td>Float</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td><code>SpawnAngleFromParking</code></td>
+      <td>Determines the spawning position of the Service by determining at which angle from the parking to move the specified distance.</td>
+      <td>Float</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>HeadingFromParkingHeading</code></td>
+      <td>Determines the heading of the spawned Service object, relative to parking heading (and not North)</td>
+      <td>Float</td>
+      <td>Yes</td>
+      </tr>
+      </tbody>
+      </table>
+      <p>Each parking in each airport is represented by a circle (with center and radius), a type, and a heading (orientation relative to North) . From this, the spawning position of a Service is determined by three parameters. First, this position will be at a distance from the center of the parking equal to <code>SpawnDistanceParkingRadiusFactor</code> * (radius of current parking) + <code>SpawnDistanceAdditionalOffset</code>. Then, the position will be computed from the center of parking and distance by moving along a line determined by an angle <code>SpawnAngleFromParking</code> from the parking heading. See the <a href="./examples.html">examples</a> chapter for more clarity.</p>
+      <h3 id="sleepingactivities"><code>&lt;SleepingActivities&gt;</code></h3>
+      <p>Determines parameters for ParkedAircrafts and former AirTraffic aircrafts that are no longer part of the AirTraffic.</p>
+      <table>
+      <colgroup>
+      <col style="width: 33%">
+      <col style="width: 33%">
+      <col style="width: 33%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Element</th>
+      <th>Description</th>
+      <th>Quantity</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><a href="#sleepingairlinerservices"><code>&lt;SleepingAirlinerServices&gt;</code></a></td>
+      <td>Parameters regarding how often parked airliners should randomly decide to use Services.</td>
+      <td>0-1</td>
+      </tr>
+      <tr class="even">
+      <td><a href="#sleepingsmallplanerefueling"><code>&lt;SleepingSmallPlaneRefueling&gt;</code></a></td>
+      <td>Parameters regarding how often parked GA aircrafts should randomly decide to taxi to a fueling station before going back to its parking.</td>
+      <td>0-1</td>
+      </tr>
+      </tbody>
+      </table>
+      <h3 id="sleepingairlinerservices"><code>&lt;SleepingAirlinerServices&gt;</code></h3>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>Timer</code></td>
+      <td>How often (in seconds) will a given airliner randomly decide to use Services.</td>
+      <td>Float</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>Probability</code></td>
+      <td>Probability (0.0-1.0) the airliner will decide to use Services when its Timer expires.</td>
+      <td>Float</td>
+      <td>Yes</td>
+      </tr>
+      </tbody>
+      </table>
+      <p>Note that the Timer is always restarting after expiring, which means that byt waiting long enough, each airliner will use Services multiple times. We recommend using a <code>Timer</code> of at least 300 seconds and a <code>Probability</code> of less than 0.4, to avoid having too many aircrafts using Services all the time.</p>
+      <h3 id="sleepingsmallplanerefueling"><code>&lt;SleepingSmallPlaneRefueling&gt;</code></h3>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>Timer</code></td>
+      <td>How often (in seconds) will a given GA aircraft randomly decide to go refueling.</td>
+      <td>Float</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>Probability</code></td>
+      <td>Probability (0.0-1.0) the GA aircraft will decide to go refueling when its Timer expires.</td>
+      <td>Float</td>
+      <td>Yes</td>
+      </tr>
+      </tbody>
+      </table>
+      <p>Note that the Timer is always restarting after expiring, which means that byt waiting long enough, each GA aircraft will go refueling multiple times. We recommend using a <code>Timer</code> of at least 300 seconds and a <code>Probability</code> of less than 0.2, to avoid having too many aircrafts using the few Fuel stations all the time.</p>
+      <h3 id="serviceairportservices"><code>&lt;Service.AirportServices&gt;</code></h3>
+      <p>List of the global airport services</p>
+      <table>
+      <thead>
+      <tr class="header">
+      <th>Element</th>
+      <th>Description</th>
+      <th>Quantity</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><a href="#airport-services"><code>&lt;Services&gt;</code></a></td>
+      <td>List of Services</td>
+      <td>1</td>
+      </tr>
+      </tbody>
+      </table>
+      <h3 id="airport-services">Airport <code>&lt;Services&gt;</code></h3>
+      <p>List of Airport Services</p>
+      <table>
+      <thead>
+      <tr class="header">
+      <th>Element</th>
+      <th>Description</th>
+      <th>Quantity</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><a href="#airport-service"><code>&lt;Service&gt;</code></a></td>
+      <td>A service along with its spawning parameters</td>
+      <td>1+</td>
+      </tr>
+      </tbody>
+      </table>
+      <h3 id="airport-service">Airport <code>&lt;Service&gt;</code></h3>
+      <p>A single Airport Service to create.</p>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>name</code></td>
+      <td>Informal name of the Service</td>
+      <td>String</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>Filename</code></td>
+      <td>Name of the script file. Should be the full path from the Airport_Services root folder (not included in the path), and not include the file extension.</td>
+      <td>String</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td><code>ParkingType</code></td>
+      <td>Which type of parking will this Service be created in.</td>
+      <td>Enum</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>Frequency</code></td>
+      <td>Frequency (0.0-1.0) at which this Service will be created</td>
+      <td>Float</td>
+      <td>Yes</td>
+      </tr>
+      </tbody>
+      </table>
+      <h2 id="service-and-idleworker-script-files">Service and IdleWorker script files</h2>
+      <p>Both Service and IdleWorker script files are some form of <a href="../../../Flights_And_Missions/index.html">Mission xml files</a>. The root of the xml file should be a <code>&lt;SimBase.Document&gt;</code></p>
+      <h3 id="script-simbasedocument">Script <code>&lt;SimBase.Document&gt;</code></h3>
+      <table>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>Type</code></td>
+      <td>Must contain “MissionFile”</td>
+      <td>String</td>
+      <td>Yes</td>
+      </tr>
+      </tbody>
+      </table>
+      <table>
+      <thead>
+      <tr class="header">
+      <th>Element</th>
+      <th>Description</th>
+      <th>Quantity</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><a href="#worldbase.flight"><code>&lt;WorldBase.Flight&gt;</code></a></td>
+      <td>The main part of the script file</td>
+      <td>1</td>
+      </tr>
+      </tbody>
+      </table>
+      <h3 id="worldbaseflight"><code>&lt;WorldBase.Flight&gt;</code></h3>
+      <p>The main part of the script file. The element list here is incomplete, and any element from missions is available. The following list just highlights the specificities for Service and IdleWorker scripts.</p>
+      <table>
+      <colgroup>
+      <col style="width: 33%">
+      <col style="width: 33%">
+      <col style="width: 33%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Element</th>
+      <th>Description</th>
+      <th>Quantity</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><a href="#service.groundservice"><code>&lt;Service.GroundService&gt;</code></a></td>
+      <td>Specific to Services, list of service states with associated <code>Action</code>s, triggering the Actions when the service enter the corresponding state.</td>
+      <td>0-1</td>
+      </tr>
+      <tr class="even">
+      <td><a href="#simmission.sendmessagetoaiaction"><code>&lt;SimMission.SendMessageToAIAction&gt;</code></a></td>
+      <td>Only used by Services, an <code>Action</code> that sends a message to the AI code in MSFS of an object.</td>
+      <td>0+</td>
+      </tr>
+      <tr class="odd">
+      <td><a href="#simcontain.container"><code>&lt;SimContain.Container&gt;</code></a></td>
+      <td>Create a SimObject, most notably to create the main object of the Service/IdleWorker, and possibly the Human pilot of the vehicle.</td>
+      <td>1+</td>
+      </tr>
+      <tr class="even">
+      <td>Any other element from a mission, see corresponding chapter</td>
+      <td></td>
+      <td></td>
+      </tr>
+      </tbody>
+      </table>
+      <p>TODO ActivateWaypointsAction and PlayBlendTreeStateAction ?</p>
+      <h3 id="servicegroundservice"><code>&lt;Service.GroundService&gt;</code></h3>
+      <table>
+      <colgroup>
+      <col style="width: 33%">
+      <col style="width: 33%">
+      <col style="width: 33%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Element</th>
+      <th>Description</th>
+      <th>Quantity</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><a href="#states"><code>&lt;States&gt;</code></a></td>
+      <td>List of service states with associated <code>Action</code>s, triggering the Actions when the service enter the corresponding state.</td>
+      <td>1</td>
+      </tr>
+      </tbody>
+      </table>
+      <h3 id="states"><code>&lt;States&gt;</code></h3>
+      <table>
+      <thead>
+      <tr class="header">
+      <th>Element</th>
+      <th>Description</th>
+      <th>Quantity</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><a href="#state"><code>&lt;State&gt;</code></a></td>
+      <td>A single state for a Service object, with its list of <code>Action</code>s</td>
+      <td>1+</td>
+      </tr>
+      </tbody>
+      </table>
+      <h3 id="state"><code>&lt;State&gt;</code></h3>
+      <table>
+      <colgroup>
+      <col style="width: 33%">
+      <col style="width: 33%">
+      <col style="width: 33%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Element</th>
+      <th>Description</th>
+      <th>Quantity</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><a href="#state-objectreferencelist"><code>&lt;ObjectReferenceList&gt;</code></a></td>
+      <td>List of references to <code>Action</code>s to be executed when the service enter this state.</td>
+      <td>1</td>
+      </tr>
+      </tbody>
+      </table>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>name</code></td>
+      <td>Name of the state, see below for the list of available states</td>
+      <td>String/Enum</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>UniqueRefId</code></td>
+      <td>Reference the GUID of the corresponding service object (<code>InstanceId</code> attribute of the corresponding <code>&lt;SimContain.Container&gt;</code>)</td>
+      <td>GUID</td>
+      <td>Yes</td>
+      </tr>
+      </tbody>
+      </table>
+      <p>Here is the list of states available for each <code>AIType</code> of object. Objects that have an <code>AIType</code> not in the list have no state triggers.</p>
+      <table>
+      <colgroup>
+      <col style="width: 33%">
+      <col style="width: 33%">
+      <col style="width: 33%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>State name</th>
+      <th>Description</th>
+      <th>Available <code>AIType</code></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>Sleep</code></td>
+      <td>State at rest, when the vehicle finished its task and turns off its engine. Can also be triggered if some error occured, and the vehicle just stops its normal behavior.</td>
+      <td>BaggageLoader, BaggageCart, BoardingRamp, CateringTruck, GroundPowerUnit, Pushback, SmallPushback, FuelTruck</td>
+      </tr>
+      <tr class="even">
+      <td><code>Move_Toward_Aircraft</code></td>
+      <td>The vehicle has been requested and starts moving towards the aircraft</td>
+      <td>BaggageLoader, BaggageCart, BoardingRamp, CateringTruck, GroundPowerUnit, Pushback, SmallPushback</td>
+      </tr>
+      <tr class="odd">
+      <td><code>Before_Reaching_Aircraft</code></td>
+      <td>Shortly before reaching the aircraft, the vehicle has some action to perform (BaggageLoader inclines its ramp, BoardingRamp extends its stairs, CateringTruck elevates its container)</td>
+      <td>BaggageLoader, BoardingRamp, CateringTruck</td>
+      </tr>
+      <tr class="even">
+      <td><code>Reached_Aircraft</code></td>
+      <td>Final state upon reaching aircraft (BaggageLoader and BoardingRamp finish moving, CateringTruck extends its bridge, GroundPowerUnit deploys its cable)</td>
+      <td>BaggageLoader, BoardingRamp, CateringTruck, GroundPowerUnit, FuelTruck</td>
+      </tr>
+      <tr class="odd">
+      <td><code>Loading</code></td>
+      <td>The vehicle is connected to the aircraft and starts doing its job</td>
+      <td>BaggageLoader, BaggageCart, BoardingRamp, CateringTruck, GroundPowerUnit, Pushback, SmallPushback</td>
+      </tr>
+      <tr class="even">
+      <td><code>Unloading</code> (future)</td>
+      <td>Same as <code>Loading</code>, but aimed to take place after a flight (to unload baggages and passengers) rather that before a flight</td>
+      <td>Not yet used, should be added in the future</td>
+      </tr>
+      <tr class="odd">
+      <td><code>Finished_Operation</code></td>
+      <td>Immediately after the <code>Loading</code>/<code>Unloading</code> state ended, the vehicle starts moving back or animating to detach from the aircraft</td>
+      <td>BaggageLoader, BoardingRamp, CateringTruck, GroundPowerUnit, Pushback, SmallPushback, FuelTruck</td>
+      </tr>
+      <tr class="even">
+      <td><code>Before_Leaving_Aircraft</code></td>
+      <td>Final gathering up state before the vehicle completely leave the aircraft (BaggageLoader moves back, BoardingRamp retracts its stairs, CateringTruck moves down its container)</td>
+      <td>BaggageLoader, BoardingRamp, CateringTruck</td>
+      </tr>
+      <tr class="odd">
+      <td><code>Move_Back_To_Parking</code></td>
+      <td>The vehicle moves back to its initial position</td>
+      <td>BaggageLoader, BaggageCart, BoardingRamp, CateringTruck, GroundPowerUnit, Pushback, SmallPushback</td>
+      </tr>
+      <tr class="even">
+      <td><code>Loading_AI</code></td>
+      <td>Equivalent to <code>Loading</code>, when connected to an AI aircraft</td>
+      <td>FuelTruck</td>
+      </tr>
+      <tr class="odd">
+      <td><code>Loading_User</code></td>
+      <td>Equivalent to <code>Loading</code>, when connected to the User aircraft</td>
+      <td>FuelTruck</td>
+      </tr>
+      <tr class="even">
+      <td><code>UserClosedWindowDuringLoading</code></td>
+      <td>When the FuelTruck starts <code>Loading_User</code>, the refueling window appears on screen. This state is triggered if the User closes this window during the Loading state.</td>
+      <td>FuelTruck</td>
+      </tr>
+      </tbody>
+      </table>
+      <p>Finally, the FuelTruck also has the following states available, but with different meaning: <code>Move_Toward_Aircraft</code>, <code>Move_Back_To_Parking</code>, <code>Before_Reaching_Aircraft</code>, <code>Before_Leaving_Aircraft</code>. The first two are used when the FuelTruck starts taxiing accross the airport towards an aircraft (it can perform multiple requests in a row) or its original parking. The last two are used to move from the parking edge to the aircraft, and back.</p>
+      <h3 id="state-objectreferencelist">State <code>&lt;ObjectReferenceList&gt;</code></h3>
+      <p>List of the Actions to be executed when the service enter this state.</p>
+      <table>
+      <thead>
+      <tr class="header">
+      <th>Element</th>
+      <th>Description</th>
+      <th>Quantity</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><a href="#state-objectreference"><code>&lt;ObjectReference&gt;</code></a></td>
+      <td>A single reference to an <code>Action</code>.</td>
+      <td>0+</td>
+      </tr>
+      </tbody>
+      </table>
+      <h3 id="state-objectreference">State <code>&lt;ObjectReference&gt;</code></h3>
+      <p>A reference to a single <code>Action</code> to be executed when the service enter this state.</p>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>id</code></td>
+      <td>Informal description of the action. Not an actual identifier, but make scripts much more readable.</td>
+      <td>String</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>InstanceId</code></td>
+      <td>Reference the GUID of the corresponding <code>Action</code></td>
+      <td>GUID</td>
+      <td>Yes</td>
+      </tr>
+      </tbody>
+      </table>
+      <p>See the <a href="../../../Flights_And_Missions/index.html">mission chapter</a> for more details on <code>Action</code>s.</p>
+      <h3 id="simmissionsendmessagetoaiaction"><code>&lt;SimMission.SendMessageToAIAction&gt;</code></h3>
+      <p>When executed, this action will send a message to the AI of an object (or multiple objects).</p>
+      <table>
+      <colgroup>
+      <col style="width: 33%">
+      <col style="width: 33%">
+      <col style="width: 33%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Element</th>
+      <th>Description</th>
+      <th>Quantity</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><a href="#sendmessagetoaiaction-objectreferencelist"><code>&lt;ObjectReferenceList&gt;</code></a></td>
+      <td>List of references to objects to which send the message</td>
+      <td>1</td>
+      </tr>
+      </tbody>
+      </table>
+      <table>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>Name</code></td>
+      <td>Message to be sent</td>
+      <td>String/Enum</td>
+      <td>Yes</td>
+      </tr>
+      </tbody>
+      </table>
+      <p>A message sent to an AI could be any string, but only a few messages have any effect, and not on all <code>AIType</code>. Here is a list of the current valid messages, with the AI types that interpret them:</p>
+      <table>
+      <colgroup>
+      <col style="width: 33%">
+      <col style="width: 33%">
+      <col style="width: 33%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Message</th>
+      <th>Description</th>
+      <th>Available <code>AIType</code></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>FINISHED_OPERATION</code></td>
+      <td>Warns the AI that the <code>Loading</code> (or <code>Unloading</code>) phase is finished, and that this service should start its regular behavior to detach from aircraft.</td>
+      <td>BaggageLoader, BoardingRamp, CateringTruck, GroundPowerUnit, FuelTruck</td>
+      </tr>
+      </tbody>
+      </table>
+      <p>Currently, no other message has any effect. This list will be expanded when new messages with effect are added.</p>
+      <h3 id="sendmessagetoaiaction-objectreferencelist">SendMessageToAIAction <code>&lt;ObjectReferenceList&gt;</code></h3>
+      <p>List of the objects with AIs to which the message will be sent.</p>
+      <table>
+      <thead>
+      <tr class="header">
+      <th>Element</th>
+      <th>Description</th>
+      <th>Quantity</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><a href="#sendmessagetoaiaction-objectreference"><code>&lt;ObjectReference&gt;</code></a></td>
+      <td>A single reference to an object.</td>
+      <td>1+</td>
+      </tr>
+      </tbody>
+      </table>
+      <h3 id="sendmessagetoaiaction-objectreference">SendMessageToAIAction <code>&lt;ObjectReference&gt;</code></h3>
+      <p>A reference to a single object with AI to which the message will be sent.</p>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>id</code></td>
+      <td>Informal description of the object. Not an actual identifier, but make scripts much more readable.</td>
+      <td>String</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>InstanceId</code></td>
+      <td>Reference the GUID of the corresponding object</td>
+      <td>GUID</td>
+      <td>Yes</td>
+      </tr>
+      </tbody>
+      </table>
+      <h3 id="simcontaincontainer"><code>&lt;SimContain.Container&gt;</code></h3>
+      <p>Create a SimObject. More details are available in the <a href="../../../Flights_And_Missions/index.html">mission chapter</a>, but here are a few especially useful attributes and elements for Services and IdleWorkers.</p>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>InstanceId</code></td>
+      <td>GUID of the SimObject, used in other elements of the script to reference this object</td>
+      <td>GUID</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>Descr</code></td>
+      <td>Informal description of the SimObject</td>
+      <td>String</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td><code>AIType</code></td>
+      <td><a href="../../../Variable_Lists/Misc_Enums.html#aitype">AI type</a> of the SimObject.</td>
+      <td>Enum</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>UseRegionContainerType</code></td>
+      <td>If true and if no <code>ContainerTitle</code> is specified, the model used will be taken at random in the correct category (based on <code>AIType</code>) from the current <a href="../LivingWorld_Config/index.html">LivingWorld region</a></td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>ContainerTitle</code></td>
+      <td>Explicit title for the SimObject. Only required if <code>UseRegionContainerType</code> is false or undefined.</td>
+      <td>String</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td>Any other attribute as defined in the mission chapter</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      </tr>
+      </tbody>
+      </table>
+      <p>Here is a correspondance between <code>AIType</code> and associated category from the <a href="../LivingWorld_Config/index.html">LivingWorld configuration file</a> :</p>
+      <table>
+      <thead>
+      <tr class="header">
+      <th><code>AIType</code></th>
+      <th>Category from LivingWorld configuration</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>FuelTruck</code></td>
+      <td><code>&lt;FuelTrucks&gt;</code></td>
+      </tr>
+      <tr class="even">
+      <td><code>PushBack</code></td>
+      <td><code>&lt;PushbackTugs&gt;</code></td>
+      </tr>
+      <tr class="odd">
+      <td><code>SmallPushBack</code></td>
+      <td><code>&lt;SmallPushbacks&gt;</code></td>
+      </tr>
+      <tr class="even">
+      <td><code>BaggageCart</code></td>
+      <td><code>&lt;BaggageCarts&gt;</code></td>
+      </tr>
+      <tr class="odd">
+      <td><code>BaggageLoader</code></td>
+      <td><code>&lt;BaggageLoaders&gt;</code></td>
+      </tr>
+      <tr class="even">
+      <td><code>CateringTruck</code></td>
+      <td><code>&lt;CateringTrucks&gt;</code></td>
+      </tr>
+      <tr class="odd">
+      <td><code>BoardingRamp</code></td>
+      <td><code>&lt;BoardingRamps&gt;</code></td>
+      </tr>
+      <tr class="even">
+      <td><code>GroundPowerUnit</code></td>
+      <td><code>&lt;GroundPowerUnits&gt;</code></td>
+      </tr>
+      <tr class="odd">
+      <td><code>VehicleFollower</code></td>
+      <td><code>&lt;BaggageDollies&gt;</code></td>
+      </tr>
+      <tr class="even">
+      <td><code>AirportAmbient</code></td>
+      <td><code>&lt;AmbientTraffic&gt;</code></td>
+      </tr>
+      <tr class="odd">
+      <td><code>IdleWorker</code></td>
+      <td><code>&lt;IdleWorkers&gt;</code></td>
+      </tr>
+      <tr class="even">
+      <td><code>GroundVehicle_Pilot</code></td>
+      <td><code>&lt;GroundVehiclePilots&gt;</code></td>
+      </tr>
+      <tr class="odd">
+      <td><code>Marshaller</code></td>
+      <td><code>&lt;Marshaller&gt;</code></td>
+      </tr>
+      <tr class="even">
+      <td><code>WanderBoat</code></td>
+      <td><code>&lt;InlandBoats&gt;</code> (in <code>&lt;Boats&gt;</code>, not <code>&lt;Airport&gt;</code>)</td>
+      </tr>
+      </tbody>
+      </table>
+      <p>The <code>&lt;SimContain.Container&gt;</code> can also have the following elements:</p>
+      <table>
+      <colgroup>
+      <col style="width: 33%">
+      <col style="width: 33%">
+      <col style="width: 33%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Element</th>
+      <th>Description</th>
+      <th>Quantity</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><a href="#humanpilotai"><code>&lt;HumanPilotAI&gt;</code></a></td>
+      <td>For SimObject with an <code>AIType</code> equal to <code>GroundVehicle_Pilot</code> or <code>Aircraft_Pilot</code>, defines the specific properties of this AI.</td>
+      <td>0-1</td>
+      </tr>
+      <tr class="even">
+      <td><a href="#idleworkerai"><code>&lt;IdleWorkerAI&gt;</code></a></td>
+      <td>For SimObject with an <code>AIType</code> equal to <code>IdleWorker</code>, defines the specific properties of this AI.</td>
+      <td>0-1</td>
+      </tr>
+      <tr class="odd">
+      <td><a href="#attachedworldobject"><code>&lt;AttachedWorldObject&gt;</code></a></td>
+      <td>Actually attach this SimObject to another, or just initialize it to a relative position.</td>
+      <td>0-1</td>
+      </tr>
+      <tr class="even">
+      <td>Any other element as defined in the mission chapter</td>
+      <td></td>
+      <td></td>
+      </tr>
+      </tbody>
+      </table>
+      <h3 id="humanpilotai"><code>&lt;HumanPilotAI&gt;</code></h3>
+      <p>AI parameters for objects with AIType <code>GroundVehicle_Pilot</code> or <code>Aircraft_Pilot</code>.</p>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>HumanPilotType</code></td>
+      <td>Determines which type of pilot is this object, and thus which parameters should be read from the <code>cfg</code> file of the attached vehicle (attach node and default animation). Enum can be <code>Unknown</code>, <code>Pilot</code>, or <code>Copilot</code>.</td>
+      <td>Enum</td>
+      <td>No</td>
+      </tr>
+      </tbody>
+      </table>
+      <p>Note that such a pilot object must have an <code>&lt;AttachedWorldObject&gt;</code> in order to be actually attached to its vehicle.</p>
+      <h3 id="idleworkerai"><code>&lt;IdleWorkerAI&gt;</code></h3>
+      <p>AI parameters for objects with AIType <code>IdleWorker</code>.</p>
+      <table>
+      <colgroup>
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Default</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>Unit_Mode</code></td>
+      <td>Initial Unit Mode of the AI. Should not make any difference for IdleWorker with current version of MSFS.</td>
+      <td>Enum</td>
+      <td>No</td>
+      <td><code>Waypoint</code></td>
+      </tr>
+      <tr class="even">
+      <td><code>GroundCruiseSpeed</code></td>
+      <td>Default speed in knots for this IdleWorker AI</td>
+      <td>Float</td>
+      <td>No</td>
+      <td>35</td>
+      </tr>
+      <tr class="odd">
+      <td><code>GroundTurnSpeed</code></td>
+      <td>IdleWorker AI slows to this speed in knots when making sharp turns</td>
+      <td>Float</td>
+      <td>No</td>
+      <td>10</td>
+      </tr>
+      <tr class="even">
+      <td><code>GroundTurnTime</code></td>
+      <td>IdleWorker AI attempts to make 90 degree turns in this amount of time (seconds)</td>
+      <td>Float</td>
+      <td>No</td>
+      <td>3.5</td>
+      </tr>
+      <tr class="odd">
+      <td><code>WaypointTouchDistance</code></td>
+      <td>Distance in meters at which IdleWorker AI considers waypoint to be reached</td>
+      <td>Float</td>
+      <td>No</td>
+      <td>1.0</td>
+      </tr>
+      <tr class="even">
+      <td><code>YieldToUser</code></td>
+      <td>Whether the IdleWorker will stop moving when getting too close to the User aircraft</td>
+      <td>Boolean</td>
+      <td>No</td>
+      <td>True</td>
+      </tr>
+      <tr class="odd">
+      <td><code>KeepLastHeading</code></td>
+      <td>Whether the IdleWorker will try to reach the heading defined by its last two waypoints before reaching its last waypoint, even if that means slightly less precision on the final position. When false, the IdleWorker will only focus on reaching the exact position of the last waypoint, ignoring orientation.</td>
+      <td>Boolean</td>
+      <td>No</td>
+      <td>True</td>
+      </tr>
+      <tr class="even">
+      <td><code>CanReverse</code></td>
+      <td>Whether the IdleWorker will try to maneuver backwards when it missed one if its waypoints.</td>
+      <td>Boolean</td>
+      <td>No</td>
+      <td>True</td>
+      </tr>
+      </tbody>
+      </table>
+      <p>Note that the <code>CanReverse</code> attribute is better set to <code>False</code> for IdleWorker, as it is more useful for vehicles.</p>
+      <table>
+      <colgroup>
+      <col style="width: 33%">
+      <col style="width: 33%">
+      <col style="width: 33%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Element</th>
+      <th>Description</th>
+      <th>Quantity</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><a href="#waypointlist"><code>&lt;WaypointList&gt;</code></a></td>
+      <td>List of waypoints the IdleWorker with start with. Will only be useful if the <code>Unit_Mode</code> is set to <code>Waypoint</code>.</td>
+      <td>0-1</td>
+      </tr>
+      </tbody>
+      </table>
+      <p>Unless using simple IdleWorker scripts that do nothing except for creating an IdleWorker, we recommend not using the <code>WaypointList</code> in the <code>&lt;IdleWorkerAI&gt;</code>. It is usually better to initialize the IdleWorker as idle, and use scripting (such as <code>TimerTrigger</code> for example) to later set up various behaviors, including a WaypointList by using a <code>ActivateWaypointsAction</code>.</p>
+      <h3 id="attachedworldobject"><code>&lt;AttachedWorldObject&gt;</code></h3>
+      <p>This element can have two different behaviors, which can be confusing. We might change this to clarify this confusion in the future.</p>
+      <table>
+      <thead>
+      <tr class="header">
+      <th>Element</th>
+      <th>Description</th>
+      <th>Quantity</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><a href="#attachedworldobject-objectreference"><code>&lt;ObjectReference&gt;</code></a></td>
+      <td>Reference to the object this is attached to.</td>
+      <td>1</td>
+      </tr>
+      </tbody>
+      </table>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>OffsetXYZ</code></td>
+      <td>Offset XYZ (in meters) defining where to place this object relative it its reference.</td>
+      <td>4 comma-separated floats</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>Orientation</code></td>
+      <td>PBH orientation (in degrees) of this object relative to its reference.</td>
+      <td>3 comma-separated floats</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>IsOnGround</code></td>
+      <td>Is this object placed on ground</td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>NodeName</code></td>
+      <td>Name of a Node from the reference object to which this object will be attached.</td>
+      <td>String</td>
+      <td>No</td>
+      </tr>
+      </tbody>
+      </table>
+      <p>Note <code>OffsetXYZ</code> 4th value is unused, and axes X, Y, Z represent the left-right axis, upward axis, and forward axis, respectively. For <code>Orientation</code>, currently only the heading (3rd value) is taken into account, but this might change in the future.</p>
+      <p>If the object has a <code>NodeName</code> defined here, or if it has a <code>&lt;HumanPilotAI&gt;</code> with a <code>HumanPilotType</code> Pilot or Copilot, then it will be actually attached to the reference (to a specific Node, either explicit, or defined in the cfg of the reference model). Otherwise, only the initial position will be used to initialize this object relative to the reference, using OffsetXYZ, Orientation, and IsOnGround informations.</p>
+      <h3 id="attachedworldobject-objectreference">AttachedWorldObject <code>&lt;ObjectReference&gt;</code></h3>
+      <p>Reference to a “main” object to which attach another object, or only initialize this other object in a relative position.</p>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>id</code></td>
+      <td>Informal description of the object. Not an actual identifier, but make scripts much more readable.</td>
+      <td>String</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>InstanceId</code></td>
+      <td>Reference the GUID of the corresponding Object</td>
+      <td>GUID</td>
+      <td>Yes</td>
+      </tr>
+      </tbody>
+      </table>
+      <h3 id="waypointlist"><code>&lt;WaypointList&gt;</code></h3>
+      <p>TODO here or in missions ?</p>
+    </article>
+  </div>
+  <script>
+	function detectIE() {
+	  var ua = window.navigator.userAgent;
+
+	  // Test values; Uncomment to check result …
+
+	  // IE 10
+	  // ua = 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)';
+
+	  // IE 11
+	  // ua = 'Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko';
+
+	  // Edge 12 (Spartan)
+	  // ua = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36 Edge/12.0';
+
+	  // Edge 13
+	  // ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Safari/537.36 Edge/13.10586';
+
+	  var msie = ua.indexOf('MSIE ');
+	  if (msie > 0) {
+		// IE 10 or older => return version number
+		return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+	  }
+
+	  var trident = ua.indexOf('Trident/');
+	  if (trident > 0) {
+		// IE 11 => return version number
+		var rv = ua.indexOf('rv:');
+		return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+	  }
+
+	  var edge = ua.indexOf('Edge/');
+	  if (edge > 0) {
+		// Edge (IE 12+) => return version number
+		return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+	  }
+
+	  // other browser
+	  return false;
+	}
+
+	var bIsIE = (detectIE() !== false);
+
+	function setData(name, value)
+	{
+		if (bIsIE)
+		{
+			if (localStorage !== undefined)
+			{
+				if (value === null)
+					localStorage.removeItem(name);
+				else
+					localStorage.setItem(name, value);
+			}
+			/*var d = new Date();
+			d.setTime(d.getTime() + (24*60*60));
+			var expires = "expires="+ d.toUTCString();
+			document.cookie = name + "=" + value + ";" + expires + ";path=/";
+			*/
+		}
+		else
+		{
+			if (value === null)
+				sessionStorage.removeItem(name);
+			else
+				sessionStorage.setItem(name, value);
+		}
+	}
+	
+	function getData(name)
+	{
+		var value = null;
+		if (bIsIE)
+		{
+			/*var cname = name + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for(var i = 0; i <ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) == ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(cname) == 0) {
+					return c.substring(cname.length, c.length);
+				}
+			}
+			return null;*/
+			if (localStorage !== undefined)
+			{
+				value = localStorage.getItem(name);
+			}
+			if (value === 'undefined')
+				value = null;
+		}
+		else
+		{
+			value = sessionStorage.getItem(name);
+			if (value === 'undefined')
+				value = null;
+		}
+		return value;
+	}
+	
+    // FROM http://purecss.io/js/ui.js
+    (function (window, document) {
+
+	
+      var content = document.getElementById('main'),
+		layout = document.getElementById('layout'),
+        menu = document.getElementById('menu'),
+        menuLink = document.getElementById('menuLink');
+		
+      function toggleClass(element, className) {
+        var classes = element.className.split(/\s+/),
+          length = classes.length,
+          i = 0;
+
+        for (; i < length; i++) {
+          if (classes[i] === className) {
+            classes.splice(i, 1);
+            break;
+          }
+        }
+        // The className is not found
+        if (length === classes.length) {
+          classes.push(className);
+        }
+
+        element.className = classes.join(' ');
+      }
+
+      function hasClass(element, className) {
+        var classes = element.className.split(/\s+/),
+          length = classes.length,
+          i = 0;
+
+        for (; i < length; i++) {
+          if (classes[i] === className) {
+            return true;
+          }
+        }
+		return false;
+      }
+
+      menuLink.onclick = function (e) {
+        var active = 'active';
+
+        e.preventDefault();
+		toggleClass(content, active);
+        toggleClass(layout, active);
+        toggleClass(menu, active);
+        toggleClass(menuLink, active);
+      };
+	  
+	  // Save menu scroll level when user click on link
+	  var a_links = document.getElementsByTagName('a');
+	  for (var i = 0 ; i < a_links.length ; i++) {
+	    var link = a_links[i];
+		if(menu.contains(link)) {
+			link.onclick = function () {
+				try {
+					setData('navScroll', link.offsetTop - link.getBoundingClientRect().top);
+					var root = menu.getElementsByTagName('ul')[0];
+					var li_elems = root.getElementsByTagName('li');
+					for (var i = 0; i<li_elems.length; i++)
+					{
+						if (!hasClass(li_elems[i],'collapsed'))
+							setData('liexp' + i, true);
+						else
+							setData('liexp' + i);
+					}
+					setData('liexp', true);
+				}
+				catch (error) {
+					console.error(error);
+				}
+				return true;
+			};
+		}
+	  };
+	  
+		var root = menu.getElementsByTagName('ul')[0];
+		// Remove empty ul
+		var ul_elems = root.getElementsByTagName('ul');
+		for (var i = ul_elems.length-1; i>=0; i--)
+		{
+			if (ul_elems[i].childElementCount == 0)
+			{
+				ul_elems[i].parentNode.removeChild(ul_elems[i]);
+			}
+		}
+		// Restore side menu state
+		var saved_state = (getData('liexp')!== null);
+		var li_elems = root.getElementsByTagName('li');
+		for (var i = 0; i<li_elems.length; i++)
+		{
+			var l = li_elems[i];
+			if (hasClass(l,'heading'))
+				toggleClass(l,'heading');
+			if ((l.nextElementSibling) && (l.nextElementSibling.nodeName=="UL"))
+			{
+				toggleClass(l,'collapsible');
+				var collapser = document.createElement('span');
+				var inserted = l.insertBefore(collapser, l.firstChild);
+				toggleClass(inserted,'collapser');
+				var inserted = l.insertBefore(collapser, l.firstChild);
+				inserted.addEventListener('click', function() { toggleClass(this.parentNode, 'collapsed') });
+				if (saved_state)
+				{
+					if (getData('liexp' + i) === null)
+					{
+						toggleClass(l,'collapsed');
+					}
+				}
+				else
+				{
+					if (l.parentNode != root)
+					{
+						toggleClass(l,'collapsed');
+					}
+				}
+			}
+		}
+		// Restore menu scroll level if defined
+		if(getData('navScroll') != null)
+			document.getElementById('menu').scrollTop = getData('navScroll');
+
+   }(this, this.document));
+  </script>
+
+
+</body></html>

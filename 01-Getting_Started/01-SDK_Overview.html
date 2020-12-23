@@ -1,0 +1,1119 @@
+<!DOCTYPE html><html><head>
+  <style>
+    /*! ADAPTED
+    Typeplate : Starter Kit
+    URL ........... http://typeplate.com
+    Version ....... 3.0.2
+    Github ........ https://github.com/typeplate/starter-kit
+    Authors ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
+    License ....... Creative Commmons Attribution 3.0
+    License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
+    */
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      text-rendering: optimizeLegibility;
+      line-height: 1;
+      margin-top: 0;
+      color: #222;
+    }
+
+    blockquote+figcaption cite {
+      display: block;
+      font-size: inherit;
+      text-align: right;
+    }
+
+    body {
+      word-wrap: break-word;
+    }
+
+    pre code {
+      word-wrap: normal;
+    }
+
+    body {
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+      hyphens: auto;
+      color: #444;
+    }
+	
+	figcaption {
+		text-align: center;
+	}
+
+    h1 {
+      font-size: 2em;
+      /* 2*16 = 32 */
+    }
+
+    h2 {
+      font-size: 1.5em;
+      /* 1.5*16 = 24 */
+    }
+
+    h3 {
+      font-size: 1.17em;
+      /* 1.17*16 = 18.72 */
+    }
+
+    h4 {
+      font-size: 1em;
+      /* 1*16 = 16 */
+    }
+
+    h5 {
+      font-size: 0.83em;
+      /* 0.83*16 = 13.28 */
+    }
+
+    h6 {
+      font-size: 0.75em;
+      /* 0.75*16 = 12 */
+    }
+
+    h1 {
+      margin: 2.42424rem 0 1.454544rem;
+    }
+
+    h2 {
+      margin: 2.0202rem 0 1.21212rem;
+    }
+
+    h3 {
+      margin: 1.61616rem 0 1rem;
+    }
+
+    h4 {
+      margin: 1.21212rem 0 1;
+    }
+
+    h5 {
+      margin: 0.80808rem 0;
+    }
+
+    h6 {
+      margin: 0.70707rem 0;
+    }
+
+    p {
+      margin: auto auto 1.5rem;
+    }
+
+    small {
+      font-size: 65%;
+    }
+
+    input,
+    abbr,
+    acronym,
+    blockquote,
+    code,
+    kbd,
+    q,
+    samp,
+    var {
+      -webkit-hyphens: none;
+      -ms-hyphens: none;
+      hyphens: none;
+    }
+
+    pre {
+      white-space: pre;
+    }
+
+    pre code {
+      white-space: -moz-pre-wrap;
+      white-space: pre-wrap;
+    }
+
+    code {
+      white-space: pre;
+      font-family: SF Mono, Consolas, Dejavu Sans Mono, Menlo, monospace;
+    }
+
+    abbr {
+      -webkit-font-variant: small-caps;
+      -moz-font-variant: small-caps;
+      -ms-font-variant: small-caps;
+      font-variant: small-caps;
+      font-weight: 600;
+      text-transform: lowercase;
+      color: gray;
+    }
+
+    abbr[title]:hover {
+      cursor: help;
+    }
+
+    /* FROM http://purecss.io/layouts/side-menu/  adapted to remove pure classes*/
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      color: #444;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: auto;
+    }
+
+    code,
+    pre {
+      background-color: #f5f5f5;
+      color: #444;
+      border-radius: 2px;
+      text-shadow: 0px 1px 0px white;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    }
+
+    pre code {
+      border: none;
+      box-shadow: none;
+    }
+
+    pre {
+      padding: 0.5em;
+    }
+
+    code {
+      display: inline-block;
+      padding: 0 0.5em;
+      line-height: 1.4;
+      font-size: 0.9em;
+    }
+
+    table {
+      border-spacing: 0;
+      margin-bottom: 1.5rem;
+    }
+
+    table th,
+    table td {
+      padding: 0.3em 0.7em;
+    }
+
+    table th {
+      background-color: #f4f4f4;
+      border-bottom: 2px solid #444;
+    }
+
+    table td {
+      border: 1px solid #f5f5f5;
+    }
+
+    /* Add transition to containers so they can push in and out. */
+
+    #layout,
+    #menu,
+    .menu-link {
+      -webkit-transition: all 0.2s ease-out;
+      -moz-transition: all 0.2s ease-out;
+      -ms-transition: all 0.2s ease-out;
+      -o-transition: all 0.2s ease-out;
+      transition: all 0.2s ease-out;
+    }
+
+    /* This is the parent `<div>` that contains the menu and the content area. */
+
+    #layout {
+      position: relative;
+      padding-left: 0;
+    }
+
+    #layout.active #menu {
+      left: 300px;
+      width: 300px;
+    }
+
+    #layout.active .menu-link {
+      left: 300px;
+    }
+
+    /* The content `<div>` is where all your content goes. */
+
+    .content {
+      margin: 50px auto;
+      padding: 0;
+      max-width: 60%;
+      line-height: 1.6em;
+    }
+
+    /*
+    The `#menu` `<div>` is the parent `<div>` that contains the menu that
+    appears on the left side of the page.
+    */
+
+    #menu {
+      margin-left: -300px;
+      /* "#menu" width */
+      width: 300px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 1000;
+      /* so the menu or its navicon stays above all content */
+      background: #f4f4f4;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      font-size: 0.9em;
+    }
+
+    a,
+    a * {
+      text-decoration: none;
+      color: #2483cc;
+    }
+
+    a:visited {
+      text-decoration: none;
+      color: #2483cc;
+    }
+
+    /* All anchors inside the menu should be styled like this. */
+
+    #menu a {
+      display: inline-block;
+      padding: 0.1em 0.5em;
+    }
+
+    #menu a:first-letter {
+      text-transform: capitalize;
+    }
+
+    #menu ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0em 0.5em;
+    }
+
+    #menu ul ul {
+      margin-top: 0em;
+      margin-left: 0.6em;
+      border-left: 1px dotted rgb(64, 64, 64);
+	  padding-left: 0.5em;
+    }
+
+    /* Change color of the anchor links on hover/focus. */
+
+    #menu li a:hover,
+    #menu li a:focus {
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    /* This styles the selected menu item `<li>`. */
+
+    #menu li a.active {
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    /* This styles a link within a selected menu item `<li>`. */
+
+    #menu li a.active {
+      color: #222;
+    }
+
+    /* This styles the menu heading. */
+
+    #menu li.heading {
+      font-size: 0.9em;
+      /*text-transform: uppercase;*/
+      color: #000;
+    }
+
+    #menu li.heading>* {
+      padding: 0.1em 0.5em;
+      display: block;
+    }
+
+    #menu li.heading a {
+      color: #0c68af;
+    }
+
+    /* -- Dynamic Button For Responsive Menu -------------------------------------*/
+
+    /*
+    `.menu-link` represents the responsive menu toggle that shows/hides on
+    small screens.
+    */
+
+    .menu-link {
+      position: fixed;
+      display: block;
+      /* show this only on small screens */
+      top: 0;
+      left: 0;
+      /* "#menu width" */
+      background: #f4f4f4;
+      font-size: 10px;
+      /* change this value to increase/decrease button size */
+      z-index: 10;
+      width: 2em;
+      height: auto;
+      padding: 1.6em 1.2em;
+      border-radius: 0 2px 2px 0;
+    }
+
+    .menu-link:hover {
+      background: /* #f4f4f4 * 0.8 */
+      #eee;
+    }
+
+    .menu-link span {
+      position: relative;
+      display: block;
+    }
+
+    .menu-link span,
+    .menu-link span:before,
+    .menu-link span:after {
+      background-color: #555;
+      width: 100%;
+      height: 0.2em;
+      border-radius: 1em;
+    }
+
+    .menu-link span:before,
+    .menu-link span:after {
+      position: absolute;
+      margin-top: -0.6em;
+      content: " ";
+    }
+
+    .menu-link span:after {
+      margin-top: 0.6em;
+    }
+
+    @media (max-width: 1300px) {       
+	  .content.active {
+		  margin-left: 310px;
+	  }
+    }
+	
+	@media (max-width: 800px) {
+		.content {
+		  max-width: 98%;
+	  }
+	}
+
+	#menu li span {
+		padding: 0.1em 0.5em;
+	}
+	
+	li.collapsible {
+		cursor: pointer;
+		font-weight:bold;
+	}
+	
+	li.collapsible span.collapser:before {
+		display:inline-block;
+		width:0.5em;
+	}
+	
+	li.collapsible span.collapser:before {
+		content: "-";
+	}
+	
+	li.collapsed span.collapser:before {
+		content: "+";
+	}
+	
+	li.collapsed + ul {
+		display:none;
+	}
+
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <!--script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script-->
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <div id="layout" class="active">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link active">
+      <!-- Hamburger icon -->
+      <span></span>
+    </a>
+    <nav id="menu" class="active">
+<ul>
+<li class="heading"><a href="..\index.html">Home</a></li>
+<li class="heading"><a href=".\index.html">Getting Started</a></li>
+<ul>
+<li class="heading"><a href=".\01-SDK_Overview.html">SDK Overview</a></li>
+<li class="heading"><a href=".\02-FAQ.html">FAQ</a></li>
+<li class="heading"><a href=".\03-Roadmap.html">Roadmap</a></li>
+<li class="heading"><span>Samples</span></li>
+<ul>
+<li class="heading"><a href=".\Samples\Aircraft\index.html">Aircraft</a></li>
+<ul>
+<li class="heading"><a href=".\Samples\Aircraft\GaugeAircraft\index.html">GaugeAircraft</a></li>
+<li class="heading"><a href=".\Samples\Aircraft\GdiplusAircraft\index.html">GdiplusAircraft</a></li>
+<li class="heading"><a href=".\Samples\Aircraft\MouseAircraft\index.html">MouseAircraft</a></li>
+<li class="heading"><a href=".\Samples\Aircraft\SimpleAircraft\index.html">SimpleAircraft</a></li>
+</ul>
+<li class="heading"><a href=".\Samples\SimpleAerial\index.html">SimpleAerial</a></li>
+<li class="heading"><a href=".\Samples\SimpleAirport\index.html">SimpleAirport</a></li>
+<li class="heading"><a href=".\Samples\SimpleBiomes\index.html">SimpleBiomes</a></li>
+<li class="heading"><a href=".\Samples\SimpleNavData\index.html">SimpleNavData</a></li>
+<li class="heading"><a href=".\Samples\SimpleScenery\index.html">SimpleScenery</a></li>
+<li class="heading"><a href=".\Samples\SimvarWatcher\index.html">SimvarWatcher</a></li>
+<li class="heading"><a href=".\Samples\WwiseSampleProject\index.html">WwiseSampleProject</a></li>
+</ul>
+<li class="heading"><span>Tutorials</span></li>
+<ul>
+<li class="heading"><a href=".\Tutorials\01-Placing_An_Add-on_Airport\index.html">Placing An Add-on Airport</a></li>
+<li class="heading"><a href=".\Tutorials\02-Flight_model_definition\index.html">Flight model definition</a></li>
+</ul>
+</ul>
+<li class="heading"><span>Asset Creation</span></li>
+<ul>
+<li class="heading"><a href="..\02-Asset_Creation\3D_Models\index.html">3D Models</a></li>
+<ul>
+<li class="heading"><span>Modeling Practices</span></li>
+<ul>
+<li class="heading"><a href="..\02-Asset_Creation\3D_Models\Modeling_Practices\01-Aircraft_Modeling.html">Aircraft Modeling</a></li>
+<li class="heading"><a href="..\02-Asset_Creation\3D_Models\Modeling_Practices\02-Levels_of_Detail.html">Levels of Detail</a></li>
+<li class="heading"><a href="..\02-Asset_Creation\3D_Models\Modeling_Practices\03-Aircraft_Texture_Mapping.html">Aircraft Texture Mapping</a></li>
+<li class="heading"><a href="..\02-Asset_Creation\3D_Models\Modeling_Practices\04-Collisions.html">Collisions</a></li>
+</ul>
+</ul>
+<li class="heading"><a href="..\02-Asset_Creation\Lighting_Model\index.html">Lighting Model</a></li>
+<li class="heading"><a href="..\02-Asset_Creation\Sounds\index.html">Sounds</a></li>
+<ul>
+<li class="heading"><a href="..\02-Asset_Creation\Sounds\01-Master_Mixer_Hierarchy.html">Master Mixer Hierarchy</a></li>
+<li class="heading"><a href="..\02-Asset_Creation\Sounds\02-Shared_Game_Parameters.html">Shared Game Parameters</a></li>
+<li class="heading"><a href="..\02-Asset_Creation\Sounds\03-Shared_States_and_Switches.html">Shared States and Switches</a></li>
+<li class="heading"><a href="..\02-Asset_Creation\Sounds\04-Shared_Attenuation_Shareset.html">Shared Attenuation Shareset</a></li>
+<li class="heading"><a href="..\02-Asset_Creation\Sounds\05-Mix_your_Aircraft.html">Mix your Aircraft</a></li>
+</ul>
+<li class="heading"><a href="..\02-Asset_Creation\Textures\index.html">Textures</a></li>
+<li class="heading"><a href="..\02-Asset_Creation\glTF_Materials.html">glTF Materials</a></li>
+</ul>
+<li class="heading"><span>Content Configuration</span></li>
+<ul>
+<li class="heading"><a href="..\03-Content_Configuration\Cameras\index.html">Cameras</a></li>
+<ul>
+<li class="heading"><a href="..\03-Content_Configuration\Cameras\Camera_Configuration.html">Camera Configuration</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\Cameras\RTC\index.html">RTC</a></li>
+<ul>
+<li class="heading"><a href="..\03-Content_Configuration\Cameras\RTC\Examples.html">Examples</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\Cameras\RTC\Using_RTCs.html">Using RTCs</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\Cameras\RTC\XML_Definition.html">XML Definition</a></li>
+</ul>
+<li class="heading"><a href="..\03-Content_Configuration\Cameras\Wow-effect.html">Wow-effect</a></li>
+</ul>
+<li class="heading"><a href="..\03-Content_Configuration\Environment\index.html">Environment</a></li>
+<ul>
+<li class="heading"><a href="..\03-Content_Configuration\Environment\Airports_And_Facilities\index.html">Airports And Facilities</a></li>
+<ul>
+<li class="heading"><a href="..\03-Content_Configuration\Environment\Airports_And_Facilities\Airports.html">Airports</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\Environment\Airports_And_Facilities\Jetways.html">Jetways</a></li>
+</ul>
+<li class="heading"><a href="..\03-Content_Configuration\Environment\File_Formats\index.html">File Formats</a></li>
+<ul>
+<li class="heading"><a href="..\03-Content_Configuration\Environment\File_Formats\BGL.html">BGL</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\Environment\File_Formats\CGL.html">CGL</a></li>
+</ul>
+<li class="heading"><a href="..\03-Content_Configuration\Environment\Living_World\index.html">Living World</a></li>
+<ul>
+<li class="heading"><a href="..\03-Content_Configuration\Environment\Living_World\AirportServices\index.html">AirportServices</a></li>
+<ul>
+<li class="heading"><a href="..\03-Content_Configuration\Environment\Living_World\AirportServices\XMLdefs.html">XMLdefs</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\Environment\Living_World\AirportServices\examples.html">examples</a></li>
+</ul>
+<li class="heading"><a href="..\03-Content_Configuration\Environment\Living_World\LivingWorld_Config\index.html">LivingWorld Config</a></li>
+<ul>
+<li class="heading"><a href="..\03-Content_Configuration\Environment\Living_World\LivingWorld_Config\XMLdefs.html">XMLdefs</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\Environment\Living_World\LivingWorld_Config\examples.html">examples</a></li>
+</ul>
+<li class="heading"><a href="..\03-Content_Configuration\Environment\Living_World\Traffic\index.html">Traffic</a></li>
+</ul>
+<li class="heading"><a href="..\03-Content_Configuration\Environment\Scenery_Objects\index.html">Scenery Objects</a></li>
+<ul>
+<li class="heading"><a href="..\03-Content_Configuration\Environment\Scenery_Objects\Effects.html">Effects</a></li>
+</ul>
+<li class="heading"><a href="..\03-Content_Configuration\Environment\Terrain\index.html">Terrain</a></li>
+<ul>
+<li class="heading"><a href="..\03-Content_Configuration\Environment\Terrain\Aerial_Imagery\index.html">Aerial Imagery</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\Environment\Terrain\DEM\index.html">DEM</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\Environment\Terrain\Vector_Shapes\index.html">Vector Shapes</a></li>
+</ul>
+<li class="heading"><a href="..\03-Content_Configuration\Environment\Vegetation\index.html">Vegetation</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\Environment\Weather\index.html">Weather</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\Environment\World_Positioning_Systems\index.html">World Positioning Systems</a></li>
+<ul>
+<li class="heading"><a href="..\03-Content_Configuration\Environment\World_Positioning_Systems\Bing_Maps_Tile_System.html">Bing Maps Tile System</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\Environment\World_Positioning_Systems\Lat_Long_Alt.html">Lat Long Alt</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\Environment\World_Positioning_Systems\QMID.html">QMID</a></li>
+</ul>
+</ul>
+<li class="heading"><a href="..\03-Content_Configuration\Flights_And_Missions\index.html">Flights And Missions</a></li>
+<ul>
+<li class="heading"><a href="..\03-Content_Configuration\Flights_And_Missions\Flight_Files.html">Flight Files</a></li>
+</ul>
+<li class="heading"><a href="..\03-Content_Configuration\Localization\index.html">Localization</a></li>
+<li class="heading"><span>SimObjects</span></li>
+<ul>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\00-Aircraft\index.html">Aircraft</a></li>
+<ul>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\00-Aircraft\Aircraft_Configuration\index.html">Aircraft Configuration</a></li>
+<ul>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\00-Aircraft\Aircraft_Configuration\00-General.html">General</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\00-Aircraft\Aircraft_Configuration\AI.html">AI</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\00-Aircraft\Aircraft_Configuration\Cameras.html">Cameras</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\00-Aircraft\Aircraft_Configuration\Cockpit.html">Cockpit</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\00-Aircraft\Aircraft_Configuration\Engines.html">Engines</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\00-Aircraft\Aircraft_Configuration\Flight_Model.html">Flight Model</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\00-Aircraft\Aircraft_Configuration\Gameplay.html">Gameplay</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\00-Aircraft\Aircraft_Configuration\InteractivePoints.html">InteractivePoints</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\00-Aircraft\Aircraft_Configuration\Systems_Configuration_File.html">Systems Configuration File</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\00-Aircraft\Aircraft_Configuration\Target_Performances_Configuration_File.html">Target Performances Configuration File</a></li>
+</ul>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\00-Aircraft\Flight_Model.html">Flight Model</a></li>
+</ul>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\01-Other_SimObjects\index.html">Other SimObjects</a></li>
+<ul>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\01-Other_SimObjects\Animals.html">Animals</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\01-Other_SimObjects\Boats.html">Boats</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\01-Other_SimObjects\GroundVehicles\index.html">GroundVehicles</a></li>
+<ul>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\01-Other_SimObjects\GroundVehicles\BaggageCart.html">BaggageCart</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\01-Other_SimObjects\GroundVehicles\BaggageLoader.html">BaggageLoader</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\01-Other_SimObjects\GroundVehicles\BoardingRamp.html">BoardingRamp</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\01-Other_SimObjects\GroundVehicles\CateringTruck.html">CateringTruck</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\01-Other_SimObjects\GroundVehicles\FuelTruck.html">FuelTruck</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\01-Other_SimObjects\GroundVehicles\GroundPowerUnit.html">GroundPowerUnit</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\01-Other_SimObjects\GroundVehicles\Pushback.html">Pushback</a></li>
+</ul>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\01-Other_SimObjects\Humans.html">Humans</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\01-Other_SimObjects\SimObject_Configuration.html">SimObject Configuration</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\01-Other_SimObjects\StaticObjects.html">StaticObjects</a></li>
+</ul>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\Checklists\index.html">Checklists</a></li>
+<ul>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\Checklists\01-Examples.html">Examples</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\Checklists\02-XML_Definition.html">XML Definition</a></li>
+</ul>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\Instruments\index.html">Instruments</a></li>
+<ul>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\Instruments\3D_Instruments\index.html">3D Instruments</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\Instruments\C_Gauges\index.html">C Gauges</a></li>
+<ul>
+<li class="heading"><span>Graphics</span></li>
+<ul>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\Instruments\C_Gauges\Graphics\GDI_Plus.html">GDI Plus</a></li>
+</ul>
+</ul>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\Instruments\HTML_Gauges\index.html">HTML Gauges</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\Instruments\Panels.html">Panels</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\Instruments\XML_Gauges\index.html">XML Gauges</a></li>
+</ul>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\Models\index.html">Models</a></li>
+<ul>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\Models\AnimGraph.html">AnimGraph</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\Models\Levels_of_Detail_(LODs).html">Levels of Detail (LODs)</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\Models\Model_Behaviors\index.html">Model Behaviors</a></li>
+<ul>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\Models\Model_Behaviors\XML_Definition.html">XML Definition</a></li>
+</ul>
+</ul>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\Sounds\index.html">Sounds</a></li>
+<ul>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\Sounds\backwards_compatibility.html">backwards compatibility</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\Sounds\sound_categories.html">sound categories</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\Sounds\xml_definition.html">xml definition</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\Sounds\xml_wavedata.html">xml wavedata</a></li>
+</ul>
+<li class="heading"><a href="..\03-Content_Configuration\SimObjects\Textures\index.html">Textures</a></li>
+</ul>
+<li class="heading"><a href="..\03-Content_Configuration\UI\index.html">UI</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\Variable_Lists\index.html">Variable Lists</a></li>
+<ul>
+<li class="heading"><a href="..\03-Content_Configuration\Variable_Lists\Event_IDs.html">Event IDs</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\Variable_Lists\Misc_Enums.html">Misc Enums</a></li>
+<li class="heading"><a href="..\03-Content_Configuration\Variable_Lists\Simulation_Variables.html">Simulation Variables</a></li>
+</ul>
+<li class="heading"><a href="..\03-Content_Configuration\Visual_Effects\index.html">Visual Effects</a></li>
+<ul>
+<li class="heading"><a href="..\03-Content_Configuration\Visual_Effects\visual_fx_file.html">visual fx file</a></li>
+</ul>
+</ul>
+<li class="heading"><a href="..\04-Developer_Tools\index.html">Developer Tools</a></li>
+<ul>
+<li class="heading"><a href="..\04-Developer_Tools\00-Developer_Mode\index.html">Developer Mode</a></li>
+<li class="heading"><span>3DS Max Tools</span></li>
+<ul>
+<li class="heading"><a href="..\04-Developer_Tools\3DS_Max_Tools\FlightSim_Lights.html">FlightSim Lights</a></li>
+<li class="heading"><a href="..\04-Developer_Tools\3DS_Max_Tools\FlightSim_Material.html">FlightSim Material</a></li>
+<li class="heading"><a href="..\04-Developer_Tools\3DS_Max_Tools\FlightSim_multiExporter.html">FlightSim multiExporter</a></li>
+<li class="heading"><a href="..\04-Developer_Tools\3DS_Max_Tools\FlightSim_versionDifferences.html">FlightSim versionDifferences</a></li>
+<li class="heading"><a href="..\04-Developer_Tools\3DS_Max_Tools\glTF_Exporter.html">glTF Exporter</a></li>
+</ul>
+<li class="heading"><a href="..\04-Developer_Tools\Aircraft_Editor\index.html">Aircraft Editor</a></li>
+<ul>
+<li class="heading"><a href="..\04-Developer_Tools\Aircraft_Editor\Debug_Windows.html">Debug Windows</a></li>
+</ul>
+<li class="heading"><a href="..\04-Developer_Tools\Command_Line_Interface.html">Command Line Interface</a></li>
+<li class="heading"><a href="..\04-Developer_Tools\Launcher_Tool\index.html">Launcher Tool</a></li>
+<li class="heading"><a href="..\04-Developer_Tools\Material_Editor\index.html">Material Editor</a></li>
+<li class="heading"><a href="..\04-Developer_Tools\Mission_Editor\index.html">Mission Editor</a></li>
+<li class="heading"><a href="..\04-Developer_Tools\Package_Tool\index.html">Package Tool</a></li>
+<ul>
+<li class="heading"><a href="..\04-Developer_Tools\Package_Tool\Concepts.html">Concepts</a></li>
+<li class="heading"><a href="..\04-Developer_Tools\Package_Tool\XMLReference.html">XMLReference</a></li>
+</ul>
+<li class="heading"><a href="..\04-Developer_Tools\Project_editor\index.html">Project editor</a></li>
+<ul>
+<li class="heading"><a href="..\04-Developer_Tools\Project_editor\Content_Manager_Data.html">Content Manager Data</a></li>
+<li class="heading"><a href="..\04-Developer_Tools\Project_editor\Export_Window.html">Export Window</a></li>
+<li class="heading"><a href="..\04-Developer_Tools\Project_editor\Marketplace_Data.html">Marketplace Data</a></li>
+</ul>
+<li class="heading"><a href="..\04-Developer_Tools\Scenery_Editor\index.html">Scenery Editor</a></li>
+<li class="heading"><a href="..\04-Developer_Tools\SimConnect\index.html">SimConnect</a></li>
+<ul>
+<li class="heading"><a href="..\04-Developer_Tools\SimConnect\SimConnect_Reference.html">SimConnect Reference</a></li>
+<li class="heading"><a href="..\04-Developer_Tools\SimConnect\SimConnect_Status_of_Functions.html">SimConnect Status of Functions</a></li>
+<li class="heading"><a href="..\04-Developer_Tools\SimConnect\SimConnect_Status_of_Input_Events.html">SimConnect Status of Input Events</a></li>
+<li class="heading"><a href="..\04-Developer_Tools\SimConnect\SimConnect_Status_of_SimEvents.html">SimConnect Status of SimEvents</a></li>
+<li class="heading"><a href="..\04-Developer_Tools\SimConnect\SimConnect_Status_of_Simulation_Variables.html">SimConnect Status of Simulation Variables</a></li>
+<li class="heading"><a href="..\04-Developer_Tools\SimConnect\SimConnect_Status_of_System_Events.html">SimConnect Status of System Events</a></li>
+</ul>
+<li class="heading"><a href="..\04-Developer_Tools\WebAssembly\index.html">WebAssembly</a></li>
+<ul>
+<li class="heading"><a href="..\04-Developer_Tools\WebAssembly\01-Platform_Toolset.html">Platform Toolset</a></li>
+<li class="heading"><a href="..\04-Developer_Tools\WebAssembly\02-Gauge_API.html">Gauge API</a></li>
+<li class="heading"><a href="..\04-Developer_Tools\WebAssembly\Graphics\index.html">Graphics</a></li>
+<ul>
+<li class="heading"><a href="..\04-Developer_Tools\WebAssembly\Graphics\GDI_Plus.html">GDI Plus</a></li>
+<li class="heading"><a href="..\04-Developer_Tools\WebAssembly\Graphics\Low_Level_API.html">Low Level API</a></li>
+</ul>
+</ul>
+</ul>
+<li class="heading"><span>Scripting Languages</span></li>
+<ul>
+<li class="heading"><a href="..\05-Scripting_Languages\CFG.html">CFG</a></li>
+<li class="heading"><a href="..\05-Scripting_Languages\Reverse_Polish_Notation.html">Reverse Polish Notation</a></li>
+</ul>
+</ul>
+    </nav>
+    <article id="main" class="content active">
+      <h1 id="sdk-overview">SDK Overview</h1>
+      <!-- START doctoc generated TOC please keep comment here to allow auto update -->
+      <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+      <ul>
+      <li><a href="#general-philosophy">General philosophy</a>
+      <ul>
+      <li><a href="#packages">Packages</a></li>
+      <li><a href="#tools">Tools</a></li>
+      </ul></li>
+      <li><a href="#3d-models">3D models</a></li>
+      <li><a href="#textures-and-materials">Textures and materials</a></li>
+      <li><a href="#simobjects">SimObjects</a>
+      <ul>
+      <li><a href="#structure">Structure</a></li>
+      <li><a href="#edition">Edition</a></li>
+      <li><a href="#model-behaviors">Model behaviors</a></li>
+      </ul></li>
+      <li><a href="#sceneries-and-airports">Sceneries and airports</a></li>
+      <li><a href="#missions">Missions</a></li>
+      <li><a href="#procedural-world-generation">Procedural world generation</a></li>
+      <li><a href="#fx">FX</a></li>
+      <li><a href="#sound">Sound</a></li>
+      <li><a href="#ui">UI</a></li>
+      <li><a href="#gauges">Gauges</a>
+      <ul>
+      <li><a href="#2d-gauges">2D gauges</a></li>
+      <li><a href="#3d-gauges">3D gauges</a></li>
+      </ul></li>
+      <li><a href="#c-support">C++ support</a></li>
+      <li><a href="#drm">DRM</a></li>
+      </ul>
+      <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+      <h2 id="general-philosophy">General philosophy</h2>
+      <h3 id="packages">Packages</h3>
+      <p>Add-ons for Microsoft Flight Simulator are developed in the form of independent <em>packages</em>. A package can contain any type of content supported by Microsoft Flight Simulator: airplanes, sceneries, missions…</p>
+      <p>A package is a single unit of redistributable content. It consists in a single directory containing assets compiled for direct consumption by the simulator, plus some special files:</p>
+      <ul>
+      <li><code>layout.json</code>, which contains a list of all the files present in the package</li>
+      <li><code>manifest.json</code>, which contains meta-information about the package (e.g.&nbsp;package name and version number).</li>
+      </ul>
+      <p>The packages system relies on a system called the <em>Virtual File System</em> (or <em>VFS</em> for short). In the VFS, a package, can be <em>mounted</em>, in which case all files present in the package become accessible/can be referenced by files present in other packages.</p>
+      <p>In the case where 2 packages feature file sharing the same relative path inside the package, the version of the file in the package mounted last will take precedence. E.g.:</p>
+      <pre><code>Packages
+      +-- package-01
+      |   +-- manifest.json
+      |   +-- layout.json
+      |   +-- MyDirectory
+      |       +-- myfile.cfg
+      +-- package-02
+      |   +-- manifest.json
+      |   +-- layout.json
+      |   +-- MyDirectory
+      |       +-- myfile.cfg</code></pre>
+      <p>In this example, the path <code>MyDirectory\myfile.cfg</code> will refer to <code>package-01\MyDirectory\myfile.cfg</code> if <code>package-01</code> was mounted last, or ot <code>package-02\MyDirectory\myfile.cfg</code> in the case <code>package-02</code> was mounted last.</p>
+      <p>Files present in a package mounted in the VFS can also be referenced by files that are present in other packages.</p>
+      <p>The packages location is set by the user upon installation of Microsoft Flight Simulator. The selected folder contains two subfolders named <code>Official</code> (for packages downloaded by the game) and <code>Community</code> (where you can install your own packages).</p>
+      <h3 id="tools">Tools</h3>
+      <p>Microsoft Flight Simulator departs from its predecessor, Microsoft Flight Simulator X (or <strong>FSXSHORTGAMENAME</strong> for short), in the way developer tools are integrated. Where FSX used to provide separate compilers for each type of resource (e.g.&nbsp;<code>bglcompiler.exe</code>, <code>SimPropCompiler.exe</code>…), the compilers of Microsoft Flight Simulator are integrated into the simulator executable under the umbrella of a build automation tool called the <em>Package Tool</em> (similar in spirit to a Makefile system).</p>
+      <p>Below is an illustration of the process that goes into building 2 packages that are part of the same project file. Note how <code>.gltf</code> files get compiled to <code>.glb</code>, <code>.png</code> files get compiled to <code>.dds</code> and <code>.xml</code> files get compiled to <code>.bgl</code>. <img src="images/package_tool_intro.png" title="package_tool_intro" alt="Package tool example"></p>
+      <p>Tools are split into 2 categories:</p>
+      <ul>
+      <li>external tools, which are distributed as part of the SDK (e.g.&nbsp;the 3D Studio Max glTF exporter plug-in)</li>
+      <li>in-sim tools, which are available under the Developer Mode (e.g.&nbsp;the Project Editor, the Scenery Editor, the Missions Editor…).</li>
+      </ul>
+      <h2 id="d-models">3D models</h2>
+      <figure>
+      <img src="images/gltf_logo.png" title="glTF" alt=""><figcaption>glTF logo</figcaption>
+      </figure>
+      <p>In Microsoft Flight Simulator 3D models, scenes and animations are stored following the glTF (GL Transmission Format) file format. glTF is a Khronos-backed standard file format consisting of a JSON file and referencing accompanying binary files. In Microsoft Flight Simulator, glTF support relies on custom glTF extensions, whose schemas can be found as part of the SDK installation in the <code>Schemas</code> subfolder.</p>
+      <p>The old MDL file format from FSX is now deprecated and should not be used when developing add-ons for Microsoft Flight Simulator</p>
+      <h2 id="textures-and-materials">Textures and materials</h2>
+      <p>Materials for 3D models are specified in glTF files, and the referenced textures are in <code>.png</code> format. The materials comply with PBR (Physically Based Rendering). Upon compilation by the glTF compiler (invoked by the Package Tool), <code>.gltf</code> files get compiled to <code>.glb</code> and <code>.png</code> files get compiled to <code>.dds</code> files. The resulting <code>.glb</code> file makes use of several glTF extensions, including <code>MSFT_texture_dds</code> as well as Microsoft Flight Simulator specific ones.</p>
+      <p>Materials for usage in the scenery tool are edited via the Materials Editor, which is part of the Developer Mode, and are stored in <code>.xml</code> format. The source textures are also edited in <code>.png</code> format and converted to <code>.dds</code> for direct consumption by the simulator runtime.</p>
+      <h2 id="simobjects">SimObjects</h2>
+      <p>In Microsoft Flight Simulator SimObjects are entities which have a simulation attached. The main use case for SimObjects is aircraft.</p>
+      <h3 id="structure">Structure</h3>
+      <p>SimObjects are comprised of several files:</p>
+      <ul>
+      <li>meshes and textures, using the glTF file format</li>
+      <li>configuration files, in the form of <code>.cfg</code> files</li>
+      <li>checklists, in the form of <code>.xml</code> files</li>
+      </ul>
+      <blockquote>
+      <p><strong>Note:</strong> <code>.air</code> files (FSX flight model configuration files) have been removed in favor of exposing all flight model parameters in plain text <code>.cfg</code> files.</p>
+      </blockquote>
+      <blockquote>
+      <p><strong>Note:</strong> SimObjects support different Levels of Detail (LoDs).</p>
+      </blockquote>
+      <h3 id="edition">Edition</h3>
+      <p>Aircraft configuration files can be edited through the <a href="../04-Developer_Tools/Aircraft_Editor/index.html">Aircraft Editor</a>, which is part of the Developer Mode.</p>
+      <h3 id="model-behaviors">Model behaviors</h3>
+      <p>glTF files support animations, but those animations need to be linked to Simulation Variables. This link is done through a <code>.xml</code> file which is named after the name of its accompanying <code>.gltf</code> file, effectively defining the model’s behavior. Model behaviors can reuse a library of XML templates which are stored in a folder <code>ModelBehaviorDefs</code> in the VFS (see package <code>fs-base-aircrafts-common</code> as part of the standard installation).</p>
+      <p>In a future release, a Model Behavior Editor will be available as part of the Developer Mode. Currently, edition of model behaviors still needs to be done manually.</p>
+      <blockquote>
+      <p><strong>Note:</strong> This file is the modern equivalent to the <code>modeldef.xml</code> file that was distributed as part of FSX SDK, which was part of the <code>.mdl</code> compilation process.</p>
+      </blockquote>
+      <h2 id="sceneries-and-airports">Sceneries and airports</h2>
+      <p>Microsoft Flight Simulator add-ons can feature sceneries and airports, which are made of:</p>
+      <ul>
+      <li>3D models, stored in model libraries</li>
+      <li>materials and textures</li>
+      <li>model placement</li>
+      <li>vector data (allowing for trees placement or removal, terraforming, biome changes…)</li>
+      <li>airports data</li>
+      </ul>
+      <p>Sceneries and airports are primarily edited using the Scenery Editor and Materials Editor, both of which are available as part of the Developer Mode.</p>
+      <p>Object placement and airports data are saved in <code>.xml</code> format and vector data are saved in the form of shapefiles. Both are compiled to <code>.bgl</code> files using the BGL compiler invoked by the Package Tool.</p>
+      <blockquote>
+      <p><strong>Note:</strong> <code>.xml</code> and shapefiles compilation to <code>.bgl</code> files is similar to how the FSX assets pipeline worked. The file formats are similar but have been extended with new features.</p>
+      </blockquote>
+      <h2 id="missions">Missions</h2>
+      <p>Missions can be edited using the Script Editor, which is available through the Developer Mode. The editor allows for real-time edition of missions, triggers placement and logic edition.</p>
+      <h2 id="procedural-world-generation">Procedural world generation</h2>
+      <p>In Microsoft Flight Simulator the world is generated using various sources of data. It supports primarily 3 differents quality levels:</p>
+      <ol type="1">
+      <li>Photogrammetry, where meshes are downloaded for each tile</li>
+      <li><em>Digital Elevation Model</em> (DEM) + aerial imagery combination</li>
+      <li><em>Digital Elevation Model</em> (DEM) + texture synthesized ground textures</li>
+      </ol>
+      <p>Level #3 is used for the offline version of the world and in cases where the aerial imagery quality is judged inadequate.</p>
+      <p>As a result, some data are stored locally and part of the installation of the simulator:</p>
+      <ul>
+      <li>Building footprints (stored in CGL files)</li>
+      <li>Biome information (stored in CGL files)</li>
+      <li>Vector data (e.g.&nbsp;water, roads. Stored in CGL files)</li>
+      <li>Textures for procedural ground texture synthesis (stored in DDS files)</li>
+      <li>Variations for the vegetation (stored in XML files)</li>
+      <li>etc.</li>
+      </ul>
+      <p>At the moment, those data cannot be edited by add-ons, but the plan is to make CGL files editable.</p>
+      <p>CGL is a container file format used for storing geolocated data. It can be used to store imagery, elevation or vector data. The data are stored following a quadtree scheme, on a Mercator projection of the Earth. See https://docs.microsoft.com/en-us/bingmaps/articles/bing-maps-tile-system for details on the projection system.</p>
+      <blockquote>
+      <p><strong>Note:</strong> The Autogen technology from FSX has effectively been removed in Microsoft Flight Simulator <strong>Note:</strong> CGL files are a replacement for BGL files for storing imagery, elevation data, vector data and footprints. BGL files are still used when it comes to airports data or edited vector data (in the form of polygons).</p>
+      </blockquote>
+      <h2 id="fx">FX</h2>
+      <p>Particle effects are edited in <code>.fx</code> files, which are plain text files. They reference materials edited using the Materials Editor.</p>
+      <blockquote>
+      <p><strong>Note:</strong> At the moment, no editor is available for <code>.fx</code> files, and we expect the current FX technology to break in future releases.</p>
+      </blockquote>
+      <blockquote>
+      <p><strong>Note:</strong> The <code>.fx</code> files are similar to the ones found in FSX, one of the main difference being that links are made to materials as defined by the Materials Editor instead of links to single albedo textures.</p>
+      </blockquote>
+      <h2 id="sound">Sound</h2>
+      <p>The sound engine used in Microsoft Flight Simulator is Audiokinetic Wwise, which allows for easy edition of advanced sound effects by sound designers using the Wwise editor. Sound banks are packaged and distributed as part of Wwise file packages (<code>.PC.PCK</code>).</p>
+      <blockquote>
+      <p><strong>IMPORTANT:</strong> One <strong>must</strong> use Wwise version 2019.2.5 Build 7349 which can be downloaded from https://www.audiokinetic.com/</p>
+      </blockquote>
+      <p>Linking Wwise <em>Runtime Parameter Control</em> (RTPC for short) to Simulation Variables is done through a file named <code>sound.xml</code> in the SimObject’s <code>sound</code> folder.</p>
+      <h2 id="ui">UI</h2>
+      <p>UI in Microsoft Flight Simulator is developed using modern HTML 5 technologies (HTML, JavaScript, CSS).</p>
+      <p>At the moment UI is not customizable as part of add-ons, though there are plans to make it possible to include UI elements as part of packages.</p>
+      <h2 id="gauges">Gauges</h2>
+      <h3 id="d-gauges">2D gauges</h3>
+      <p>Glass cockpits are developed using HTML technologies (similar to UI). HTML pages are referenced from the <code>panel.cfg</code> file in the <code>panel</code> folder of a SimObject.</p>
+      <h3 id="d-gauges-1">3D gauges</h3>
+      <p>3D gauges are part of the glTF model for an aircraft and are essentially made of a mesh, textures and the accompanying animations.</p>
+      <blockquote>
+      <p><strong>Note:</strong> the old FSX XML gauges system is still supported but is deprecated in favor of HTML.</p>
+      </blockquote>
+      <h2 id="c-support">C++ support</h2>
+      <p>C++ support is provided in the form of WebAssembly modules. In particular, this can be used for implementing complex gauges and porting from legacy code. The following APIs are currently available:</p>
+      <ul>
+      <li>2D vector graphics drawing API (for gauges)</li>
+      <li>SimConnect</li>
+      </ul>
+      <p>More APIs may be authored depending on community feedback.</p>
+      <h2 id="drm">DRM</h2>
+      <p><em>Digital Rights Management</em> (DRM for short) functionality is planned for a future release (see the roadmap page) and should work by encrypting the entirety of the package content. Therefore, WebAssembly binaries, HTML code or any type of content that goes into packages will be protected the same way.</p>
+      <p>The provided DRM solution will be available through the official marketplace framework.</p>
+    </article>
+  </div>
+  <script>
+	function detectIE() {
+	  var ua = window.navigator.userAgent;
+
+	  // Test values; Uncomment to check result …
+
+	  // IE 10
+	  // ua = 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)';
+
+	  // IE 11
+	  // ua = 'Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko';
+
+	  // Edge 12 (Spartan)
+	  // ua = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36 Edge/12.0';
+
+	  // Edge 13
+	  // ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Safari/537.36 Edge/13.10586';
+
+	  var msie = ua.indexOf('MSIE ');
+	  if (msie > 0) {
+		// IE 10 or older => return version number
+		return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+	  }
+
+	  var trident = ua.indexOf('Trident/');
+	  if (trident > 0) {
+		// IE 11 => return version number
+		var rv = ua.indexOf('rv:');
+		return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+	  }
+
+	  var edge = ua.indexOf('Edge/');
+	  if (edge > 0) {
+		// Edge (IE 12+) => return version number
+		return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+	  }
+
+	  // other browser
+	  return false;
+	}
+
+	var bIsIE = (detectIE() !== false);
+
+	function setData(name, value)
+	{
+		if (bIsIE)
+		{
+			if (localStorage !== undefined)
+			{
+				if (value === null)
+					localStorage.removeItem(name);
+				else
+					localStorage.setItem(name, value);
+			}
+			/*var d = new Date();
+			d.setTime(d.getTime() + (24*60*60));
+			var expires = "expires="+ d.toUTCString();
+			document.cookie = name + "=" + value + ";" + expires + ";path=/";
+			*/
+		}
+		else
+		{
+			if (value === null)
+				sessionStorage.removeItem(name);
+			else
+				sessionStorage.setItem(name, value);
+		}
+	}
+	
+	function getData(name)
+	{
+		var value = null;
+		if (bIsIE)
+		{
+			/*var cname = name + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for(var i = 0; i <ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) == ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(cname) == 0) {
+					return c.substring(cname.length, c.length);
+				}
+			}
+			return null;*/
+			if (localStorage !== undefined)
+			{
+				value = localStorage.getItem(name);
+			}
+			if (value === 'undefined')
+				value = null;
+		}
+		else
+		{
+			value = sessionStorage.getItem(name);
+			if (value === 'undefined')
+				value = null;
+		}
+		return value;
+	}
+	
+    // FROM http://purecss.io/js/ui.js
+    (function (window, document) {
+
+	
+      var content = document.getElementById('main'),
+		layout = document.getElementById('layout'),
+        menu = document.getElementById('menu'),
+        menuLink = document.getElementById('menuLink');
+		
+      function toggleClass(element, className) {
+        var classes = element.className.split(/\s+/),
+          length = classes.length,
+          i = 0;
+
+        for (; i < length; i++) {
+          if (classes[i] === className) {
+            classes.splice(i, 1);
+            break;
+          }
+        }
+        // The className is not found
+        if (length === classes.length) {
+          classes.push(className);
+        }
+
+        element.className = classes.join(' ');
+      }
+
+      function hasClass(element, className) {
+        var classes = element.className.split(/\s+/),
+          length = classes.length,
+          i = 0;
+
+        for (; i < length; i++) {
+          if (classes[i] === className) {
+            return true;
+          }
+        }
+		return false;
+      }
+
+      menuLink.onclick = function (e) {
+        var active = 'active';
+
+        e.preventDefault();
+		toggleClass(content, active);
+        toggleClass(layout, active);
+        toggleClass(menu, active);
+        toggleClass(menuLink, active);
+      };
+	  
+	  // Save menu scroll level when user click on link
+	  var a_links = document.getElementsByTagName('a');
+	  for (var i = 0 ; i < a_links.length ; i++) {
+	    var link = a_links[i];
+		if(menu.contains(link)) {
+			link.onclick = function () {
+				try {
+					setData('navScroll', link.offsetTop - link.getBoundingClientRect().top);
+					var root = menu.getElementsByTagName('ul')[0];
+					var li_elems = root.getElementsByTagName('li');
+					for (var i = 0; i<li_elems.length; i++)
+					{
+						if (!hasClass(li_elems[i],'collapsed'))
+							setData('liexp' + i, true);
+						else
+							setData('liexp' + i);
+					}
+					setData('liexp', true);
+				}
+				catch (error) {
+					console.error(error);
+				}
+				return true;
+			};
+		}
+	  };
+	  
+		var root = menu.getElementsByTagName('ul')[0];
+		// Remove empty ul
+		var ul_elems = root.getElementsByTagName('ul');
+		for (var i = ul_elems.length-1; i>=0; i--)
+		{
+			if (ul_elems[i].childElementCount == 0)
+			{
+				ul_elems[i].parentNode.removeChild(ul_elems[i]);
+			}
+		}
+		// Restore side menu state
+		var saved_state = (getData('liexp')!== null);
+		var li_elems = root.getElementsByTagName('li');
+		for (var i = 0; i<li_elems.length; i++)
+		{
+			var l = li_elems[i];
+			if (hasClass(l,'heading'))
+				toggleClass(l,'heading');
+			if ((l.nextElementSibling) && (l.nextElementSibling.nodeName=="UL"))
+			{
+				toggleClass(l,'collapsible');
+				var collapser = document.createElement('span');
+				var inserted = l.insertBefore(collapser, l.firstChild);
+				toggleClass(inserted,'collapser');
+				var inserted = l.insertBefore(collapser, l.firstChild);
+				inserted.addEventListener('click', function() { toggleClass(this.parentNode, 'collapsed') });
+				if (saved_state)
+				{
+					if (getData('liexp' + i) === null)
+					{
+						toggleClass(l,'collapsed');
+					}
+				}
+				else
+				{
+					if (l.parentNode != root)
+					{
+						toggleClass(l,'collapsed');
+					}
+				}
+			}
+		}
+		// Restore menu scroll level if defined
+		if(getData('navScroll') != null)
+			document.getElementById('menu').scrollTop = getData('navScroll');
+
+   }(this, this.document));
+  </script>
+
+
+</body></html>

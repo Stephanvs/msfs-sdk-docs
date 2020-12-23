@@ -1,0 +1,2565 @@
+<!DOCTYPE html><html><head>
+  <style>
+    /*! ADAPTED
+    Typeplate : Starter Kit
+    URL ........... http://typeplate.com
+    Version ....... 3.0.2
+    Github ........ https://github.com/typeplate/starter-kit
+    Authors ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
+    License ....... Creative Commmons Attribution 3.0
+    License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
+    */
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      text-rendering: optimizeLegibility;
+      line-height: 1;
+      margin-top: 0;
+      color: #222;
+    }
+
+    blockquote+figcaption cite {
+      display: block;
+      font-size: inherit;
+      text-align: right;
+    }
+
+    body {
+      word-wrap: break-word;
+    }
+
+    pre code {
+      word-wrap: normal;
+    }
+
+    body {
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+      hyphens: auto;
+      color: #444;
+    }
+	
+	figcaption {
+		text-align: center;
+	}
+
+    h1 {
+      font-size: 2em;
+      /* 2*16 = 32 */
+    }
+
+    h2 {
+      font-size: 1.5em;
+      /* 1.5*16 = 24 */
+    }
+
+    h3 {
+      font-size: 1.17em;
+      /* 1.17*16 = 18.72 */
+    }
+
+    h4 {
+      font-size: 1em;
+      /* 1*16 = 16 */
+    }
+
+    h5 {
+      font-size: 0.83em;
+      /* 0.83*16 = 13.28 */
+    }
+
+    h6 {
+      font-size: 0.75em;
+      /* 0.75*16 = 12 */
+    }
+
+    h1 {
+      margin: 2.42424rem 0 1.454544rem;
+    }
+
+    h2 {
+      margin: 2.0202rem 0 1.21212rem;
+    }
+
+    h3 {
+      margin: 1.61616rem 0 1rem;
+    }
+
+    h4 {
+      margin: 1.21212rem 0 1;
+    }
+
+    h5 {
+      margin: 0.80808rem 0;
+    }
+
+    h6 {
+      margin: 0.70707rem 0;
+    }
+
+    p {
+      margin: auto auto 1.5rem;
+    }
+
+    small {
+      font-size: 65%;
+    }
+
+    input,
+    abbr,
+    acronym,
+    blockquote,
+    code,
+    kbd,
+    q,
+    samp,
+    var {
+      -webkit-hyphens: none;
+      -ms-hyphens: none;
+      hyphens: none;
+    }
+
+    pre {
+      white-space: pre;
+    }
+
+    pre code {
+      white-space: -moz-pre-wrap;
+      white-space: pre-wrap;
+    }
+
+    code {
+      white-space: pre;
+      font-family: SF Mono, Consolas, Dejavu Sans Mono, Menlo, monospace;
+    }
+
+    abbr {
+      -webkit-font-variant: small-caps;
+      -moz-font-variant: small-caps;
+      -ms-font-variant: small-caps;
+      font-variant: small-caps;
+      font-weight: 600;
+      text-transform: lowercase;
+      color: gray;
+    }
+
+    abbr[title]:hover {
+      cursor: help;
+    }
+
+    /* FROM http://purecss.io/layouts/side-menu/  adapted to remove pure classes*/
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      color: #444;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: auto;
+    }
+
+    code,
+    pre {
+      background-color: #f5f5f5;
+      color: #444;
+      border-radius: 2px;
+      text-shadow: 0px 1px 0px white;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    }
+
+    pre code {
+      border: none;
+      box-shadow: none;
+    }
+
+    pre {
+      padding: 0.5em;
+    }
+
+    code {
+      display: inline-block;
+      padding: 0 0.5em;
+      line-height: 1.4;
+      font-size: 0.9em;
+    }
+
+    table {
+      border-spacing: 0;
+      margin-bottom: 1.5rem;
+    }
+
+    table th,
+    table td {
+      padding: 0.3em 0.7em;
+    }
+
+    table th {
+      background-color: #f4f4f4;
+      border-bottom: 2px solid #444;
+    }
+
+    table td {
+      border: 1px solid #f5f5f5;
+    }
+
+    /* Add transition to containers so they can push in and out. */
+
+    #layout,
+    #menu,
+    .menu-link {
+      -webkit-transition: all 0.2s ease-out;
+      -moz-transition: all 0.2s ease-out;
+      -ms-transition: all 0.2s ease-out;
+      -o-transition: all 0.2s ease-out;
+      transition: all 0.2s ease-out;
+    }
+
+    /* This is the parent `<div>` that contains the menu and the content area. */
+
+    #layout {
+      position: relative;
+      padding-left: 0;
+    }
+
+    #layout.active #menu {
+      left: 300px;
+      width: 300px;
+    }
+
+    #layout.active .menu-link {
+      left: 300px;
+    }
+
+    /* The content `<div>` is where all your content goes. */
+
+    .content {
+      margin: 50px auto;
+      padding: 0;
+      max-width: 60%;
+      line-height: 1.6em;
+    }
+
+    /*
+    The `#menu` `<div>` is the parent `<div>` that contains the menu that
+    appears on the left side of the page.
+    */
+
+    #menu {
+      margin-left: -300px;
+      /* "#menu" width */
+      width: 300px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 1000;
+      /* so the menu or its navicon stays above all content */
+      background: #f4f4f4;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      font-size: 0.9em;
+    }
+
+    a,
+    a * {
+      text-decoration: none;
+      color: #2483cc;
+    }
+
+    a:visited {
+      text-decoration: none;
+      color: #2483cc;
+    }
+
+    /* All anchors inside the menu should be styled like this. */
+
+    #menu a {
+      display: inline-block;
+      padding: 0.1em 0.5em;
+    }
+
+    #menu a:first-letter {
+      text-transform: capitalize;
+    }
+
+    #menu ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0em 0.5em;
+    }
+
+    #menu ul ul {
+      margin-top: 0em;
+      margin-left: 0.6em;
+      border-left: 1px dotted rgb(64, 64, 64);
+	  padding-left: 0.5em;
+    }
+
+    /* Change color of the anchor links on hover/focus. */
+
+    #menu li a:hover,
+    #menu li a:focus {
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    /* This styles the selected menu item `<li>`. */
+
+    #menu li a.active {
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    /* This styles a link within a selected menu item `<li>`. */
+
+    #menu li a.active {
+      color: #222;
+    }
+
+    /* This styles the menu heading. */
+
+    #menu li.heading {
+      font-size: 0.9em;
+      /*text-transform: uppercase;*/
+      color: #000;
+    }
+
+    #menu li.heading>* {
+      padding: 0.1em 0.5em;
+      display: block;
+    }
+
+    #menu li.heading a {
+      color: #0c68af;
+    }
+
+    /* -- Dynamic Button For Responsive Menu -------------------------------------*/
+
+    /*
+    `.menu-link` represents the responsive menu toggle that shows/hides on
+    small screens.
+    */
+
+    .menu-link {
+      position: fixed;
+      display: block;
+      /* show this only on small screens */
+      top: 0;
+      left: 0;
+      /* "#menu width" */
+      background: #f4f4f4;
+      font-size: 10px;
+      /* change this value to increase/decrease button size */
+      z-index: 10;
+      width: 2em;
+      height: auto;
+      padding: 1.6em 1.2em;
+      border-radius: 0 2px 2px 0;
+    }
+
+    .menu-link:hover {
+      background: /* #f4f4f4 * 0.8 */
+      #eee;
+    }
+
+    .menu-link span {
+      position: relative;
+      display: block;
+    }
+
+    .menu-link span,
+    .menu-link span:before,
+    .menu-link span:after {
+      background-color: #555;
+      width: 100%;
+      height: 0.2em;
+      border-radius: 1em;
+    }
+
+    .menu-link span:before,
+    .menu-link span:after {
+      position: absolute;
+      margin-top: -0.6em;
+      content: " ";
+    }
+
+    .menu-link span:after {
+      margin-top: 0.6em;
+    }
+
+    @media (max-width: 1300px) {       
+	  .content.active {
+		  margin-left: 310px;
+	  }
+    }
+	
+	@media (max-width: 800px) {
+		.content {
+		  max-width: 98%;
+	  }
+	}
+
+	#menu li span {
+		padding: 0.1em 0.5em;
+	}
+	
+	li.collapsible {
+		cursor: pointer;
+		font-weight:bold;
+	}
+	
+	li.collapsible span.collapser:before {
+		display:inline-block;
+		width:0.5em;
+	}
+	
+	li.collapsible span.collapser:before {
+		content: "-";
+	}
+	
+	li.collapsed span.collapser:before {
+		content: "+";
+	}
+	
+	li.collapsed + ul {
+		display:none;
+	}
+
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <!--script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script-->
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <div id="layout" class="active">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link active">
+      <!-- Hamburger icon -->
+      <span></span>
+    </a>
+    <nav id="menu" class="active">
+<ul>
+<li class="heading"><a href="..\..\..\index.html">Home</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\index.html">Getting Started</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\01-Getting_Started\01-SDK_Overview.html">SDK Overview</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\02-FAQ.html">FAQ</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\03-Roadmap.html">Roadmap</a></li>
+<li class="heading"><span>Samples</span></li>
+<ul>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Samples\Aircraft\index.html">Aircraft</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Samples\Aircraft\GaugeAircraft\index.html">GaugeAircraft</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Samples\Aircraft\GdiplusAircraft\index.html">GdiplusAircraft</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Samples\Aircraft\MouseAircraft\index.html">MouseAircraft</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Samples\Aircraft\SimpleAircraft\index.html">SimpleAircraft</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Samples\SimpleAerial\index.html">SimpleAerial</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Samples\SimpleAirport\index.html">SimpleAirport</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Samples\SimpleBiomes\index.html">SimpleBiomes</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Samples\SimpleNavData\index.html">SimpleNavData</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Samples\SimpleScenery\index.html">SimpleScenery</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Samples\SimvarWatcher\index.html">SimvarWatcher</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Samples\WwiseSampleProject\index.html">WwiseSampleProject</a></li>
+</ul>
+<li class="heading"><span>Tutorials</span></li>
+<ul>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Tutorials\01-Placing_An_Add-on_Airport\index.html">Placing An Add-on Airport</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Tutorials\02-Flight_model_definition\index.html">Flight model definition</a></li>
+</ul>
+</ul>
+<li class="heading"><span>Asset Creation</span></li>
+<ul>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\3D_Models\index.html">3D Models</a></li>
+<ul>
+<li class="heading"><span>Modeling Practices</span></li>
+<ul>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\3D_Models\Modeling_Practices\01-Aircraft_Modeling.html">Aircraft Modeling</a></li>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\3D_Models\Modeling_Practices\02-Levels_of_Detail.html">Levels of Detail</a></li>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\3D_Models\Modeling_Practices\03-Aircraft_Texture_Mapping.html">Aircraft Texture Mapping</a></li>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\3D_Models\Modeling_Practices\04-Collisions.html">Collisions</a></li>
+</ul>
+</ul>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\Lighting_Model\index.html">Lighting Model</a></li>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\Sounds\index.html">Sounds</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\Sounds\01-Master_Mixer_Hierarchy.html">Master Mixer Hierarchy</a></li>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\Sounds\02-Shared_Game_Parameters.html">Shared Game Parameters</a></li>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\Sounds\03-Shared_States_and_Switches.html">Shared States and Switches</a></li>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\Sounds\04-Shared_Attenuation_Shareset.html">Shared Attenuation Shareset</a></li>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\Sounds\05-Mix_your_Aircraft.html">Mix your Aircraft</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\Textures\index.html">Textures</a></li>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\glTF_Materials.html">glTF Materials</a></li>
+</ul>
+<li class="heading"><span>Content Configuration</span></li>
+<ul>
+<li class="heading"><a href="..\..\Cameras\index.html">Cameras</a></li>
+<ul>
+<li class="heading"><a href="..\..\Cameras\Camera_Configuration.html">Camera Configuration</a></li>
+<li class="heading"><a href="..\..\Cameras\RTC\index.html">RTC</a></li>
+<ul>
+<li class="heading"><a href="..\..\Cameras\RTC\Examples.html">Examples</a></li>
+<li class="heading"><a href="..\..\Cameras\RTC\Using_RTCs.html">Using RTCs</a></li>
+<li class="heading"><a href="..\..\Cameras\RTC\XML_Definition.html">XML Definition</a></li>
+</ul>
+<li class="heading"><a href="..\..\Cameras\Wow-effect.html">Wow-effect</a></li>
+</ul>
+<li class="heading"><a href="..\..\Environment\index.html">Environment</a></li>
+<ul>
+<li class="heading"><a href="..\..\Environment\Airports_And_Facilities\index.html">Airports And Facilities</a></li>
+<ul>
+<li class="heading"><a href="..\..\Environment\Airports_And_Facilities\Airports.html">Airports</a></li>
+<li class="heading"><a href="..\..\Environment\Airports_And_Facilities\Jetways.html">Jetways</a></li>
+</ul>
+<li class="heading"><a href="..\..\Environment\File_Formats\index.html">File Formats</a></li>
+<ul>
+<li class="heading"><a href="..\..\Environment\File_Formats\BGL.html">BGL</a></li>
+<li class="heading"><a href="..\..\Environment\File_Formats\CGL.html">CGL</a></li>
+</ul>
+<li class="heading"><a href="..\..\Environment\Living_World\index.html">Living World</a></li>
+<ul>
+<li class="heading"><a href="..\..\Environment\Living_World\AirportServices\index.html">AirportServices</a></li>
+<ul>
+<li class="heading"><a href="..\..\Environment\Living_World\AirportServices\XMLdefs.html">XMLdefs</a></li>
+<li class="heading"><a href="..\..\Environment\Living_World\AirportServices\examples.html">examples</a></li>
+</ul>
+<li class="heading"><a href="..\..\Environment\Living_World\LivingWorld_Config\index.html">LivingWorld Config</a></li>
+<ul>
+<li class="heading"><a href="..\..\Environment\Living_World\LivingWorld_Config\XMLdefs.html">XMLdefs</a></li>
+<li class="heading"><a href="..\..\Environment\Living_World\LivingWorld_Config\examples.html">examples</a></li>
+</ul>
+<li class="heading"><a href="..\..\Environment\Living_World\Traffic\index.html">Traffic</a></li>
+</ul>
+<li class="heading"><a href="..\..\Environment\Scenery_Objects\index.html">Scenery Objects</a></li>
+<ul>
+<li class="heading"><a href="..\..\Environment\Scenery_Objects\Effects.html">Effects</a></li>
+</ul>
+<li class="heading"><a href="..\..\Environment\Terrain\index.html">Terrain</a></li>
+<ul>
+<li class="heading"><a href="..\..\Environment\Terrain\Aerial_Imagery\index.html">Aerial Imagery</a></li>
+<li class="heading"><a href="..\..\Environment\Terrain\DEM\index.html">DEM</a></li>
+<li class="heading"><a href="..\..\Environment\Terrain\Vector_Shapes\index.html">Vector Shapes</a></li>
+</ul>
+<li class="heading"><a href="..\..\Environment\Vegetation\index.html">Vegetation</a></li>
+<li class="heading"><a href="..\..\Environment\Weather\index.html">Weather</a></li>
+<li class="heading"><a href="..\..\Environment\World_Positioning_Systems\index.html">World Positioning Systems</a></li>
+<ul>
+<li class="heading"><a href="..\..\Environment\World_Positioning_Systems\Bing_Maps_Tile_System.html">Bing Maps Tile System</a></li>
+<li class="heading"><a href="..\..\Environment\World_Positioning_Systems\Lat_Long_Alt.html">Lat Long Alt</a></li>
+<li class="heading"><a href="..\..\Environment\World_Positioning_Systems\QMID.html">QMID</a></li>
+</ul>
+</ul>
+<li class="heading"><a href="..\..\Flights_And_Missions\index.html">Flights And Missions</a></li>
+<ul>
+<li class="heading"><a href="..\..\Flights_And_Missions\Flight_Files.html">Flight Files</a></li>
+</ul>
+<li class="heading"><a href="..\..\Localization\index.html">Localization</a></li>
+<li class="heading"><span>SimObjects</span></li>
+<ul>
+<li class="heading"><a href="..\00-Aircraft\index.html">Aircraft</a></li>
+<ul>
+<li class="heading"><a href="..\00-Aircraft\Aircraft_Configuration\index.html">Aircraft Configuration</a></li>
+<ul>
+<li class="heading"><a href="..\00-Aircraft\Aircraft_Configuration\00-General.html">General</a></li>
+<li class="heading"><a href="..\00-Aircraft\Aircraft_Configuration\AI.html">AI</a></li>
+<li class="heading"><a href="..\00-Aircraft\Aircraft_Configuration\Cameras.html">Cameras</a></li>
+<li class="heading"><a href="..\00-Aircraft\Aircraft_Configuration\Cockpit.html">Cockpit</a></li>
+<li class="heading"><a href="..\00-Aircraft\Aircraft_Configuration\Engines.html">Engines</a></li>
+<li class="heading"><a href="..\00-Aircraft\Aircraft_Configuration\Flight_Model.html">Flight Model</a></li>
+<li class="heading"><a href="..\00-Aircraft\Aircraft_Configuration\Gameplay.html">Gameplay</a></li>
+<li class="heading"><a href="..\00-Aircraft\Aircraft_Configuration\InteractivePoints.html">InteractivePoints</a></li>
+<li class="heading"><a href="..\00-Aircraft\Aircraft_Configuration\Systems_Configuration_File.html">Systems Configuration File</a></li>
+<li class="heading"><a href="..\00-Aircraft\Aircraft_Configuration\Target_Performances_Configuration_File.html">Target Performances Configuration File</a></li>
+</ul>
+<li class="heading"><a href="..\00-Aircraft\Flight_Model.html">Flight Model</a></li>
+</ul>
+<li class="heading"><a href="..\01-Other_SimObjects\index.html">Other SimObjects</a></li>
+<ul>
+<li class="heading"><a href="..\01-Other_SimObjects\Animals.html">Animals</a></li>
+<li class="heading"><a href="..\01-Other_SimObjects\Boats.html">Boats</a></li>
+<li class="heading"><a href="..\01-Other_SimObjects\GroundVehicles\index.html">GroundVehicles</a></li>
+<ul>
+<li class="heading"><a href="..\01-Other_SimObjects\GroundVehicles\BaggageCart.html">BaggageCart</a></li>
+<li class="heading"><a href="..\01-Other_SimObjects\GroundVehicles\BaggageLoader.html">BaggageLoader</a></li>
+<li class="heading"><a href="..\01-Other_SimObjects\GroundVehicles\BoardingRamp.html">BoardingRamp</a></li>
+<li class="heading"><a href="..\01-Other_SimObjects\GroundVehicles\CateringTruck.html">CateringTruck</a></li>
+<li class="heading"><a href="..\01-Other_SimObjects\GroundVehicles\FuelTruck.html">FuelTruck</a></li>
+<li class="heading"><a href="..\01-Other_SimObjects\GroundVehicles\GroundPowerUnit.html">GroundPowerUnit</a></li>
+<li class="heading"><a href="..\01-Other_SimObjects\GroundVehicles\Pushback.html">Pushback</a></li>
+</ul>
+<li class="heading"><a href="..\01-Other_SimObjects\Humans.html">Humans</a></li>
+<li class="heading"><a href="..\01-Other_SimObjects\SimObject_Configuration.html">SimObject Configuration</a></li>
+<li class="heading"><a href="..\01-Other_SimObjects\StaticObjects.html">StaticObjects</a></li>
+</ul>
+<li class="heading"><a href=".\index.html">Checklists</a></li>
+<ul>
+<li class="heading"><a href=".\01-Examples.html">Examples</a></li>
+<li class="heading"><a href=".\02-XML_Definition.html">XML Definition</a></li>
+</ul>
+<li class="heading"><a href="..\Instruments\index.html">Instruments</a></li>
+<ul>
+<li class="heading"><a href="..\Instruments\3D_Instruments\index.html">3D Instruments</a></li>
+<li class="heading"><a href="..\Instruments\C_Gauges\index.html">C Gauges</a></li>
+<ul>
+<li class="heading"><span>Graphics</span></li>
+<ul>
+<li class="heading"><a href="..\Instruments\C_Gauges\Graphics\GDI_Plus.html">GDI Plus</a></li>
+</ul>
+</ul>
+<li class="heading"><a href="..\Instruments\HTML_Gauges\index.html">HTML Gauges</a></li>
+<li class="heading"><a href="..\Instruments\Panels.html">Panels</a></li>
+<li class="heading"><a href="..\Instruments\XML_Gauges\index.html">XML Gauges</a></li>
+</ul>
+<li class="heading"><a href="..\Models\index.html">Models</a></li>
+<ul>
+<li class="heading"><a href="..\Models\AnimGraph.html">AnimGraph</a></li>
+<li class="heading"><a href="..\Models\Levels_of_Detail_(LODs).html">Levels of Detail (LODs)</a></li>
+<li class="heading"><a href="..\Models\Model_Behaviors\index.html">Model Behaviors</a></li>
+<ul>
+<li class="heading"><a href="..\Models\Model_Behaviors\XML_Definition.html">XML Definition</a></li>
+</ul>
+</ul>
+<li class="heading"><a href="..\Sounds\index.html">Sounds</a></li>
+<ul>
+<li class="heading"><a href="..\Sounds\backwards_compatibility.html">backwards compatibility</a></li>
+<li class="heading"><a href="..\Sounds\sound_categories.html">sound categories</a></li>
+<li class="heading"><a href="..\Sounds\xml_definition.html">xml definition</a></li>
+<li class="heading"><a href="..\Sounds\xml_wavedata.html">xml wavedata</a></li>
+</ul>
+<li class="heading"><a href="..\Textures\index.html">Textures</a></li>
+</ul>
+<li class="heading"><a href="..\..\UI\index.html">UI</a></li>
+<li class="heading"><a href="..\..\Variable_Lists\index.html">Variable Lists</a></li>
+<ul>
+<li class="heading"><a href="..\..\Variable_Lists\Event_IDs.html">Event IDs</a></li>
+<li class="heading"><a href="..\..\Variable_Lists\Misc_Enums.html">Misc Enums</a></li>
+<li class="heading"><a href="..\..\Variable_Lists\Simulation_Variables.html">Simulation Variables</a></li>
+</ul>
+<li class="heading"><a href="..\..\Visual_Effects\index.html">Visual Effects</a></li>
+<ul>
+<li class="heading"><a href="..\..\Visual_Effects\visual_fx_file.html">visual fx file</a></li>
+</ul>
+</ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\index.html">Developer Tools</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\00-Developer_Mode\index.html">Developer Mode</a></li>
+<li class="heading"><span>3DS Max Tools</span></li>
+<ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\3DS_Max_Tools\FlightSim_Lights.html">FlightSim Lights</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\3DS_Max_Tools\FlightSim_Material.html">FlightSim Material</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\3DS_Max_Tools\FlightSim_multiExporter.html">FlightSim multiExporter</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\3DS_Max_Tools\FlightSim_versionDifferences.html">FlightSim versionDifferences</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\3DS_Max_Tools\glTF_Exporter.html">glTF Exporter</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Aircraft_Editor\index.html">Aircraft Editor</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Aircraft_Editor\Debug_Windows.html">Debug Windows</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Command_Line_Interface.html">Command Line Interface</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Launcher_Tool\index.html">Launcher Tool</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Material_Editor\index.html">Material Editor</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Mission_Editor\index.html">Mission Editor</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Package_Tool\index.html">Package Tool</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Package_Tool\Concepts.html">Concepts</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Package_Tool\XMLReference.html">XMLReference</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Project_editor\index.html">Project editor</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Project_editor\Content_Manager_Data.html">Content Manager Data</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Project_editor\Export_Window.html">Export Window</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Project_editor\Marketplace_Data.html">Marketplace Data</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Scenery_Editor\index.html">Scenery Editor</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\SimConnect\index.html">SimConnect</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\SimConnect\SimConnect_Reference.html">SimConnect Reference</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\SimConnect\SimConnect_Status_of_Functions.html">SimConnect Status of Functions</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\SimConnect\SimConnect_Status_of_Input_Events.html">SimConnect Status of Input Events</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\SimConnect\SimConnect_Status_of_SimEvents.html">SimConnect Status of SimEvents</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\SimConnect\SimConnect_Status_of_Simulation_Variables.html">SimConnect Status of Simulation Variables</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\SimConnect\SimConnect_Status_of_System_Events.html">SimConnect Status of System Events</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\WebAssembly\index.html">WebAssembly</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\WebAssembly\01-Platform_Toolset.html">Platform Toolset</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\WebAssembly\02-Gauge_API.html">Gauge API</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\WebAssembly\Graphics\index.html">Graphics</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\WebAssembly\Graphics\GDI_Plus.html">GDI Plus</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\WebAssembly\Graphics\Low_Level_API.html">Low Level API</a></li>
+</ul>
+</ul>
+</ul>
+<li class="heading"><span>Scripting Languages</span></li>
+<ul>
+<li class="heading"><a href="..\..\..\05-Scripting_Languages\CFG.html">CFG</a></li>
+<li class="heading"><a href="..\..\..\05-Scripting_Languages\Reverse_Polish_Notation.html">Reverse Polish Notation</a></li>
+</ul>
+</ul>
+    </nav>
+    <article id="main" class="content active">
+      <h1 id="checklist-xml-definition">Checklist XML definition</h1>
+      <p>Examples illustrating the various concepts introduced in this specification page can be found <a href="./01-Examples.html">here</a>, and basic explanation about the checklist system and the different <code>modes</code> is available in the <a href="index.html">Overview</a>.</p>
+      <!-- START doctoc generated TOC please keep comment here to allow auto update -->
+      <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+      <ul>
+      <li><a href="#simbasedocument"><code>&lt;SimBase.Document&gt;</code></a></li>
+      <li><a href="#checklistchecklist"><code>&lt;Checklist.Checklist&gt;</code></a></li>
+      <li><a href="#checklistcheckpointlibrary"><code>&lt;Checklist.CheckpointLibrary&gt;</code></a></li>
+      <li><a href="#includecheckpointlibrary"><code>&lt;IncludeCheckpointLibrary&gt;</code></a></li>
+      <li><a href="#step"><code>&lt;Step&gt;</code></a></li>
+      <li><a href="#page"><code>&lt;Page&gt;</code></a></li>
+      <li><a href="#block"><code>&lt;Block&gt;</code></a></li>
+      <li><a href="#blockcondition"><code>&lt;BlockCondition&gt;</code></a></li>
+      <li><a href="#checkpoint"><code>&lt;Checkpoint&gt;</code></a></li>
+      <li><a href="#checkpointdesc"><code>&lt;CheckpointDesc&gt;</code></a></li>
+      <li><a href="#feedback"><code>&lt;Feedback&gt;</code></a></li>
+      <li><a href="#clue"><code>&lt;Clue&gt;</code></a></li>
+      <li><a href="#sequence"><code>&lt;Sequence&gt;</code></a></li>
+      <li><a href="#seqtype"><code>SeqType</code></a></li>
+      <li><a href="#test"><code>&lt;Test&gt;</code></a></li>
+      <li><a href="#testvalue"><code>&lt;TestValue&gt;</code></a></li>
+      <li><a href="#val"><code>&lt;Val&gt;</code></a></li>
+      <li><a href="#operator"><code>&lt;Operator&gt;</code></a></li>
+      <li><a href="#once"><code>&lt;Once&gt;</code></a></li>
+      <li><a href="#duration"><code>&lt;Duration&gt;</code></a></li>
+      <li><a href="#instrument"><code>&lt;Instrument&gt;</code></a></li>
+      <li><a href="#forcecamera"><code>&lt;ForceCamera&gt;</code></a></li>
+      <li><a href="#settemplatevalue"><code>&lt;SetTemplateValue&gt;</code></a></li>
+      <li><a href="#action"><code>&lt;Action&gt;</code></a></li>
+      <li><a href="#settemplateaction"><code>&lt;SetTemplateAction&gt;</code></a></li>
+      <li><a href="#condition"><code>Condition</code></a></li>
+      <li><a href="#specialaction"><code>SpecialAction</code></a></li>
+      <li><a href="#storevar-and-readvar"><code>StoreVar</code> and <code>ReadVar</code></a></li>
+      </ul>
+      <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+      <h2 id="simbasedocument"><code>&lt;SimBase.Document&gt;</code></h2>
+      <p>Base of an xml document.</p>
+      <table>
+      <thead>
+      <tr class="header">
+      <th>Element</th>
+      <th>Description</th>
+      <th>Unique</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><a href="#checklist.checklist"><code>&lt;Checklist.Checklist&gt;</code></a></td>
+      <td></td>
+      <td>Yes</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><a href="#checklist.checkpointlibrary"><code>&lt;Checklist.CheckpointLibrary&gt;</code></a></td>
+      <td></td>
+      <td>Yes</td>
+      <td>No</td>
+      </tr>
+      </tbody>
+      </table>
+      <table>
+      <colgroup>
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Default</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>Type</code></td>
+      <td>Type of the xml file, either “Checklist” or “CheckpointLibrary”.</td>
+      <td>string</td>
+      <td>Yes</td>
+      <td></td>
+      </tr>
+      </tbody>
+      </table>
+      <blockquote>
+      <p><strong>Note:</strong> This element must contain an unique child element corresponding to value of the <code>Type</code> attribute.</p>
+      </blockquote>
+      <h2 id="checklistchecklist"><code>&lt;Checklist.Checklist&gt;</code></h2>
+      <p>Base of an <code>aircraft checklist file</code>, as only element of a <code>SimBase.Document</code>. Can include Libraries, and must contain one or several <code>steps</code> (that will each contain <code>pages</code> of <code>checkpoints</code>).</p>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Element</th>
+      <th>Description</th>
+      <th>Unique</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><a href="#includecheckpointlibrary"><code>&lt;IncludeCheckpointLibrary&gt;</code></a></td>
+      <td>A <code>checkpoint library</code> to be loaded.<br>Checkpoints from said library can then be used by using a <a href="#checkpoint"><code>ReferenceId</code></a></td>
+      <td>No</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><a href="#step"><code>&lt;Step&gt;</code></a></td>
+      <td>A list of <code>pages</code>.<br>Used to regroup one or several pages by logical steps.</td>
+      <td>No</td>
+      <td>Yes</td>
+      </tr>
+      </tbody>
+      </table>
+      <h2 id="checklistcheckpointlibrary"><code>&lt;Checklist.CheckpointLibrary&gt;</code></h2>
+      <p>Base of a CheckpointLibrary file, as only element of a <code>SimBase.Document</code>. Contains only a list of <code>checkpoints</code>.</p>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Element</th>
+      <th>Description</th>
+      <th>Unique</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><a href="#checkpoint"><code>&lt;Checkpoint&gt;</code></a></td>
+      <td>A single item of Checklist, with an Id to be referenced in <code>aicraft checklist files</code>.</td>
+      <td>No</td>
+      <td>Yes</td>
+      </tr>
+      </tbody>
+      </table>
+      <h2 id="includecheckpointlibrary"><code>&lt;IncludeCheckpointLibrary&gt;</code></h2>
+      <table>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Default</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>FileName</code></td>
+      <td>Path of an xml file for a <code>checkpoint library</code>.</td>
+      <td>string</td>
+      <td>Yes</td>
+      <td></td>
+      </tr>
+      </tbody>
+      </table>
+      <h2 id="step"><code>&lt;Step&gt;</code></h2>
+      <table>
+      <colgroup>
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Default</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>ChecklistStepId</code></td>
+      <td>A key from <code>Checklist Steps list</code>, defined by missions propsets. <br>Used to reference the <code>step</code> by a <code>mission</code>.</td>
+      <td>string</td>
+      <td>Yes</td>
+      <td></td>
+      </tr>
+      </tbody>
+      </table>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Element</th>
+      <th>Description</th>
+      <th>Unique</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><a href="#page"><code>&lt;Page&gt;</code></a></td>
+      <td>A list of <code>checkpoints</code>, displayed in the UI with a title.<br>Used to regroup one or several checkpoints in a single page of this checklist.</td>
+      <td>No</td>
+      <td>Yes</td>
+      </tr>
+      </tbody>
+      </table>
+      <h2 id="page"><code>&lt;Page&gt;</code></h2>
+      <table>
+      <colgroup>
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Default</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>SubjectTT</code></td>
+      <td>A translation key to the <code>page</code> title. See <a href="../../Localization/index.html">Localization</a> for more details.</td>
+      <td>string</td>
+      <td>Yes</td>
+      <td></td>
+      </tr>
+      </tbody>
+      </table>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Element</th>
+      <th>Description</th>
+      <th>Unique</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><a href="#checkpoint"><code>&lt;Checkpoint&gt;</code></a></td>
+      <td>A single item of a checklist.</td>
+      <td>No</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><a href="#block"><code>&lt;Block&gt;</code></a></td>
+      <td>A block of checkpoints, with a title, and possibly a condition.</td>
+      <td>No</td>
+      <td>No</td>
+      </tr>
+      </tbody>
+      </table>
+      <blockquote>
+      <p><strong>Note:</strong> A <code>page</code> must contain at least one <code>checkpoint</code>, or a <code>block</code> containing at least one <code>checkpoint</code>. Order between <code>checkpoints</code> that are direct elements of the <code>page</code>, and <code>blocks</code> of checkpoints, is important.</p>
+      </blockquote>
+      <h2 id="block"><code>&lt;Block&gt;</code></h2>
+      <table>
+      <colgroup>
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Default</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>SubjectTT</code></td>
+      <td>A translation key to the <code>block</code> title. See <a href="../../Localization/index.html">Localization</a> for more details.</td>
+      <td>string</td>
+      <td>Yes</td>
+      <td></td>
+      </tr>
+      </tbody>
+      </table>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Element</th>
+      <th>Description</th>
+      <th>Unique</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><a href="#blockcondition"><code>&lt;BlockCondition&gt;</code></a></td>
+      <td>A condition to execute the <code>block</code>’s <code>checkpoints</code>. In non-<em>Manual</em> mode, these <code>checkpoints</code> will be skipped if condition is <code>false</code> when their evaluation would start.</td>
+      <td>Yes</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><a href="#checkpoint"><code>&lt;Checkpoint&gt;</code></a></td>
+      <td>A single item of a checklist.</td>
+      <td>No</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><a href="#block"><code>&lt;Block&gt;</code></a></td>
+      <td>A block of checkpoints, with a title, and possibly a condition.</td>
+      <td>No</td>
+      <td>No</td>
+      </tr>
+      </tbody>
+      </table>
+      <blockquote>
+      <p><strong>Note:</strong> Order between each element, <code>checkpoint</code> or <code>block</code>, is important. A <code>block</code> without <code>blockCondition</code> will always be evaluated.</p>
+      </blockquote>
+      <h2 id="blockcondition"><code>&lt;BlockCondition&gt;</code></h2>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Element</th>
+      <th>Description</th>
+      <th>Unique</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><a href="#val"><code>&lt;Val&gt;</code></a></td>
+      <td>Value that can be defined various ways (see corresponding section). The value will be read as a boolean, meaning 0 is false and non-zero is true.</td>
+      <td>Yes</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><a href="#operator"><code>&lt;Operator&gt;</code></a></td>
+      <td>Operation that will be evaluated using one or several values (see corresponding section).</td>
+      <td>Yes</td>
+      <td>No</td>
+      </tr>
+      </tbody>
+      </table>
+      <blockquote>
+      <p><strong>Note:</strong> A <code>blockCondition</code> <em>must</em> contain either a <code>val</code> or an <code>operator</code>.</p>
+      </blockquote>
+      <h2 id="checkpoint"><code>&lt;Checkpoint&gt;</code></h2>
+      <table>
+      <colgroup>
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Default</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>ReferenceId</code></td>
+      <td>Id of a <code>checkpoint</code> from a loaded Library.<br>Used to load a shared <code>checkpoint</code> for an <code>aircraft checklist</code>.</td>
+      <td>string</td>
+      <td>No</td>
+      <td></td>
+      </tr>
+      <tr class="even">
+      <td><code>Id</code></td>
+      <td>Id of a <code>checkpoint</code> in a Library.<br>Set in Library files, and used as a reference in <code>aircraft checklist files</code>.</td>
+      <td>string</td>
+      <td>No</td>
+      <td></td>
+      </tr>
+      </tbody>
+      </table>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Element</th>
+      <th>Description</th>
+      <th>Unique</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><a href="#checkpointdesc"><code>&lt;CheckpointDesc&gt;</code></a></td>
+      <td>Text description of the <code>checkpoint</code>, that is displayed on in-game UI.</td>
+      <td>Yes</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><a href="#sequence"><code>&lt;Sequence&gt;</code></a></td>
+      <td>Sequence of <code>tests</code> required to validate the <code>checkpoint</code>.</td>
+      <td>Yes</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><a href="#test"><code>&lt;Test&gt;</code></a></td>
+      <td>Single test required to validate the <code>checkpoint</code></td>
+      <td>Yes</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><a href="#action"><code>&lt;Action&gt;</code></a></td>
+      <td>Actions to be executed when the checkpoint start being evaluated, or at the end of its validation.</td>
+      <td>No</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><a href="#settemplatevalue"><code>&lt;SetTemplateValue&gt;</code></a></td>
+      <td>Defines a value that can then be used inside the <code>checkpoint</code>’s other elements.<br>Mostly used to add parameters to a library <code>checkpoint</code> that can be overridden in a checklist <code>checkpoint</code>.</td>
+      <td>No</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><a href="#settemplateaction"><code>&lt;SetTemplateAction&gt;</code></a></td>
+      <td>Defines an action that can then be used inside the <code>checkpoint</code>’s other elements.<br>Mostly used to add parameters to a library <code>checkpoint</code> that can be overridden in a checklist <code>checkpoint</code>.</td>
+      <td>No</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><a href="#instrument"><code>&lt;Instrument&gt;</code></a></td>
+      <td>Reference to an instrument associated with this checkpoint.<br>This instrument can be highlighted in-game.</td>
+      <td>No</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><a href="#forcecamera"><code>&lt;ForceCamera&gt;</code></a></td>
+      <td>Specify a camera to be used when highliting instruments, instead of using the regular instruments camera. Mostly useful when multiple instruments that are far apart need to be highlighted. Good practice is to put <code>ForceCamera</code> in a <code>checklist</code> file, not in a <code>library</code>.</td>
+      <td>Yes</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><a href="#feedback"><code>&lt;Feedback&gt;</code></a></td>
+      <td>Text to be displayed in the interface while evaluating the checkpoint, in non-<em>Manual</em> mode.</td>
+      <td>Yes</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><a href="#clue"><code>&lt;Clue&gt;</code></a></td>
+      <td>Text to be displayed in the interface while checkpoint is selected.</td>
+      <td>Yes</td>
+      <td>No</td>
+      </tr>
+      </tbody>
+      </table>
+      <blockquote>
+      <p><strong>Note:</strong> Only <strong>one</strong> of <code>sequence</code> and <code>test</code> should be defined. If both are defined, one of them will be ignored. If neither is defined, the <code>checkpoint</code> will be automatically validated in all modes except Manual.</p>
+      </blockquote>
+      <blockquote>
+      <p><strong>Note:</strong> All elements except <code>checkpointDesc</code> and <code>clue</code> are ignored while in <em>Manual</em> mode.</p>
+      </blockquote>
+      <h2 id="checkpointdesc"><code>&lt;CheckpointDesc&gt;</code></h2>
+      <table>
+      <colgroup>
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Default</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>SubjectTT</code></td>
+      <td>A translation key to the <code>checkpoint</code> <code>subject</code>. See <a href="../../Localization/index.html">Localization</a> for more details.</td>
+      <td>string</td>
+      <td>Yes</td>
+      <td></td>
+      </tr>
+      <tr class="even">
+      <td><code>ExpectationTT</code></td>
+      <td>A translation key to the <code>checkpoint</code> expected action or state. See <a href="../../Localization/index.html">Localization</a> for more details.</td>
+      <td>string</td>
+      <td>Yes</td>
+      <td></td>
+      </tr>
+      </tbody>
+      </table>
+      <h2 id="feedback"><code>&lt;Feedback&gt;</code></h2>
+      <table>
+      <colgroup>
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Default</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>Name</code></td>
+      <td>A translation key to the <code>feedback</code> text. See <a href="../../Localization/index.html">Localization</a> for more details.</td>
+      <td>string</td>
+      <td>Yes</td>
+      <td></td>
+      </tr>
+      <tr class="even">
+      <td><code>DurationTimer</code></td>
+      <td>If true, will display the remaining total <a href="#duration"><code>Duration</code></a> time in real-time, as seconds, in the text in place of a <code>%f</code>.</td>
+      <td>boolean</td>
+      <td>No</td>
+      <td></td>
+      </tr>
+      <tr class="odd">
+      <td><code>SimVarName</code></td>
+      <td>If defined, will display the value of the corresponding simvar, in the text in place of a <code>%f</code>.</td>
+      <td>string</td>
+      <td>string</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>Units</code></td>
+      <td>Units of the simVar. Must be defined if SimVarName is defined.</td>
+      <td>string</td>
+      <td>Yes</td>
+      <td></td>
+      </tr>
+      </tbody>
+      </table>
+      <blockquote>
+      <p><strong>Note:</strong> This text will be displayed when the checkpoint being evaluated, in Automatic or Copilot mode.</p>
+      </blockquote>
+      <blockquote>
+      <p><strong>Note:</strong> A Feedback element can contain at most one of the following (sets of) attributes: - <code>DurationTimer</code> - <code>SimVarName</code> and <code>Units</code></p>
+      <p>When either is defined, if the translated text contain a <code>%f</code>, it will be replaced by the corresponding value (but only the first <code>%f</code>). You can also use <code>%.0f</code> to display 0 digits after the decimal, and similarly <code>%.1f</code> for 1 digit after the decimal, <code>%.2f</code>…</p>
+      </blockquote>
+      <h2 id="clue"><code>&lt;Clue&gt;</code></h2>
+      <table>
+      <colgroup>
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Default</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>Name</code></td>
+      <td>A translation key to the <code>clue</code> text. See <a href="../../Localization/index.html">Localization</a> for more details.</td>
+      <td>string</td>
+      <td>Yes</td>
+      <td></td>
+      </tr>
+      </tbody>
+      </table>
+      <blockquote>
+      <p><strong>Note:</strong> This text will be displayed when the checkpoint is clicked in Manual mode, or in non-started Automatic mode. In started Automatic mode, it will also display if currently for evaluated checkpoint, if it does not have a Feedback text.</p>
+      </blockquote>
+      <h2 id="sequence"><code>&lt;Sequence&gt;</code></h2>
+      <table>
+      <colgroup>
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Default</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><a href="#seqtype"><code>SeqType</code></a></td>
+      <td>Type of sequence to be used.<br>Possible values are: <code>Ordered</code>, <code>Unordered</code>, <code>Parallel</code>.</td>
+      <td>enum</td>
+      <td>Yes</td>
+      <td>Unordered</td>
+      </tr>
+      </tbody>
+      </table>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Element</th>
+      <th>Description</th>
+      <th>Unique</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><a href="#sequence"><code>&lt;Sequence&gt;</code></a></td>
+      <td>A sub-<code>sequence</code> of <code>tests</code>.</td>
+      <td>No</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><a href="#test"><code>&lt;Test&gt;</code></a></td>
+      <td>Contains the logic for a single test to perform.</td>
+      <td>No</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><a href="#once"><code>&lt;Once&gt;</code></a></td>
+      <td>Determines whether this <code>sequence</code> only needs to be validated once to then be considered forever validated.</td>
+      <td>Yes</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><a href="#duration"><code>&lt;Duration&gt;</code></a></td>
+      <td>Duration during which all the elements of the <code>sequence</code> need to be valid for it to be validated.</td>
+      <td>Yes</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><a href="#instrument"><code>&lt;Instrument&gt;</code></a></td>
+      <td>Reference to an instrument associated with this sequence.<br>This instrument can be highlighted in-game.</td>
+      <td>No</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><a href="#action"><code>&lt;Action&gt;</code></a></td>
+      <td>Actions to be executed during evaluation of this sequence, depending on various conditions.</td>
+      <td>No</td>
+      <td>No</td>
+      </tr>
+      </tbody>
+      </table>
+      <h2 id="seqtype"><code>SeqType</code></h2>
+      <p>Regardless of the type of sequence, all <code>tests</code> or sub-<code>sequences</code> in this <code>sequence</code> need to be validated simultaneously (or have a <code>once</code> True and an earlier validation) for the main <code>sequence</code> to be valid. Informally, an <code>Ordered</code> SeqType means the sequence is supposed to be executed in strict order (determined by the order of elements), an <code>Unordered</code> SeqType means the sequence can be executed in any order, and a <code>Parallel</code> SeqType means the sequence elements should be executed simulatenously. More details:</p>
+      <table>
+      <colgroup>
+      <col style="width: 50%">
+      <col style="width: 50%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th><code>SeqType</code></th>
+      <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>Ordered</code></td>
+      <td>Every <code>test</code> and <code>sequence</code> element of this <code>sequence</code> is ordered as in the xml. Whenever the <code>sequence</code> is evaluated, each of those element is evaluated in order, from the first one up until an element that is evaluated to False. Any later element is thus not evaluated during this frame, and their <code>actions</code> not executed. Next frame evaluation will start over from the first element.</td>
+      </tr>
+      <tr class="even">
+      <td><code>Parallel</code></td>
+      <td>Whenever the <code>sequence</code> is evaluated, every <code>test</code> and <code>sequence</code> element of this <code>sequence</code> is evaluated (in order of their xml order) during the same frame.</td>
+      </tr>
+      <tr class="odd">
+      <td><code>Unordered</code></td>
+      <td>Without <em>Copilot</em> mode, the evaluation of such <code>sequence</code> works exactly as the Parallel one: every element is evaluated. However, in <em>Copilot</em> mode, the evaluation will follow the Ordered SeqType. This difference is important to avoid a copilot doing everything (especially <code>actions</code>) at the same time, while still permitting User without <em>Copilot</em> mode to complete this <code>sequence</code> in any order.</td>
+      </tr>
+      </tbody>
+      </table>
+      <blockquote>
+      <p><strong>Note:</strong> <em>Frame</em>, as used in the descriptions above, refer to a portion of time during which some computation are done by the game, such as evaluation of various <code>tests</code> and <code>sequences</code>. Usually, one second is composed of at least 30 consecutive <em>frames</em>. <code>Actions</code> and <code>test</code> evaluation can be executed at most once per <em>frame</em>.</p>
+      </blockquote>
+      <h2 id="test"><code>&lt;Test&gt;</code></h2>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Element</th>
+      <th>Description</th>
+      <th>Unique</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><a href="#testvalue"><code>&lt;TestValue&gt;</code></a></td>
+      <td>Value computation that needs to evaluate to True for this <code>test</code> to be validated.</td>
+      <td>Yes</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><a href="#action"><code>&lt;Action&gt;</code></a></td>
+      <td>Actions to be executed during evaluation of this test, depending on various conditions.</td>
+      <td>No</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><a href="#once"><code>&lt;Once&gt;</code></a></td>
+      <td>Determines whether this <code>test</code> only needs to be validated once to then be considered forever validated.</td>
+      <td>Yes</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><a href="#duration"><code>&lt;Duration&gt;</code></a></td>
+      <td>Duration during which the <code>testValue</code> needs to be true for this <code>test</code> to be validated.</td>
+      <td>Yes</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><a href="#instrument"><code>&lt;Instrument&gt;</code></a></td>
+      <td>Reference to an instrument associated with this test.<br>This instrument can be highlighted in-game.</td>
+      <td>No</td>
+      <td>No</td>
+      </tr>
+      </tbody>
+      </table>
+      <blockquote>
+      <p><strong>Note:</strong> If no <code>testValue</code> is defined, this <code>test</code> will be automatically validated in all modes except Manual.</p>
+      </blockquote>
+      <h2 id="testvalue"><code>&lt;TestValue&gt;</code></h2>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Element</th>
+      <th>Description</th>
+      <th>Unique</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><a href="#val"><code>&lt;Val&gt;</code></a></td>
+      <td>Value that can be defined various ways (see corresponding section). The value will be read as a boolean, meaning 0 is false and non-zero is true.</td>
+      <td>Yes</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><a href="#operator"><code>&lt;Operator&gt;</code></a></td>
+      <td>Operation that will be evaluated using one or several values (see corresponding section).</td>
+      <td>Yes</td>
+      <td>No</td>
+      </tr>
+      </tbody>
+      </table>
+      <blockquote>
+      <p><strong>Note:</strong> A <code>testValue</code> <em>must</em> contain either a <code>val</code> or an <code>operator</code>.</p>
+      </blockquote>
+      <h2 id="val"><code>&lt;Val&gt;</code></h2>
+      <table>
+      <colgroup>
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Default</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>Value</code></td>
+      <td>Constant <code>value</code>.</td>
+      <td>number</td>
+      <td>No</td>
+      <td></td>
+      </tr>
+      <tr class="even">
+      <td><code>SimVarName</code></td>
+      <td><code>Simulation Variable</code> name, as defined <a href="../../Variable_Lists/Simulation_Variables.html">here</a>. Must be defined with <code>units</code>.</td>
+      <td>string</td>
+      <td>No</td>
+      <td></td>
+      </tr>
+      <tr class="odd">
+      <td><code>Units</code></td>
+      <td><code>Units</code> name, as defined <a href="../../Variable_Lists/Simulation_Variables.html">here</a>. Must be defined with <code>simVarName</code>.</td>
+      <td>string</td>
+      <td>No</td>
+      <td></td>
+      </tr>
+      <tr class="even">
+      <td><code>Code</code></td>
+      <td>Allows for more complex evaluation, using the <a href="../../../05-Scripting_Languages/Reverse_Polish_Notation.html">ESP XML gauges code</a> syntax.</td>
+      <td>string</td>
+      <td>No</td>
+      <td></td>
+      </tr>
+      <tr class="odd">
+      <td><a href="#storevar-and-readvar"><code>ReadVar</code></a></td>
+      <td>Read the value previously stored in the checklist-specific variable with this name.</td>
+      <td>string</td>
+      <td>No</td>
+      <td></td>
+      </tr>
+      <tr class="even">
+      <td><code>ATCState</code></td>
+      <td>Name of an <code>ATC State</code>.<br>Used for comparison with an ATCParam <code>State</code>.</td>
+      <td>string</td>
+      <td>No</td>
+      <td></td>
+      </tr>
+      <tr class="odd">
+      <td><code>ATCParam</code></td>
+      <td>Get the current <code>ATC State</code> or the last <code>ATC message ID</code>.<br>Used for comparison with an <code>ATCState</code> Val, or a constant integer value.</td>
+      <td>enum: <code>State</code> or <code>LastMessageId</code></td>
+      <td>No</td>
+      <td></td>
+      </tr>
+      <tr class="even">
+      <td><code>UseTemplateValue</code></td>
+      <td>Replace this value by the value defined by the <a href="#settemplatevalue"><code>SetTemplateValue</code></a> with the same id in this <code>checkpoint</code>.</td>
+      <td>string</td>
+      <td>No</td>
+      <td></td>
+      </tr>
+      </tbody>
+      </table>
+      <blockquote>
+      <p><strong>Note:</strong> A Val element <em>must</em> contain one (and only one) of the following (sets of) attributes: - <code>Value</code> - <code>SimVarName</code> and <code>Units</code> - <code>Code</code> - <code>ReadVar</code> - <code>ATCState</code> - <code>ATCParam</code></p>
+      </blockquote>
+      <h2 id="operator"><code>&lt;Operator&gt;</code></h2>
+      <table>
+      <colgroup>
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Default</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>OpType</code></td>
+      <td>Type of operator, as detailed in the table below.</td>
+      <td>enum</td>
+      <td>Yes</td>
+      <td>Equal</td>
+      </tr>
+      <tr class="even">
+      <td><code>Tolerance</code></td>
+      <td>Numerical tolerance only used for the <code>Equal</code> OpType.<br> The comparison will then be “Is the difference between the values less than or equal to <code>tolerance</code>?”.</td>
+      <td>number</td>
+      <td>No</td>
+      <td>0</td>
+      </tr>
+      </tbody>
+      </table>
+      <table>
+      <thead>
+      <tr class="header">
+      <th>Element</th>
+      <th>Description</th>
+      <th>Unique</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><a href="#val"><code>&lt;Val&gt;</code></a></td>
+      <td>Unit value.</td>
+      <td>No</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><a href="#operator"><code>&lt;Operator&gt;</code></a></td>
+      <td>Sub-operation, evaluated into a value.</td>
+      <td>No</td>
+      <td>No</td>
+      </tr>
+      </tbody>
+      </table>
+      <blockquote>
+      <p><strong>Note:</strong> An Operator <em>must</em> contain at least a <code>val</code> or an <code>operator</code>.</p>
+      </blockquote>
+      <blockquote>
+      <p><strong>Note:</strong> The relative order between <code>val</code> and <code>operator</code> elements is important, and they are all considered “values” similarly. The required number of “values” elements depends on the OpType, as follows:</p>
+      </blockquote>
+      <table>
+      <colgroup>
+      <col style="width: 33%">
+      <col style="width: 33%">
+      <col style="width: 33%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>OpType</th>
+      <th>Description</th>
+      <th>Number of values</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td>EQUAL</td>
+      <td>Returns true (1) if both values are equal, false (0) otherwise.<br>If a tolerance is defined, returns true if <code>abs(v1-v2) &lt;= tolerance</code>, instead.</td>
+      <td>2</td>
+      </tr>
+      <tr class="even">
+      <td>LESS</td>
+      <td>Returns true (1) if first value is (strictly) less than second value, false (0) otherwise.</td>
+      <td>2</td>
+      </tr>
+      <tr class="odd">
+      <td>GREATER</td>
+      <td>Returns true (1) if first value is (strictly) greater than second value, false (0) otherwise.</td>
+      <td>2</td>
+      </tr>
+      <tr class="even">
+      <td>LESS_OR_EQUAL</td>
+      <td>Returns true (1) if first value is less than or equal to second value, false (0) otherwise.</td>
+      <td>2</td>
+      </tr>
+      <tr class="odd">
+      <td>GREATER_OR_EQUAL</td>
+      <td>Returns true (1) if first value is greater than or equal to second value, false (0) otherwise.</td>
+      <td>2</td>
+      </tr>
+      <tr class="even">
+      <td>BETWEEN</td>
+      <td>Returns true (1) if first value is greater than or equal to second value <strong>and</strong> less than or equal to third value, false (0) otherwise.</td>
+      <td>3</td>
+      </tr>
+      <tr class="odd">
+      <td>NOT</td>
+      <td>Returns true (1) is value is false (0), and returns false (0) otherwise.</td>
+      <td>1</td>
+      </tr>
+      <tr class="even">
+      <td>AND</td>
+      <td>Returns true (1) if both values are true (non-zero), false (0) otherwise.</td>
+      <td>2</td>
+      </tr>
+      <tr class="odd">
+      <td>OR</td>
+      <td>Returns true (1) if at least one of the two values is true (non-zero), false (0) otherwise.</td>
+      <td>2</td>
+      </tr>
+      <tr class="even">
+      <td>PLUS</td>
+      <td>Returns the sum of the two values.</td>
+      <td>2</td>
+      </tr>
+      <tr class="odd">
+      <td>MINUS</td>
+      <td>Returns the first value minus the second value.</td>
+      <td>2</td>
+      </tr>
+      <tr class="even">
+      <td>MULTIPLY</td>
+      <td>Returns the product of the two values.</td>
+      <td>2</td>
+      </tr>
+      <tr class="odd">
+      <td>DIVIDE</td>
+      <td>Returns the first value divided by the second value.</td>
+      <td>2</td>
+      </tr>
+      </tbody>
+      </table>
+      <h2 id="once"><code>&lt;Once&gt;</code></h2>
+      <p>A <code>&lt;Once&gt;</code> element must have a single boolean value as follows:</p>
+      <div class="sourceCode" id="cb1"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">&lt;Once&gt;</span>True<span class="kw">&lt;/Once&gt;</span></span>
+      <span id="cb1-2"><a href="#cb1-2"></a><span class="co">&lt;!-- OR --&gt;</span></span>
+      <span id="cb1-3"><a href="#cb1-3"></a><span class="kw">&lt;Once&gt;</span>False<span class="kw">&lt;/Once&gt;</span></span></code></pre></div>
+      <p>If, during its evaluation, a <code>test</code> or <code>sequence</code> with a <code>once</code> True is validated (including its possible duration), then it will remain validated until Reset, and will never be evaluated again. This means actions within this <code>test</code> or <code>sequence</code> will not be executed in later either.</p>
+      <h2 id="duration"><code>&lt;Duration&gt;</code></h2>
+      <p>If a <code>test</code> or <code>sequence</code> is validated but has a non-zero Duration, it will not be considered validated until the Duration criteria has also been validated.</p>
+      <table>
+      <colgroup>
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Default</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>Value</code></td>
+      <td>Number of seconds.</td>
+      <td>number</td>
+      <td>Yes</td>
+      <td></td>
+      </tr>
+      <tr class="even">
+      <td><code>Cumulative</code></td>
+      <td>Determines if the duration is accumulated on times where the test is Validated even if interrupted by some non-valid time, or if the Duration timer is reset is the test becomes non-validated.</td>
+      <td>boolean</td>
+      <td>Yes</td>
+      <td></td>
+      </tr>
+      </tbody>
+      </table>
+      <h2 id="instrument"><code>&lt;Instrument&gt;</code></h2>
+      <table>
+      <colgroup>
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Default</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>Id</code></td>
+      <td>Id of an instrument, defined as PartID in ModelBehaviours of corresponding aircraft.</td>
+      <td>string</td>
+      <td>Yes</td>
+      <td></td>
+      </tr>
+      </tbody>
+      </table>
+      <p>Instruments for an aircraft are defined in an xml file describing the interior of the 3D model. In this file, <code>ModelBehaviors</code> are defined and use <code>Components</code> associated with parts of the model, that can have a <code>PartID</code> defined. This <code>PartID</code> can then be used as a reference in a Checkpoint to highlight said instrument. A <code>Component</code> with a <code>PartID</code> should also have a <code>CameraTitle</code> and a <code>Node</code> to be able to properly highlight the instrument, and to change the camera to be able to see the instrument more easily.</p>
+      <p>See section about <a href="../Models/Model_Behaviors/index.html">Model Behaviors</a> for more details.</p>
+      <h2 id="forcecamera"><code>&lt;ForceCamera&gt;</code></h2>
+      <table>
+      <colgroup>
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Default</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>Name</code></td>
+      <td>Name of the camera to be used in this checkpoint, regardless of instruments camera, when highlighting instruments.</td>
+      <td>string</td>
+      <td>Yes</td>
+      <td></td>
+      </tr>
+      </tbody>
+      </table>
+      <blockquote>
+      <p><strong>Note:</strong> The name of the camera correspond to the “Title” as defined in the <code>CameraDefinition</code> parts of aircraft.cfg file. Good practice is to use <code>ForceCamera</code> only in checklist files, not in checkpoint libraries.</p>
+      </blockquote>
+      <h2 id="settemplatevalue"><code>&lt;SetTemplateValue&gt;</code></h2>
+      <table>
+      <colgroup>
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Default</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>Id</code></td>
+      <td>Id of the template value defined here, to be referenced by <code>UseTemplateValue</code>.<br>When used in a checklist <code>checkpoint</code> referencing (with <code>ReferenceId</code>) a library <code>checkpoint</code>, this <code>Id</code> must correspond to one of the template value <code>Ids</code> defined in the library <code>checkpoint</code></td>
+      <td>string</td>
+      <td>Yes</td>
+      <td></td>
+      </tr>
+      <tr class="even">
+      <td><code>Value</code></td>
+      <td>Defines a constant value. If defined, this <code>SetTemplateValue</code>’s elements will be ignored.</td>
+      <td>number</td>
+      <td>No</td>
+      <td></td>
+      </tr>
+      </tbody>
+      </table>
+      <table>
+      <thead>
+      <tr class="header">
+      <th>Element</th>
+      <th>Description</th>
+      <th>Unique</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><a href="#val"><code>&lt;Val&gt;</code></a></td>
+      <td>Value corresponding to this template value.</td>
+      <td>Yes</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><a href="#operator"><code>&lt;Operator&gt;</code></a></td>
+      <td>Operation corresponding to this template value.</td>
+      <td>Yes</td>
+      <td>No</td>
+      </tr>
+      </tbody>
+      </table>
+      <blockquote>
+      <p><strong>Note:</strong> One (and only one) among the <code>Value</code> attribute, the <code>Val</code> element, and the <code>Oparator</code> element, must be defined.</p>
+      <p>More information about the uses of template values can be found in <a href="01-Examples.html">section <em>Using a library checkpoint with slight modifications</em> of Examples and Tips</a></p>
+      </blockquote>
+      <h2 id="action"><code>&lt;Action&gt;</code></h2>
+      <table>
+      <colgroup>
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Default</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>Copilot</code></td>
+      <td>Is this action executed only in <em>Copilot</em> mode?</td>
+      <td>boolean</td>
+      <td>Yes</td>
+      <td>False</td>
+      </tr>
+      <tr class="even">
+      <td><a href="#condition"><code>Condition</code></a></td>
+      <td>Condition to execute the action. See corresponding section.</td>
+      <td>enum</td>
+      <td>Yes</td>
+      <td>Any</td>
+      </tr>
+      <tr class="odd">
+      <td><code>Once</code></td>
+      <td>Is this action executed only once, then never again?</td>
+      <td>boolean</td>
+      <td>Yes</td>
+      <td>False</td>
+      </tr>
+      <tr class="even">
+      <td><code>FlowEvent</code></td>
+      <td>FlowEvent action.</td>
+      <td>string</td>
+      <td>No</td>
+      <td></td>
+      </tr>
+      <tr class="odd">
+      <td><code>EventID</code></td>
+      <td>EventID action, as listed <a href="../../Variable_Lists/Event_IDs.html">here</a>.</td>
+      <td>string</td>
+      <td>No</td>
+      <td></td>
+      </tr>
+      <tr class="even">
+      <td><code>EventParam</code></td>
+      <td>Parameter for the EventID (ignored if no EventID is defined).<br>Some EventIDs require a parameter, but not all of them. This is detailed in the <a href="../../Variable_Lists/Event_IDs.html">EventID page</a>.</td>
+      <td>number</td>
+      <td>No</td>
+      <td></td>
+      </tr>
+      <tr class="odd">
+      <td><a href="#specialaction"><code>SpecialAction</code></a></td>
+      <td>Special Action (see corresponding section)</td>
+      <td>enum</td>
+      <td>No</td>
+      <td>None</td>
+      </tr>
+      <tr class="even">
+      <td><a href="#storevar-and-readvar"><code>StoreVar</code></a></td>
+      <td>Store a value in a checklist-specific variable with this name.</td>
+      <td>string</td>
+      <td>No</td>
+      <td></td>
+      </tr>
+      <tr class="odd">
+      <td><code>Value</code></td>
+      <td>Constant <code>value</code>.<br>Used either with <code>storeVar</code> or with the <code>specialAction</code> <code>WaitForDuration</code>.</td>
+      <td>number</td>
+      <td>No</td>
+      <td></td>
+      </tr>
+      <tr class="even">
+      <td><code>UseTemplateAction</code></td>
+      <td>Replace this action by the action with the same ID that has been defined by <a href="#settemplateaction"><code>SetTemplateAction</code></a>. Other attributes and elements will be ignored.</td>
+      <td>string</td>
+      <td>No</td>
+      <td></td>
+      </tr>
+      </tbody>
+      </table>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Element</th>
+      <th>Description</th>
+      <th>Unique</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><a href="#val"><code>&lt;Val&gt;</code></a></td>
+      <td>Value to be stored in the variable defined in <code>storeVar</code>.</td>
+      <td>Yes</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><a href="#operator"><code>&lt;Operator&gt;</code></a></td>
+      <td>Operation to be evaluated, then result stored in the variable defined in <code>storeVar</code>.</td>
+      <td>Yes</td>
+      <td>No</td>
+      </tr>
+      </tbody>
+      </table>
+      <blockquote>
+      <p><strong>Note:</strong> To make sure everything behaves as expected (and for organizational purposes), it is highly recommended to have <strong>only one</strong> of the following attributes per Action. This is never limiting, since multiple <code>actions</code> can always be defined in the same element. - <code>UseTemplateAction</code> - <code>FlowEvent</code> - <code>EventID</code> - <code>SpecialAction</code> - <code>StoreVar</code></p>
+      </blockquote>
+      <h2 id="settemplateaction"><code>&lt;SetTemplateAction&gt;</code></h2>
+      <table>
+      <colgroup>
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      <col style="width: 20%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      <th>Default</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>Id</code></td>
+      <td>Id of the template action defined here, to be referenced by <code>UseTemplateAction</code>.<br>When used in a checklist <code>checkpoint</code> referencing (with <code>ReferenceId</code>) a library <code>checkpoint</code>, this <code>Id</code> must correspond to one of the template action <code>Ids</code> defined in the library <code>checkpoint</code></td>
+      <td>string</td>
+      <td>Yes</td>
+      <td></td>
+      </tr>
+      <tr class="even">
+      <td><code>Copilot</code></td>
+      <td>Is this action executed only in <em>Copilot</em> mode?</td>
+      <td>boolean</td>
+      <td>Yes</td>
+      <td>False</td>
+      </tr>
+      <tr class="odd">
+      <td><a href="#condition"><code>Condition</code></a></td>
+      <td>Condition to execute the action. See corresponding section.</td>
+      <td>enum</td>
+      <td>Yes</td>
+      <td>Any</td>
+      </tr>
+      <tr class="even">
+      <td><code>Once</code></td>
+      <td>Is this action executed only once, then never again?</td>
+      <td>boolean</td>
+      <td>Yes</td>
+      <td>False</td>
+      </tr>
+      <tr class="odd">
+      <td><code>FlowEvent</code></td>
+      <td>FlowEvent action, as listed [here][flowevents].</td>
+      <td>string</td>
+      <td>No</td>
+      <td></td>
+      </tr>
+      <tr class="even">
+      <td><code>EventID</code></td>
+      <td>EventID action, as listed <a href="../../Variable_Lists/Event_IDs.html">here</a>.</td>
+      <td>string</td>
+      <td>No</td>
+      <td></td>
+      </tr>
+      <tr class="odd">
+      <td><code>EventParam</code></td>
+      <td>Parameter for the EventID (ignored if no EventID is defined).<br>Some EventIDs require a parameter, but not all of them. This is detailed in the <a href="../../Variable_Lists/Event_IDs.html">EventID page</a>.</td>
+      <td>number</td>
+      <td>No</td>
+      <td></td>
+      </tr>
+      <tr class="even">
+      <td><a href="#specialaction"><code>SpecialAction</code></a></td>
+      <td>Special Action (see corresponding section)</td>
+      <td>enum</td>
+      <td>No</td>
+      <td>None</td>
+      </tr>
+      <tr class="odd">
+      <td><a href="#storevar-and-readvar"><code>StoreVar</code></a></td>
+      <td>Store a value in a checklist-specific variable with this name.</td>
+      <td>string</td>
+      <td>No</td>
+      <td></td>
+      </tr>
+      <tr class="even">
+      <td><code>Value</code></td>
+      <td>Constant <code>value</code>.<br>Used either with <code>storeVar</code> or with the <code>specialAction</code> <code>WaitForDuration</code>.</td>
+      <td>number</td>
+      <td>No</td>
+      <td></td>
+      </tr>
+      </tbody>
+      </table>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Element</th>
+      <th>Description</th>
+      <th>Unique</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><a href="#val"><code>&lt;Val&gt;</code></a></td>
+      <td>Value to be stored in the variable defined in <code>storeVar</code>.</td>
+      <td>Yes</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><a href="#operator"><code>&lt;Operator&gt;</code></a></td>
+      <td>Operation to be evaluated, then result stored in the variable defined in <code>storeVar</code>.</td>
+      <td>Yes</td>
+      <td>No</td>
+      </tr>
+      </tbody>
+      </table>
+      <blockquote>
+      <p><strong>Note:</strong> As for regular <code>Actions</code>, it is recommended to have only one of the following attributes: - <code>FlowEvent</code> - <code>EventID</code> - <code>SpecialAction</code> - <code>StoreVar</code></p>
+      </blockquote>
+      <h2 id="condition"><code>Condition</code></h2>
+      <table>
+      <colgroup>
+      <col style="width: 33%">
+      <col style="width: 33%">
+      <col style="width: 33%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Enum values</th>
+      <th>Description</th>
+      <th>Where can it be used?</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td>IfTestValueTrue</td>
+      <td>Only if the evaluation of <a href="#testvalue"><code>testValue</code></a> is currently True. If Used in a <code>Sequence</code>, uses the value of all sub-tests as a TestValue.</td>
+      <td>Only in <code>actions</code> element of <a href="#test"><code>&lt;Test&gt;</code></a> or <a href="#sequence"><code>&lt;Sequence&gt;</code></a></td>
+      </tr>
+      <tr class="even">
+      <td>IfTestValueFalse</td>
+      <td>Only if the evaluation of <a href="#testvalue"><code>testValue</code></a> is currently False. If Used in a <code>Sequence</code>, uses the value of all sub-tests as a TestValue.</td>
+      <td>Only in <code>actions</code> element of <a href="#test"><code>&lt;Test&gt;</code></a> or <a href="#sequence"><code>&lt;Sequence&gt;</code></a></td>
+      </tr>
+      <tr class="odd">
+      <td>Init</td>
+      <td>Only when the <a href="#checkpoint"><code>checkpoint</code></a> start being evaluated for the first time since Reset.</td>
+      <td>Only in <code>actions</code> element of <a href="#checkpoint"><code>&lt;Checkpoint&gt;</code></a></td>
+      </tr>
+      <tr class="even">
+      <td>End</td>
+      <td>Only when the <a href="#checkpoint"><code>checkpoint</code></a> is completely validated.</td>
+      <td>Only in <code>actions</code> element of <a href="#checkpoint"><code>&lt;Checkpoint&gt;</code></a></td>
+      </tr>
+      <tr class="odd">
+      <td>Any</td>
+      <td>If defined in an <code>action</code> that is an element of <a href="#test"><code>&lt;Test&gt;</code></a> or <a href="#sequence"><code>&lt;Sequence&gt;</code></a>, executed every time the <code>testValue</code> is evaluated.<br>If defined in an <code>action</code> that is an element of <a href="#checkpoint"><code>checkpoint</code></a>, executed at <code>Init</code> and <code>End</code> of said <code>checkpoint</code></td>
+      <td>Every <code>action</code></td>
+      </tr>
+      </tbody>
+      </table>
+      <h2 id="specialaction"><code>SpecialAction</code></h2>
+      <table>
+      <colgroup>
+      <col style="width: 33%">
+      <col style="width: 33%">
+      <col style="width: 33%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Enum values</th>
+      <th>Description</th>
+      <th>Where can it be used?</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td>ForceValidate</td>
+      <td>Force the Validation of this <a href="#test"><code>test</code></a>, ignoring possible <a href="#duration"><code>durations</code></a> or <a href="#testvalue"><code>testValue</code></a> not valid.<br>Mainly used for <em>Copilot</em> mode, to ignore an unimportant <code>test</code> that cannot be completed by copilot.</td>
+      <td>Only in <code>actions</code> element of <a href="#test"><code>&lt;Test&gt;</code></a></td>
+      </tr>
+      <tr class="even">
+      <td>WaitForUserToDoIt</td>
+      <td>Waits until the <a href="#test"><code>test</code></a> is validated.<br>Mainly used for <em>Copilot</em> mode, to force the copilot to wait even if no <code>Copilot</code> action is defined (otherwise the default <em>Copilot</em> behaviour is to force validate this test).</td>
+      <td>Only in <code>actions</code> element of <a href="#test"><code>&lt;Test&gt;</code></a></td>
+      </tr>
+      <tr class="odd">
+      <td>WaitUntilTestValueValidated</td>
+      <td>Waits until the <a href="#test"><code>test</code></a> is validated.<br>Mainly used for <em>Copilot</em> mode, to force the copilot to wait even if no <code>Copilot</code> action is defined (otherwise the default <em>Copilot</em> behaviour is to force validate this test).</td>
+      <td>Only in <code>actions</code> element of <a href="#test"><code>&lt;Test&gt;</code></a></td>
+      </tr>
+      <tr class="even">
+      <td>WaitForDuration</td>
+      <td>Once this action triggers (depending on <code>condition</code>), current <a href="#test"><code>test</code></a> cannot be validated (regardless of <code>duration</code> or <code>testValue</code>) until some time has passed.<br>Time (in seconds) must be specified in the <code>value</code> attribute of this <code>action</code>.</td>
+      <td>Only in <code>actions</code> element of <a href="#test"><code>&lt;Test&gt;</code></a></td>
+      </tr>
+      </tbody>
+      </table>
+      <blockquote>
+      <p><strong>Note:</strong> <code>WaitForUserToDoIt</code> and <code>WaitUntilTestValueValidated</code> work the same way (currently), but it is recommended to use the right one for clarity, because they have different meaning. <code>WaitForUserToDoIt</code> means the User should manually do some action, and the copilot will not (or cannot) do it, and will not skip it either. <code>WaitUntilTestValueValidated</code> means the only required action is waiting; user and copilot do not have any action to perform, and this should not be skipped either.</p>
+      </blockquote>
+      <h2 id="storevar-and-readvar"><code>StoreVar</code> and <code>ReadVar</code></h2>
+      <p><code>StoreVar</code> and <code>ReadVar</code> can be used to create variables that are specific to the Checklist and use them. Those variables are destroyed whenever a Checklist page is Reset (either by pressing the “Reset Page” button, or by restarting the mission). Names for those variables can be any string. Values stored and read are numbers. Booleans (true/false) are represented by <code>0</code> (false) or <code>1</code> (true). Note, however, that any non-zero number will evaluate to true when used as a boolean.</p>
+      <p><code>ReadVar</code> can be used in a <a href="#val"><code>&lt;Val&gt;</code></a> to retrieve a previously stored variable. If the requested variable has never been stored, it will return 0 instead.</p>
+      <p><code>StoreVar</code> can be used in an <a href="#action"><code>&lt;Action&gt;</code></a> to store a value in a variable. The corresponding <code>action</code> must contain <strong>one</strong> of the following: - a <a href="#val"><code>&lt;Val&gt;</code></a> element - a <a href="#operator"><code>&lt;Operator&gt;</code></a> element - a <code>Value</code> attribute, containing a constant number</p>
+      <p>If multiple are defined, behavior is undefined. If none are defined, 0 will be stored by default (erasing any previous value stored in this variable).</p>
+    </article>
+  </div>
+  <script>
+	function detectIE() {
+	  var ua = window.navigator.userAgent;
+
+	  // Test values; Uncomment to check result …
+
+	  // IE 10
+	  // ua = 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)';
+
+	  // IE 11
+	  // ua = 'Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko';
+
+	  // Edge 12 (Spartan)
+	  // ua = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36 Edge/12.0';
+
+	  // Edge 13
+	  // ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Safari/537.36 Edge/13.10586';
+
+	  var msie = ua.indexOf('MSIE ');
+	  if (msie > 0) {
+		// IE 10 or older => return version number
+		return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+	  }
+
+	  var trident = ua.indexOf('Trident/');
+	  if (trident > 0) {
+		// IE 11 => return version number
+		var rv = ua.indexOf('rv:');
+		return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+	  }
+
+	  var edge = ua.indexOf('Edge/');
+	  if (edge > 0) {
+		// Edge (IE 12+) => return version number
+		return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+	  }
+
+	  // other browser
+	  return false;
+	}
+
+	var bIsIE = (detectIE() !== false);
+
+	function setData(name, value)
+	{
+		if (bIsIE)
+		{
+			if (localStorage !== undefined)
+			{
+				if (value === null)
+					localStorage.removeItem(name);
+				else
+					localStorage.setItem(name, value);
+			}
+			/*var d = new Date();
+			d.setTime(d.getTime() + (24*60*60));
+			var expires = "expires="+ d.toUTCString();
+			document.cookie = name + "=" + value + ";" + expires + ";path=/";
+			*/
+		}
+		else
+		{
+			if (value === null)
+				sessionStorage.removeItem(name);
+			else
+				sessionStorage.setItem(name, value);
+		}
+	}
+	
+	function getData(name)
+	{
+		var value = null;
+		if (bIsIE)
+		{
+			/*var cname = name + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for(var i = 0; i <ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) == ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(cname) == 0) {
+					return c.substring(cname.length, c.length);
+				}
+			}
+			return null;*/
+			if (localStorage !== undefined)
+			{
+				value = localStorage.getItem(name);
+			}
+			if (value === 'undefined')
+				value = null;
+		}
+		else
+		{
+			value = sessionStorage.getItem(name);
+			if (value === 'undefined')
+				value = null;
+		}
+		return value;
+	}
+	
+    // FROM http://purecss.io/js/ui.js
+    (function (window, document) {
+
+	
+      var content = document.getElementById('main'),
+		layout = document.getElementById('layout'),
+        menu = document.getElementById('menu'),
+        menuLink = document.getElementById('menuLink');
+		
+      function toggleClass(element, className) {
+        var classes = element.className.split(/\s+/),
+          length = classes.length,
+          i = 0;
+
+        for (; i < length; i++) {
+          if (classes[i] === className) {
+            classes.splice(i, 1);
+            break;
+          }
+        }
+        // The className is not found
+        if (length === classes.length) {
+          classes.push(className);
+        }
+
+        element.className = classes.join(' ');
+      }
+
+      function hasClass(element, className) {
+        var classes = element.className.split(/\s+/),
+          length = classes.length,
+          i = 0;
+
+        for (; i < length; i++) {
+          if (classes[i] === className) {
+            return true;
+          }
+        }
+		return false;
+      }
+
+      menuLink.onclick = function (e) {
+        var active = 'active';
+
+        e.preventDefault();
+		toggleClass(content, active);
+        toggleClass(layout, active);
+        toggleClass(menu, active);
+        toggleClass(menuLink, active);
+      };
+	  
+	  // Save menu scroll level when user click on link
+	  var a_links = document.getElementsByTagName('a');
+	  for (var i = 0 ; i < a_links.length ; i++) {
+	    var link = a_links[i];
+		if(menu.contains(link)) {
+			link.onclick = function () {
+				try {
+					setData('navScroll', link.offsetTop - link.getBoundingClientRect().top);
+					var root = menu.getElementsByTagName('ul')[0];
+					var li_elems = root.getElementsByTagName('li');
+					for (var i = 0; i<li_elems.length; i++)
+					{
+						if (!hasClass(li_elems[i],'collapsed'))
+							setData('liexp' + i, true);
+						else
+							setData('liexp' + i);
+					}
+					setData('liexp', true);
+				}
+				catch (error) {
+					console.error(error);
+				}
+				return true;
+			};
+		}
+	  };
+	  
+		var root = menu.getElementsByTagName('ul')[0];
+		// Remove empty ul
+		var ul_elems = root.getElementsByTagName('ul');
+		for (var i = ul_elems.length-1; i>=0; i--)
+		{
+			if (ul_elems[i].childElementCount == 0)
+			{
+				ul_elems[i].parentNode.removeChild(ul_elems[i]);
+			}
+		}
+		// Restore side menu state
+		var saved_state = (getData('liexp')!== null);
+		var li_elems = root.getElementsByTagName('li');
+		for (var i = 0; i<li_elems.length; i++)
+		{
+			var l = li_elems[i];
+			if (hasClass(l,'heading'))
+				toggleClass(l,'heading');
+			if ((l.nextElementSibling) && (l.nextElementSibling.nodeName=="UL"))
+			{
+				toggleClass(l,'collapsible');
+				var collapser = document.createElement('span');
+				var inserted = l.insertBefore(collapser, l.firstChild);
+				toggleClass(inserted,'collapser');
+				var inserted = l.insertBefore(collapser, l.firstChild);
+				inserted.addEventListener('click', function() { toggleClass(this.parentNode, 'collapsed') });
+				if (saved_state)
+				{
+					if (getData('liexp' + i) === null)
+					{
+						toggleClass(l,'collapsed');
+					}
+				}
+				else
+				{
+					if (l.parentNode != root)
+					{
+						toggleClass(l,'collapsed');
+					}
+				}
+			}
+		}
+		// Restore menu scroll level if defined
+		if(getData('navScroll') != null)
+			document.getElementById('menu').scrollTop = getData('navScroll');
+
+   }(this, this.document));
+  </script>
+
+
+</body></html>

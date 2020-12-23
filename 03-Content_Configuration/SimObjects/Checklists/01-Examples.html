@@ -1,0 +1,1743 @@
+<!DOCTYPE html><html><head>
+  <style>
+    /*! ADAPTED
+    Typeplate : Starter Kit
+    URL ........... http://typeplate.com
+    Version ....... 3.0.2
+    Github ........ https://github.com/typeplate/starter-kit
+    Authors ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
+    License ....... Creative Commmons Attribution 3.0
+    License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
+    */
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      text-rendering: optimizeLegibility;
+      line-height: 1;
+      margin-top: 0;
+      color: #222;
+    }
+
+    blockquote+figcaption cite {
+      display: block;
+      font-size: inherit;
+      text-align: right;
+    }
+
+    body {
+      word-wrap: break-word;
+    }
+
+    pre code {
+      word-wrap: normal;
+    }
+
+    body {
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+      hyphens: auto;
+      color: #444;
+    }
+	
+	figcaption {
+		text-align: center;
+	}
+
+    h1 {
+      font-size: 2em;
+      /* 2*16 = 32 */
+    }
+
+    h2 {
+      font-size: 1.5em;
+      /* 1.5*16 = 24 */
+    }
+
+    h3 {
+      font-size: 1.17em;
+      /* 1.17*16 = 18.72 */
+    }
+
+    h4 {
+      font-size: 1em;
+      /* 1*16 = 16 */
+    }
+
+    h5 {
+      font-size: 0.83em;
+      /* 0.83*16 = 13.28 */
+    }
+
+    h6 {
+      font-size: 0.75em;
+      /* 0.75*16 = 12 */
+    }
+
+    h1 {
+      margin: 2.42424rem 0 1.454544rem;
+    }
+
+    h2 {
+      margin: 2.0202rem 0 1.21212rem;
+    }
+
+    h3 {
+      margin: 1.61616rem 0 1rem;
+    }
+
+    h4 {
+      margin: 1.21212rem 0 1;
+    }
+
+    h5 {
+      margin: 0.80808rem 0;
+    }
+
+    h6 {
+      margin: 0.70707rem 0;
+    }
+
+    p {
+      margin: auto auto 1.5rem;
+    }
+
+    small {
+      font-size: 65%;
+    }
+
+    input,
+    abbr,
+    acronym,
+    blockquote,
+    code,
+    kbd,
+    q,
+    samp,
+    var {
+      -webkit-hyphens: none;
+      -ms-hyphens: none;
+      hyphens: none;
+    }
+
+    pre {
+      white-space: pre;
+    }
+
+    pre code {
+      white-space: -moz-pre-wrap;
+      white-space: pre-wrap;
+    }
+
+    code {
+      white-space: pre;
+      font-family: SF Mono, Consolas, Dejavu Sans Mono, Menlo, monospace;
+    }
+
+    abbr {
+      -webkit-font-variant: small-caps;
+      -moz-font-variant: small-caps;
+      -ms-font-variant: small-caps;
+      font-variant: small-caps;
+      font-weight: 600;
+      text-transform: lowercase;
+      color: gray;
+    }
+
+    abbr[title]:hover {
+      cursor: help;
+    }
+
+    /* FROM http://purecss.io/layouts/side-menu/  adapted to remove pure classes*/
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      color: #444;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: auto;
+    }
+
+    code,
+    pre {
+      background-color: #f5f5f5;
+      color: #444;
+      border-radius: 2px;
+      text-shadow: 0px 1px 0px white;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    }
+
+    pre code {
+      border: none;
+      box-shadow: none;
+    }
+
+    pre {
+      padding: 0.5em;
+    }
+
+    code {
+      display: inline-block;
+      padding: 0 0.5em;
+      line-height: 1.4;
+      font-size: 0.9em;
+    }
+
+    table {
+      border-spacing: 0;
+      margin-bottom: 1.5rem;
+    }
+
+    table th,
+    table td {
+      padding: 0.3em 0.7em;
+    }
+
+    table th {
+      background-color: #f4f4f4;
+      border-bottom: 2px solid #444;
+    }
+
+    table td {
+      border: 1px solid #f5f5f5;
+    }
+
+    /* Add transition to containers so they can push in and out. */
+
+    #layout,
+    #menu,
+    .menu-link {
+      -webkit-transition: all 0.2s ease-out;
+      -moz-transition: all 0.2s ease-out;
+      -ms-transition: all 0.2s ease-out;
+      -o-transition: all 0.2s ease-out;
+      transition: all 0.2s ease-out;
+    }
+
+    /* This is the parent `<div>` that contains the menu and the content area. */
+
+    #layout {
+      position: relative;
+      padding-left: 0;
+    }
+
+    #layout.active #menu {
+      left: 300px;
+      width: 300px;
+    }
+
+    #layout.active .menu-link {
+      left: 300px;
+    }
+
+    /* The content `<div>` is where all your content goes. */
+
+    .content {
+      margin: 50px auto;
+      padding: 0;
+      max-width: 60%;
+      line-height: 1.6em;
+    }
+
+    /*
+    The `#menu` `<div>` is the parent `<div>` that contains the menu that
+    appears on the left side of the page.
+    */
+
+    #menu {
+      margin-left: -300px;
+      /* "#menu" width */
+      width: 300px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 1000;
+      /* so the menu or its navicon stays above all content */
+      background: #f4f4f4;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      font-size: 0.9em;
+    }
+
+    a,
+    a * {
+      text-decoration: none;
+      color: #2483cc;
+    }
+
+    a:visited {
+      text-decoration: none;
+      color: #2483cc;
+    }
+
+    /* All anchors inside the menu should be styled like this. */
+
+    #menu a {
+      display: inline-block;
+      padding: 0.1em 0.5em;
+    }
+
+    #menu a:first-letter {
+      text-transform: capitalize;
+    }
+
+    #menu ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0em 0.5em;
+    }
+
+    #menu ul ul {
+      margin-top: 0em;
+      margin-left: 0.6em;
+      border-left: 1px dotted rgb(64, 64, 64);
+	  padding-left: 0.5em;
+    }
+
+    /* Change color of the anchor links on hover/focus. */
+
+    #menu li a:hover,
+    #menu li a:focus {
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    /* This styles the selected menu item `<li>`. */
+
+    #menu li a.active {
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    /* This styles a link within a selected menu item `<li>`. */
+
+    #menu li a.active {
+      color: #222;
+    }
+
+    /* This styles the menu heading. */
+
+    #menu li.heading {
+      font-size: 0.9em;
+      /*text-transform: uppercase;*/
+      color: #000;
+    }
+
+    #menu li.heading>* {
+      padding: 0.1em 0.5em;
+      display: block;
+    }
+
+    #menu li.heading a {
+      color: #0c68af;
+    }
+
+    /* -- Dynamic Button For Responsive Menu -------------------------------------*/
+
+    /*
+    `.menu-link` represents the responsive menu toggle that shows/hides on
+    small screens.
+    */
+
+    .menu-link {
+      position: fixed;
+      display: block;
+      /* show this only on small screens */
+      top: 0;
+      left: 0;
+      /* "#menu width" */
+      background: #f4f4f4;
+      font-size: 10px;
+      /* change this value to increase/decrease button size */
+      z-index: 10;
+      width: 2em;
+      height: auto;
+      padding: 1.6em 1.2em;
+      border-radius: 0 2px 2px 0;
+    }
+
+    .menu-link:hover {
+      background: /* #f4f4f4 * 0.8 */
+      #eee;
+    }
+
+    .menu-link span {
+      position: relative;
+      display: block;
+    }
+
+    .menu-link span,
+    .menu-link span:before,
+    .menu-link span:after {
+      background-color: #555;
+      width: 100%;
+      height: 0.2em;
+      border-radius: 1em;
+    }
+
+    .menu-link span:before,
+    .menu-link span:after {
+      position: absolute;
+      margin-top: -0.6em;
+      content: " ";
+    }
+
+    .menu-link span:after {
+      margin-top: 0.6em;
+    }
+
+    @media (max-width: 1300px) {       
+	  .content.active {
+		  margin-left: 310px;
+	  }
+    }
+	
+	@media (max-width: 800px) {
+		.content {
+		  max-width: 98%;
+	  }
+	}
+
+	#menu li span {
+		padding: 0.1em 0.5em;
+	}
+	
+	li.collapsible {
+		cursor: pointer;
+		font-weight:bold;
+	}
+	
+	li.collapsible span.collapser:before {
+		display:inline-block;
+		width:0.5em;
+	}
+	
+	li.collapsible span.collapser:before {
+		content: "-";
+	}
+	
+	li.collapsed span.collapser:before {
+		content: "+";
+	}
+	
+	li.collapsed + ul {
+		display:none;
+	}
+
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <!--script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script-->
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <div id="layout" class="active">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link active">
+      <!-- Hamburger icon -->
+      <span></span>
+    </a>
+    <nav id="menu" class="active">
+<ul>
+<li class="heading"><a href="..\..\..\index.html">Home</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\index.html">Getting Started</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\01-Getting_Started\01-SDK_Overview.html">SDK Overview</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\02-FAQ.html">FAQ</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\03-Roadmap.html">Roadmap</a></li>
+<li class="heading"><span>Samples</span></li>
+<ul>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Samples\Aircraft\index.html">Aircraft</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Samples\Aircraft\GaugeAircraft\index.html">GaugeAircraft</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Samples\Aircraft\GdiplusAircraft\index.html">GdiplusAircraft</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Samples\Aircraft\MouseAircraft\index.html">MouseAircraft</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Samples\Aircraft\SimpleAircraft\index.html">SimpleAircraft</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Samples\SimpleAerial\index.html">SimpleAerial</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Samples\SimpleAirport\index.html">SimpleAirport</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Samples\SimpleBiomes\index.html">SimpleBiomes</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Samples\SimpleNavData\index.html">SimpleNavData</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Samples\SimpleScenery\index.html">SimpleScenery</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Samples\SimvarWatcher\index.html">SimvarWatcher</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Samples\WwiseSampleProject\index.html">WwiseSampleProject</a></li>
+</ul>
+<li class="heading"><span>Tutorials</span></li>
+<ul>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Tutorials\01-Placing_An_Add-on_Airport\index.html">Placing An Add-on Airport</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Tutorials\02-Flight_model_definition\index.html">Flight model definition</a></li>
+</ul>
+</ul>
+<li class="heading"><span>Asset Creation</span></li>
+<ul>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\3D_Models\index.html">3D Models</a></li>
+<ul>
+<li class="heading"><span>Modeling Practices</span></li>
+<ul>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\3D_Models\Modeling_Practices\01-Aircraft_Modeling.html">Aircraft Modeling</a></li>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\3D_Models\Modeling_Practices\02-Levels_of_Detail.html">Levels of Detail</a></li>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\3D_Models\Modeling_Practices\03-Aircraft_Texture_Mapping.html">Aircraft Texture Mapping</a></li>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\3D_Models\Modeling_Practices\04-Collisions.html">Collisions</a></li>
+</ul>
+</ul>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\Lighting_Model\index.html">Lighting Model</a></li>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\Sounds\index.html">Sounds</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\Sounds\01-Master_Mixer_Hierarchy.html">Master Mixer Hierarchy</a></li>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\Sounds\02-Shared_Game_Parameters.html">Shared Game Parameters</a></li>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\Sounds\03-Shared_States_and_Switches.html">Shared States and Switches</a></li>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\Sounds\04-Shared_Attenuation_Shareset.html">Shared Attenuation Shareset</a></li>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\Sounds\05-Mix_your_Aircraft.html">Mix your Aircraft</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\Textures\index.html">Textures</a></li>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\glTF_Materials.html">glTF Materials</a></li>
+</ul>
+<li class="heading"><span>Content Configuration</span></li>
+<ul>
+<li class="heading"><a href="..\..\Cameras\index.html">Cameras</a></li>
+<ul>
+<li class="heading"><a href="..\..\Cameras\Camera_Configuration.html">Camera Configuration</a></li>
+<li class="heading"><a href="..\..\Cameras\RTC\index.html">RTC</a></li>
+<ul>
+<li class="heading"><a href="..\..\Cameras\RTC\Examples.html">Examples</a></li>
+<li class="heading"><a href="..\..\Cameras\RTC\Using_RTCs.html">Using RTCs</a></li>
+<li class="heading"><a href="..\..\Cameras\RTC\XML_Definition.html">XML Definition</a></li>
+</ul>
+<li class="heading"><a href="..\..\Cameras\Wow-effect.html">Wow-effect</a></li>
+</ul>
+<li class="heading"><a href="..\..\Environment\index.html">Environment</a></li>
+<ul>
+<li class="heading"><a href="..\..\Environment\Airports_And_Facilities\index.html">Airports And Facilities</a></li>
+<ul>
+<li class="heading"><a href="..\..\Environment\Airports_And_Facilities\Airports.html">Airports</a></li>
+<li class="heading"><a href="..\..\Environment\Airports_And_Facilities\Jetways.html">Jetways</a></li>
+</ul>
+<li class="heading"><a href="..\..\Environment\File_Formats\index.html">File Formats</a></li>
+<ul>
+<li class="heading"><a href="..\..\Environment\File_Formats\BGL.html">BGL</a></li>
+<li class="heading"><a href="..\..\Environment\File_Formats\CGL.html">CGL</a></li>
+</ul>
+<li class="heading"><a href="..\..\Environment\Living_World\index.html">Living World</a></li>
+<ul>
+<li class="heading"><a href="..\..\Environment\Living_World\AirportServices\index.html">AirportServices</a></li>
+<ul>
+<li class="heading"><a href="..\..\Environment\Living_World\AirportServices\XMLdefs.html">XMLdefs</a></li>
+<li class="heading"><a href="..\..\Environment\Living_World\AirportServices\examples.html">examples</a></li>
+</ul>
+<li class="heading"><a href="..\..\Environment\Living_World\LivingWorld_Config\index.html">LivingWorld Config</a></li>
+<ul>
+<li class="heading"><a href="..\..\Environment\Living_World\LivingWorld_Config\XMLdefs.html">XMLdefs</a></li>
+<li class="heading"><a href="..\..\Environment\Living_World\LivingWorld_Config\examples.html">examples</a></li>
+</ul>
+<li class="heading"><a href="..\..\Environment\Living_World\Traffic\index.html">Traffic</a></li>
+</ul>
+<li class="heading"><a href="..\..\Environment\Scenery_Objects\index.html">Scenery Objects</a></li>
+<ul>
+<li class="heading"><a href="..\..\Environment\Scenery_Objects\Effects.html">Effects</a></li>
+</ul>
+<li class="heading"><a href="..\..\Environment\Terrain\index.html">Terrain</a></li>
+<ul>
+<li class="heading"><a href="..\..\Environment\Terrain\Aerial_Imagery\index.html">Aerial Imagery</a></li>
+<li class="heading"><a href="..\..\Environment\Terrain\DEM\index.html">DEM</a></li>
+<li class="heading"><a href="..\..\Environment\Terrain\Vector_Shapes\index.html">Vector Shapes</a></li>
+</ul>
+<li class="heading"><a href="..\..\Environment\Vegetation\index.html">Vegetation</a></li>
+<li class="heading"><a href="..\..\Environment\Weather\index.html">Weather</a></li>
+<li class="heading"><a href="..\..\Environment\World_Positioning_Systems\index.html">World Positioning Systems</a></li>
+<ul>
+<li class="heading"><a href="..\..\Environment\World_Positioning_Systems\Bing_Maps_Tile_System.html">Bing Maps Tile System</a></li>
+<li class="heading"><a href="..\..\Environment\World_Positioning_Systems\Lat_Long_Alt.html">Lat Long Alt</a></li>
+<li class="heading"><a href="..\..\Environment\World_Positioning_Systems\QMID.html">QMID</a></li>
+</ul>
+</ul>
+<li class="heading"><a href="..\..\Flights_And_Missions\index.html">Flights And Missions</a></li>
+<ul>
+<li class="heading"><a href="..\..\Flights_And_Missions\Flight_Files.html">Flight Files</a></li>
+</ul>
+<li class="heading"><a href="..\..\Localization\index.html">Localization</a></li>
+<li class="heading"><span>SimObjects</span></li>
+<ul>
+<li class="heading"><a href="..\00-Aircraft\index.html">Aircraft</a></li>
+<ul>
+<li class="heading"><a href="..\00-Aircraft\Aircraft_Configuration\index.html">Aircraft Configuration</a></li>
+<ul>
+<li class="heading"><a href="..\00-Aircraft\Aircraft_Configuration\00-General.html">General</a></li>
+<li class="heading"><a href="..\00-Aircraft\Aircraft_Configuration\AI.html">AI</a></li>
+<li class="heading"><a href="..\00-Aircraft\Aircraft_Configuration\Cameras.html">Cameras</a></li>
+<li class="heading"><a href="..\00-Aircraft\Aircraft_Configuration\Cockpit.html">Cockpit</a></li>
+<li class="heading"><a href="..\00-Aircraft\Aircraft_Configuration\Engines.html">Engines</a></li>
+<li class="heading"><a href="..\00-Aircraft\Aircraft_Configuration\Flight_Model.html">Flight Model</a></li>
+<li class="heading"><a href="..\00-Aircraft\Aircraft_Configuration\Gameplay.html">Gameplay</a></li>
+<li class="heading"><a href="..\00-Aircraft\Aircraft_Configuration\InteractivePoints.html">InteractivePoints</a></li>
+<li class="heading"><a href="..\00-Aircraft\Aircraft_Configuration\Systems_Configuration_File.html">Systems Configuration File</a></li>
+<li class="heading"><a href="..\00-Aircraft\Aircraft_Configuration\Target_Performances_Configuration_File.html">Target Performances Configuration File</a></li>
+</ul>
+<li class="heading"><a href="..\00-Aircraft\Flight_Model.html">Flight Model</a></li>
+</ul>
+<li class="heading"><a href="..\01-Other_SimObjects\index.html">Other SimObjects</a></li>
+<ul>
+<li class="heading"><a href="..\01-Other_SimObjects\Animals.html">Animals</a></li>
+<li class="heading"><a href="..\01-Other_SimObjects\Boats.html">Boats</a></li>
+<li class="heading"><a href="..\01-Other_SimObjects\GroundVehicles\index.html">GroundVehicles</a></li>
+<ul>
+<li class="heading"><a href="..\01-Other_SimObjects\GroundVehicles\BaggageCart.html">BaggageCart</a></li>
+<li class="heading"><a href="..\01-Other_SimObjects\GroundVehicles\BaggageLoader.html">BaggageLoader</a></li>
+<li class="heading"><a href="..\01-Other_SimObjects\GroundVehicles\BoardingRamp.html">BoardingRamp</a></li>
+<li class="heading"><a href="..\01-Other_SimObjects\GroundVehicles\CateringTruck.html">CateringTruck</a></li>
+<li class="heading"><a href="..\01-Other_SimObjects\GroundVehicles\FuelTruck.html">FuelTruck</a></li>
+<li class="heading"><a href="..\01-Other_SimObjects\GroundVehicles\GroundPowerUnit.html">GroundPowerUnit</a></li>
+<li class="heading"><a href="..\01-Other_SimObjects\GroundVehicles\Pushback.html">Pushback</a></li>
+</ul>
+<li class="heading"><a href="..\01-Other_SimObjects\Humans.html">Humans</a></li>
+<li class="heading"><a href="..\01-Other_SimObjects\SimObject_Configuration.html">SimObject Configuration</a></li>
+<li class="heading"><a href="..\01-Other_SimObjects\StaticObjects.html">StaticObjects</a></li>
+</ul>
+<li class="heading"><a href=".\index.html">Checklists</a></li>
+<ul>
+<li class="heading"><a href=".\01-Examples.html">Examples</a></li>
+<li class="heading"><a href=".\02-XML_Definition.html">XML Definition</a></li>
+</ul>
+<li class="heading"><a href="..\Instruments\index.html">Instruments</a></li>
+<ul>
+<li class="heading"><a href="..\Instruments\3D_Instruments\index.html">3D Instruments</a></li>
+<li class="heading"><a href="..\Instruments\C_Gauges\index.html">C Gauges</a></li>
+<ul>
+<li class="heading"><span>Graphics</span></li>
+<ul>
+<li class="heading"><a href="..\Instruments\C_Gauges\Graphics\GDI_Plus.html">GDI Plus</a></li>
+</ul>
+</ul>
+<li class="heading"><a href="..\Instruments\HTML_Gauges\index.html">HTML Gauges</a></li>
+<li class="heading"><a href="..\Instruments\Panels.html">Panels</a></li>
+<li class="heading"><a href="..\Instruments\XML_Gauges\index.html">XML Gauges</a></li>
+</ul>
+<li class="heading"><a href="..\Models\index.html">Models</a></li>
+<ul>
+<li class="heading"><a href="..\Models\AnimGraph.html">AnimGraph</a></li>
+<li class="heading"><a href="..\Models\Levels_of_Detail_(LODs).html">Levels of Detail (LODs)</a></li>
+<li class="heading"><a href="..\Models\Model_Behaviors\index.html">Model Behaviors</a></li>
+<ul>
+<li class="heading"><a href="..\Models\Model_Behaviors\XML_Definition.html">XML Definition</a></li>
+</ul>
+</ul>
+<li class="heading"><a href="..\Sounds\index.html">Sounds</a></li>
+<ul>
+<li class="heading"><a href="..\Sounds\backwards_compatibility.html">backwards compatibility</a></li>
+<li class="heading"><a href="..\Sounds\sound_categories.html">sound categories</a></li>
+<li class="heading"><a href="..\Sounds\xml_definition.html">xml definition</a></li>
+<li class="heading"><a href="..\Sounds\xml_wavedata.html">xml wavedata</a></li>
+</ul>
+<li class="heading"><a href="..\Textures\index.html">Textures</a></li>
+</ul>
+<li class="heading"><a href="..\..\UI\index.html">UI</a></li>
+<li class="heading"><a href="..\..\Variable_Lists\index.html">Variable Lists</a></li>
+<ul>
+<li class="heading"><a href="..\..\Variable_Lists\Event_IDs.html">Event IDs</a></li>
+<li class="heading"><a href="..\..\Variable_Lists\Misc_Enums.html">Misc Enums</a></li>
+<li class="heading"><a href="..\..\Variable_Lists\Simulation_Variables.html">Simulation Variables</a></li>
+</ul>
+<li class="heading"><a href="..\..\Visual_Effects\index.html">Visual Effects</a></li>
+<ul>
+<li class="heading"><a href="..\..\Visual_Effects\visual_fx_file.html">visual fx file</a></li>
+</ul>
+</ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\index.html">Developer Tools</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\00-Developer_Mode\index.html">Developer Mode</a></li>
+<li class="heading"><span>3DS Max Tools</span></li>
+<ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\3DS_Max_Tools\FlightSim_Lights.html">FlightSim Lights</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\3DS_Max_Tools\FlightSim_Material.html">FlightSim Material</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\3DS_Max_Tools\FlightSim_multiExporter.html">FlightSim multiExporter</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\3DS_Max_Tools\FlightSim_versionDifferences.html">FlightSim versionDifferences</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\3DS_Max_Tools\glTF_Exporter.html">glTF Exporter</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Aircraft_Editor\index.html">Aircraft Editor</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Aircraft_Editor\Debug_Windows.html">Debug Windows</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Command_Line_Interface.html">Command Line Interface</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Launcher_Tool\index.html">Launcher Tool</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Material_Editor\index.html">Material Editor</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Mission_Editor\index.html">Mission Editor</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Package_Tool\index.html">Package Tool</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Package_Tool\Concepts.html">Concepts</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Package_Tool\XMLReference.html">XMLReference</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Project_editor\index.html">Project editor</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Project_editor\Content_Manager_Data.html">Content Manager Data</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Project_editor\Export_Window.html">Export Window</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Project_editor\Marketplace_Data.html">Marketplace Data</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Scenery_Editor\index.html">Scenery Editor</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\SimConnect\index.html">SimConnect</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\SimConnect\SimConnect_Reference.html">SimConnect Reference</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\SimConnect\SimConnect_Status_of_Functions.html">SimConnect Status of Functions</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\SimConnect\SimConnect_Status_of_Input_Events.html">SimConnect Status of Input Events</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\SimConnect\SimConnect_Status_of_SimEvents.html">SimConnect Status of SimEvents</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\SimConnect\SimConnect_Status_of_Simulation_Variables.html">SimConnect Status of Simulation Variables</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\SimConnect\SimConnect_Status_of_System_Events.html">SimConnect Status of System Events</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\WebAssembly\index.html">WebAssembly</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\WebAssembly\01-Platform_Toolset.html">Platform Toolset</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\WebAssembly\02-Gauge_API.html">Gauge API</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\WebAssembly\Graphics\index.html">Graphics</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\WebAssembly\Graphics\GDI_Plus.html">GDI Plus</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\WebAssembly\Graphics\Low_Level_API.html">Low Level API</a></li>
+</ul>
+</ul>
+</ul>
+<li class="heading"><span>Scripting Languages</span></li>
+<ul>
+<li class="heading"><a href="..\..\..\05-Scripting_Languages\CFG.html">CFG</a></li>
+<li class="heading"><a href="..\..\..\05-Scripting_Languages\Reverse_Polish_Notation.html">Reverse Polish Notation</a></li>
+</ul>
+</ul>
+    </nav>
+    <article id="main" class="content active">
+      <h1 id="checklist-examples-and-tips">Checklist Examples and Tips</h1>
+      <!-- START doctoc generated TOC please keep comment here to allow auto update -->
+      <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+      <ul>
+      <li><a href="#examples">Examples</a>
+      <ul>
+      <li><a href="#basic-checkpoint">Basic <code>checkpoint</code></a></li>
+      <li><a href="#checkpoint-library"><code>Checkpoint library</code></a></li>
+      <li><a href="#aircraft-checklist-file"><code>Aircraft checklist file</code></a></li>
+      <li><a href="#advanced-checkpoints">Advanced <code>checkpoints</code></a></li>
+      </ul></li>
+      <li><a href="#using-a-generic-library-checkpoint-with-aircraft-specific-modifications">Using a generic library checkpoint with aircraft-specific modifications</a>
+      <ul>
+      <li><a href="#changing-subject-expectation-feedback-and-clue">Changing <code>subject</code>, <code>expectation</code>, <code>feedback</code>, and <code>clue</code></a></li>
+      <li><a href="#forcing-a-camera-and-adding-instrument-highlights">Forcing a camera, and adding instrument highlights</a></li>
+      <li><a href="#using-templates-to-replace-values-or-actions">Using templates to replace values or actions</a></li>
+      </ul></li>
+      <li><a href="#tips">Tips</a>
+      <ul>
+      <li><a href="#cleaning-state-after-copilot-mode">Cleaning state after <em>Copilot</em> mode</a></li>
+      <li><a href="#pacing-the-copilot-mode">Pacing the <em>Copilot</em> mode</a></li>
+      <li><a href="#nesting-operators">Nesting Operators</a></li>
+      <li><a href="#nesting-sequences">Nesting <code>sequences</code></a></li>
+      <li><a href="#executing-only-one-among-two-sequences">Executing only one among two <code>sequences</code></a></li>
+      </ul></li>
+      </ul>
+      <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+      <h2 id="examples">Examples</h2>
+      <p>The following examples are written assuming the reader knows the core concepts of Checklist, that are described in the <a href="index.html">Overview</a>.</p>
+      <p>If needed, additional information about XML specifications can be found in <a href="02-XML_Definition.html">this page</a>.</p>
+      <h3 id="basic-checkpoint">Basic <code>checkpoint</code></h3>
+      <p>A minimal <code>checkpoint</code>, that will only display a <code>subject</code> and <code>expectation</code>, and will be automatically skipped in all modes except Manual.</p>
+      <div class="sourceCode" id="cb1"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">&lt;Checkpoint&gt;</span></span>
+      <span id="cb1-2"><a href="#cb1-2"></a>    <span class="kw">&lt;CheckpointDesc</span><span class="ot"> SubjectTT=</span><span class="st">"TT:GAME.CHECKLIST_PARKING_BRAKE"</span><span class="ot"> ExpectationTT=</span><span class="st">"TT:GAME.CHECKLIST_SET"</span><span class="kw">/&gt;</span></span>
+      <span id="cb1-3"><a href="#cb1-3"></a><span class="kw">&lt;/Checkpoint&gt;</span></span></code></pre></div>
+      <p>A similar <code>checkpoint</code> that will enable highlighting of an instrument, as a visual assistance. It will still be skipped as with the previous example.</p>
+      <div class="sourceCode" id="cb2"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">&lt;Checkpoint&gt;</span></span>
+      <span id="cb2-2"><a href="#cb2-2"></a>    <span class="kw">&lt;CheckpointDesc</span><span class="ot"> SubjectTT=</span><span class="st">"TT:GAME.CHECKLIST_PARKING_BRAKE"</span><span class="ot"> ExpectationTT=</span><span class="st">"TT:GAME.CHECKLIST_SET"</span><span class="kw">/&gt;</span></span>
+      <span id="cb2-3"><a href="#cb2-3"></a>    <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb2-4"><a href="#cb2-4"></a>        <span class="kw">&lt;Instrument</span><span class="ot"> id=</span><span class="st">"PARKING_BRAKE"</span><span class="kw">/&gt;</span></span>
+      <span id="cb2-5"><a href="#cb2-5"></a>    <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb2-6"><a href="#cb2-6"></a><span class="kw">&lt;/Checkpoint&gt;</span></span></code></pre></div>
+      <p>A similar <code>checkpoint</code> with a <code>test</code> to automatically validate it in <em>Automatic</em> mode as soon as the User meets the requirement. Here, the SimVar “BRAKE PARKING POSITION” must be True for the requirements to be fulfilled. In <em>Copilot</em> mode this <code>checkpoint</code> will be skipped, because no <code>Copilot</code> action is defined.</p>
+      <div class="sourceCode" id="cb3"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">&lt;Checkpoint&gt;</span></span>
+      <span id="cb3-2"><a href="#cb3-2"></a>    <span class="kw">&lt;CheckpointDesc</span><span class="ot"> SubjectTT=</span><span class="st">"TT:GAME.CHECKLIST_PARKING_BRAKE"</span><span class="ot"> ExpectationTT=</span><span class="st">"TT:GAME.CHECKLIST_SET"</span><span class="kw">/&gt;</span></span>
+      <span id="cb3-3"><a href="#cb3-3"></a>    <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb3-4"><a href="#cb3-4"></a>        <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb3-5"><a href="#cb3-5"></a>            <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"BRAKE PARKING POSITION"</span><span class="ot"> Units=</span><span class="st">"Boolean"</span><span class="kw">/&gt;</span></span>
+      <span id="cb3-6"><a href="#cb3-6"></a>        <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb3-7"><a href="#cb3-7"></a>        <span class="kw">&lt;Instrument</span><span class="ot"> id=</span><span class="st">"PARKING_BRAKE"</span><span class="kw">/&gt;</span></span>
+      <span id="cb3-8"><a href="#cb3-8"></a>    <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb3-9"><a href="#cb3-9"></a><span class="kw">&lt;/Checkpoint&gt;</span></span></code></pre></div>
+      <p>A similar <code>checkpoint</code> with a Copilot-only (<code>Copilot="true"</code>) Action. This Action will be automatically executed in <em>Copilot</em> mode (and only in this mode), if the <code>testValue</code> is False (i.e.&nbsp;if the parking brake is not set), and only once. The Action sends the Event of EventID “PARKING_BRAKES”, which will activate the parking brake of the aircraft. This checkpoint will still wait until the <code>testValue</code> is True before being automatically validated (i.e.&nbsp;setting an unrelated action will cause the <em>Copilot</em> mode to wait until the User resolves the issue by himself).</p>
+      <div class="sourceCode" id="cb4"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">&lt;Checkpoint&gt;</span></span>
+      <span id="cb4-2"><a href="#cb4-2"></a>    <span class="kw">&lt;CheckpointDesc</span><span class="ot"> SubjectTT=</span><span class="st">"TT:GAME.CHECKLIST_PARKING_BRAKE"</span><span class="ot"> ExpectationTT=</span><span class="st">"TT:GAME.CHECKLIST_SET"</span><span class="kw">/&gt;</span></span>
+      <span id="cb4-3"><a href="#cb4-3"></a>    <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb4-4"><a href="#cb4-4"></a>        <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb4-5"><a href="#cb4-5"></a>            <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"BRAKE PARKING POSITION"</span><span class="ot"> Units=</span><span class="st">"Boolean"</span><span class="kw">/&gt;</span></span>
+      <span id="cb4-6"><a href="#cb4-6"></a>        <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb4-7"><a href="#cb4-7"></a>        <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueFalse"</span><span class="ot"> Once=</span><span class="st">"true"</span><span class="ot"> EventID=</span><span class="st">"PARKING_BRAKES"</span><span class="kw">/&gt;</span></span>
+      <span id="cb4-8"><a href="#cb4-8"></a>        <span class="kw">&lt;Instrument</span><span class="ot"> id=</span><span class="st">"PARKING_BRAKE"</span><span class="kw">/&gt;</span></span>
+      <span id="cb4-9"><a href="#cb4-9"></a>    <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb4-10"><a href="#cb4-10"></a><span class="kw">&lt;/Checkpoint&gt;</span></span></code></pre></div>
+      <h3 id="checkpoint-library"><code>Checkpoint library</code></h3>
+      <p>A <code>checkpoint library</code> is a file that contain one or several <code>checkpoints</code> that can be shared accross various aircrafts.</p>
+      <p>Minimal example of a library containing a single <code>checkpoint</code>:</p>
+      <div class="sourceCode" id="cb5"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">&lt;?xml</span> version="1.0" encoding="Windows-1252"<span class="kw">?&gt;</span></span>
+      <span id="cb5-2"><a href="#cb5-2"></a><span class="kw">&lt;SimBase.Document</span><span class="ot"> Type=</span><span class="st">"CheckpointLibrary"</span><span class="ot"> version=</span><span class="st">"1,0"</span><span class="kw">&gt;</span></span>
+      <span id="cb5-3"><a href="#cb5-3"></a>    <span class="kw">&lt;Checklist.CheckpointLibrary&gt;</span></span>
+      <span id="cb5-4"><a href="#cb5-4"></a>        <span class="kw">&lt;Checkpoint</span><span class="ot"> Id=</span><span class="st">"Parking_Brake_Set"</span><span class="kw">&gt;</span></span>
+      <span id="cb5-5"><a href="#cb5-5"></a>            <span class="kw">&lt;CheckpointDesc</span><span class="ot"> SubjectTT=</span><span class="st">"TT:GAME.CHECKLIST_PARKING_BRAKE"</span><span class="ot"> ExpectationTT=</span><span class="st">"TT:GAME.CHECKLIST_SET"</span><span class="kw">/&gt;</span></span>
+      <span id="cb5-6"><a href="#cb5-6"></a>        <span class="kw">&lt;/Checkpoint&gt;</span></span>
+      <span id="cb5-7"><a href="#cb5-7"></a>    <span class="kw">&lt;/Checklist.CheckpointLibrary&gt;</span></span>
+      <span id="cb5-8"><a href="#cb5-8"></a><span class="kw">&lt;/SimBase.Document&gt;</span></span></code></pre></div>
+      <p>More advanced example of a library with two <code>checkpoints</code>:</p>
+      <div class="sourceCode" id="cb6"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">&lt;?xml</span> version="1.0" encoding="Windows-1252"<span class="kw">?&gt;</span></span>
+      <span id="cb6-2"><a href="#cb6-2"></a><span class="kw">&lt;SimBase.Document</span><span class="ot"> Type=</span><span class="st">"CheckpointLibrary"</span><span class="ot"> version=</span><span class="st">"1,0"</span><span class="kw">&gt;</span></span>
+      <span id="cb6-3"><a href="#cb6-3"></a>    <span class="kw">&lt;Checklist.CheckpointLibrary&gt;</span></span>
+      <span id="cb6-4"><a href="#cb6-4"></a>    <span class="co">&lt;!-- You can also add XML comments anywhere you want --&gt;</span></span>
+      <span id="cb6-5"><a href="#cb6-5"></a></span>
+      <span id="cb6-6"><a href="#cb6-6"></a>        <span class="kw">&lt;Checkpoint</span><span class="ot"> Id=</span><span class="st">"Parking_Brake_Set"</span><span class="kw">&gt;</span></span>
+      <span id="cb6-7"><a href="#cb6-7"></a>            <span class="kw">&lt;CheckpointDesc</span><span class="ot"> SubjectTT=</span><span class="st">"TT:GAME.CHECKLIST_PARKING_BRAKE"</span><span class="ot"> ExpectationTT=</span><span class="st">"TT:GAME.CHECKLIST_SET"</span><span class="kw">/&gt;</span></span>
+      <span id="cb6-8"><a href="#cb6-8"></a>            <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb6-9"><a href="#cb6-9"></a>                <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb6-10"><a href="#cb6-10"></a>                    <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"BRAKE PARKING POSITION"</span><span class="ot"> Units=</span><span class="st">"Boolean"</span><span class="kw">/&gt;</span></span>
+      <span id="cb6-11"><a href="#cb6-11"></a>                <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb6-12"><a href="#cb6-12"></a>                <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueFalse"</span><span class="ot"> Once=</span><span class="st">"true"</span><span class="ot"> EventID=</span><span class="st">"PARKING_BRAKES"</span><span class="kw">/&gt;</span></span>
+      <span id="cb6-13"><a href="#cb6-13"></a>                <span class="kw">&lt;Instrument</span><span class="ot"> id=</span><span class="st">"PARKING_BRAKE"</span><span class="kw">/&gt;</span></span>
+      <span id="cb6-14"><a href="#cb6-14"></a>            <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb6-15"><a href="#cb6-15"></a>        <span class="kw">&lt;/Checkpoint&gt;</span></span>
+      <span id="cb6-16"><a href="#cb6-16"></a></span>
+      <span id="cb6-17"><a href="#cb6-17"></a>        <span class="kw">&lt;Checkpoint</span><span class="ot"> Id=</span><span class="st">"BRAKES_RELEASED"</span><span class="kw">&gt;</span></span>
+      <span id="cb6-18"><a href="#cb6-18"></a>            <span class="kw">&lt;CheckpointDesc</span><span class="ot"> SubjectTT=</span><span class="st">"TT:GAME.CHECKLIST_BRAKES"</span><span class="ot"> ExpectationTT=</span><span class="st">"TT:GAME.CHECKLIST_RELEASED"</span><span class="kw">/&gt;</span></span>
+      <span id="cb6-19"><a href="#cb6-19"></a>            <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb6-20"><a href="#cb6-20"></a>                <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb6-21"><a href="#cb6-21"></a>                    <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"NOT"</span><span class="kw">&gt;</span></span>
+      <span id="cb6-22"><a href="#cb6-22"></a>                        <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"BRAKE PARKING POSITION"</span><span class="ot"> Units=</span><span class="st">"Boolean"</span><span class="kw">/&gt;</span></span>
+      <span id="cb6-23"><a href="#cb6-23"></a>                    <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb6-24"><a href="#cb6-24"></a>                <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb6-25"><a href="#cb6-25"></a>                <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueFalse"</span><span class="ot"> Once=</span><span class="st">"true"</span><span class="ot"> EventID=</span><span class="st">"PARKING_BRAKES"</span><span class="kw">/&gt;</span></span>
+      <span id="cb6-26"><a href="#cb6-26"></a>                <span class="kw">&lt;Instrument</span><span class="ot"> id=</span><span class="st">"PARKING_BRAKE"</span><span class="kw">/&gt;</span></span>
+      <span id="cb6-27"><a href="#cb6-27"></a>            <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb6-28"><a href="#cb6-28"></a>        <span class="kw">&lt;/Checkpoint&gt;</span></span>
+      <span id="cb6-29"><a href="#cb6-29"></a></span>
+      <span id="cb6-30"><a href="#cb6-30"></a>    <span class="kw">&lt;/Checklist.CheckpointLibrary&gt;</span></span>
+      <span id="cb6-31"><a href="#cb6-31"></a><span class="kw">&lt;/SimBase.Document&gt;</span></span></code></pre></div>
+      <h3 id="aircraft-checklist-file"><code>Aircraft checklist file</code></h3>
+      <p>Minimal example, without using any library. This <code>checklist</code> contains a single <code>step</code>, which is composed of a single <code>page</code> containing two simple <code>checkpoints</code>:</p>
+      <div class="sourceCode" id="cb7"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">&lt;?xml</span> version="1.0" encoding="Windows-1252"<span class="kw">?&gt;</span></span>
+      <span id="cb7-2"><a href="#cb7-2"></a><span class="kw">&lt;SimBase.Document</span><span class="ot"> Type=</span><span class="st">"Checklist"</span><span class="ot"> version=</span><span class="st">"1,0"</span><span class="kw">&gt;</span></span>
+      <span id="cb7-3"><a href="#cb7-3"></a>    <span class="kw">&lt;Checklist.Checklist&gt;</span></span>
+      <span id="cb7-4"><a href="#cb7-4"></a>        <span class="kw">&lt;Step</span><span class="ot"> ChecklistStepId=</span><span class="st">"PREFLIGHT_GATE"</span><span class="kw">&gt;</span></span>
+      <span id="cb7-5"><a href="#cb7-5"></a>            <span class="kw">&lt;Page</span><span class="ot"> SubjectTT=</span><span class="st">"TT:GAME.CHECKLIST_PREFLIGHT_1"</span><span class="kw">&gt;</span></span>
+      <span id="cb7-6"><a href="#cb7-6"></a>                <span class="kw">&lt;Checkpoint&gt;</span></span>
+      <span id="cb7-7"><a href="#cb7-7"></a>                    <span class="kw">&lt;CheckpointDesc</span><span class="ot"> SubjectTT=</span><span class="st">"TT:GAME.CHECKLIST_PARKING_BRAKE"</span><span class="ot"> ExpectationTT=</span><span class="st">"TT:GAME.CHECKLIST_SET"</span><span class="kw">/&gt;</span></span>
+      <span id="cb7-8"><a href="#cb7-8"></a>                <span class="kw">&lt;/Checkpoint&gt;</span></span>
+      <span id="cb7-9"><a href="#cb7-9"></a>                <span class="kw">&lt;Checkpoint&gt;</span></span>
+      <span id="cb7-10"><a href="#cb7-10"></a>                    <span class="kw">&lt;CheckpointDesc</span><span class="ot"> SubjectTT=</span><span class="st">"TT:GAME.CHECKLIST_NAVIGATION_LIGHTS"</span><span class="ot"> ExpectationTT=</span><span class="st">"TT:GAME.CHECKLIST_ON"</span><span class="kw">/&gt;</span></span>
+      <span id="cb7-11"><a href="#cb7-11"></a>                <span class="kw">&lt;/Checkpoint&gt;</span></span>
+      <span id="cb7-12"><a href="#cb7-12"></a>            <span class="kw">&lt;/Page&gt;</span></span>
+      <span id="cb7-13"><a href="#cb7-13"></a>        <span class="kw">&lt;/Step&gt;</span></span>
+      <span id="cb7-14"><a href="#cb7-14"></a>    <span class="kw">&lt;/Checklist.Checklist&gt;</span></span>
+      <span id="cb7-15"><a href="#cb7-15"></a><span class="kw">&lt;/SimBase.Document&gt;</span></span></code></pre></div>
+      <p>More advanced example, where a library is loaded, and the first and third <code>checkpoints</code> are defined in the library to be referenced here, while the second <code>checkpoint</code> is fully defined in this <code>checklist file</code>:</p>
+      <div class="sourceCode" id="cb8"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">&lt;?xml</span> version="1.0" encoding="Windows-1252"<span class="kw">?&gt;</span></span>
+      <span id="cb8-2"><a href="#cb8-2"></a><span class="kw">&lt;SimBase.Document</span><span class="ot"> Type=</span><span class="st">"Checklist"</span><span class="ot"> version=</span><span class="st">"1,0"</span><span class="kw">&gt;</span></span>
+      <span id="cb8-3"><a href="#cb8-3"></a>    <span class="kw">&lt;Checklist.Checklist&gt;</span></span>
+      <span id="cb8-4"><a href="#cb8-4"></a></span>
+      <span id="cb8-5"><a href="#cb8-5"></a>        <span class="kw">&lt;IncludeCheckpointLibrary</span><span class="ot"> FileName=</span><span class="st">"aircrafts\\DefaultCheckpointLibrary.xml"</span><span class="kw">/&gt;</span></span>
+      <span id="cb8-6"><a href="#cb8-6"></a></span>
+      <span id="cb8-7"><a href="#cb8-7"></a>        <span class="kw">&lt;Step</span><span class="ot"> ChecklistStepId=</span><span class="st">"PREFLIGHT_GATE"</span><span class="kw">&gt;</span></span>
+      <span id="cb8-8"><a href="#cb8-8"></a>            <span class="kw">&lt;Page</span><span class="ot"> SubjectTT=</span><span class="st">"TT:GAME.CHECKLIST_PREFLIGHT_1_1"</span><span class="kw">&gt;</span></span>
+      <span id="cb8-9"><a href="#cb8-9"></a></span>
+      <span id="cb8-10"><a href="#cb8-10"></a>                <span class="kw">&lt;Checkpoint</span><span class="ot"> ReferenceId=</span><span class="st">"Parking_Brake_Set"</span><span class="kw">/&gt;</span></span>
+      <span id="cb8-11"><a href="#cb8-11"></a></span>
+      <span id="cb8-12"><a href="#cb8-12"></a>            <span class="kw">&lt;/Page&gt;</span></span>
+      <span id="cb8-13"><a href="#cb8-13"></a></span>
+      <span id="cb8-14"><a href="#cb8-14"></a>            <span class="kw">&lt;Page</span><span class="ot"> SubjectTT=</span><span class="st">"TT:GAME.CHECKLIST_PREFLIGHT_1_2"</span><span class="kw">&gt;</span></span>
+      <span id="cb8-15"><a href="#cb8-15"></a></span>
+      <span id="cb8-16"><a href="#cb8-16"></a>                <span class="kw">&lt;Checkpoint&gt;</span></span>
+      <span id="cb8-17"><a href="#cb8-17"></a>                    <span class="kw">&lt;CheckpointDesc</span><span class="ot"> SubjectTT=</span><span class="st">"TT:GAME.CHECKLIST_NAVIGATION_LIGHTS"</span><span class="ot"> ExpectationTT=</span><span class="st">"TT:GAME.CHECKLIST_ON"</span><span class="kw">/&gt;</span></span>
+      <span id="cb8-18"><a href="#cb8-18"></a>                    <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb8-19"><a href="#cb8-19"></a>                        <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb8-20"><a href="#cb8-20"></a>                            <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"LIGHT NAV"</span><span class="ot"> Units=</span><span class="st">"Boolean"</span><span class="kw">/&gt;</span></span>
+      <span id="cb8-21"><a href="#cb8-21"></a>                        <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb8-22"><a href="#cb8-22"></a>                        <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueFalse"</span><span class="ot"> Once=</span><span class="st">"true"</span><span class="ot"> EventID=</span><span class="st">"TOGGLE_NAV_LIGHTS"</span><span class="kw">/&gt;</span></span>
+      <span id="cb8-23"><a href="#cb8-23"></a>                        <span class="kw">&lt;Instrument</span><span class="ot"> id=</span><span class="st">"LIGHT_NAV_SWITCH"</span><span class="kw">/&gt;</span></span>
+      <span id="cb8-24"><a href="#cb8-24"></a>                    <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb8-25"><a href="#cb8-25"></a>                <span class="kw">&lt;/Checkpoint&gt;</span></span>
+      <span id="cb8-26"><a href="#cb8-26"></a></span>
+      <span id="cb8-27"><a href="#cb8-27"></a>            <span class="kw">&lt;/Page&gt;</span></span>
+      <span id="cb8-28"><a href="#cb8-28"></a>        <span class="kw">&lt;/Step&gt;</span></span>
+      <span id="cb8-29"><a href="#cb8-29"></a></span>
+      <span id="cb8-30"><a href="#cb8-30"></a>        <span class="kw">&lt;Step</span><span class="ot"> ChecklistStepId=</span><span class="st">"PREFLIGHT_PUSHBACK"</span><span class="kw">&gt;</span></span>
+      <span id="cb8-31"><a href="#cb8-31"></a>            <span class="kw">&lt;Page</span><span class="ot"> SubjectTT</span> <span class="ot">=</span> <span class="st">"TT:GAME.CHECKLIST_PUSHBACK"</span><span class="kw">&gt;</span></span>
+      <span id="cb8-32"><a href="#cb8-32"></a></span>
+      <span id="cb8-33"><a href="#cb8-33"></a>                <span class="kw">&lt;Checkpoint</span><span class="ot"> ReferenceId=</span><span class="st">"BRAKES_RELEASED"</span><span class="kw">/&gt;</span></span>
+      <span id="cb8-34"><a href="#cb8-34"></a></span>
+      <span id="cb8-35"><a href="#cb8-35"></a>            <span class="kw">&lt;/Page&gt;</span></span>
+      <span id="cb8-36"><a href="#cb8-36"></a>        <span class="kw">&lt;/Step&gt;</span></span>
+      <span id="cb8-37"><a href="#cb8-37"></a></span>
+      <span id="cb8-38"><a href="#cb8-38"></a>    <span class="kw">&lt;/Checklist.Checklist&gt;</span></span>
+      <span id="cb8-39"><a href="#cb8-39"></a><span class="kw">&lt;/SimBase.Document&gt;</span></span></code></pre></div>
+      <h3 id="advanced-checkpoints">Advanced <code>checkpoints</code></h3>
+      <p>Example of a <code>checkpoint</code> where 4 switches have to be set in “ON” position, in any order:</p>
+      <div class="sourceCode" id="cb9"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">&lt;Checkpoint</span><span class="ot"> Id=</span><span class="st">"Generator_Control_Switches_On"</span><span class="kw">&gt;</span></span>
+      <span id="cb9-2"><a href="#cb9-2"></a>    <span class="kw">&lt;CheckpointDesc</span><span class="ot"> SubjectTT=</span><span class="st">"TT:GAME.CHECKLIST_GENERATOR_CONTROL_SWITCHES"</span><span class="ot"> ExpectationTT=</span><span class="st">"TT:GAME.CHECKLIST_ON"</span><span class="kw">/&gt;</span></span>
+      <span id="cb9-3"><a href="#cb9-3"></a>    <span class="kw">&lt;Sequence</span><span class="ot"> SeqType=</span><span class="st">"Unordered"</span><span class="kw">&gt;</span></span>
+      <span id="cb9-4"><a href="#cb9-4"></a>        <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb9-5"><a href="#cb9-5"></a>            <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb9-6"><a href="#cb9-6"></a>                <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"GENERAL ENG GENERATOR SWITCH:1"</span><span class="ot"> Units=</span><span class="st">"Boolean"</span><span class="kw">/&gt;</span></span>
+      <span id="cb9-7"><a href="#cb9-7"></a>            <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb9-8"><a href="#cb9-8"></a>            <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueFalse"</span><span class="ot"> Once=</span><span class="st">"true"</span><span class="ot"> EventID=</span><span class="st">"TOGGLE_ALTERNATOR1"</span><span class="kw">/&gt;</span></span>
+      <span id="cb9-9"><a href="#cb9-9"></a>            <span class="kw">&lt;Instrument</span><span class="ot"> id=</span><span class="st">"OVHD_PUSH_ELECTRICS_GEN_CONT_01"</span><span class="kw">/&gt;</span></span>
+      <span id="cb9-10"><a href="#cb9-10"></a>        <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb9-11"><a href="#cb9-11"></a>        <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb9-12"><a href="#cb9-12"></a>            <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb9-13"><a href="#cb9-13"></a>                <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"GENERAL ENG GENERATOR SWITCH:2"</span><span class="ot"> Units=</span><span class="st">"Boolean"</span><span class="kw">/&gt;</span></span>
+      <span id="cb9-14"><a href="#cb9-14"></a>            <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb9-15"><a href="#cb9-15"></a>            <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueFalse"</span><span class="ot"> Once=</span><span class="st">"true"</span><span class="ot"> EventID=</span><span class="st">"TOGGLE_ALTERNATOR2"</span><span class="kw">/&gt;</span></span>
+      <span id="cb9-16"><a href="#cb9-16"></a>            <span class="kw">&lt;Instrument</span><span class="ot"> id=</span><span class="st">"OVHD_PUSH_ELECTRICS_GEN_CONT_02"</span><span class="kw">/&gt;</span></span>
+      <span id="cb9-17"><a href="#cb9-17"></a>        <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb9-18"><a href="#cb9-18"></a>        <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb9-19"><a href="#cb9-19"></a>            <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb9-20"><a href="#cb9-20"></a>                <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"GENERAL ENG GENERATOR SWITCH:3"</span><span class="ot"> Units=</span><span class="st">"Boolean"</span><span class="kw">/&gt;</span></span>
+      <span id="cb9-21"><a href="#cb9-21"></a>            <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb9-22"><a href="#cb9-22"></a>            <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueFalse"</span><span class="ot"> Once=</span><span class="st">"true"</span><span class="ot"> EventID=</span><span class="st">"TOGGLE_ALTERNATOR3"</span><span class="kw">/&gt;</span></span>
+      <span id="cb9-23"><a href="#cb9-23"></a>            <span class="kw">&lt;Instrument</span><span class="ot"> id=</span><span class="st">"OVHD_PUSH_ELECTRICS_GEN_CONT_03"</span><span class="kw">/&gt;</span></span>
+      <span id="cb9-24"><a href="#cb9-24"></a>        <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb9-25"><a href="#cb9-25"></a>        <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb9-26"><a href="#cb9-26"></a>            <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb9-27"><a href="#cb9-27"></a>                <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"GENERAL ENG GENERATOR SWITCH:4"</span><span class="ot"> Units=</span><span class="st">"Boolean"</span><span class="kw">/&gt;</span></span>
+      <span id="cb9-28"><a href="#cb9-28"></a>            <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb9-29"><a href="#cb9-29"></a>            <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueFalse"</span><span class="ot"> Once=</span><span class="st">"true"</span><span class="ot"> EventID=</span><span class="st">"TOGGLE_ALTERNATOR4"</span><span class="kw">/&gt;</span></span>
+      <span id="cb9-30"><a href="#cb9-30"></a>            <span class="kw">&lt;Instrument</span><span class="ot"> id=</span><span class="st">"OVHD_PUSH_ELECTRICS_GEN_CONT_04"</span><span class="kw">/&gt;</span></span>
+      <span id="cb9-31"><a href="#cb9-31"></a>        <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb9-32"><a href="#cb9-32"></a>    <span class="kw">&lt;/Sequence&gt;</span></span>
+      <span id="cb9-33"><a href="#cb9-33"></a><span class="kw">&lt;/Checkpoint&gt;</span></span></code></pre></div>
+      <p>Second example. A checkpoint that tests if rudder controls function properly, using the <a href="#pacing-the-copilot-mode">Pacing the <em>Copilot</em> mode</a> and <a href="#cleaning-state-after-copilot-mode">Cleaning state after <em>Copilot</em> mode</a> examples that are found in next chapter.</p>
+      <div class="sourceCode" id="cb10"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb10-1"><a href="#cb10-1"></a><span class="kw">&lt;Checkpoint</span><span class="ot"> Id=</span><span class="st">"Rudder_Test"</span><span class="kw">&gt;</span></span>
+      <span id="cb10-2"><a href="#cb10-2"></a>    <span class="kw">&lt;CheckpointDesc</span><span class="ot"> SubjectTT=</span><span class="st">"TT:GAME.CHECKLIST_RUDDER"</span><span class="ot"> ExpectationTT=</span><span class="st">"TT:GAME.CHECKLIST_TEST"</span><span class="kw">/&gt;</span></span>
+      <span id="cb10-3"><a href="#cb10-3"></a>    <span class="kw">&lt;Sequence</span><span class="ot"> SeqType=</span><span class="st">"Unordered"</span><span class="kw">&gt;</span></span>
+      <span id="cb10-4"><a href="#cb10-4"></a>        <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb10-5"><a href="#cb10-5"></a>            <span class="kw">&lt;Once&gt;</span>True<span class="kw">&lt;/Once&gt;</span></span>
+      <span id="cb10-6"><a href="#cb10-6"></a>            <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb10-7"><a href="#cb10-7"></a>                <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"LESS"</span><span class="kw">&gt;</span></span>
+      <span id="cb10-8"><a href="#cb10-8"></a>                    <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"RUDDER POSITION"</span><span class="ot"> Units=</span><span class="st">"percent"</span><span class="kw">/&gt;</span></span>
+      <span id="cb10-9"><a href="#cb10-9"></a>                    <span class="kw">&lt;Val</span><span class="ot"> Value=</span><span class="st">"-66"</span><span class="kw">/&gt;</span></span>
+      <span id="cb10-10"><a href="#cb10-10"></a>                <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb10-11"><a href="#cb10-11"></a>            <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb10-12"><a href="#cb10-12"></a>            <span class="kw">&lt;Instrument</span><span class="ot"> id=</span><span class="st">"RUDDER_PEDALS"</span><span class="kw">/&gt;</span></span>
+      <span id="cb10-13"><a href="#cb10-13"></a>            <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueFalse"</span><span class="ot"> Once=</span><span class="st">"true"</span><span class="ot"> EventID=</span><span class="st">"RUDDER_SET"</span><span class="ot"> EventParam=</span><span class="st">"16383"</span><span class="kw">/&gt;</span></span>
+      <span id="cb10-14"><a href="#cb10-14"></a>            <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueTrue"</span><span class="ot"> Once=</span><span class="st">"true"</span><span class="ot"> SpecialAction=</span><span class="st">"WaitForDuration"</span><span class="ot"> Value=</span><span class="st">"0.5"</span><span class="kw">/&gt;</span></span>
+      <span id="cb10-15"><a href="#cb10-15"></a>        <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb10-16"><a href="#cb10-16"></a>        <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb10-17"><a href="#cb10-17"></a>            <span class="kw">&lt;Once&gt;</span>True<span class="kw">&lt;/Once&gt;</span></span>
+      <span id="cb10-18"><a href="#cb10-18"></a>            <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb10-19"><a href="#cb10-19"></a>                <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"GREATER"</span><span class="kw">&gt;</span></span>
+      <span id="cb10-20"><a href="#cb10-20"></a>                    <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"RUDDER POSITION"</span><span class="ot"> Units=</span><span class="st">"percent"</span><span class="kw">/&gt;</span></span>
+      <span id="cb10-21"><a href="#cb10-21"></a>                    <span class="kw">&lt;Val</span><span class="ot"> Value</span> <span class="ot">=</span> <span class="st">"66"</span><span class="kw">/&gt;</span></span>
+      <span id="cb10-22"><a href="#cb10-22"></a>                <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb10-23"><a href="#cb10-23"></a>            <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb10-24"><a href="#cb10-24"></a>            <span class="kw">&lt;Instrument</span><span class="ot"> id=</span><span class="st">"RUDDER_PEDALS"</span><span class="kw">/&gt;</span></span>
+      <span id="cb10-25"><a href="#cb10-25"></a>            <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueFalse"</span><span class="ot"> Once=</span><span class="st">"true"</span><span class="ot"> EventID=</span><span class="st">"RUDDER_SET"</span><span class="ot"> EventParam=</span><span class="st">"-16383"</span><span class="kw">/&gt;</span></span>
+      <span id="cb10-26"><a href="#cb10-26"></a>            <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueTrue"</span><span class="ot"> Once=</span><span class="st">"true"</span><span class="ot"> SpecialAction=</span><span class="st">"WaitForDuration"</span><span class="ot"> Value=</span><span class="st">"0.5"</span><span class="kw">/&gt;</span></span>
+      <span id="cb10-27"><a href="#cb10-27"></a>        <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb10-28"><a href="#cb10-28"></a>    <span class="kw">&lt;/Sequence&gt;</span></span>
+      <span id="cb10-29"><a href="#cb10-29"></a>    <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"End"</span><span class="ot"> EventID=</span><span class="st">"RUDDER_SET"</span><span class="ot"> EventParam=</span><span class="st">"0"</span><span class="kw">/&gt;</span></span>
+      <span id="cb10-30"><a href="#cb10-30"></a><span class="kw">&lt;/Checkpoint&gt;</span></span></code></pre></div>
+      <p>Finally, here is an even more complex example of two <code>checkpoints</code> that share variables, with said variables also being used to have only one of two <code>sequences</code> being actually executed, as explained in <a href="#executing-only-one-among-two-sequences">Executing only one among two <code>sequences</code></a>. Details about how it works below.</p>
+      <div class="sourceCode" id="cb11"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb11-1"><a href="#cb11-1"></a><span class="kw">&lt;Checkpoint</span><span class="ot"> Id=</span><span class="st">"Magneto_150_RPM_Max_Decrease"</span><span class="kw">&gt;</span></span>
+      <span id="cb11-2"><a href="#cb11-2"></a>    <span class="kw">&lt;CheckpointDesc</span><span class="ot"> SubjectTT=</span><span class="st">"TT:GAME.CHECKLIST_MAGNETOS"</span><span class="ot"> ExpectationTT=</span><span class="st">"TT:GAME.CHECKLIST_150RPM_MAX_DECREASE"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-3"><a href="#cb11-3"></a>    <span class="kw">&lt;Action</span><span class="ot"> Condition=</span><span class="st">"Init"</span><span class="ot"> StoreVar=</span><span class="st">"Magneto_RPM_BOTH"</span><span class="ot"> Value=</span><span class="st">"0"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-4"><a href="#cb11-4"></a>    <span class="kw">&lt;Action</span><span class="ot"> Condition=</span><span class="st">"Init"</span><span class="ot"> StoreVar=</span><span class="st">"Magneto_RPM_LEFT"</span><span class="ot"> Value=</span><span class="st">"0"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-5"><a href="#cb11-5"></a>    <span class="kw">&lt;Action</span><span class="ot"> Condition=</span><span class="st">"Init"</span><span class="ot"> StoreVar=</span><span class="st">"Magneto_RPM_RIGHT"</span><span class="ot"> Value=</span><span class="st">"0"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-6"><a href="#cb11-6"></a>    <span class="kw">&lt;Sequence</span><span class="ot"> SeqType=</span><span class="st">"Ordered"</span><span class="kw">&gt;</span></span>
+      <span id="cb11-7"><a href="#cb11-7"></a>        <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb11-8"><a href="#cb11-8"></a>            <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb11-9"><a href="#cb11-9"></a>                <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"And"</span><span class="kw">&gt;</span></span>
+      <span id="cb11-10"><a href="#cb11-10"></a>                    <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"RECIP ENG LEFT MAGNETO:1"</span><span class="ot"> Units=</span><span class="st">"Boolean"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-11"><a href="#cb11-11"></a>                    <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"RECIP ENG RIGHT MAGNETO:1"</span><span class="ot"> Units=</span><span class="st">"Boolean"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-12"><a href="#cb11-12"></a>                <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb11-13"><a href="#cb11-13"></a>            <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb11-14"><a href="#cb11-14"></a>            <span class="kw">&lt;Duration</span><span class="ot"> Value=</span><span class="st">"1.0"</span><span class="ot"> Cumulative=</span><span class="st">"False"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-15"><a href="#cb11-15"></a>            <span class="kw">&lt;Once&gt;</span>True<span class="kw">&lt;/Once&gt;</span></span>
+      <span id="cb11-16"><a href="#cb11-16"></a>            <span class="kw">&lt;Instrument</span><span class="ot"> id=</span><span class="st">"MAGNETO"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-17"><a href="#cb11-17"></a>            <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueFalse"</span><span class="ot"> Once=</span><span class="st">"true"</span><span class="ot"> EventID=</span><span class="st">"MAGNETO_BOTH"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-18"><a href="#cb11-18"></a>            <span class="kw">&lt;Action</span><span class="ot"> Condition=</span><span class="st">"TestValueTrue"</span><span class="ot"> Once=</span><span class="st">"false"</span><span class="ot"> StoreVar=</span><span class="st">"Magneto_RPM_BOTH"</span><span class="kw">&gt;</span></span>
+      <span id="cb11-19"><a href="#cb11-19"></a>                <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"GENERAL ENG RPM:1"</span><span class="ot"> Units=</span><span class="st">"rpm"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-20"><a href="#cb11-20"></a>            <span class="kw">&lt;/Action&gt;</span></span>
+      <span id="cb11-21"><a href="#cb11-21"></a>        <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb11-22"><a href="#cb11-22"></a></span>
+      <span id="cb11-23"><a href="#cb11-23"></a>        <span class="kw">&lt;Sequence</span><span class="ot"> SeqType=</span><span class="st">"Unordered"</span><span class="kw">&gt;</span></span>
+      <span id="cb11-24"><a href="#cb11-24"></a>            <span class="kw">&lt;Sequence</span><span class="ot"> SeqType=</span><span class="st">"Ordered"</span><span class="kw">&gt;</span></span>
+      <span id="cb11-25"><a href="#cb11-25"></a>                <span class="kw">&lt;Once&gt;</span>True<span class="kw">&lt;/Once&gt;</span></span>
+      <span id="cb11-26"><a href="#cb11-26"></a>                <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb11-27"><a href="#cb11-27"></a>                    <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb11-28"><a href="#cb11-28"></a>                        <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"OR"</span><span class="kw">&gt;</span> <span class="co">&lt;!-- Skips if Magneto_RPM_RIGHT is already set --&gt;</span></span>
+      <span id="cb11-29"><a href="#cb11-29"></a>                            <span class="kw">&lt;Val</span><span class="ot"> ReadVar=</span><span class="st">"Magneto_RPM_RIGHT"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-30"><a href="#cb11-30"></a>                            <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"And"</span><span class="kw">&gt;</span></span>
+      <span id="cb11-31"><a href="#cb11-31"></a>                                <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"RECIP ENG LEFT MAGNETO:1"</span><span class="ot"> Units=</span><span class="st">"Boolean"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-32"><a href="#cb11-32"></a>                                <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"Not"</span><span class="kw">&gt;</span></span>
+      <span id="cb11-33"><a href="#cb11-33"></a>                                    <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"RECIP ENG RIGHT MAGNETO:1"</span><span class="ot"> Units=</span><span class="st">"Boolean"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-34"><a href="#cb11-34"></a>                                <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb11-35"><a href="#cb11-35"></a>                            <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb11-36"><a href="#cb11-36"></a>                        <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb11-37"><a href="#cb11-37"></a>                    <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb11-38"><a href="#cb11-38"></a>                    <span class="kw">&lt;Duration</span><span class="ot"> Value=</span><span class="st">"1.5"</span><span class="ot"> Cumulative=</span><span class="st">"False"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-39"><a href="#cb11-39"></a>                    <span class="kw">&lt;Instrument</span><span class="ot"> id=</span><span class="st">"MAGNETO"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-40"><a href="#cb11-40"></a>                    <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueFalse"</span><span class="ot"> Once=</span><span class="st">"true"</span><span class="ot"> EventID=</span><span class="st">"MAGNETO_LEFT"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-41"><a href="#cb11-41"></a>                <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb11-42"><a href="#cb11-42"></a>                <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb11-43"><a href="#cb11-43"></a>                    <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb11-44"><a href="#cb11-44"></a>                        <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"OR"</span><span class="kw">&gt;</span> <span class="co">&lt;!-- Skips if Magneto_RPM_RIGHT is already set --&gt;</span></span>
+      <span id="cb11-45"><a href="#cb11-45"></a>                            <span class="kw">&lt;Val</span><span class="ot"> ReadVar=</span><span class="st">"Magneto_RPM_RIGHT"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-46"><a href="#cb11-46"></a>                            <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"Greater"</span><span class="kw">&gt;</span></span>
+      <span id="cb11-47"><a href="#cb11-47"></a>                                <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"GENERAL ENG RPM:1"</span><span class="ot"> Units=</span><span class="st">"rpm"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-48"><a href="#cb11-48"></a>                                <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"Minus"</span><span class="kw">&gt;</span></span>
+      <span id="cb11-49"><a href="#cb11-49"></a>                                    <span class="kw">&lt;Val</span><span class="ot"> ReadVar=</span><span class="st">"Magneto_RPM_BOTH"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-50"><a href="#cb11-50"></a>                                    <span class="kw">&lt;Val</span><span class="ot"> Value=</span><span class="st">"150"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-51"><a href="#cb11-51"></a>                                <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb11-52"><a href="#cb11-52"></a>                            <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb11-53"><a href="#cb11-53"></a>                        <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb11-54"><a href="#cb11-54"></a>                    <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb11-55"><a href="#cb11-55"></a>                <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb11-56"><a href="#cb11-56"></a>                <span class="kw">&lt;Test&gt;</span> <span class="co">&lt;!-- Store the current rpm in Magneto_RPM_LEFT, unless Magneto_RPM_RIGHT is already set --&gt;</span></span>
+      <span id="cb11-57"><a href="#cb11-57"></a>                    <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb11-58"><a href="#cb11-58"></a>                        <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"OR"</span><span class="kw">&gt;</span> <span class="co">&lt;!-- Verifies if one of the var is set --&gt;</span></span>
+      <span id="cb11-59"><a href="#cb11-59"></a>                            <span class="kw">&lt;Val</span><span class="ot"> ReadVar=</span><span class="st">"Magneto_RPM_LEFT"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-60"><a href="#cb11-60"></a>                            <span class="kw">&lt;Val</span><span class="ot"> ReadVar=</span><span class="st">"Magneto_RPM_RIGHT"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-61"><a href="#cb11-61"></a>                        <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb11-62"><a href="#cb11-62"></a>                    <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb11-63"><a href="#cb11-63"></a>                    <span class="kw">&lt;Action</span><span class="ot"> Condition=</span><span class="st">"TestValueFalse"</span><span class="ot"> Once=</span><span class="st">"True"</span><span class="ot"> StoreVar=</span><span class="st">"Magneto_RPM_LEFT"</span><span class="kw">&gt;</span></span>
+      <span id="cb11-64"><a href="#cb11-64"></a>                        <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"GENERAL ENG RPM:1"</span><span class="ot"> Units=</span><span class="st">"rpm"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-65"><a href="#cb11-65"></a>                    <span class="kw">&lt;/Action&gt;</span></span>
+      <span id="cb11-66"><a href="#cb11-66"></a>                <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb11-67"><a href="#cb11-67"></a>            <span class="kw">&lt;/Sequence&gt;</span></span>
+      <span id="cb11-68"><a href="#cb11-68"></a></span>
+      <span id="cb11-69"><a href="#cb11-69"></a>            <span class="kw">&lt;Sequence</span><span class="ot"> SeqType=</span><span class="st">"Ordered"</span><span class="kw">&gt;</span></span>
+      <span id="cb11-70"><a href="#cb11-70"></a>                <span class="kw">&lt;Once&gt;</span>True<span class="kw">&lt;/Once&gt;</span></span>
+      <span id="cb11-71"><a href="#cb11-71"></a>                <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb11-72"><a href="#cb11-72"></a>                    <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb11-73"><a href="#cb11-73"></a>                        <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"OR"</span><span class="kw">&gt;</span> <span class="co">&lt;!-- Skips if Magneto_RPM_LEFT is already set --&gt;</span></span>
+      <span id="cb11-74"><a href="#cb11-74"></a>                            <span class="kw">&lt;Val</span><span class="ot"> ReadVar=</span><span class="st">"Magneto_RPM_LEFT"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-75"><a href="#cb11-75"></a>                            <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"And"</span><span class="kw">&gt;</span></span>
+      <span id="cb11-76"><a href="#cb11-76"></a>                                <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"RECIP ENG RIGHT MAGNETO:1"</span><span class="ot"> Units=</span><span class="st">"Boolean"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-77"><a href="#cb11-77"></a>                                <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"Not"</span><span class="kw">&gt;</span></span>
+      <span id="cb11-78"><a href="#cb11-78"></a>                                    <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"RECIP ENG LEFT MAGNETO:1"</span><span class="ot"> Units=</span><span class="st">"Boolean"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-79"><a href="#cb11-79"></a>                                <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb11-80"><a href="#cb11-80"></a>                            <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb11-81"><a href="#cb11-81"></a>                        <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb11-82"><a href="#cb11-82"></a>                    <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb11-83"><a href="#cb11-83"></a>                    <span class="kw">&lt;Duration</span><span class="ot"> Value=</span><span class="st">"1.5"</span><span class="ot"> Cumulative=</span><span class="st">"False"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-84"><a href="#cb11-84"></a>                    <span class="kw">&lt;Instrument</span><span class="ot"> id=</span><span class="st">"MAGNETO"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-85"><a href="#cb11-85"></a>                    <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueFalse"</span><span class="ot"> Once=</span><span class="st">"true"</span><span class="ot"> EventID=</span><span class="st">"MAGNETO_RIGHT"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-86"><a href="#cb11-86"></a>                <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb11-87"><a href="#cb11-87"></a>                <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb11-88"><a href="#cb11-88"></a>                    <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb11-89"><a href="#cb11-89"></a>                        <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"OR"</span><span class="kw">&gt;</span> <span class="co">&lt;!-- Skips if Magneto_RPM_LEFT is already set --&gt;</span></span>
+      <span id="cb11-90"><a href="#cb11-90"></a>                            <span class="kw">&lt;Val</span><span class="ot"> ReadVar=</span><span class="st">"Magneto_RPM_LEFT"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-91"><a href="#cb11-91"></a>                            <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"Greater"</span><span class="kw">&gt;</span></span>
+      <span id="cb11-92"><a href="#cb11-92"></a>                                <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"GENERAL ENG RPM:1"</span><span class="ot"> Units=</span><span class="st">"rpm"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-93"><a href="#cb11-93"></a>                                <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"Minus"</span><span class="kw">&gt;</span></span>
+      <span id="cb11-94"><a href="#cb11-94"></a>                                    <span class="kw">&lt;Val</span><span class="ot"> ReadVar=</span><span class="st">"Magneto_RPM_BOTH"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-95"><a href="#cb11-95"></a>                                    <span class="kw">&lt;Val</span><span class="ot"> Value=</span><span class="st">"150"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-96"><a href="#cb11-96"></a>                                <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb11-97"><a href="#cb11-97"></a>                            <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb11-98"><a href="#cb11-98"></a>                        <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb11-99"><a href="#cb11-99"></a>                    <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb11-100"><a href="#cb11-100"></a>                <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb11-101"><a href="#cb11-101"></a>                <span class="kw">&lt;Test&gt;</span> <span class="co">&lt;!-- Store the current rpm in Magneto_RPM_RIGHT, unless Magneto_RPM_LEFT is already set --&gt;</span></span>
+      <span id="cb11-102"><a href="#cb11-102"></a>                    <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb11-103"><a href="#cb11-103"></a>                        <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"OR"</span><span class="kw">&gt;</span> <span class="co">&lt;!-- Verifies if one of the var is set --&gt;</span></span>
+      <span id="cb11-104"><a href="#cb11-104"></a>                            <span class="kw">&lt;Val</span><span class="ot"> ReadVar=</span><span class="st">"Magneto_RPM_LEFT"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-105"><a href="#cb11-105"></a>                            <span class="kw">&lt;Val</span><span class="ot"> ReadVar=</span><span class="st">"Magneto_RPM_RIGHT"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-106"><a href="#cb11-106"></a>                        <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb11-107"><a href="#cb11-107"></a>                    <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb11-108"><a href="#cb11-108"></a>                    <span class="kw">&lt;Action</span><span class="ot"> Condition=</span><span class="st">"TestValueFalse"</span><span class="ot"> Once=</span><span class="st">"True"</span><span class="ot"> StoreVar=</span><span class="st">"Magneto_RPM_RIGHT"</span><span class="kw">&gt;</span></span>
+      <span id="cb11-109"><a href="#cb11-109"></a>                        <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"GENERAL ENG RPM:1"</span><span class="ot"> Units=</span><span class="st">"rpm"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-110"><a href="#cb11-110"></a>                    <span class="kw">&lt;/Action&gt;</span></span>
+      <span id="cb11-111"><a href="#cb11-111"></a>                <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb11-112"><a href="#cb11-112"></a>            <span class="kw">&lt;/Sequence&gt;</span></span>
+      <span id="cb11-113"><a href="#cb11-113"></a>        <span class="kw">&lt;/Sequence&gt;</span></span>
+      <span id="cb11-114"><a href="#cb11-114"></a>    <span class="kw">&lt;/Sequence&gt;</span></span>
+      <span id="cb11-115"><a href="#cb11-115"></a><span class="kw">&lt;/Checkpoint&gt;</span></span>
+      <span id="cb11-116"><a href="#cb11-116"></a></span>
+      <span id="cb11-117"><a href="#cb11-117"></a><span class="kw">&lt;Checkpoint</span><span class="ot"> Id=</span><span class="st">"Magneto_50_RPM_Difference_Max"</span><span class="kw">&gt;</span></span>
+      <span id="cb11-118"><a href="#cb11-118"></a>    <span class="kw">&lt;CheckpointDesc</span><span class="ot"> SubjectTT=</span><span class="st">"TT:GAME.CHECKLIST_MAGNETOS"</span><span class="ot"> ExpectationTT=</span><span class="st">"TT:GAME.CHECKLIST_50RPM_MAX_DIFFERENCE"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-119"><a href="#cb11-119"></a>    <span class="kw">&lt;Sequence</span><span class="ot"> SeqType=</span><span class="st">"Ordered"</span><span class="kw">&gt;</span></span>
+      <span id="cb11-120"><a href="#cb11-120"></a>        <span class="kw">&lt;Sequence</span><span class="ot"> SeqType=</span><span class="st">"Ordered"</span><span class="kw">&gt;</span></span>
+      <span id="cb11-121"><a href="#cb11-121"></a>            <span class="kw">&lt;Once&gt;</span>True<span class="kw">&lt;/Once&gt;</span></span>
+      <span id="cb11-122"><a href="#cb11-122"></a>            <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb11-123"><a href="#cb11-123"></a>                <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb11-124"><a href="#cb11-124"></a>                    <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"OR"</span><span class="kw">&gt;</span> <span class="co">&lt;!-- Skips if Magneto_RPM_RIGHT is already set --&gt;</span></span>
+      <span id="cb11-125"><a href="#cb11-125"></a>                        <span class="kw">&lt;Val</span><span class="ot"> ReadVar=</span><span class="st">"Magneto_RPM_RIGHT"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-126"><a href="#cb11-126"></a>                        <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"And"</span><span class="kw">&gt;</span></span>
+      <span id="cb11-127"><a href="#cb11-127"></a>                            <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"RECIP ENG RIGHT MAGNETO:1"</span><span class="ot"> Units=</span><span class="st">"Boolean"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-128"><a href="#cb11-128"></a>                            <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"Not"</span><span class="kw">&gt;</span></span>
+      <span id="cb11-129"><a href="#cb11-129"></a>                                <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"RECIP ENG LEFT MAGNETO:1"</span><span class="ot"> Units=</span><span class="st">"Boolean"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-130"><a href="#cb11-130"></a>                            <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb11-131"><a href="#cb11-131"></a>                        <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb11-132"><a href="#cb11-132"></a>                    <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb11-133"><a href="#cb11-133"></a>                <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb11-134"><a href="#cb11-134"></a>                <span class="kw">&lt;Duration</span><span class="ot"> Value=</span><span class="st">"1.5"</span><span class="ot"> Cumulative=</span><span class="st">"False"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-135"><a href="#cb11-135"></a>                <span class="kw">&lt;Instrument</span><span class="ot"> id=</span><span class="st">"MAGNETO"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-136"><a href="#cb11-136"></a>                <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueFalse"</span><span class="ot"> Once=</span><span class="st">"true"</span><span class="ot"> EventID=</span><span class="st">"MAGNETO_RIGHT"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-137"><a href="#cb11-137"></a>            <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb11-138"><a href="#cb11-138"></a>            <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb11-139"><a href="#cb11-139"></a>                <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb11-140"><a href="#cb11-140"></a>                    <span class="kw">&lt;Val</span><span class="ot"> ReadVar=</span><span class="st">"Magneto_RPM_RIGHT"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-141"><a href="#cb11-141"></a>                <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb11-142"><a href="#cb11-142"></a>                <span class="kw">&lt;Action</span><span class="ot"> Condition=</span><span class="st">"TestValueFalse"</span><span class="ot"> Once=</span><span class="st">"True"</span><span class="ot"> StoreVar=</span><span class="st">"Magneto_RPM_RIGHT"</span><span class="kw">&gt;</span></span>
+      <span id="cb11-143"><a href="#cb11-143"></a>                    <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"GENERAL ENG RPM:1"</span><span class="ot"> Units=</span><span class="st">"rpm"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-144"><a href="#cb11-144"></a>                <span class="kw">&lt;/Action&gt;</span></span>
+      <span id="cb11-145"><a href="#cb11-145"></a>            <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb11-146"><a href="#cb11-146"></a>        <span class="kw">&lt;/Sequence&gt;</span></span>
+      <span id="cb11-147"><a href="#cb11-147"></a></span>
+      <span id="cb11-148"><a href="#cb11-148"></a>        <span class="kw">&lt;Sequence</span><span class="ot"> SeqType=</span><span class="st">"Ordered"</span><span class="kw">&gt;</span></span>
+      <span id="cb11-149"><a href="#cb11-149"></a>            <span class="kw">&lt;Once&gt;</span>True<span class="kw">&lt;/Once&gt;</span></span>
+      <span id="cb11-150"><a href="#cb11-150"></a>            <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb11-151"><a href="#cb11-151"></a>                <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb11-152"><a href="#cb11-152"></a>                    <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"OR"</span><span class="kw">&gt;</span> <span class="co">&lt;!-- Skips if Magneto_RPM_LEFT is already set --&gt;</span></span>
+      <span id="cb11-153"><a href="#cb11-153"></a>                        <span class="kw">&lt;Val</span><span class="ot"> ReadVar=</span><span class="st">"Magneto_RPM_LEFT"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-154"><a href="#cb11-154"></a>                        <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"And"</span><span class="kw">&gt;</span></span>
+      <span id="cb11-155"><a href="#cb11-155"></a>                            <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"RECIP ENG LEFT MAGNETO:1"</span><span class="ot"> Units=</span><span class="st">"Boolean"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-156"><a href="#cb11-156"></a>                            <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"Not"</span><span class="kw">&gt;</span></span>
+      <span id="cb11-157"><a href="#cb11-157"></a>                                <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"RECIP ENG RIGHT MAGNETO:1"</span><span class="ot"> Units=</span><span class="st">"Boolean"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-158"><a href="#cb11-158"></a>                            <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb11-159"><a href="#cb11-159"></a>                        <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb11-160"><a href="#cb11-160"></a>                    <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb11-161"><a href="#cb11-161"></a>                <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb11-162"><a href="#cb11-162"></a>                <span class="kw">&lt;Duration</span><span class="ot"> Value=</span><span class="st">"1.5"</span><span class="ot"> Cumulative=</span><span class="st">"False"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-163"><a href="#cb11-163"></a>                <span class="kw">&lt;Instrument</span><span class="ot"> id=</span><span class="st">"MAGNETO"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-164"><a href="#cb11-164"></a>                <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueFalse"</span><span class="ot"> Once=</span><span class="st">"true"</span><span class="ot"> EventID=</span><span class="st">"MAGNETO_LEFT"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-165"><a href="#cb11-165"></a>            <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb11-166"><a href="#cb11-166"></a>            <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb11-167"><a href="#cb11-167"></a>                <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb11-168"><a href="#cb11-168"></a>                    <span class="kw">&lt;Val</span><span class="ot"> ReadVar=</span><span class="st">"Magneto_RPM_LEFT"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-169"><a href="#cb11-169"></a>                <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb11-170"><a href="#cb11-170"></a>                <span class="kw">&lt;Action</span><span class="ot"> Condition=</span><span class="st">"TestValueFalse"</span><span class="ot"> Once=</span><span class="st">"True"</span><span class="ot"> StoreVar=</span><span class="st">"Magneto_RPM_LEFT"</span><span class="kw">&gt;</span></span>
+      <span id="cb11-171"><a href="#cb11-171"></a>                    <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"GENERAL ENG RPM:1"</span><span class="ot"> Units=</span><span class="st">"rpm"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-172"><a href="#cb11-172"></a>                <span class="kw">&lt;/Action&gt;</span></span>
+      <span id="cb11-173"><a href="#cb11-173"></a>            <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb11-174"><a href="#cb11-174"></a>        <span class="kw">&lt;/Sequence&gt;</span></span>
+      <span id="cb11-175"><a href="#cb11-175"></a></span>
+      <span id="cb11-176"><a href="#cb11-176"></a>        <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb11-177"><a href="#cb11-177"></a>            <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb11-178"><a href="#cb11-178"></a>                <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"Equal"</span><span class="ot"> Tolerance=</span><span class="st">"50"</span><span class="kw">&gt;</span></span>
+      <span id="cb11-179"><a href="#cb11-179"></a>                    <span class="kw">&lt;Val</span><span class="ot"> ReadVar=</span><span class="st">"Magneto_RPM_LEFT"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-180"><a href="#cb11-180"></a>                    <span class="kw">&lt;Val</span><span class="ot"> ReadVar=</span><span class="st">"Magneto_RPM_RIGHT"</span><span class="kw">/&gt;</span></span>
+      <span id="cb11-181"><a href="#cb11-181"></a>                <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb11-182"><a href="#cb11-182"></a>            <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb11-183"><a href="#cb11-183"></a>        <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb11-184"><a href="#cb11-184"></a>    <span class="kw">&lt;/Sequence&gt;</span></span>
+      <span id="cb11-185"><a href="#cb11-185"></a><span class="kw">&lt;/Checkpoint&gt;</span></span></code></pre></div>
+      <blockquote>
+      <p><strong>How this last example work</strong>:</p>
+      <p>The User is supposed to set the magneto to “Both”, wait some time for the RPM to stabilize, then measure the current RPM. He then does the same for “Left” and “Right”, in any order. The RPM for “Left” or “Right” should be no less than 150 RPM below the RPM for “Both”. The RPM for “Left” and “Right” should not be further apart than 50 RPM.</p>
+      <p>Here, the first <code>checkpoint</code> starts by initializing variables to 0, to avoid possible side-effects. Then, the first <code>test</code> measures the RPM in “Both” setting. The following <code>unordered sequence</code> is composed of two <code>ordered sequences</code>, each set up so that only one <em>actually</em> needs to be properly executed, one for “Left” and the other for “Right”. The sequence waits 1.5 seconds in the correct settings, and measures the RPM. The difference of RPM between “Both” and “Left/Right” is computed, and if small enough, the corresponding RPM is stored in the appropriate variable. The other “Right/Left” variable will keep a value of 0.<br> In the second checkpoint, only one of the first two ordered sub-<code>sequences</code> is actually executed, and the other is skipped, based on which variable among “Left” and “Right” is set, and which still contains 0. The correct <code>sequence</code> will set the corresponding “Left/Right” settings, and measure the RPM. Finally, the last <code>test</code> verifies that the two “Left” and “Right” variables are close enough.</p>
+      </blockquote>
+      <h2 id="using-a-generic-library-checkpoint-with-aircraft-specific-modifications">Using a generic library checkpoint with aircraft-specific modifications</h2>
+      <p><code>Libraries</code> are useful to share <code>checkpoint</code> definitions accross various aircraft checklist, without having to copy-paste a whole block of xml. But sometimes, two aircraft checklists have <em>almost</em> the same <code>checkpoint</code> but with only a minor difference. In such situation, it could be useful to be able to reference a <code>checkpoint</code> from a <code>library</code>, but also specify a minor modification, without having to copy-paste the whole block. This is possible for a variety of fields, as detailed in the following sections.</p>
+      <h3 id="changing-subject-expectation-feedback-and-clue">Changing <code>subject</code>, <code>expectation</code>, <code>feedback</code>, and <code>clue</code></h3>
+      <p>It is possible to replace the <code>CheckpointDesc</code> while loading a <code>library</code> <code>checkpoint</code> through its <code>ReferenceId</code>. The resulting checklist’s <code>checkpoint</code> will have identical code (<code>Actions</code>, <code>Tests</code>, …), but the new <code>SubjectTT</code> and <code>ExpectationTT</code> instead of those from the <code>library</code>.</p>
+      <div class="sourceCode" id="cb12"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb12-1"><a href="#cb12-1"></a><span class="kw">&lt;Checkpoint</span><span class="ot"> ReferenceId=</span><span class="st">"Taxi_Light_On"</span><span class="kw">&gt;</span></span>
+      <span id="cb12-2"><a href="#cb12-2"></a>    <span class="kw">&lt;CheckpointDesc</span><span class="ot"> SubjectTT=</span><span class="st">"Insert_here_a_new_subject"</span><span class="ot"> ExpectationTT=</span><span class="st">"Insert_here_a_new_expectation"</span><span class="kw">/&gt;</span></span>
+      <span id="cb12-3"><a href="#cb12-3"></a><span class="kw">&lt;/Checkpoint&gt;</span></span></code></pre></div>
+      <p>Similarly, it is possible to replace <code>Feedback</code> and/or <code>Clue</code> by specifying them in the checklist file. Note that it is also possible to add a feedback or clue to a checkpoint that did not have any in its library definition.</p>
+      <div class="sourceCode" id="cb13"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb13-1"><a href="#cb13-1"></a><span class="kw">&lt;Checkpoint</span><span class="ot"> ReferenceId=</span><span class="st">"Aux_Fuel_Pump_On_3-5Sec_Then_Off"</span><span class="kw">&gt;</span></span>
+      <span id="cb13-2"><a href="#cb13-2"></a>    <span class="kw">&lt;Feedback</span><span class="ot"> name=</span><span class="st">"Insert_here_a_feedback_TT"</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> DurationTimer=</span><span class="st">"True"</span><span class="kw">/&gt;</span></span>
+      <span id="cb13-3"><a href="#cb13-3"></a><span class="kw">&lt;/Checkpoint&gt;</span></span></code></pre></div>
+      <h3 id="forcing-a-camera-and-adding-instrument-highlights">Forcing a camera, and adding instrument highlights</h3>
+      <p>Instruments to be highlighted can be added to a library checkpoint after loading it through its <code>ReferenceId</code>. They will not replace the instruments previously defined (if any), but invalid instruments are always ignored.</p>
+      <div class="sourceCode" id="cb14"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb14-1"><a href="#cb14-1"></a><span class="kw">&lt;Checkpoint</span><span class="ot"> ReferenceId=</span><span class="st">"Flight_Control_Move_Against_AP"</span><span class="kw">&gt;</span></span>
+      <span id="cb14-2"><a href="#cb14-2"></a>    <span class="kw">&lt;Instrument</span><span class="ot"> id=</span><span class="st">"YOKE1"</span><span class="kw">/&gt;</span></span>
+      <span id="cb14-3"><a href="#cb14-3"></a>    <span class="kw">&lt;Instrument</span><span class="ot"> id=</span><span class="st">"YOKE2"</span><span class="kw">/&gt;</span></span>
+      <span id="cb14-4"><a href="#cb14-4"></a><span class="kw">&lt;/Checkpoint&gt;</span></span></code></pre></div>
+      <p>When multiple instruments are to be highlighted, sometimes the camera associated with them is not suitable to be able to see them all. In this case, a <code>ForceCamera</code> can be added to ignore instruments cameras, and use the one specified instead.</p>
+      <div class="sourceCode" id="cb15"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb15-1"><a href="#cb15-1"></a><span class="kw">&lt;Checkpoint</span><span class="ot"> ReferenceId=</span><span class="st">"TBM_THROTTLE_SET_LOIDLE_WHEN_NG_13"</span><span class="kw">&gt;</span></span>
+      <span id="cb15-2"><a href="#cb15-2"></a>    <span class="kw">&lt;ForceCamera</span><span class="ot"> name=</span><span class="st">"Yokes"</span><span class="kw">/&gt;</span></span>
+      <span id="cb15-3"><a href="#cb15-3"></a><span class="kw">&lt;/Checkpoint&gt;</span></span></code></pre></div>
+      <h3 id="using-templates-to-replace-values-or-actions">Using templates to replace values or actions</h3>
+      <p>If <code>template values</code> are used in the referenced library <code>checkpoint</code>, they can be overriden a similar way in the checklist <code>checkpoint</code>. When writing a library <code>checkpoint</code> that would probably benefit from values that can be overriden (such as aircraft-specific numbers), a good practice is to define some <code>template values</code> (with default values).</p>
+      <p>Here is an example. The first <code>checkpoint</code> is in a library file, while the second is a checklist <code>checkpoint</code> that overrides only some of the <code>template values</code> defined by the first.</p>
+      <div class="sourceCode" id="cb16"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb16-1"><a href="#cb16-1"></a><span class="kw">&lt;Checkpoint</span><span class="ot"> Id=</span><span class="st">"OIL_PRESS_TEMP_CHECK"</span><span class="kw">&gt;</span></span>
+      <span id="cb16-2"><a href="#cb16-2"></a>    <span class="kw">&lt;CheckpointDesc</span><span class="ot"> SubjectTT=</span><span class="st">"TT:GAME.CHECKLIST_OIL_PRESS_TEMP"</span><span class="ot"> ExpectationTT=</span><span class="st">"TT:GAME.CHECKLIST_CHECK"</span><span class="kw">/&gt;</span></span>
+      <span id="cb16-3"><a href="#cb16-3"></a>    <span class="co">&lt;!-- Those default values are the correct ones for TBM930, but might change for another aircraft --&gt;</span></span>
+      <span id="cb16-4"><a href="#cb16-4"></a>    <span class="kw">&lt;SetTemplateValue</span><span class="ot"> Id=</span><span class="st">"Min Oil Pressure"</span><span class="ot"> Value=</span><span class="st">"60"</span><span class="kw">/&gt;</span></span>
+      <span id="cb16-5"><a href="#cb16-5"></a>    <span class="kw">&lt;SetTemplateValue</span><span class="ot"> Id=</span><span class="st">"Max Oil Pressure"</span><span class="ot"> Value=</span><span class="st">"135"</span><span class="kw">/&gt;</span></span>
+      <span id="cb16-6"><a href="#cb16-6"></a>    <span class="kw">&lt;SetTemplateValue</span><span class="ot"> Id=</span><span class="st">"Min Oil Temperature"</span><span class="ot"> Value=</span><span class="st">"0"</span><span class="kw">/&gt;</span></span>
+      <span id="cb16-7"><a href="#cb16-7"></a>    <span class="kw">&lt;SetTemplateValue</span><span class="ot"> Id=</span><span class="st">"Max Oil Temperature"</span><span class="kw">&gt;</span></span>
+      <span id="cb16-8"><a href="#cb16-8"></a>        <span class="kw">&lt;Val</span><span class="ot"> Value=</span><span class="st">"104"</span><span class="kw">/&gt;</span> <span class="co">&lt;!-- More complex expression can be written this way, but for constant values both forms are identical. --&gt;</span></span>
+      <span id="cb16-9"><a href="#cb16-9"></a>    <span class="kw">&lt;/SetTemplateValue&gt;</span></span>
+      <span id="cb16-10"><a href="#cb16-10"></a>    <span class="kw">&lt;Sequence</span><span class="ot"> SeqType=</span><span class="st">"Unordered"</span><span class="kw">&gt;</span></span>
+      <span id="cb16-11"><a href="#cb16-11"></a>        <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb16-12"><a href="#cb16-12"></a>            <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb16-13"><a href="#cb16-13"></a>                <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"BETWEEN"</span><span class="kw">&gt;</span></span>
+      <span id="cb16-14"><a href="#cb16-14"></a>                    <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"ENG OIL PRESSURE:1"</span><span class="ot"> Units=</span><span class="st">"psi"</span><span class="kw">/&gt;</span></span>
+      <span id="cb16-15"><a href="#cb16-15"></a>                    <span class="kw">&lt;Val</span><span class="ot"> UseTemplateValue=</span><span class="st">"Min Oil Pressure"</span><span class="kw">/&gt;</span> <span class="co">&lt;!-- Instead of using the constants directly, template values are referenced, with possibly overwritten values --&gt;</span></span>
+      <span id="cb16-16"><a href="#cb16-16"></a>                    <span class="kw">&lt;Val</span><span class="ot"> UseTemplateValue=</span><span class="st">"Max Oil Pressure"</span><span class="kw">/&gt;</span></span>
+      <span id="cb16-17"><a href="#cb16-17"></a>                <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb16-18"><a href="#cb16-18"></a>            <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb16-19"><a href="#cb16-19"></a>            <span class="kw">&lt;Instrument</span><span class="ot"> id=</span><span class="st">"HIGHLIGHT_OIL_PRESS"</span><span class="kw">/&gt;</span></span>
+      <span id="cb16-20"><a href="#cb16-20"></a>            <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueFalse"</span><span class="ot"> Once=</span><span class="st">"false"</span><span class="ot"> SpecialAction=</span><span class="st">"WaitUntilTestValueValidated"</span><span class="kw">/&gt;</span></span>
+      <span id="cb16-21"><a href="#cb16-21"></a>        <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb16-22"><a href="#cb16-22"></a>        <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb16-23"><a href="#cb16-23"></a>            <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb16-24"><a href="#cb16-24"></a>                <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"BETWEEN"</span><span class="kw">&gt;</span></span>
+      <span id="cb16-25"><a href="#cb16-25"></a>                    <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"ENG OIL TEMPERATURE:1"</span><span class="ot"> Units=</span><span class="st">"celsius"</span><span class="kw">/&gt;</span></span>
+      <span id="cb16-26"><a href="#cb16-26"></a>                    <span class="kw">&lt;Val</span><span class="ot"> UseTemplateValue=</span><span class="st">"Min Oil Temperature"</span><span class="kw">/&gt;</span></span>
+      <span id="cb16-27"><a href="#cb16-27"></a>                    <span class="kw">&lt;Val</span><span class="ot"> UseTemplateValue=</span><span class="st">"Max Oil Temperature"</span><span class="kw">/&gt;</span></span>
+      <span id="cb16-28"><a href="#cb16-28"></a>                <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb16-29"><a href="#cb16-29"></a>            <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb16-30"><a href="#cb16-30"></a>            <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueFalse"</span><span class="ot"> Once=</span><span class="st">"false"</span><span class="ot"> SpecialAction=</span><span class="st">"WaitUntilTestValueValidated"</span><span class="kw">/&gt;</span></span>
+      <span id="cb16-31"><a href="#cb16-31"></a>        <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb16-32"><a href="#cb16-32"></a>    <span class="kw">&lt;/Sequence&gt;</span></span>
+      <span id="cb16-33"><a href="#cb16-33"></a><span class="kw">&lt;/Checkpoint&gt;</span></span></code></pre></div>
+      <div class="sourceCode" id="cb17"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb17-1"><a href="#cb17-1"></a><span class="kw">&lt;Checkpoint</span><span class="ot"> ReferenceId=</span><span class="st">"OIL_PRESS_TEMP_CHECK"</span><span class="kw">&gt;</span></span>
+      <span id="cb17-2"><a href="#cb17-2"></a>    <span class="co">&lt;!-- Overwrite some of the template values, while keeping default values for others --&gt;</span></span>
+      <span id="cb17-3"><a href="#cb17-3"></a>    <span class="kw">&lt;SetTemplateValue</span><span class="ot"> Id=</span><span class="st">"Min Oil Pressure"</span><span class="ot"> Value=</span><span class="st">"50"</span><span class="kw">/&gt;</span></span>
+      <span id="cb17-4"><a href="#cb17-4"></a>    <span class="kw">&lt;SetTemplateValue</span><span class="ot"> Id=</span><span class="st">"Max Oil Pressure"</span><span class="kw">&gt;</span></span>
+      <span id="cb17-5"><a href="#cb17-5"></a>        <span class="kw">&lt;Val</span><span class="ot"> Value=</span><span class="st">"150"</span><span class="kw">/&gt;</span> <span class="co">&lt;!-- More complex expression can be written this way, but for constant values both forms are identical. --&gt;</span></span>
+      <span id="cb17-6"><a href="#cb17-6"></a>    <span class="kw">&lt;/SetTemplateValue&gt;</span></span>
+      <span id="cb17-7"><a href="#cb17-7"></a><span class="kw">&lt;/Checkpoint&gt;</span></span></code></pre></div>
+      <p>Similarly, <code>SetTemplateAction</code> and <code>UseTemplateAction</code> can be used to introduce generic actions in a library checkpoint, for example to set throttle lever to a specific position in a checkpoint wanting to reach a specific airspeed. This <code>SetTemplateAction</code> can then be overridden in the checklist file.</p>
+      <p>The following example presents a library checkpoint and a checklist reference to this checkpoint, for an aircraft with stronger engines (throttle needs to be pushed less to reach same RPM).</p>
+      <div class="sourceCode" id="cb18"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb18-1"><a href="#cb18-1"></a><span class="kw">&lt;Checkpoint</span><span class="ot"> Id=</span><span class="st">"Throttle_Set_1800_RPM"</span><span class="kw">&gt;</span></span>
+      <span id="cb18-2"><a href="#cb18-2"></a>    <span class="kw">&lt;CheckpointDesc</span><span class="ot"> SubjectTT=</span><span class="st">"TT:GAME.CHECKLIST_THROTTLE"</span><span class="ot"> ExpectationTT=</span><span class="st">"TT:GAME.CHECKLIST_SET_1800RPM"</span><span class="kw">/&gt;</span></span>
+      <span id="cb18-3"><a href="#cb18-3"></a>    <span class="kw">&lt;SetTemplateAction</span><span class="ot"> Id=</span><span class="st">"SetThrottle"</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueFalse"</span><span class="ot"> Once=</span><span class="st">"true"</span><span class="ot"> EventID=</span><span class="st">"THROTTLE1_SET"</span><span class="ot"> EventParam=</span><span class="st">"9997"</span><span class="kw">/&gt;</span></span>
+      <span id="cb18-4"><a href="#cb18-4"></a>    <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb18-5"><a href="#cb18-5"></a>        <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb18-6"><a href="#cb18-6"></a>            <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"EQUAL"</span><span class="ot"> Tolerance=</span><span class="st">"50"</span><span class="kw">&gt;</span></span>
+      <span id="cb18-7"><a href="#cb18-7"></a>                <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"GENERAL ENG RPM:1"</span><span class="ot"> Units=</span><span class="st">"rpm"</span><span class="kw">/&gt;</span></span>
+      <span id="cb18-8"><a href="#cb18-8"></a>                <span class="kw">&lt;Val</span><span class="ot"> Value=</span><span class="st">"1800"</span><span class="kw">/&gt;</span></span>
+      <span id="cb18-9"><a href="#cb18-9"></a>            <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb18-10"><a href="#cb18-10"></a>        <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb18-11"><a href="#cb18-11"></a>        <span class="kw">&lt;Duration</span><span class="ot"> Value=</span><span class="st">"0.2"</span><span class="ot"> Cumulative=</span><span class="st">"False"</span><span class="kw">/&gt;</span></span>
+      <span id="cb18-12"><a href="#cb18-12"></a>        <span class="kw">&lt;Instrument</span><span class="ot"> id=</span><span class="st">"THROTTLE"</span><span class="kw">/&gt;</span></span>
+      <span id="cb18-13"><a href="#cb18-13"></a>        <span class="kw">&lt;Instrument</span><span class="ot"> id=</span><span class="st">"THROTTLE_COPILOT"</span><span class="kw">/&gt;</span></span>
+      <span id="cb18-14"><a href="#cb18-14"></a>        <span class="kw">&lt;Instrument</span><span class="ot"> id=</span><span class="st">"THROTTLE1"</span><span class="kw">/&gt;</span></span>
+      <span id="cb18-15"><a href="#cb18-15"></a>        <span class="kw">&lt;Instrument</span><span class="ot"> id=</span><span class="st">"THROTTLE2"</span><span class="kw">/&gt;</span></span>
+      <span id="cb18-16"><a href="#cb18-16"></a>        <span class="kw">&lt;Action</span><span class="ot"> UseTemplateAction=</span><span class="st">"SetThrottle"</span><span class="kw">/&gt;</span> <span class="co">&lt;!-- Executes the action defined by SetTemplateAction --&gt;</span></span>
+      <span id="cb18-17"><a href="#cb18-17"></a>    <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb18-18"><a href="#cb18-18"></a><span class="kw">&lt;/Checkpoint&gt;</span></span></code></pre></div>
+      <div class="sourceCode" id="cb19"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb19-1"><a href="#cb19-1"></a><span class="kw">&lt;Checkpoint</span><span class="ot"> ReferenceId=</span><span class="st">"Throttle_Set_1800_RPM"</span><span class="kw">&gt;</span></span>
+      <span id="cb19-2"><a href="#cb19-2"></a>    <span class="kw">&lt;SetTemplateAction</span><span class="ot"> Id=</span><span class="st">"SetThrottle"</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueFalse"</span><span class="ot"> Once=</span><span class="st">"true"</span><span class="ot"> EventID=</span><span class="st">"THROTTLE1_SET"</span><span class="ot"> EventParam=</span><span class="st">"9200"</span><span class="kw">/&gt;</span></span>
+      <span id="cb19-3"><a href="#cb19-3"></a><span class="kw">&lt;/Checkpoint&gt;</span></span></code></pre></div>
+      <h2 id="tips">Tips</h2>
+      <h3 id="cleaning-state-after-copilot-mode">Cleaning state after <em>Copilot</em> mode</h3>
+      <p>Some <code>checkpoints</code> might require temporarily moving some controls into a non-idle state to verify their proper behaviour. To avoid finishing the <code>checkpoint</code> while keeping said controls in such state, additionnal <code>tests</code> could be added to check if they are properly returned to idle. While one may expect the User to do this on his own, forcing him to do is not very user-friendly. In <em>Copilot</em> mode, controls should usually be returned back to normal upon exiting a <code>checkpoint</code>. To this end, it is recommended to add the following <code>action</code>, changing the attributes to the required ones.</p>
+      <div class="sourceCode" id="cb20"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb20-1"><a href="#cb20-1"></a><span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"End"</span><span class="ot"> EventID=</span><span class="st">"RUDDER_SET"</span><span class="ot"> EventParam=</span><span class="st">"0"</span><span class="kw">/&gt;</span></span></code></pre></div>
+      <p>Note that defining <code>Copilot="True"</code> means this will not interfere with the user in non-<em>Copilot</em> mode. A more complete example:</p>
+      <div class="sourceCode" id="cb21"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb21-1"><a href="#cb21-1"></a><span class="kw">&lt;Checkpoint</span><span class="ot"> Id=</span><span class="st">"Brakes_Test"</span><span class="kw">&gt;</span></span>
+      <span id="cb21-2"><a href="#cb21-2"></a>    <span class="kw">&lt;CheckpointDesc</span><span class="ot"> SubjectTT=</span><span class="st">"TT:GAME.CHECKLIST_BRAKES"</span><span class="ot"> ExpectationTT=</span><span class="st">"TT:GAME.CHECKLIST_TEST"</span><span class="kw">/&gt;</span></span>
+      <span id="cb21-3"><a href="#cb21-3"></a>    <span class="kw">&lt;Sequence</span><span class="ot"> SeqType=</span><span class="st">"Unordered"</span><span class="kw">&gt;</span></span>
+      <span id="cb21-4"><a href="#cb21-4"></a>        <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb21-5"><a href="#cb21-5"></a>            <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb21-6"><a href="#cb21-6"></a>                <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"NOT"</span><span class="kw">&gt;</span></span>
+      <span id="cb21-7"><a href="#cb21-7"></a>                    <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"BRAKE PARKING POSITION"</span><span class="ot"> Units=</span><span class="st">"Boolean"</span><span class="kw">/&gt;</span></span>
+      <span id="cb21-8"><a href="#cb21-8"></a>                <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb21-9"><a href="#cb21-9"></a>            <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb21-10"><a href="#cb21-10"></a>            <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueFalse"</span><span class="ot"> Once=</span><span class="st">"true"</span><span class="ot"> EventID=</span><span class="st">"PARKING_BRAKES"</span> <span class="kw">/&gt;</span></span>
+      <span id="cb21-11"><a href="#cb21-11"></a>            <span class="kw">&lt;Instrument</span><span class="ot"> id=</span><span class="st">"RUDDER_PEDALS"</span><span class="kw">/&gt;</span></span>
+      <span id="cb21-12"><a href="#cb21-12"></a>        <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb21-13"><a href="#cb21-13"></a>        <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb21-14"><a href="#cb21-14"></a>            <span class="kw">&lt;Once&gt;</span>TRUE<span class="kw">&lt;/Once&gt;</span></span>
+      <span id="cb21-15"><a href="#cb21-15"></a>            <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb21-16"><a href="#cb21-16"></a>                <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"GREATER"</span><span class="kw">&gt;</span></span>
+      <span id="cb21-17"><a href="#cb21-17"></a>                    <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"BRAKE LEFT POSITION"</span><span class="ot"> Units=</span><span class="st">"percent"</span><span class="kw">/&gt;</span></span>
+      <span id="cb21-18"><a href="#cb21-18"></a>                    <span class="kw">&lt;Val</span><span class="ot"> Value=</span><span class="st">"50"</span><span class="kw">/&gt;</span></span>
+      <span id="cb21-19"><a href="#cb21-19"></a>                <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb21-20"><a href="#cb21-20"></a>            <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb21-21"><a href="#cb21-21"></a>            <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueFalse"</span><span class="ot"> Once=</span><span class="st">"true"</span><span class="ot"> EventID=</span><span class="st">"AXIS_LEFT_BRAKE_SET"</span><span class="ot"> EventParam=</span><span class="st">"16383"</span><span class="kw">/&gt;</span></span>
+      <span id="cb21-22"><a href="#cb21-22"></a>            <span class="kw">&lt;Duration</span><span class="ot">  Value=</span><span class="st">"1.0"</span><span class="ot"> Cumulative=</span><span class="st">"False"</span><span class="kw">/&gt;</span></span>
+      <span id="cb21-23"><a href="#cb21-23"></a>        <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb21-24"><a href="#cb21-24"></a>        <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb21-25"><a href="#cb21-25"></a>            <span class="kw">&lt;Once&gt;</span>TRUE<span class="kw">&lt;/Once&gt;</span></span>
+      <span id="cb21-26"><a href="#cb21-26"></a>            <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb21-27"><a href="#cb21-27"></a>                <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"GREATER"</span><span class="kw">&gt;</span></span>
+      <span id="cb21-28"><a href="#cb21-28"></a>                    <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"BRAKE RIGHT POSITION"</span><span class="ot"> Units=</span><span class="st">"percent"</span><span class="kw">/&gt;</span></span>
+      <span id="cb21-29"><a href="#cb21-29"></a>                    <span class="kw">&lt;Val</span><span class="ot"> Value=</span><span class="st">"50"</span><span class="kw">/&gt;</span></span>
+      <span id="cb21-30"><a href="#cb21-30"></a>                <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb21-31"><a href="#cb21-31"></a>            <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb21-32"><a href="#cb21-32"></a>            <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueFalse"</span><span class="ot"> Once=</span><span class="st">"true"</span><span class="ot"> EventID=</span><span class="st">"AXIS_RIGHT_BRAKE_SET"</span><span class="ot"> EventParam=</span><span class="st">"16383"</span><span class="kw">/&gt;</span></span>
+      <span id="cb21-33"><a href="#cb21-33"></a>            <span class="kw">&lt;Duration</span><span class="ot"> Value=</span><span class="st">"1.0"</span><span class="ot"> Cumulative=</span><span class="st">"False"</span><span class="kw">/&gt;</span></span>
+      <span id="cb21-34"><a href="#cb21-34"></a>        <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb21-35"><a href="#cb21-35"></a>    <span class="kw">&lt;/Sequence&gt;</span></span>
+      <span id="cb21-36"><a href="#cb21-36"></a>    <span class="co">&lt;!-- Those two actions "clean" up the state of controls at the end of the checkpoint, in Copilot mode --&gt;</span></span>
+      <span id="cb21-37"><a href="#cb21-37"></a>    <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"End"</span><span class="ot"> EventID=</span><span class="st">"AXIS_LEFT_BRAKE_SET"</span><span class="ot"> EventParam=</span><span class="st">"0"</span><span class="kw">/&gt;</span></span>
+      <span id="cb21-38"><a href="#cb21-38"></a>    <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"End"</span><span class="ot"> EventID=</span><span class="st">"AXIS_RIGHT_BRAKE_SET"</span><span class="ot"> EventParam=</span><span class="st">"0"</span><span class="kw">/&gt;</span></span>
+      <span id="cb21-39"><a href="#cb21-39"></a><span class="kw">&lt;/Checkpoint&gt;</span></span></code></pre></div>
+      <h3 id="pacing-the-copilot-mode">Pacing the <em>Copilot</em> mode</h3>
+      <p>Some <code>checkpoints</code> might require several different actions to be executed in any order, but without the need to hold those actions for a certain Duration. In such a case, the <em>Copilot</em> mode might trigger all actions nearly simultaneously (1 per frame), which is not realistic. Pacing the actions of <em>Copilot</em> mode by adding a delay solves this, but doing so by adding a Duration adds constraints to the way the User can validate this in <em>Automatic</em> mode. The following Action is then a good solution:</p>
+      <div class="sourceCode" id="cb22"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb22-1"><a href="#cb22-1"></a><span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueTrue"</span><span class="ot"> Once=</span><span class="st">"True"</span><span class="ot"> SpecialAction=</span><span class="st">"WaitForDuration"</span><span class="ot"> Value=</span><span class="st">"1.5"</span><span class="kw">/&gt;</span></span></code></pre></div>
+      <p>As the element of a <code>test</code>, this <code>action</code> will trigger once the <code>testValue</code> is true, only in <em>Copilot</em> mode, and it will add a delay of 1.5 seconds. This way, <em>Copilot</em> checklist progression may appear more natural.</p>
+      <p>Here is a complex example using this technique:</p>
+      <div class="sourceCode" id="cb23"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb23-1"><a href="#cb23-1"></a><span class="kw">&lt;Checkpoint</span><span class="ot"> Id=</span><span class="st">"Flight_Control_Free_And_Correct"</span><span class="kw">&gt;</span></span>
+      <span id="cb23-2"><a href="#cb23-2"></a>    <span class="kw">&lt;CheckpointDesc</span><span class="ot"> SubjectTT=</span><span class="st">"TT:GAME.CHECKLIST_FLIGHT_CONTROLS"</span><span class="ot"> ExpectationTT=</span><span class="st">"TT:GAME.CHECKLIST_FREE_AND_CORRECT"</span><span class="kw">/&gt;</span></span>
+      <span id="cb23-3"><a href="#cb23-3"></a>    <span class="kw">&lt;Sequence</span><span class="ot"> SeqType=</span><span class="st">"Unordered"</span><span class="kw">&gt;</span></span>
+      <span id="cb23-4"><a href="#cb23-4"></a>        <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb23-5"><a href="#cb23-5"></a>            <span class="kw">&lt;Once&gt;</span>True<span class="kw">&lt;/Once&gt;</span></span>
+      <span id="cb23-6"><a href="#cb23-6"></a>            <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb23-7"><a href="#cb23-7"></a>                <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"LESS"</span><span class="kw">&gt;</span></span>
+      <span id="cb23-8"><a href="#cb23-8"></a>                    <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"YOKE X POSITION"</span><span class="ot"> Units=</span><span class="st">"percent"</span><span class="kw">/&gt;</span></span>
+      <span id="cb23-9"><a href="#cb23-9"></a>                    <span class="kw">&lt;Val</span><span class="ot"> Value=</span><span class="st">"-95"</span><span class="kw">/&gt;</span></span>
+      <span id="cb23-10"><a href="#cb23-10"></a>                <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb23-11"><a href="#cb23-11"></a>            <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb23-12"><a href="#cb23-12"></a>            <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueFalse"</span><span class="ot"> Once=</span><span class="st">"true"</span><span class="ot"> EventID=</span><span class="st">"AILERON_SET"</span><span class="ot"> EventParam=</span><span class="st">"16383"</span><span class="kw">/&gt;</span></span>
+      <span id="cb23-13"><a href="#cb23-13"></a>            <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueTrue"</span><span class="ot"> Once=</span><span class="st">"true"</span><span class="ot"> SpecialAction=</span><span class="st">"WaitForDuration"</span><span class="ot"> Value=</span><span class="st">"1.0"</span><span class="kw">/&gt;</span></span>
+      <span id="cb23-14"><a href="#cb23-14"></a>            <span class="kw">&lt;Instrument</span><span class="ot"> id=</span><span class="st">"YOKE_X"</span><span class="kw">/&gt;</span></span>
+      <span id="cb23-15"><a href="#cb23-15"></a>        <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb23-16"><a href="#cb23-16"></a>        <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb23-17"><a href="#cb23-17"></a>            <span class="kw">&lt;Once&gt;</span>True<span class="kw">&lt;/Once&gt;</span></span>
+      <span id="cb23-18"><a href="#cb23-18"></a>            <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb23-19"><a href="#cb23-19"></a>                <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"GREATER"</span><span class="kw">&gt;</span></span>
+      <span id="cb23-20"><a href="#cb23-20"></a>                    <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"YOKE X POSITION"</span><span class="ot"> Units=</span><span class="st">"percent"</span><span class="kw">/&gt;</span></span>
+      <span id="cb23-21"><a href="#cb23-21"></a>                    <span class="kw">&lt;Val</span><span class="ot"> Value=</span><span class="st">"95"</span><span class="kw">/&gt;</span></span>
+      <span id="cb23-22"><a href="#cb23-22"></a>                <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb23-23"><a href="#cb23-23"></a>            <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb23-24"><a href="#cb23-24"></a>            <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueFalse"</span><span class="ot"> Once=</span><span class="st">"true"</span><span class="ot"> EventID=</span><span class="st">"AILERON_SET"</span><span class="ot"> EventParam=</span><span class="st">"-16383"</span><span class="kw">/&gt;</span></span>
+      <span id="cb23-25"><a href="#cb23-25"></a>            <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueTrue"</span><span class="ot"> Once=</span><span class="st">"true"</span><span class="ot"> SpecialAction=</span><span class="st">"WaitForDuration"</span><span class="ot"> Value=</span><span class="st">"1.0"</span><span class="kw">/&gt;</span></span>
+      <span id="cb23-26"><a href="#cb23-26"></a>            <span class="kw">&lt;Instrument</span><span class="ot"> id=</span><span class="st">"YOKE_X"</span><span class="kw">/&gt;</span></span>
+      <span id="cb23-27"><a href="#cb23-27"></a>        <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb23-28"><a href="#cb23-28"></a>        <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb23-29"><a href="#cb23-29"></a>            <span class="kw">&lt;Once&gt;</span>True<span class="kw">&lt;/Once&gt;</span></span>
+      <span id="cb23-30"><a href="#cb23-30"></a>            <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb23-31"><a href="#cb23-31"></a>                <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"LESS"</span><span class="kw">&gt;</span></span>
+      <span id="cb23-32"><a href="#cb23-32"></a>                    <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"YOKE Y POSITION"</span><span class="ot"> Units=</span><span class="st">"percent"</span><span class="kw">/&gt;</span></span>
+      <span id="cb23-33"><a href="#cb23-33"></a>                    <span class="kw">&lt;Val</span><span class="ot"> Value=</span><span class="st">"-90"</span><span class="kw">/&gt;</span></span>
+      <span id="cb23-34"><a href="#cb23-34"></a>                <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb23-35"><a href="#cb23-35"></a>            <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb23-36"><a href="#cb23-36"></a>            <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueFalse"</span><span class="ot"> Once=</span><span class="st">"true"</span><span class="ot"> EventID=</span><span class="st">"AILERON_SET"</span><span class="ot"> EventParam=</span><span class="st">"0"</span><span class="kw">/&gt;</span></span>
+      <span id="cb23-37"><a href="#cb23-37"></a>            <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueFalse"</span><span class="ot"> Once=</span><span class="st">"true"</span><span class="ot"> EventID=</span><span class="st">"ELEVATOR_SET"</span><span class="ot">  EventParam=</span><span class="st">"16383"</span><span class="kw">/&gt;</span></span>
+      <span id="cb23-38"><a href="#cb23-38"></a>            <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueTrue"</span><span class="ot"> Once=</span><span class="st">"true"</span><span class="ot"> SpecialAction=</span><span class="st">"WaitForDuration"</span><span class="ot"> Value=</span><span class="st">"1.0"</span><span class="kw">/&gt;</span></span>
+      <span id="cb23-39"><a href="#cb23-39"></a>            <span class="kw">&lt;Instrument</span><span class="ot"> id=</span><span class="st">"YOKE_Y"</span><span class="kw">/&gt;</span></span>
+      <span id="cb23-40"><a href="#cb23-40"></a>        <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb23-41"><a href="#cb23-41"></a>        <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb23-42"><a href="#cb23-42"></a>            <span class="kw">&lt;Once&gt;</span>True<span class="kw">&lt;/Once&gt;</span></span>
+      <span id="cb23-43"><a href="#cb23-43"></a>            <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb23-44"><a href="#cb23-44"></a>                <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"GREATER"</span><span class="kw">&gt;</span></span>
+      <span id="cb23-45"><a href="#cb23-45"></a>                    <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"YOKE Y POSITION"</span><span class="ot"> Units=</span><span class="st">"percent"</span><span class="kw">/&gt;</span></span>
+      <span id="cb23-46"><a href="#cb23-46"></a>                    <span class="kw">&lt;Val</span><span class="ot"> Value=</span><span class="st">"90"</span><span class="kw">/&gt;</span></span>
+      <span id="cb23-47"><a href="#cb23-47"></a>                <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb23-48"><a href="#cb23-48"></a>            <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb23-49"><a href="#cb23-49"></a>            <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueFalse"</span><span class="ot"> Once=</span><span class="st">"true"</span><span class="ot"> EventID=</span><span class="st">"ELEVATOR_SET"</span><span class="ot"> EventParam=</span><span class="st">"-16383"</span><span class="kw">/&gt;</span></span>
+      <span id="cb23-50"><a href="#cb23-50"></a>            <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueTrue"</span><span class="ot"> Once=</span><span class="st">"true"</span><span class="ot"> SpecialAction=</span><span class="st">"WaitForDuration"</span><span class="ot"> Value=</span><span class="st">"1.0"</span><span class="kw">/&gt;</span></span>
+      <span id="cb23-51"><a href="#cb23-51"></a>            <span class="kw">&lt;Instrument</span><span class="ot"> id=</span><span class="st">"YOKE_Y"</span><span class="kw">/&gt;</span></span>
+      <span id="cb23-52"><a href="#cb23-52"></a>        <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb23-53"><a href="#cb23-53"></a>        <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb23-54"><a href="#cb23-54"></a>            <span class="kw">&lt;Once&gt;</span>True<span class="kw">&lt;/Once&gt;</span></span>
+      <span id="cb23-55"><a href="#cb23-55"></a>            <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb23-56"><a href="#cb23-56"></a>                <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"LESS"</span><span class="kw">&gt;</span></span>
+      <span id="cb23-57"><a href="#cb23-57"></a>                    <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"RUDDER POSITION"</span><span class="ot"> Units=</span><span class="st">"percent"</span><span class="kw">/&gt;</span></span>
+      <span id="cb23-58"><a href="#cb23-58"></a>                    <span class="kw">&lt;Val</span><span class="ot"> Value=</span><span class="st">"-66"</span><span class="kw">/&gt;</span></span>
+      <span id="cb23-59"><a href="#cb23-59"></a>                <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb23-60"><a href="#cb23-60"></a>            <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb23-61"><a href="#cb23-61"></a>            <span class="kw">&lt;Instrument</span><span class="ot"> id=</span><span class="st">"RUDDER_PEDALS"</span><span class="kw">/&gt;</span></span>
+      <span id="cb23-62"><a href="#cb23-62"></a>            <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueFalse"</span><span class="ot"> Once=</span><span class="st">"true"</span><span class="ot"> EventID=</span><span class="st">"ELEVATOR_SET"</span><span class="ot"> EventParam=</span><span class="st">"0"</span><span class="kw">/&gt;</span></span>
+      <span id="cb23-63"><a href="#cb23-63"></a>            <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueFalse"</span><span class="ot"> Once=</span><span class="st">"true"</span><span class="ot"> EventID=</span><span class="st">"RUDDER_SET"</span><span class="ot"> EventParam=</span><span class="st">"16383"</span><span class="kw">/&gt;</span></span>
+      <span id="cb23-64"><a href="#cb23-64"></a>            <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueTrue"</span><span class="ot"> Once=</span><span class="st">"true"</span><span class="ot"> SpecialAction=</span><span class="st">"WaitForDuration"</span><span class="ot"> Value=</span><span class="st">"1.0"</span><span class="kw">/&gt;</span></span>
+      <span id="cb23-65"><a href="#cb23-65"></a>        <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb23-66"><a href="#cb23-66"></a>        <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb23-67"><a href="#cb23-67"></a>            <span class="kw">&lt;Once&gt;</span>True<span class="kw">&lt;/Once&gt;</span></span>
+      <span id="cb23-68"><a href="#cb23-68"></a>            <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb23-69"><a href="#cb23-69"></a>                <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"GREATER"</span><span class="kw">&gt;</span></span>
+      <span id="cb23-70"><a href="#cb23-70"></a>                    <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"RUDDER POSITION"</span><span class="ot"> Units=</span><span class="st">"percent"</span><span class="kw">/&gt;</span></span>
+      <span id="cb23-71"><a href="#cb23-71"></a>                    <span class="kw">&lt;Val</span><span class="ot"> Value=</span><span class="st">"66"</span><span class="kw">/&gt;</span></span>
+      <span id="cb23-72"><a href="#cb23-72"></a>                <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb23-73"><a href="#cb23-73"></a>            <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb23-74"><a href="#cb23-74"></a>            <span class="kw">&lt;Instrument</span><span class="ot"> id=</span><span class="st">"RUDDER_PEDALS"</span><span class="kw">/&gt;</span></span>
+      <span id="cb23-75"><a href="#cb23-75"></a>            <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueFalse"</span><span class="ot"> Once=</span><span class="st">"true"</span><span class="ot"> EventID=</span><span class="st">"RUDDER_SET"</span><span class="ot"> EventParam=</span><span class="st">"-16383"</span><span class="kw">/&gt;</span></span>
+      <span id="cb23-76"><a href="#cb23-76"></a>            <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"TestValueTrue"</span><span class="ot"> Once=</span><span class="st">"true"</span><span class="ot"> SpecialAction=</span><span class="st">"WaitForDuration"</span><span class="ot"> Value=</span><span class="st">"1.0"</span><span class="kw">/&gt;</span></span>
+      <span id="cb23-77"><a href="#cb23-77"></a>        <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb23-78"><a href="#cb23-78"></a>    <span class="kw">&lt;/Sequence&gt;</span></span>
+      <span id="cb23-79"><a href="#cb23-79"></a>    <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"End"</span><span class="ot"> EventID=</span><span class="st">"AILERON_SET"</span><span class="ot"> EventParam=</span><span class="st">"0"</span><span class="kw">/&gt;</span></span>
+      <span id="cb23-80"><a href="#cb23-80"></a>    <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"End"</span><span class="ot"> EventID=</span><span class="st">"ELEVATOR_SET"</span><span class="ot"> EventParam=</span><span class="st">"0"</span><span class="kw">/&gt;</span></span>
+      <span id="cb23-81"><a href="#cb23-81"></a>    <span class="kw">&lt;Action</span><span class="ot"> Copilot=</span><span class="st">"True"</span><span class="ot"> Condition=</span><span class="st">"End"</span><span class="ot"> EventID=</span><span class="st">"RUDDER_SET"</span><span class="ot"> EventParam=</span><span class="st">"0"</span><span class="kw">/&gt;</span></span>
+      <span id="cb23-82"><a href="#cb23-82"></a><span class="kw">&lt;/Checkpoint&gt;</span></span></code></pre></div>
+      <h3 id="nesting-operators">Nesting Operators</h3>
+      <p>Whether used to store a value in a variable with <code>storeVar</code> or just to evaluate some <code>testValue</code>, <code>operators</code> can be nested (almost) infinitely to compute complex values using various simVars, variables, and constants.</p>
+      <p>Here is a (fake) example, that evaluates <code>(MyFakeVariable || ((FirstFakeSimVar-SecondFakeSimVar &lt; 10) &amp;&amp; (FirstFakeSimVar-SecondFakeSimVar &gt; -10))</code>:</p>
+      <div class="sourceCode" id="cb24"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb24-1"><a href="#cb24-1"></a><span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"OR"</span><span class="kw">&gt;</span></span>
+      <span id="cb24-2"><a href="#cb24-2"></a>    <span class="kw">&lt;Val</span><span class="ot"> ReadVar=</span><span class="st">"MyFakeVariable"</span><span class="kw">/&gt;</span></span>
+      <span id="cb24-3"><a href="#cb24-3"></a>    <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"AND"</span><span class="kw">&gt;</span></span>
+      <span id="cb24-4"><a href="#cb24-4"></a>        <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"LESS"</span><span class="kw">&gt;</span></span>
+      <span id="cb24-5"><a href="#cb24-5"></a>            <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"MINUS"</span><span class="kw">&gt;</span></span>
+      <span id="cb24-6"><a href="#cb24-6"></a>                <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"FirstFakeSimVar"</span><span class="ot"> Units=</span><span class="st">"feet"</span><span class="kw">/&gt;</span></span>
+      <span id="cb24-7"><a href="#cb24-7"></a>                 <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"SecondFakeSimVar"</span><span class="ot"> Units=</span><span class="st">"feet"</span><span class="kw">/&gt;</span></span>
+      <span id="cb24-8"><a href="#cb24-8"></a>            <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb24-9"><a href="#cb24-9"></a>            <span class="kw">&lt;Val</span><span class="ot"> Value=</span><span class="st">"10.0"</span><span class="kw">/&gt;</span></span>
+      <span id="cb24-10"><a href="#cb24-10"></a>        <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb24-11"><a href="#cb24-11"></a>        <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"GREATER"</span><span class="kw">&gt;</span></span>
+      <span id="cb24-12"><a href="#cb24-12"></a>            <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"MINUS"</span><span class="kw">&gt;</span></span>
+      <span id="cb24-13"><a href="#cb24-13"></a>                <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"FirstFakeSimVar"</span><span class="ot"> Units=</span><span class="st">"feet"</span><span class="kw">/&gt;</span></span>
+      <span id="cb24-14"><a href="#cb24-14"></a>                 <span class="kw">&lt;Val</span><span class="ot"> SimVarName=</span><span class="st">"SecondFakeSimVar"</span><span class="ot"> Units=</span><span class="st">"feet"</span><span class="kw">/&gt;</span></span>
+      <span id="cb24-15"><a href="#cb24-15"></a>            <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb24-16"><a href="#cb24-16"></a>            <span class="kw">&lt;Val</span><span class="ot"> Value=</span><span class="st">"-10.0"</span><span class="kw">/&gt;</span></span>
+      <span id="cb24-17"><a href="#cb24-17"></a>        <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb24-18"><a href="#cb24-18"></a>    <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb24-19"><a href="#cb24-19"></a><span class="kw">&lt;/Operator&gt;</span></span></code></pre></div>
+      <h3 id="nesting-sequences">Nesting <code>sequences</code></h3>
+      <p>Although in most cases it is not necessary to nest sequences, because a <code>sequence</code> can contain any number of <code>tests</code>, <code>sequences</code> can be nested to enable more complex behaviour. For example, a checkpoint could be composed of 2 sequences of actions (e.g.&nbsp;some actions on a Right device, and the same on a Left device), and each of these sequences require their action(s) to be executed in order, yet the 2 sequences could be done one after the other in any order. Such a case could be handled as follows:</p>
+      <div class="sourceCode" id="cb25"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb25-1"><a href="#cb25-1"></a><span class="kw">&lt;Sequence</span><span class="ot"> SeqType=</span><span class="st">"Unordered"</span><span class="kw">&gt;</span></span>
+      <span id="cb25-2"><a href="#cb25-2"></a>    <span class="kw">&lt;Sequence</span><span class="ot"> SeqType=</span><span class="st">"Ordered"</span><span class="kw">&gt;</span></span>
+      <span id="cb25-3"><a href="#cb25-3"></a>        <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb25-4"><a href="#cb25-4"></a>            <span class="co">&lt;!-- Insert here the first part for Right device --&gt;</span></span>
+      <span id="cb25-5"><a href="#cb25-5"></a>        <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb25-6"><a href="#cb25-6"></a>        <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb25-7"><a href="#cb25-7"></a>            <span class="co">&lt;!-- Insert here the second part for Right device --&gt;</span></span>
+      <span id="cb25-8"><a href="#cb25-8"></a>        <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb25-9"><a href="#cb25-9"></a>    <span class="kw">&lt;/Sequence&gt;</span></span>
+      <span id="cb25-10"><a href="#cb25-10"></a>    <span class="kw">&lt;Sequence</span><span class="ot"> SeqType=</span><span class="st">"Ordered"</span><span class="kw">&gt;</span></span>
+      <span id="cb25-11"><a href="#cb25-11"></a>        <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb25-12"><a href="#cb25-12"></a>            <span class="co">&lt;!-- Insert here the first part for Left device --&gt;</span></span>
+      <span id="cb25-13"><a href="#cb25-13"></a>        <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb25-14"><a href="#cb25-14"></a>        <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb25-15"><a href="#cb25-15"></a>            <span class="co">&lt;!-- Insert here the second part for Left device --&gt;</span></span>
+      <span id="cb25-16"><a href="#cb25-16"></a>        <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb25-17"><a href="#cb25-17"></a>    <span class="kw">&lt;/Sequence&gt;</span></span>
+      <span id="cb25-18"><a href="#cb25-18"></a><span class="kw">&lt;/Sequence&gt;</span></span></code></pre></div>
+      <h3 id="executing-only-one-among-two-sequences">Executing only one among two <code>sequences</code></h3>
+      <p>Executing only one among two <code>tests</code> can usually be solved by having only one <code>test</code> for which the <code>testValue</code> contains an <code>operator</code> “OR” between the two tests required. However, if one among two <code>ordered sequences</code> has to be chosen, the solution is trickier.</p>
+      <p>A trick that works well is to create two variables (one for each <code>sequence</code>) and initialize them to 0. Then, every <code>testValue</code> in a <code>sequence</code> verifies if the variable for the <strong>other</strong> sequence is set OR the <em>normal</em> <code>testValue</code>. Finally, each sequence contains a last <code>test</code> that verifies if any of these two variables is set, and then sets one variable. Example:</p>
+      <div class="sourceCode" id="cb26"><pre class="sourceCode xml"><code class="sourceCode xml"><span id="cb26-1"><a href="#cb26-1"></a><span class="kw">&lt;Action</span><span class="ot"> Condition=</span><span class="st">"Init"</span><span class="ot"> StoreVar=</span><span class="st">"Seq1Finished"</span><span class="ot"> Value=</span><span class="st">"0"</span><span class="kw">/&gt;</span></span>
+      <span id="cb26-2"><a href="#cb26-2"></a><span class="kw">&lt;Action</span><span class="ot"> Condition=</span><span class="st">"Init"</span><span class="ot"> StoreVar=</span><span class="st">"Seq2Finished"</span><span class="ot"> Value=</span><span class="st">"0"</span><span class="kw">/&gt;</span></span>
+      <span id="cb26-3"><a href="#cb26-3"></a><span class="kw">&lt;Sequence</span><span class="ot"> SeqType=</span><span class="st">"Unordered"</span><span class="kw">&gt;</span></span>
+      <span id="cb26-4"><a href="#cb26-4"></a>    <span class="kw">&lt;Sequence</span><span class="ot"> SeqType=</span><span class="st">"Ordered"</span><span class="kw">&gt;</span></span>
+      <span id="cb26-5"><a href="#cb26-5"></a>        <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb26-6"><a href="#cb26-6"></a>            <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb26-7"><a href="#cb26-7"></a>                <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"OR"</span><span class="kw">&gt;</span></span>
+      <span id="cb26-8"><a href="#cb26-8"></a>                    <span class="kw">&lt;Val</span><span class="ot"> ReadVar=</span><span class="st">"Seq2Finished"</span><span class="kw">/&gt;</span></span>
+      <span id="cb26-9"><a href="#cb26-9"></a>                    <span class="co">&lt;!-- Insert here the Val or Operator for this "normal" Test --&gt;</span></span>
+      <span id="cb26-10"><a href="#cb26-10"></a>                <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb26-11"><a href="#cb26-11"></a>            <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb26-12"><a href="#cb26-12"></a>            <span class="co">&lt;!-- Insert here possible actions --&gt;</span></span>
+      <span id="cb26-13"><a href="#cb26-13"></a>        <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb26-14"><a href="#cb26-14"></a>        <span class="co">&lt;!-- Similarly, other Tests ... --&gt;</span></span>
+      <span id="cb26-15"><a href="#cb26-15"></a>        <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb26-16"><a href="#cb26-16"></a>            <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb26-17"><a href="#cb26-17"></a>                <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"OR"</span><span class="kw">&gt;</span></span>
+      <span id="cb26-18"><a href="#cb26-18"></a>                    <span class="kw">&lt;Val</span><span class="ot"> ReadVar=</span><span class="st">"Seq1Finished"</span><span class="kw">/&gt;</span></span>
+      <span id="cb26-19"><a href="#cb26-19"></a>                    <span class="kw">&lt;Val</span><span class="ot"> ReadVar=</span><span class="st">"Seq2Finished"</span><span class="kw">/&gt;</span></span>
+      <span id="cb26-20"><a href="#cb26-20"></a>                <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb26-21"><a href="#cb26-21"></a>            <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb26-22"><a href="#cb26-22"></a>            <span class="kw">&lt;Action</span><span class="ot"> Condition=</span><span class="st">"TestValueFalse"</span><span class="ot"> StoreVar=</span><span class="st">"Seq1Finished"</span><span class="ot"> Value=</span><span class="st">"1"</span><span class="kw">/&gt;</span></span>
+      <span id="cb26-23"><a href="#cb26-23"></a>        <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb26-24"><a href="#cb26-24"></a>    <span class="kw">&lt;/Sequence&gt;</span></span>
+      <span id="cb26-25"><a href="#cb26-25"></a>    <span class="kw">&lt;Sequence</span><span class="ot"> SeqType=</span><span class="st">"Ordered"</span><span class="kw">&gt;</span></span>
+      <span id="cb26-26"><a href="#cb26-26"></a>        <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb26-27"><a href="#cb26-27"></a>            <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb26-28"><a href="#cb26-28"></a>                <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"OR"</span><span class="kw">&gt;</span></span>
+      <span id="cb26-29"><a href="#cb26-29"></a>                    <span class="kw">&lt;Val</span><span class="ot"> ReadVar=</span><span class="st">"Seq1Finished"</span><span class="kw">/&gt;</span></span>
+      <span id="cb26-30"><a href="#cb26-30"></a>                    <span class="co">&lt;!-- Insert here the Val or Operator for this "normal" Test --&gt;</span></span>
+      <span id="cb26-31"><a href="#cb26-31"></a>                <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb26-32"><a href="#cb26-32"></a>            <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb26-33"><a href="#cb26-33"></a>            <span class="co">&lt;!-- Insert here possible actions --&gt;</span></span>
+      <span id="cb26-34"><a href="#cb26-34"></a>        <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb26-35"><a href="#cb26-35"></a>        <span class="co">&lt;!-- Similarly, other Tests ... --&gt;</span></span>
+      <span id="cb26-36"><a href="#cb26-36"></a>        <span class="kw">&lt;Test&gt;</span></span>
+      <span id="cb26-37"><a href="#cb26-37"></a>            <span class="kw">&lt;TestValue&gt;</span></span>
+      <span id="cb26-38"><a href="#cb26-38"></a>                <span class="kw">&lt;Operator</span><span class="ot"> OpType=</span><span class="st">"OR"</span><span class="kw">&gt;</span></span>
+      <span id="cb26-39"><a href="#cb26-39"></a>                    <span class="kw">&lt;Val</span><span class="ot"> ReadVar=</span><span class="st">"Seq1Finished"</span><span class="kw">/&gt;</span></span>
+      <span id="cb26-40"><a href="#cb26-40"></a>                    <span class="kw">&lt;Val</span><span class="ot"> ReadVar=</span><span class="st">"Seq2Finished"</span><span class="kw">/&gt;</span></span>
+      <span id="cb26-41"><a href="#cb26-41"></a>                <span class="kw">&lt;/Operator&gt;</span></span>
+      <span id="cb26-42"><a href="#cb26-42"></a>            <span class="kw">&lt;/TestValue&gt;</span></span>
+      <span id="cb26-43"><a href="#cb26-43"></a>            <span class="kw">&lt;Action</span><span class="ot"> Condition=</span><span class="st">"TestValueFalse"</span><span class="ot"> StoreVar=</span><span class="st">"Seq2Finished"</span><span class="ot"> Value=</span><span class="st">"1"</span><span class="kw">/&gt;</span></span>
+      <span id="cb26-44"><a href="#cb26-44"></a>        <span class="kw">&lt;/Test&gt;</span></span>
+      <span id="cb26-45"><a href="#cb26-45"></a>    <span class="kw">&lt;/Sequence&gt;</span></span>
+      <span id="cb26-46"><a href="#cb26-46"></a><span class="kw">&lt;/Sequence&gt;</span></span></code></pre></div>
+    </article>
+  </div>
+  <script>
+	function detectIE() {
+	  var ua = window.navigator.userAgent;
+
+	  // Test values; Uncomment to check result …
+
+	  // IE 10
+	  // ua = 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)';
+
+	  // IE 11
+	  // ua = 'Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko';
+
+	  // Edge 12 (Spartan)
+	  // ua = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36 Edge/12.0';
+
+	  // Edge 13
+	  // ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Safari/537.36 Edge/13.10586';
+
+	  var msie = ua.indexOf('MSIE ');
+	  if (msie > 0) {
+		// IE 10 or older => return version number
+		return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+	  }
+
+	  var trident = ua.indexOf('Trident/');
+	  if (trident > 0) {
+		// IE 11 => return version number
+		var rv = ua.indexOf('rv:');
+		return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+	  }
+
+	  var edge = ua.indexOf('Edge/');
+	  if (edge > 0) {
+		// Edge (IE 12+) => return version number
+		return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+	  }
+
+	  // other browser
+	  return false;
+	}
+
+	var bIsIE = (detectIE() !== false);
+
+	function setData(name, value)
+	{
+		if (bIsIE)
+		{
+			if (localStorage !== undefined)
+			{
+				if (value === null)
+					localStorage.removeItem(name);
+				else
+					localStorage.setItem(name, value);
+			}
+			/*var d = new Date();
+			d.setTime(d.getTime() + (24*60*60));
+			var expires = "expires="+ d.toUTCString();
+			document.cookie = name + "=" + value + ";" + expires + ";path=/";
+			*/
+		}
+		else
+		{
+			if (value === null)
+				sessionStorage.removeItem(name);
+			else
+				sessionStorage.setItem(name, value);
+		}
+	}
+	
+	function getData(name)
+	{
+		var value = null;
+		if (bIsIE)
+		{
+			/*var cname = name + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for(var i = 0; i <ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) == ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(cname) == 0) {
+					return c.substring(cname.length, c.length);
+				}
+			}
+			return null;*/
+			if (localStorage !== undefined)
+			{
+				value = localStorage.getItem(name);
+			}
+			if (value === 'undefined')
+				value = null;
+		}
+		else
+		{
+			value = sessionStorage.getItem(name);
+			if (value === 'undefined')
+				value = null;
+		}
+		return value;
+	}
+	
+    // FROM http://purecss.io/js/ui.js
+    (function (window, document) {
+
+	
+      var content = document.getElementById('main'),
+		layout = document.getElementById('layout'),
+        menu = document.getElementById('menu'),
+        menuLink = document.getElementById('menuLink');
+		
+      function toggleClass(element, className) {
+        var classes = element.className.split(/\s+/),
+          length = classes.length,
+          i = 0;
+
+        for (; i < length; i++) {
+          if (classes[i] === className) {
+            classes.splice(i, 1);
+            break;
+          }
+        }
+        // The className is not found
+        if (length === classes.length) {
+          classes.push(className);
+        }
+
+        element.className = classes.join(' ');
+      }
+
+      function hasClass(element, className) {
+        var classes = element.className.split(/\s+/),
+          length = classes.length,
+          i = 0;
+
+        for (; i < length; i++) {
+          if (classes[i] === className) {
+            return true;
+          }
+        }
+		return false;
+      }
+
+      menuLink.onclick = function (e) {
+        var active = 'active';
+
+        e.preventDefault();
+		toggleClass(content, active);
+        toggleClass(layout, active);
+        toggleClass(menu, active);
+        toggleClass(menuLink, active);
+      };
+	  
+	  // Save menu scroll level when user click on link
+	  var a_links = document.getElementsByTagName('a');
+	  for (var i = 0 ; i < a_links.length ; i++) {
+	    var link = a_links[i];
+		if(menu.contains(link)) {
+			link.onclick = function () {
+				try {
+					setData('navScroll', link.offsetTop - link.getBoundingClientRect().top);
+					var root = menu.getElementsByTagName('ul')[0];
+					var li_elems = root.getElementsByTagName('li');
+					for (var i = 0; i<li_elems.length; i++)
+					{
+						if (!hasClass(li_elems[i],'collapsed'))
+							setData('liexp' + i, true);
+						else
+							setData('liexp' + i);
+					}
+					setData('liexp', true);
+				}
+				catch (error) {
+					console.error(error);
+				}
+				return true;
+			};
+		}
+	  };
+	  
+		var root = menu.getElementsByTagName('ul')[0];
+		// Remove empty ul
+		var ul_elems = root.getElementsByTagName('ul');
+		for (var i = ul_elems.length-1; i>=0; i--)
+		{
+			if (ul_elems[i].childElementCount == 0)
+			{
+				ul_elems[i].parentNode.removeChild(ul_elems[i]);
+			}
+		}
+		// Restore side menu state
+		var saved_state = (getData('liexp')!== null);
+		var li_elems = root.getElementsByTagName('li');
+		for (var i = 0; i<li_elems.length; i++)
+		{
+			var l = li_elems[i];
+			if (hasClass(l,'heading'))
+				toggleClass(l,'heading');
+			if ((l.nextElementSibling) && (l.nextElementSibling.nodeName=="UL"))
+			{
+				toggleClass(l,'collapsible');
+				var collapser = document.createElement('span');
+				var inserted = l.insertBefore(collapser, l.firstChild);
+				toggleClass(inserted,'collapser');
+				var inserted = l.insertBefore(collapser, l.firstChild);
+				inserted.addEventListener('click', function() { toggleClass(this.parentNode, 'collapsed') });
+				if (saved_state)
+				{
+					if (getData('liexp' + i) === null)
+					{
+						toggleClass(l,'collapsed');
+					}
+				}
+				else
+				{
+					if (l.parentNode != root)
+					{
+						toggleClass(l,'collapsed');
+					}
+				}
+			}
+		}
+		// Restore menu scroll level if defined
+		if(getData('navScroll') != null)
+			document.getElementById('menu').scrollTop = getData('navScroll');
+
+   }(this, this.document));
+  </script>
+
+
+</body></html>

@@ -1,0 +1,3112 @@
+<!DOCTYPE html><html><head>
+  <style>
+    /*! ADAPTED
+    Typeplate : Starter Kit
+    URL ........... http://typeplate.com
+    Version ....... 3.0.2
+    Github ........ https://github.com/typeplate/starter-kit
+    Authors ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
+    License ....... Creative Commmons Attribution 3.0
+    License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
+    */
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      text-rendering: optimizeLegibility;
+      line-height: 1;
+      margin-top: 0;
+      color: #222;
+    }
+
+    blockquote+figcaption cite {
+      display: block;
+      font-size: inherit;
+      text-align: right;
+    }
+
+    body {
+      word-wrap: break-word;
+    }
+
+    pre code {
+      word-wrap: normal;
+    }
+
+    body {
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+      hyphens: auto;
+      color: #444;
+    }
+	
+	figcaption {
+		text-align: center;
+	}
+
+    h1 {
+      font-size: 2em;
+      /* 2*16 = 32 */
+    }
+
+    h2 {
+      font-size: 1.5em;
+      /* 1.5*16 = 24 */
+    }
+
+    h3 {
+      font-size: 1.17em;
+      /* 1.17*16 = 18.72 */
+    }
+
+    h4 {
+      font-size: 1em;
+      /* 1*16 = 16 */
+    }
+
+    h5 {
+      font-size: 0.83em;
+      /* 0.83*16 = 13.28 */
+    }
+
+    h6 {
+      font-size: 0.75em;
+      /* 0.75*16 = 12 */
+    }
+
+    h1 {
+      margin: 2.42424rem 0 1.454544rem;
+    }
+
+    h2 {
+      margin: 2.0202rem 0 1.21212rem;
+    }
+
+    h3 {
+      margin: 1.61616rem 0 1rem;
+    }
+
+    h4 {
+      margin: 1.21212rem 0 1;
+    }
+
+    h5 {
+      margin: 0.80808rem 0;
+    }
+
+    h6 {
+      margin: 0.70707rem 0;
+    }
+
+    p {
+      margin: auto auto 1.5rem;
+    }
+
+    small {
+      font-size: 65%;
+    }
+
+    input,
+    abbr,
+    acronym,
+    blockquote,
+    code,
+    kbd,
+    q,
+    samp,
+    var {
+      -webkit-hyphens: none;
+      -ms-hyphens: none;
+      hyphens: none;
+    }
+
+    pre {
+      white-space: pre;
+    }
+
+    pre code {
+      white-space: -moz-pre-wrap;
+      white-space: pre-wrap;
+    }
+
+    code {
+      white-space: pre;
+      font-family: SF Mono, Consolas, Dejavu Sans Mono, Menlo, monospace;
+    }
+
+    abbr {
+      -webkit-font-variant: small-caps;
+      -moz-font-variant: small-caps;
+      -ms-font-variant: small-caps;
+      font-variant: small-caps;
+      font-weight: 600;
+      text-transform: lowercase;
+      color: gray;
+    }
+
+    abbr[title]:hover {
+      cursor: help;
+    }
+
+    /* FROM http://purecss.io/layouts/side-menu/  adapted to remove pure classes*/
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      color: #444;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: auto;
+    }
+
+    code,
+    pre {
+      background-color: #f5f5f5;
+      color: #444;
+      border-radius: 2px;
+      text-shadow: 0px 1px 0px white;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    }
+
+    pre code {
+      border: none;
+      box-shadow: none;
+    }
+
+    pre {
+      padding: 0.5em;
+    }
+
+    code {
+      display: inline-block;
+      padding: 0 0.5em;
+      line-height: 1.4;
+      font-size: 0.9em;
+    }
+
+    table {
+      border-spacing: 0;
+      margin-bottom: 1.5rem;
+    }
+
+    table th,
+    table td {
+      padding: 0.3em 0.7em;
+    }
+
+    table th {
+      background-color: #f4f4f4;
+      border-bottom: 2px solid #444;
+    }
+
+    table td {
+      border: 1px solid #f5f5f5;
+    }
+
+    /* Add transition to containers so they can push in and out. */
+
+    #layout,
+    #menu,
+    .menu-link {
+      -webkit-transition: all 0.2s ease-out;
+      -moz-transition: all 0.2s ease-out;
+      -ms-transition: all 0.2s ease-out;
+      -o-transition: all 0.2s ease-out;
+      transition: all 0.2s ease-out;
+    }
+
+    /* This is the parent `<div>` that contains the menu and the content area. */
+
+    #layout {
+      position: relative;
+      padding-left: 0;
+    }
+
+    #layout.active #menu {
+      left: 300px;
+      width: 300px;
+    }
+
+    #layout.active .menu-link {
+      left: 300px;
+    }
+
+    /* The content `<div>` is where all your content goes. */
+
+    .content {
+      margin: 50px auto;
+      padding: 0;
+      max-width: 60%;
+      line-height: 1.6em;
+    }
+
+    /*
+    The `#menu` `<div>` is the parent `<div>` that contains the menu that
+    appears on the left side of the page.
+    */
+
+    #menu {
+      margin-left: -300px;
+      /* "#menu" width */
+      width: 300px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 1000;
+      /* so the menu or its navicon stays above all content */
+      background: #f4f4f4;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      font-size: 0.9em;
+    }
+
+    a,
+    a * {
+      text-decoration: none;
+      color: #2483cc;
+    }
+
+    a:visited {
+      text-decoration: none;
+      color: #2483cc;
+    }
+
+    /* All anchors inside the menu should be styled like this. */
+
+    #menu a {
+      display: inline-block;
+      padding: 0.1em 0.5em;
+    }
+
+    #menu a:first-letter {
+      text-transform: capitalize;
+    }
+
+    #menu ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0em 0.5em;
+    }
+
+    #menu ul ul {
+      margin-top: 0em;
+      margin-left: 0.6em;
+      border-left: 1px dotted rgb(64, 64, 64);
+	  padding-left: 0.5em;
+    }
+
+    /* Change color of the anchor links on hover/focus. */
+
+    #menu li a:hover,
+    #menu li a:focus {
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    /* This styles the selected menu item `<li>`. */
+
+    #menu li a.active {
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    /* This styles a link within a selected menu item `<li>`. */
+
+    #menu li a.active {
+      color: #222;
+    }
+
+    /* This styles the menu heading. */
+
+    #menu li.heading {
+      font-size: 0.9em;
+      /*text-transform: uppercase;*/
+      color: #000;
+    }
+
+    #menu li.heading>* {
+      padding: 0.1em 0.5em;
+      display: block;
+    }
+
+    #menu li.heading a {
+      color: #0c68af;
+    }
+
+    /* -- Dynamic Button For Responsive Menu -------------------------------------*/
+
+    /*
+    `.menu-link` represents the responsive menu toggle that shows/hides on
+    small screens.
+    */
+
+    .menu-link {
+      position: fixed;
+      display: block;
+      /* show this only on small screens */
+      top: 0;
+      left: 0;
+      /* "#menu width" */
+      background: #f4f4f4;
+      font-size: 10px;
+      /* change this value to increase/decrease button size */
+      z-index: 10;
+      width: 2em;
+      height: auto;
+      padding: 1.6em 1.2em;
+      border-radius: 0 2px 2px 0;
+    }
+
+    .menu-link:hover {
+      background: /* #f4f4f4 * 0.8 */
+      #eee;
+    }
+
+    .menu-link span {
+      position: relative;
+      display: block;
+    }
+
+    .menu-link span,
+    .menu-link span:before,
+    .menu-link span:after {
+      background-color: #555;
+      width: 100%;
+      height: 0.2em;
+      border-radius: 1em;
+    }
+
+    .menu-link span:before,
+    .menu-link span:after {
+      position: absolute;
+      margin-top: -0.6em;
+      content: " ";
+    }
+
+    .menu-link span:after {
+      margin-top: 0.6em;
+    }
+
+    @media (max-width: 1300px) {       
+	  .content.active {
+		  margin-left: 310px;
+	  }
+    }
+	
+	@media (max-width: 800px) {
+		.content {
+		  max-width: 98%;
+	  }
+	}
+
+	#menu li span {
+		padding: 0.1em 0.5em;
+	}
+	
+	li.collapsible {
+		cursor: pointer;
+		font-weight:bold;
+	}
+	
+	li.collapsible span.collapser:before {
+		display:inline-block;
+		width:0.5em;
+	}
+	
+	li.collapsible span.collapser:before {
+		content: "-";
+	}
+	
+	li.collapsed span.collapser:before {
+		content: "+";
+	}
+	
+	li.collapsed + ul {
+		display:none;
+	}
+
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <!--script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script-->
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <div id="layout" class="active">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link active">
+      <!-- Hamburger icon -->
+      <span></span>
+    </a>
+    <nav id="menu" class="active">
+<ul>
+<li class="heading"><a href="..\..\..\index.html">Home</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\index.html">Getting Started</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\01-Getting_Started\01-SDK_Overview.html">SDK Overview</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\02-FAQ.html">FAQ</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\03-Roadmap.html">Roadmap</a></li>
+<li class="heading"><span>Samples</span></li>
+<ul>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Samples\Aircraft\index.html">Aircraft</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Samples\Aircraft\GaugeAircraft\index.html">GaugeAircraft</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Samples\Aircraft\GdiplusAircraft\index.html">GdiplusAircraft</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Samples\Aircraft\MouseAircraft\index.html">MouseAircraft</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Samples\Aircraft\SimpleAircraft\index.html">SimpleAircraft</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Samples\SimpleAerial\index.html">SimpleAerial</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Samples\SimpleAirport\index.html">SimpleAirport</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Samples\SimpleBiomes\index.html">SimpleBiomes</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Samples\SimpleNavData\index.html">SimpleNavData</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Samples\SimpleScenery\index.html">SimpleScenery</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Samples\SimvarWatcher\index.html">SimvarWatcher</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Samples\WwiseSampleProject\index.html">WwiseSampleProject</a></li>
+</ul>
+<li class="heading"><span>Tutorials</span></li>
+<ul>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Tutorials\01-Placing_An_Add-on_Airport\index.html">Placing An Add-on Airport</a></li>
+<li class="heading"><a href="..\..\..\01-Getting_Started\Tutorials\02-Flight_model_definition\index.html">Flight model definition</a></li>
+</ul>
+</ul>
+<li class="heading"><span>Asset Creation</span></li>
+<ul>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\3D_Models\index.html">3D Models</a></li>
+<ul>
+<li class="heading"><span>Modeling Practices</span></li>
+<ul>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\3D_Models\Modeling_Practices\01-Aircraft_Modeling.html">Aircraft Modeling</a></li>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\3D_Models\Modeling_Practices\02-Levels_of_Detail.html">Levels of Detail</a></li>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\3D_Models\Modeling_Practices\03-Aircraft_Texture_Mapping.html">Aircraft Texture Mapping</a></li>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\3D_Models\Modeling_Practices\04-Collisions.html">Collisions</a></li>
+</ul>
+</ul>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\Lighting_Model\index.html">Lighting Model</a></li>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\Sounds\index.html">Sounds</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\Sounds\01-Master_Mixer_Hierarchy.html">Master Mixer Hierarchy</a></li>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\Sounds\02-Shared_Game_Parameters.html">Shared Game Parameters</a></li>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\Sounds\03-Shared_States_and_Switches.html">Shared States and Switches</a></li>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\Sounds\04-Shared_Attenuation_Shareset.html">Shared Attenuation Shareset</a></li>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\Sounds\05-Mix_your_Aircraft.html">Mix your Aircraft</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\Textures\index.html">Textures</a></li>
+<li class="heading"><a href="..\..\..\02-Asset_Creation\glTF_Materials.html">glTF Materials</a></li>
+</ul>
+<li class="heading"><span>Content Configuration</span></li>
+<ul>
+<li class="heading"><a href="..\..\Cameras\index.html">Cameras</a></li>
+<ul>
+<li class="heading"><a href="..\..\Cameras\Camera_Configuration.html">Camera Configuration</a></li>
+<li class="heading"><a href="..\..\Cameras\RTC\index.html">RTC</a></li>
+<ul>
+<li class="heading"><a href="..\..\Cameras\RTC\Examples.html">Examples</a></li>
+<li class="heading"><a href="..\..\Cameras\RTC\Using_RTCs.html">Using RTCs</a></li>
+<li class="heading"><a href="..\..\Cameras\RTC\XML_Definition.html">XML Definition</a></li>
+</ul>
+<li class="heading"><a href="..\..\Cameras\Wow-effect.html">Wow-effect</a></li>
+</ul>
+<li class="heading"><a href="..\index.html">Environment</a></li>
+<ul>
+<li class="heading"><a href=".\index.html">Airports And Facilities</a></li>
+<ul>
+<li class="heading"><a href=".\Airports.html">Airports</a></li>
+<li class="heading"><a href=".\Jetways.html">Jetways</a></li>
+</ul>
+<li class="heading"><a href="..\File_Formats\index.html">File Formats</a></li>
+<ul>
+<li class="heading"><a href="..\File_Formats\BGL.html">BGL</a></li>
+<li class="heading"><a href="..\File_Formats\CGL.html">CGL</a></li>
+</ul>
+<li class="heading"><a href="..\Living_World\index.html">Living World</a></li>
+<ul>
+<li class="heading"><a href="..\Living_World\AirportServices\index.html">AirportServices</a></li>
+<ul>
+<li class="heading"><a href="..\Living_World\AirportServices\XMLdefs.html">XMLdefs</a></li>
+<li class="heading"><a href="..\Living_World\AirportServices\examples.html">examples</a></li>
+</ul>
+<li class="heading"><a href="..\Living_World\LivingWorld_Config\index.html">LivingWorld Config</a></li>
+<ul>
+<li class="heading"><a href="..\Living_World\LivingWorld_Config\XMLdefs.html">XMLdefs</a></li>
+<li class="heading"><a href="..\Living_World\LivingWorld_Config\examples.html">examples</a></li>
+</ul>
+<li class="heading"><a href="..\Living_World\Traffic\index.html">Traffic</a></li>
+</ul>
+<li class="heading"><a href="..\Scenery_Objects\index.html">Scenery Objects</a></li>
+<ul>
+<li class="heading"><a href="..\Scenery_Objects\Effects.html">Effects</a></li>
+</ul>
+<li class="heading"><a href="..\Terrain\index.html">Terrain</a></li>
+<ul>
+<li class="heading"><a href="..\Terrain\Aerial_Imagery\index.html">Aerial Imagery</a></li>
+<li class="heading"><a href="..\Terrain\DEM\index.html">DEM</a></li>
+<li class="heading"><a href="..\Terrain\Vector_Shapes\index.html">Vector Shapes</a></li>
+</ul>
+<li class="heading"><a href="..\Vegetation\index.html">Vegetation</a></li>
+<li class="heading"><a href="..\Weather\index.html">Weather</a></li>
+<li class="heading"><a href="..\World_Positioning_Systems\index.html">World Positioning Systems</a></li>
+<ul>
+<li class="heading"><a href="..\World_Positioning_Systems\Bing_Maps_Tile_System.html">Bing Maps Tile System</a></li>
+<li class="heading"><a href="..\World_Positioning_Systems\Lat_Long_Alt.html">Lat Long Alt</a></li>
+<li class="heading"><a href="..\World_Positioning_Systems\QMID.html">QMID</a></li>
+</ul>
+</ul>
+<li class="heading"><a href="..\..\Flights_And_Missions\index.html">Flights And Missions</a></li>
+<ul>
+<li class="heading"><a href="..\..\Flights_And_Missions\Flight_Files.html">Flight Files</a></li>
+</ul>
+<li class="heading"><a href="..\..\Localization\index.html">Localization</a></li>
+<li class="heading"><span>SimObjects</span></li>
+<ul>
+<li class="heading"><a href="..\..\SimObjects\00-Aircraft\index.html">Aircraft</a></li>
+<ul>
+<li class="heading"><a href="..\..\SimObjects\00-Aircraft\Aircraft_Configuration\index.html">Aircraft Configuration</a></li>
+<ul>
+<li class="heading"><a href="..\..\SimObjects\00-Aircraft\Aircraft_Configuration\00-General.html">General</a></li>
+<li class="heading"><a href="..\..\SimObjects\00-Aircraft\Aircraft_Configuration\AI.html">AI</a></li>
+<li class="heading"><a href="..\..\SimObjects\00-Aircraft\Aircraft_Configuration\Cameras.html">Cameras</a></li>
+<li class="heading"><a href="..\..\SimObjects\00-Aircraft\Aircraft_Configuration\Cockpit.html">Cockpit</a></li>
+<li class="heading"><a href="..\..\SimObjects\00-Aircraft\Aircraft_Configuration\Engines.html">Engines</a></li>
+<li class="heading"><a href="..\..\SimObjects\00-Aircraft\Aircraft_Configuration\Flight_Model.html">Flight Model</a></li>
+<li class="heading"><a href="..\..\SimObjects\00-Aircraft\Aircraft_Configuration\Gameplay.html">Gameplay</a></li>
+<li class="heading"><a href="..\..\SimObjects\00-Aircraft\Aircraft_Configuration\InteractivePoints.html">InteractivePoints</a></li>
+<li class="heading"><a href="..\..\SimObjects\00-Aircraft\Aircraft_Configuration\Systems_Configuration_File.html">Systems Configuration File</a></li>
+<li class="heading"><a href="..\..\SimObjects\00-Aircraft\Aircraft_Configuration\Target_Performances_Configuration_File.html">Target Performances Configuration File</a></li>
+</ul>
+<li class="heading"><a href="..\..\SimObjects\00-Aircraft\Flight_Model.html">Flight Model</a></li>
+</ul>
+<li class="heading"><a href="..\..\SimObjects\01-Other_SimObjects\index.html">Other SimObjects</a></li>
+<ul>
+<li class="heading"><a href="..\..\SimObjects\01-Other_SimObjects\Animals.html">Animals</a></li>
+<li class="heading"><a href="..\..\SimObjects\01-Other_SimObjects\Boats.html">Boats</a></li>
+<li class="heading"><a href="..\..\SimObjects\01-Other_SimObjects\GroundVehicles\index.html">GroundVehicles</a></li>
+<ul>
+<li class="heading"><a href="..\..\SimObjects\01-Other_SimObjects\GroundVehicles\BaggageCart.html">BaggageCart</a></li>
+<li class="heading"><a href="..\..\SimObjects\01-Other_SimObjects\GroundVehicles\BaggageLoader.html">BaggageLoader</a></li>
+<li class="heading"><a href="..\..\SimObjects\01-Other_SimObjects\GroundVehicles\BoardingRamp.html">BoardingRamp</a></li>
+<li class="heading"><a href="..\..\SimObjects\01-Other_SimObjects\GroundVehicles\CateringTruck.html">CateringTruck</a></li>
+<li class="heading"><a href="..\..\SimObjects\01-Other_SimObjects\GroundVehicles\FuelTruck.html">FuelTruck</a></li>
+<li class="heading"><a href="..\..\SimObjects\01-Other_SimObjects\GroundVehicles\GroundPowerUnit.html">GroundPowerUnit</a></li>
+<li class="heading"><a href="..\..\SimObjects\01-Other_SimObjects\GroundVehicles\Pushback.html">Pushback</a></li>
+</ul>
+<li class="heading"><a href="..\..\SimObjects\01-Other_SimObjects\Humans.html">Humans</a></li>
+<li class="heading"><a href="..\..\SimObjects\01-Other_SimObjects\SimObject_Configuration.html">SimObject Configuration</a></li>
+<li class="heading"><a href="..\..\SimObjects\01-Other_SimObjects\StaticObjects.html">StaticObjects</a></li>
+</ul>
+<li class="heading"><a href="..\..\SimObjects\Checklists\index.html">Checklists</a></li>
+<ul>
+<li class="heading"><a href="..\..\SimObjects\Checklists\01-Examples.html">Examples</a></li>
+<li class="heading"><a href="..\..\SimObjects\Checklists\02-XML_Definition.html">XML Definition</a></li>
+</ul>
+<li class="heading"><a href="..\..\SimObjects\Instruments\index.html">Instruments</a></li>
+<ul>
+<li class="heading"><a href="..\..\SimObjects\Instruments\3D_Instruments\index.html">3D Instruments</a></li>
+<li class="heading"><a href="..\..\SimObjects\Instruments\C_Gauges\index.html">C Gauges</a></li>
+<ul>
+<li class="heading"><span>Graphics</span></li>
+<ul>
+<li class="heading"><a href="..\..\SimObjects\Instruments\C_Gauges\Graphics\GDI_Plus.html">GDI Plus</a></li>
+</ul>
+</ul>
+<li class="heading"><a href="..\..\SimObjects\Instruments\HTML_Gauges\index.html">HTML Gauges</a></li>
+<li class="heading"><a href="..\..\SimObjects\Instruments\Panels.html">Panels</a></li>
+<li class="heading"><a href="..\..\SimObjects\Instruments\XML_Gauges\index.html">XML Gauges</a></li>
+</ul>
+<li class="heading"><a href="..\..\SimObjects\Models\index.html">Models</a></li>
+<ul>
+<li class="heading"><a href="..\..\SimObjects\Models\AnimGraph.html">AnimGraph</a></li>
+<li class="heading"><a href="..\..\SimObjects\Models\Levels_of_Detail_(LODs).html">Levels of Detail (LODs)</a></li>
+<li class="heading"><a href="..\..\SimObjects\Models\Model_Behaviors\index.html">Model Behaviors</a></li>
+<ul>
+<li class="heading"><a href="..\..\SimObjects\Models\Model_Behaviors\XML_Definition.html">XML Definition</a></li>
+</ul>
+</ul>
+<li class="heading"><a href="..\..\SimObjects\Sounds\index.html">Sounds</a></li>
+<ul>
+<li class="heading"><a href="..\..\SimObjects\Sounds\backwards_compatibility.html">backwards compatibility</a></li>
+<li class="heading"><a href="..\..\SimObjects\Sounds\sound_categories.html">sound categories</a></li>
+<li class="heading"><a href="..\..\SimObjects\Sounds\xml_definition.html">xml definition</a></li>
+<li class="heading"><a href="..\..\SimObjects\Sounds\xml_wavedata.html">xml wavedata</a></li>
+</ul>
+<li class="heading"><a href="..\..\SimObjects\Textures\index.html">Textures</a></li>
+</ul>
+<li class="heading"><a href="..\..\UI\index.html">UI</a></li>
+<li class="heading"><a href="..\..\Variable_Lists\index.html">Variable Lists</a></li>
+<ul>
+<li class="heading"><a href="..\..\Variable_Lists\Event_IDs.html">Event IDs</a></li>
+<li class="heading"><a href="..\..\Variable_Lists\Misc_Enums.html">Misc Enums</a></li>
+<li class="heading"><a href="..\..\Variable_Lists\Simulation_Variables.html">Simulation Variables</a></li>
+</ul>
+<li class="heading"><a href="..\..\Visual_Effects\index.html">Visual Effects</a></li>
+<ul>
+<li class="heading"><a href="..\..\Visual_Effects\visual_fx_file.html">visual fx file</a></li>
+</ul>
+</ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\index.html">Developer Tools</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\00-Developer_Mode\index.html">Developer Mode</a></li>
+<li class="heading"><span>3DS Max Tools</span></li>
+<ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\3DS_Max_Tools\FlightSim_Lights.html">FlightSim Lights</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\3DS_Max_Tools\FlightSim_Material.html">FlightSim Material</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\3DS_Max_Tools\FlightSim_multiExporter.html">FlightSim multiExporter</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\3DS_Max_Tools\FlightSim_versionDifferences.html">FlightSim versionDifferences</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\3DS_Max_Tools\glTF_Exporter.html">glTF Exporter</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Aircraft_Editor\index.html">Aircraft Editor</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Aircraft_Editor\Debug_Windows.html">Debug Windows</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Command_Line_Interface.html">Command Line Interface</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Launcher_Tool\index.html">Launcher Tool</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Material_Editor\index.html">Material Editor</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Mission_Editor\index.html">Mission Editor</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Package_Tool\index.html">Package Tool</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Package_Tool\Concepts.html">Concepts</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Package_Tool\XMLReference.html">XMLReference</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Project_editor\index.html">Project editor</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Project_editor\Content_Manager_Data.html">Content Manager Data</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Project_editor\Export_Window.html">Export Window</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Project_editor\Marketplace_Data.html">Marketplace Data</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\Scenery_Editor\index.html">Scenery Editor</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\SimConnect\index.html">SimConnect</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\SimConnect\SimConnect_Reference.html">SimConnect Reference</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\SimConnect\SimConnect_Status_of_Functions.html">SimConnect Status of Functions</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\SimConnect\SimConnect_Status_of_Input_Events.html">SimConnect Status of Input Events</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\SimConnect\SimConnect_Status_of_SimEvents.html">SimConnect Status of SimEvents</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\SimConnect\SimConnect_Status_of_Simulation_Variables.html">SimConnect Status of Simulation Variables</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\SimConnect\SimConnect_Status_of_System_Events.html">SimConnect Status of System Events</a></li>
+</ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\WebAssembly\index.html">WebAssembly</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\WebAssembly\01-Platform_Toolset.html">Platform Toolset</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\WebAssembly\02-Gauge_API.html">Gauge API</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\WebAssembly\Graphics\index.html">Graphics</a></li>
+<ul>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\WebAssembly\Graphics\GDI_Plus.html">GDI Plus</a></li>
+<li class="heading"><a href="..\..\..\04-Developer_Tools\WebAssembly\Graphics\Low_Level_API.html">Low Level API</a></li>
+</ul>
+</ul>
+</ul>
+<li class="heading"><span>Scripting Languages</span></li>
+<ul>
+<li class="heading"><a href="..\..\..\05-Scripting_Languages\CFG.html">CFG</a></li>
+<li class="heading"><a href="..\..\..\05-Scripting_Languages\Reverse_Polish_Notation.html">Reverse Polish Notation</a></li>
+</ul>
+</ul>
+    </nav>
+    <article id="main" class="content active">
+      <h1 id="airports">Airports</h1>
+      <!-- START doctoc generated TOC please keep comment here to allow auto update -->
+      <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+      <ul>
+      <li><a href="#deleteairport">DeleteAirport</a>
+      <ul>
+      <li><a href="#deleterunway">DeleteRunway</a></li>
+      <li><a href="#deletestart">DeleteStart</a></li>
+      </ul></li>
+      <li><a href="#runway">Runway</a>
+      <ul>
+      <li><a href="#runwaydeformation">RunwayDeformation</a></li>
+      <li><a href="#coloration">Coloration</a></li>
+      <li><a href="#markings">Markings</a></li>
+      <li><a href="#lights">Lights</a></li>
+      <li><a href="#approachlights">ApproachLights</a></li>
+      <li><a href="#blastpad">Blastpad</a></li>
+      <li><a href="#offsetthreshold">OffsetThreshold</a></li>
+      <li><a href="#vasi">Vasi</a></li>
+      <li><a href="#runwaystart">RunwayStart</a></li>
+      <li><a href="#material">Material</a></li>
+      </ul></li>
+      <li><a href="#taxiway-logic-structures">Taxiway Logic Structures</a>
+      <ul>
+      <li><a href="#taxiwaypoint">TaxiwayPoint</a></li>
+      <li><a href="#taxiwayparking">TaxiwayParking</a></li>
+      <li><a href="#taxiwaypath">TaxiwayPath</a></li>
+      <li><a href="#taxiname">TaxiName</a></li>
+      </ul></li>
+      <li><a href="#jetway">Jetway</a>
+      <ul>
+      <li><a href="#jetway-xml-definition">Jetway XML definition</a></li>
+      </ul></li>
+      <li><a href="#lightsupport">LightSupport</a></li>
+      <li><a href="#apron">Apron</a>
+      <ul>
+      <li><a href="#vertex">Vertex</a></li>
+      </ul></li>
+      <li><a href="#apronedgelights">ApronEdgeLights</a></li>
+      <li><a href="#paintedelements">PaintedElements</a>
+      <ul>
+      <li><a href="#paintedline">PaintedLine</a></li>
+      <li><a href="#paintedhatchedarea">PaintedHatchedArea</a></li>
+      </ul></li>
+      <li><a href="#specific-types">Specific Types</a></li>
+      <li><a href="#enumerations">Enumerations</a>
+      <ul>
+      <li><a href="#runway-numbers">Runway Numbers</a></li>
+      <li><a href="#runway-designator">Runway Designator</a></li>
+      <li><a href="#approach-light-systems">Approach Light Systems</a></li>
+      <li><a href="#vasi-systems">VASI Systems</a></li>
+      <li><a href="#taxiway-path-types">Taxiway Path Types</a></li>
+      <li><a href="#painted-line-types">Painted Line Types</a></li>
+      </ul></li>
+      </ul>
+      <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+      <p>An <code>&lt;Airport&gt;</code> is a modular structure meant to describe both the visual and logical aspects of the airport. In its most simple form, it is only containing a <a href="#runway"><code>&lt;Runway&gt;</code></a> but can, in its most complex forms, contain a large assembly of the structures described in the following sections, in order to represent the complexity of an airport. Due to the modular approach of the airport loading system, it is possible to separate different data types into multiple files within a package or even different packages. For example, it is possible to have the taxiway logic which is necessary for AI planes to move on the airport in a different file than the taxiway signs which are for visual purposed only.</p>
+      <blockquote>
+      <p>An <code>&lt;Airport&gt;</code> may contain also navigation related data such as Approach, Departure or Arrival procedures but those will be discussed in their own specific documentation related to Navigation Data as they are overall independant from the rest of the airport data.</p>
+      </blockquote>
+      <p>An <code>&lt;Airport&gt;</code> has the following attributes, mainly to describe where it is and information displayed on the world map.</p>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>lat</code></td>
+      <td>Latitude of the airport reference point</td>
+      <td><a href="#specific-types">Latitude</a></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>lon</code></td>
+      <td>Longitude of the airport reference point</td>
+      <td><a href="#specific-types">Longitude</a></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td><code>alt</code></td>
+      <td>Altitude of the airport reference point</td>
+      <td><a href="#specific-types">Altitude</a></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>altType</code></td>
+      <td>Either “GEOID” or “ELLIPSOID”, it is used to determine the referential for the <code>alt</code> field</td>
+      <td>Enum</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>ident</code></td>
+      <td>Unique identifier that is used to represent the airport, must be 3 or 4 characters long</td>
+      <td>String</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>name</code></td>
+      <td>Name of the airport, displayed on the world map</td>
+      <td>String</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>city</code></td>
+      <td>Name of the closest city of the airport, displayed on the world map</td>
+      <td>String</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>magvar</code></td>
+      <td>Magnetic variation, the angle difference between the magnetic north and true north. Negative for value to the east and positive for value to the west</td>
+      <td><a href="#specific-types">AngleDeg</a></td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>isOnTIN</code></td>
+      <td>Used to get a different ground materials behavior in certain area</td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>onlyAddIfReplace</code></td>
+      <td>Only adds the airport if it was already present in another package. Relevant if the data contained within <code>&lt;Airport&gt;</code> is only complementary and not meant to be used on its own</td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>applyFlatten</code></td>
+      <td>Generate flattening rectangles on the airport based on runways altitude and inclination</td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>starAirport</code></td>
+      <td>Puts the airport forward on the world map</td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>closed</code></td>
+      <td>Stop the airport from being accessible or interactive in any interface such as the world map, the instruments or the ATC system. The airport is only going to be rendered in the simulator.</td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      </tbody>
+      </table>
+      <blockquote>
+      <p>When doing work on an already existing airport in the simulator, it is necessary to be aware that by default the behavior is to add the new set of data to the existing airport not to replace the corresponding structures. If the objective is to replace the previous set of data, then it is necessary to use a <a href="#deleteairport"><code>&lt;DeleteAirport&gt;</code></a> structure to describe what is to be replaced.</p>
+      </blockquote>
+      <h2 id="deleteairport">DeleteAirport</h2>
+      <p>Since most of the airports that are going to be edited are preexisting airport in the simulator, it is important to understand the behavior behind the <code>&lt;DeleteAirport&gt;</code> structure.</p>
+      <p>When loading packages that contains airport, the simulator will load the version of an airport from each package, incrementaly adding the data of each package to the data contained in the previous ones. In case that is not what the user wants, here is a description of the attributes that can remove previously existing data.</p>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>deleteAllApronLights</code></td>
+      <td>Remove all data coming from <code>&lt;ApronEdgeLights&gt;</code> field</td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>deleteAllAprons</code></td>
+      <td>Remove all data coming from <code>&lt;Aprons&gt;</code> field</td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>deleteAllHelipads</code></td>
+      <td>Remove all data coming from <code>&lt;Helipad&gt;</code> field</td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>deleteAllRunways</code></td>
+      <td>Remove all data coming from <code>&lt;Runway&gt;</code> field</td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>deleteAllStarts</code></td>
+      <td>Remove all data coming from <code>&lt;Start&gt;</code> field</td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>deleteAllTaxiways</code></td>
+      <td>Remove all data coming from <code>&lt;TaxiwayPoint&gt;</code>, <code>&lt;TaxiwayParking&gt;</code>, <code>&lt;TaxiwayPath&gt;</code> and <code>&lt;TaxiwayName&gt;</code>fields</td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>deleteAllBlastFences</code></td>
+      <td>Remove all data coming from <code>&lt;BlastFence&gt;</code> fields</td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>deleteAllBoundaryFences</code></td>
+      <td>Remove all data coming from <code>&lt;BoundaryFence&gt;</code> fields</td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>deleteAllControlTowers</code></td>
+      <td>Remove all data coming from <code>&lt;Tower&gt;</code> fields</td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>deleteAllJetways</code></td>
+      <td>Remove all data coming from <code>&lt;Jetway&gt;</code> fields</td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>deleteAllPaintedElements</code></td>
+      <td>Remove all data coming from <code>&lt;PaintedElements&gt;</code> fields</td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>deleteAllLightSupports</code></td>
+      <td>Remove all data coming from <code>&lt;LightSupport&gt;</code> fields</td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>deleteAllTaxiwaySigns</code></td>
+      <td>Remove all data coming from <code>&lt;TaxiwaySign&gt;</code> fields</td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>deleteAllApproaches</code></td>
+      <td>Remove all data coming from <code>&lt;Approach&gt;</code> fields</td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>deleteAllFrequencies</code></td>
+      <td>Remove all data coming from <code>&lt;Com&gt;</code> fields</td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>deleteAllDepartures</code></td>
+      <td>Remove all data coming from <code>&lt;Departure&gt;</code> fields</td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>deleteAllArrivals</code></td>
+      <td>Remove all data coming from <code>&lt;Arrival&gt;</code> fields</td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>deleteAllTerminalWaypoints</code></td>
+      <td>Remove all data coming from <code>&lt;Waypoint&gt;</code> fields</td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>deleteAllILSs</code></td>
+      <td>Remove all data coming from <code>&lt;ILs&gt;</code> fields</td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>deleteAllTerminalNDBs</code></td>
+      <td>Remove all data coming from <code>&lt;Ndb&gt;</code> fields</td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      </tbody>
+      </table>
+      <p>In adition to these attributes, there exist other structures which can be contained within the <code>&lt;DeleteAirport&gt;</code> structure in order to have a more refined deletion of certain objects.</p>
+      <h3 id="deleterunway">DeleteRunway</h3>
+      <p>The structure <code>&lt;DeleteRunway&gt;</code> purposes is to delete a specific runway coming from previously loaded packages.</p>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>surface</code></td>
+      <td>GUID or Name of the surface of the runway to delete</td>
+      <td>GUID or String</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>number</code></td>
+      <td>Number of the runway to delete</td>
+      <td><a href="#runway-number">Enum</a></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td><code>designator</code></td>
+      <td>Designator of the runway to delete</td>
+      <td><a href="#runway-designator">Enum</a></td>
+      <td>Yes</td>
+      </tr>
+      </tbody>
+      </table>
+      <h3 id="deletestart">DeleteStart</h3>
+      <!-- Comes from FSX and we never used it so don't really know what its behavior is -->
+      <h2 id="runway">Runway</h2>
+      <p>In the same way as the <code>&lt;Airport&gt;</code> structure, a <code>&lt;Runway&gt;</code> structure is also modular structure in order to represent the variety of runways that might be encountered in the world. In its minimal configuration, it is necessary to have two <code>&lt;RunwayStart&gt;</code> structures has child to be usable. Even though a runway is one physical object, it is consituted with two logical ends that share the physical space, referenced as <code>PRIMARY</code> or <code>SECONDARY</code> in the following structures. The <code>PRIMARY</code> one is the one that is reference in the attributes <code>number</code> and <code>designator</code> of the <code>&lt;Runway&gt;</code>.</p>
+      <p>A <code>&lt;Runway&gt;</code> has the following attributes :</p>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>lat</code></td>
+      <td>Latitude of the center of the runway</td>
+      <td><a href="#specific-types">Latitude</a></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>lon</code></td>
+      <td>Longitude of the center of the runway</td>
+      <td><a href="#specific-types">Longitude</a></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td><code>alt</code></td>
+      <td>Altitude of the center of the runway</td>
+      <td><a href="#specific-types">Altitude</a></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>altType</code></td>
+      <td>Either “GEOID” or “ELLIPSOID”, it is used to determine the referential for the <code>alt</code> field</td>
+      <td>Enum</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>length</code></td>
+      <td>Length of the runway including <code>&lt;OffsetThreshold&gt;</code> but excluding <code>&lt;Blastpad&gt;</code></td>
+      <td><a href="#specific-types">Distance</a></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>width</code></td>
+      <td>Width of the runway</td>
+      <td><a href="#specific-types">Distance</a></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td><code>heading</code></td>
+      <td>Angle compared to true magnetic north towards which the <code>PRIMARY</code> end of the runway goes</td>
+      <td><a href="#specific-types">AngleDeg</a></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>number</code></td>
+      <td>Number of the runway, does not contain the designator which has its own field. For a runway 12L, the number would be “12”</td>
+      <td><a href="#runway-number">Enum</a></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td><code>designator</code></td>
+      <td>Designator of the runway. For a runway 12L, the designator would be “LEFT” or “L”</td>
+      <td><a href="#runway-designator">Enum</a></td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>transparent</code></td>
+      <td>Make the runway surface transparent</td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>surface</code></td>
+      <td>Material to apply to the runway surface</td>
+      <td><a href="#specific-types">Surface</a></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>patternAltitude</code></td>
+      <td>Relative altitude to the runway at which traffic patterns are done</td>
+      <td><a href="#specific-types">Altitude</a></td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>falloff</code></td>
+      <td>Defines the range affected by the flattening of the runway, higher value meaning an increase range</td>
+      <td>Float</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>primaryTakeoff</code></td>
+      <td>Defines if aircafts can takeoff from the <code>PRIMARY</code> end of the runway</td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>primaryLanding</code></td>
+      <td>Defines if aircafts can land on the <code>PRIMARY</code> end of the runway</td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>secondaryTakeoff</code></td>
+      <td>Defines if aircafts can takeoff from the <code>SECONDARY</code> end of the runway</td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>secondaryLanding</code></td>
+      <td>Defines if aircafts can land on the <code>SECONDARY</code> end of the runway</td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>primaryPattern</code></td>
+      <td>Side for traffic patterns taking of in the <code>PRIMARY</code> end of the runway. Can be either <code>"LEFT"</code> or <code>"RIGHT"</code></td>
+      <td>Enum</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>secondaryPattern</code></td>
+      <td>Side for traffic patterns taking of in the <code>SECONDARY</code> end of the runway. Can be either <code>"LEFT"</code> or <code>"RIGHT"</code></td>
+      <td>Enum</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>primaryMarkingBias</code></td>
+      <td>Offset from the end of the runway for the marking on the <code>PRIMARY</code> half</td>
+      <td><a href="#specific-types">Distance</a></td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>secondaryMarkingBias</code></td>
+      <td>Offset from the end of the runway for the marking on the <code>SECONDARY</code> half</td>
+      <td><a href="#specific-types">Distance</a></td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>groundMerging</code></td>
+      <td>Adds detail from the ground beneath the runway to the runway material</td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      </tbody>
+      </table>
+      <h3 id="runwaydeformation">RunwayDeformation</h3>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>ratio</code></td>
+      <td>Ratio along the runway at which the other attributes applies. “0.0” corresponding to the <code>PRIMARY</code> end and “1.0” to the <code>SECONDARY</code> end</td>
+      <td>Float</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>alt</code></td>
+      <td>Altitude at which the runway should be at the ratio <code>ratio</code></td>
+      <td><a href="#specific-types">Altitude</a></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td><code>altType</code></td>
+      <td>Either “GEOID” or “ELLIPSOID”, it is used to determine the referential for the <code>alt</code> field</td>
+      <td>Enum</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>controlPointBefore</code></td>
+      <td>Determine the shape of the flattening before the point. “0” meaning that it should be flat, positive values for a bump and negative values for a crease</td>
+      <td>Float</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>controlPointAfter</code></td>
+      <td>Determine the shape of the flattening after the point. “0” meaning that it should be flat, positive values for a bump and negative values for a crease</td>
+      <td>Float</td>
+      <td>No</td>
+      </tr>
+      </tbody>
+      </table>
+      <h3 id="coloration">Coloration</h3>
+      <table>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>red</code></td>
+      <td>Red component of the coloration</td>
+      <td><a href="#specific-types">ColorComponent</a></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>green</code></td>
+      <td>Green component of the coloration</td>
+      <td><a href="#specific-types">ColorComponent</a></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td><code>blue</code></td>
+      <td>Blue component of the coloration</td>
+      <td><a href="#specific-types">ColorComponent</a></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>alpha</code></td>
+      <td>Alpha component of the coloration <!-- Don't know if it is used --></td>
+      <td><a href="#specific-types">ColorComponent</a></td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>override</code></td>
+      <td><!-- Don't know what this does --></td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      </tbody>
+      </table>
+      <h3 id="markings">Markings</h3>
+      <table>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>alternateThreshold</code></td>
+      <td></td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>alternateTouchdown</code></td>
+      <td></td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>alternateFixedDistance</code></td>
+      <td></td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>alternatePrecision</code></td>
+      <td></td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>leadingZeroIdent</code></td>
+      <td></td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>noThresholdEndArrows</code></td>
+      <td></td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>edges</code></td>
+      <td></td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>threshold</code></td>
+      <td></td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>fixedDistance</code></td>
+      <td></td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>dashes</code></td>
+      <td></td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>ident</code></td>
+      <td></td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>primaryClosed</code></td>
+      <td></td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>secondaryClosed</code></td>
+      <td></td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>touchdown</code></td>
+      <td></td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>precision</code></td>
+      <td></td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>edgePavement</code></td>
+      <td></td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>singleEnd</code></td>
+      <td></td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>primaryStol</code></td>
+      <td></td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>secondaryStol</code></td>
+      <td></td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      </tbody>
+      </table>
+      <h3 id="lights">Lights</h3>
+      <table>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>edge</code></td>
+      <td></td>
+      <td>Enum</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>center</code></td>
+      <td></td>
+      <td>Enum</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>centerRed</code></td>
+      <td></td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      </tbody>
+      </table>
+      <h3 id="approachlights">ApproachLights</h3>
+      <table>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>end</code></td>
+      <td></td>
+      <td>Enum</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>system</code></td>
+      <td></td>
+      <td><a href="#approach-light-systems">Enum</a></td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>reil</code></td>
+      <td></td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>strobes</code></td>
+      <td></td>
+      <td>Positive Integer</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>endLights</code></td>
+      <td></td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>touchdown</code></td>
+      <td></td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>snapToGround</code></td>
+      <td></td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>spacing</code></td>
+      <td></td>
+      <td><a href="#specific-types">Distance</a></td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>offset</code></td>
+      <td></td>
+      <td><a href="#specific-types">Distance</a></td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>slope</code></td>
+      <td></td>
+      <td><a href="#specific-types">AngleDeg</a></td>
+      <td>No</td>
+      </tr>
+      </tbody>
+      </table>
+      <h3 id="blastpad">Blastpad</h3>
+      <table>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>end</code></td>
+      <td></td>
+      <td>Enum</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>length</code></td>
+      <td></td>
+      <td><a href="#specific-types">Distance</a></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td><code>width</code></td>
+      <td></td>
+      <td><a href="#specific-types">Distance</a></td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>surface</code></td>
+      <td></td>
+      <td><a href="#specific-types">Surface</a></td>
+      <td>No</td>
+      </tr>
+      </tbody>
+      </table>
+      <h3 id="offsetthreshold">OffsetThreshold</h3>
+      <table>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>end</code></td>
+      <td></td>
+      <td>Enum</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>length</code></td>
+      <td></td>
+      <td><a href="#specific-types">Distance</a></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td><code>width</code></td>
+      <td></td>
+      <td><a href="#specific-types">Distance</a></td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>surface</code></td>
+      <td></td>
+      <td><a href="#specific-types">Surface</a></td>
+      <td>No</td>
+      </tr>
+      </tbody>
+      </table>
+      <h3 id="vasi">Vasi</h3>
+      <table>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>end</code></td>
+      <td></td>
+      <td>Enum</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>type</code></td>
+      <td></td>
+      <td><a href="#vasi-systems">Enum</a></td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>side</code></td>
+      <td></td>
+      <td>Enum</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>biasX</code></td>
+      <td></td>
+      <td><a href="#specific-types">Distance</a></td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>biasZ</code></td>
+      <td></td>
+      <td><a href="#specific-types">Distance</a></td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>spacing</code></td>
+      <td></td>
+      <td><a href="#specific-types">Distance</a></td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>pitch</code></td>
+      <td></td>
+      <td><a href="#specific-types">AngleDeg</a></td>
+      <td>No</td>
+      </tr>
+      </tbody>
+      </table>
+      <h3 id="runwaystart">RunwayStart</h3>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>end</code></td>
+      <td>End of the runway for which the starting point is. When selecting the end on the worldmap for the start of the flight, the plane will be place at the <code>lat</code>, <code>lon</code> coordinates</td>
+      <td>Enum</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>lat</code></td>
+      <td>Latitude of the starting point</td>
+      <td><a href="#specific-types">Latitude</a></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td><code>lon</code></td>
+      <td>Longitude of the starting point</td>
+      <td><a href="#specific-types">Longitude</a></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>alt</code></td>
+      <td>Altitude of the starting point</td>
+      <td><a href="#specific-types">Altitude</a></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td><code>altType</code></td>
+      <td>Either “GEOID” or “ELLIPSOID”, it is used to determine the referential for the <code>alt</code> field</td>
+      <td>Enum</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>heading</code></td>
+      <td>Angle compared to true magnetic north which the plane will face when starting</td>
+      <td><a href="#specific-types">AngleDeg</a></td>
+      <td>Yes</td>
+      </tr>
+      </tbody>
+      </table>
+      <h3 id="material">Material</h3>
+      <table>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>guid</code></td>
+      <td></td>
+      <td>GUID</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>type</code></td>
+      <td></td>
+      <td>String</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td><code>tilingU</code></td>
+      <td></td>
+      <td>Float</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>tilingV</code></td>
+      <td></td>
+      <td>Float</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td><code>width</code></td>
+      <td></td>
+      <td><a href="#specific-types">Distance</a></td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>falloff</code></td>
+      <td></td>
+      <td>Float</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>opacity</code></td>
+      <td></td>
+      <td>Integer</td>
+      <td>No</td>
+      </tr>
+      </tbody>
+      </table>
+      <h2 id="taxiway-logic-structures">Taxiway Logic Structures</h2>
+      <h3 id="taxiwaypoint">TaxiwayPoint</h3>
+      <table>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>index</code></td>
+      <td></td>
+      <td>Positive Integer</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>type</code></td>
+      <td></td>
+      <td>Enum</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td><code>lat</code></td>
+      <td></td>
+      <td><a href="#specific-types">Latitude</a></td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>lon</code></td>
+      <td></td>
+      <td><a href="#specific-types">Longitude</a></td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>orientation</code></td>
+      <td></td>
+      <td>Enum</td>
+      <td>No</td>
+      </tr>
+      </tbody>
+      </table>
+      <h3 id="taxiwayparking">TaxiwayParking</h3>
+      <table>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>index</code></td>
+      <td></td>
+      <td>Positive Integer</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>lat</code></td>
+      <td></td>
+      <td><a href="#specific-types">Latitude</a></td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>lon</code></td>
+      <td></td>
+      <td><a href="#specific-types">Longitude</a></td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>heading</code></td>
+      <td></td>
+      <td><a href="#specific-types">AngleDeg</a></td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>radius</code></td>
+      <td></td>
+      <td><a href="#specific-types">Distance</a></td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>type</code></td>
+      <td></td>
+      <td>Enum</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>name</code></td>
+      <td></td>
+      <td>Enum</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>number</code></td>
+      <td></td>
+      <td>Positive Integer</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>suffix</code></td>
+      <td></td>
+      <td>Enum</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>teeOffset1</code></td>
+      <td></td>
+      <td>Float</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>teeOffset2</code></td>
+      <td></td>
+      <td>Float</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>teeOffset3</code></td>
+      <td></td>
+      <td>Float</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>teeOffset4</code></td>
+      <td></td>
+      <td>Float</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>airlineCodes</code></td>
+      <td></td>
+      <td>String</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>manufacturerNames</code></td>
+      <td></td>
+      <td>String</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>numberMarking</code></td>
+      <td></td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>numberBiasX</code></td>
+      <td></td>
+      <td><a href="#specific-types">Distance</a></td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>numberBiasZ</code></td>
+      <td></td>
+      <td><a href="#specific-types">Distance</a></td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>numberHeading</code></td>
+      <td></td>
+      <td><a href="#specific-types">AngleDeg</a></td>
+      <td>No</td>
+      </tr>
+      </tbody>
+      </table>
+      <h3 id="taxiwaypath">TaxiwayPath</h3>
+      <table>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>start</code></td>
+      <td></td>
+      <td>Positive Integer</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>end</code></td>
+      <td></td>
+      <td>Positive Integer</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>type</code></td>
+      <td></td>
+      <td><a href="#taxiway-path-types">Enum</a></td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>surface</code></td>
+      <td></td>
+      <td><a href="#specific-types">Surface</a></td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>drawSurface</code></td>
+      <td></td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>drawDetail</code></td>
+      <td></td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>width</code></td>
+      <td></td>
+      <td><a href="#specific-types">Distance</a></td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>weightLimit</code></td>
+      <td></td>
+      <td>Positive Integer</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>name</code></td>
+      <td></td>
+      <td>Positive Integer</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>centerLine</code></td>
+      <td></td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>centerLineLighted</code></td>
+      <td></td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>leftEdgeLighted</code></td>
+      <td></td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>rightEdgeLighted</code></td>
+      <td></td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>leftEdge</code></td>
+      <td></td>
+      <td>Enum</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>rightEdge</code></td>
+      <td></td>
+      <td>Enum</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>number</code></td>
+      <td></td>
+      <td><a href="#runway-number">Enum</a></td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>designator</code></td>
+      <td></td>
+      <td><a href="#runway-designator">Enum</a></td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>enhanced</code></td>
+      <td></td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>groundMerging</code></td>
+      <td></td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      </tbody>
+      </table>
+      <!-- TODO Material + Coloration child -->
+      <h3 id="taxiname">TaxiName</h3>
+      <table>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>index</code></td>
+      <td></td>
+      <td>Positive Integer</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>name</code></td>
+      <td></td>
+      <td>String</td>
+      <td>Yes</td>
+      </tr>
+      </tbody>
+      </table>
+      <h2 id="jetway">Jetway</h2>
+      <p>Each jetway must be associated with a parking (which should be a Gate), and each parking can have at most one jetway associated to it.</p>
+      <p>A <code>&lt;Jetway&gt;</code> can contain one or two <code>SceneryObject</code>, where one must be an interactive jetway object, and the optional second one is an link object connecting the interactive jetway with a building. Those links are especially useful when using auto-generated buildings and not handcrafted SceneryObject buildings.</p>
+      <p>Details on jetway models and link models are available in a <a href="./Jetways.html">dedicated chapter</a>.</p>
+      <h3 id="jetway-xml-definition">Jetway XML definition</h3>
+      <p>A <code>&lt;Jetway&gt;</code> element has the following attributes (identifying the associated <a href="#taxiwayparking">parking</a>) and elements (defining the jetway objects):</p>
+      <table>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>gateName</code></td>
+      <td>Name of the associated parking</td>
+      <td>Enum</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>parkingNumber</code></td>
+      <td>Number of the associated parking</td>
+      <td>Positive Integer</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td><code>suffix</code></td>
+      <td>Suffix of the associated parking</td>
+      <td>Enum</td>
+      <td>Yes</td>
+      </tr>
+      </tbody>
+      </table>
+      <table>
+      <colgroup>
+      <col style="width: 33%">
+      <col style="width: 33%">
+      <col style="width: 33%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Element</th>
+      <th>Description</th>
+      <th>Quantity</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>&lt;SceneryObject&gt;</code></td>
+      <td>Jetway object, either the interactive jetway or the link.</td>
+      <td>1-2</td>
+      </tr>
+      </tbody>
+      </table>
+      <p>Each <code>&lt;SceneryObject&gt;</code> must have one element, either <code>&lt;SimObject&gt;</code> or <code>&lt;LibraryObject&gt;</code>, and also has the following attributes:</p>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>lat</code></td>
+      <td>Latitude of the object</td>
+      <td><a href="#specific-types">Latitude</a></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>lon</code></td>
+      <td>Longitude of the object</td>
+      <td><a href="#specific-types">Longitude</a></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td><code>alt</code></td>
+      <td>Altitude of the object</td>
+      <td><a href="#specific-types">Altitude</a></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>pitch</code></td>
+      <td>Pitch of the object</td>
+      <td><a href="#specific-types">AngleDeg</a></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td><code>bank</code></td>
+      <td>Bank of the object</td>
+      <td><a href="#specific-types">AngleDeg</a></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>heading</code></td>
+      <td>Heading of the object</td>
+      <td><a href="#specific-types">AngleDeg</a></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td><code>altitudeIsAgl</code></td>
+      <td>True if the altitude is relative to the ground (AGL = Above Ground Level), False if the altitude is relative to the mean sea level. Default to True.</td>
+      <td>Boolean</td>
+      <td>Np</td>
+      </tr>
+      </tbody>
+      </table>
+      <p>Then, a <code>&lt;SimObject&gt;</code> element describes the model of interactive jetway used, while a <code>&lt;LibraryObject&gt;</code> element describes the model of link used. Note that if a <code>Jetway</code> has one <code>SceneryObject</code>, then it should contain a <code>SimObject</code>, and if a <code>Jetway</code> has two <code>SceneryObject</code> elements, then one should contain a <code>SimObject</code> and the other a <code>LibraryObject</code>.</p>
+      <p>A <code>&lt;SimObject&gt;</code> has the following attributes:</p>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>containerTitle</code></td>
+      <td>Title of the SimObject to be used as interactive jetway</td>
+      <td>String</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>scale</code></td>
+      <td>Scale of the model, to make it larger (&gt; 1.0) or smaller (&lt; 1.0).</td>
+      <td>Float</td>
+      <td>Yes</td>
+      </tr>
+      </tbody>
+      </table>
+      <p>A <code>&lt;LibraryObject&gt;</code> has the following attributes:</p>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>name</code></td>
+      <td>GUID of the SceneryObject to be used as jetway link</td>
+      <td>GUID</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>scale</code></td>
+      <td>Scale of the model, to make it larger (&gt; 1.0) or smaller (&lt; 1.0).</td>
+      <td>Float</td>
+      <td>Yes</td>
+      </tr>
+      </tbody>
+      </table>
+      <h2 id="lightsupport">LightSupport</h2>
+      <table>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>latitude</code></td>
+      <td></td>
+      <td><a href="#specific-types">Latitude</a></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>longitude</code></td>
+      <td></td>
+      <td><a href="#specific-types">Longitude</a></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td><code>altitude</code></td>
+      <td></td>
+      <td><a href="#specific-types">Altitude</a></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>altitude2</code></td>
+      <td></td>
+      <td><a href="#specific-types">Altitude</a></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td><code>heading</code></td>
+      <td></td>
+      <td><a href="#specific-types">AngleDeg</a></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>width</code></td>
+      <td></td>
+      <td><a href="#specific-types">Distance</a></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td><code>length</code></td>
+      <td></td>
+      <td><a href="#specific-types">Distance</a></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>excludeLights</code></td>
+      <td></td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>excludeLightObjects</code></td>
+      <td></td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      </tbody>
+      </table>
+      <h2 id="apron">Apron</h2>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>surface</code></td>
+      <td>Guid of the material</td>
+      <td>GUID</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>drawSurface</code></td>
+      <td>Does this surface need to be drawn</td>
+      <td>Boolean</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td><code>drawDetail</code></td>
+      <td>Not used</td>
+      <td>Boolean</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>localUV</code></td>
+      <td>The UV mapping is local to the apron, i.e.&nbsp;the UV doesn’t move when the apron move</td>
+      <td>Boolean</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td><code>stretchUV</code></td>
+      <td>The material is strech on the apron to avoid tiling</td>
+      <td>Boolean</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>isRectangle</code></td>
+      <td>Used for edition</td>
+      <td>Boolean</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td><code>priority</code></td>
+      <td>For draw order</td>
+      <td>Integer</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>tiling</code></td>
+      <td>Texture tiling in meter</td>
+      <td>Float</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>heading</code></td>
+      <td>Texture rotation in degree</td>
+      <td>Float</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>falloff</code></td>
+      <td>In meter, negative equal default value</td>
+      <td>Float</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>opacity</code></td>
+      <td>Texture opacity in [0,1]</td>
+      <td>Integer</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>groundMerging</code></td>
+      <td>Perform merging with the ground at the shader</td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>excludeVegetationAround</code></td>
+      <td>Generate vegetation exclusion geometry around surface</td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      <tr class="even">
+      <td><code>excludeVegetationInside</code></td>
+      <td>Exclude vegetation inside the surface</td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      </tbody>
+      </table>
+      <!-- TODO Coloration child -->
+      <h3 id="vertex">Vertex</h3>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>lat</code></td>
+      <td>Latitude of the vertex</td>
+      <td><a href="#specific-types">Latitude</a></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>lon</code></td>
+      <td>Longitude of the vertex</td>
+      <td><a href="#specific-types">Longitude</a></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td><code>spline</code></td>
+      <td>Toggle smoothing of the polygon edge/line at the given point</td>
+      <td>Boolean</td>
+      <td>No</td>
+      </tr>
+      </tbody>
+      </table>
+      <h2 id="apronedgelights">ApronEdgeLights</h2>
+      <h2 id="paintedelements">PaintedElements</h2>
+      <h3 id="paintedline">PaintedLine</h3>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>type</code></td>
+      <td>Type of line to be used for the drawing</td>
+      <td>Enum</td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>trueAngle</code></td>
+      <td>Defines if the line should have hard or soft angles. <code>"NONE"</code> for only soft angles, <code>BEGIN</code> and <code>END</code></td>
+      <td>Enum</td>
+      <td>No</td>
+      </tr>
+      <tr class="odd">
+      <td><code>surface</code></td>
+      <td>Optional custom material</td>
+      <td>GUID</td>
+      <td>No</td>
+      </tr>
+      </tbody>
+      </table>
+      <table>
+      <thead>
+      <tr class="header">
+      <th>Type of painted line</th>
+      <th>Texture layout</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td>DEFAULT</td>
+      <td>CenterLineSolid</td>
+      </tr>
+      <tr class="even">
+      <td>EDGE_LINE_DASHED</td>
+      <td>EdgeLineDashed</td>
+      </tr>
+      <tr class="odd">
+      <td>EDGE_LINE_SOLID</td>
+      <td>EdgeLineSolid</td>
+      </tr>
+      <tr class="even">
+      <td>EDGE_LINE_SOLID_ORTHO</td>
+      <td>EdgeLineSolid</td>
+      </tr>
+      <tr class="odd">
+      <td>EDGE_LINE_SOLID_ORTHO_BACKWARD</td>
+      <td>EdgeLineSolid</td>
+      </tr>
+      <tr class="even">
+      <td>EDGE_SERVICE_DASHED</td>
+      <td>ServiceEdgeDashed</td>
+      </tr>
+      <tr class="odd">
+      <td>EDGE_SERVICE_SOLID</td>
+      <td>ServiceEdgeSolid</td>
+      </tr>
+      <tr class="even">
+      <td>HOLD_SHORT_TAXIWAY</td>
+      <td>HoldShortTaxiway</td>
+      </tr>
+      <tr class="odd">
+      <td>SERVICE_DASHED</td>
+      <td>ServiceCenterDashed</td>
+      </tr>
+      <tr class="even">
+      <td>WIDE_YELLOW</td>
+      <td>WideYellowLine</td>
+      </tr>
+      <tr class="odd">
+      <td>WIDE_WHITE</td>
+      <td>WideWhiteLine</td>
+      </tr>
+      <tr class="even">
+      <td>NON_MOVEMENT</td>
+      <td>NonMovementBoundaryLine</td>
+      </tr>
+      <tr class="odd">
+      <td>NON_MOVEMENT_BACKWARD</td>
+      <td>NonMovementBoundaryLine</td>
+      </tr>
+      <tr class="even">
+      <td>ENHANCED_CENTER</td>
+      <td>EnhancedCenter</td>
+      </tr>
+      <tr class="odd">
+      <td>WIDE_RED</td>
+      <td>WideRedLine</td>
+      </tr>
+      <tr class="even">
+      <td>SLIM_RED</td>
+      <td>SlimRedLine</td>
+      </tr>
+      </tbody>
+      </table>
+      <table style="width:100%;">
+      <colgroup>
+      <col style="width: 14%">
+      <col style="width: 14%">
+      <col style="width: 14%">
+      <col style="width: 14%">
+      <col style="width: 14%">
+      <col style="width: 14%">
+      <col style="width: 14%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Texture layout</th>
+      <th>Width in Meters</th>
+      <th>Length in Meters</th>
+      <th>Tile</th>
+      <th>Left U</th>
+      <th>Right U</th>
+      <th>Delta V</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td>CenterLineSolid ( Solid Centerline )</td>
+      <td>0.30</td>
+      <td>25</td>
+      <td>TRUE</td>
+      <td>32/512</td>
+      <td>17/512</td>
+      <td>1 / 25</td>
+      </tr>
+      <tr class="even">
+      <td>EdgeLineSolid ( Solid Edge line )</td>
+      <td>0.45</td>
+      <td>25</td>
+      <td>TRUE</td>
+      <td>58/512</td>
+      <td>16/512</td>
+      <td>1 / 25</td>
+      </tr>
+      <tr class="odd">
+      <td>EdgeLineDashed ( Dashed Edge line )</td>
+      <td>0.45</td>
+      <td>12.00</td>
+      <td>TRUE</td>
+      <td>192/512</td>
+      <td>144/512</td>
+      <td>1/12</td>
+      </tr>
+      <tr class="even">
+      <td>HoldShortRunway ( Hold Short, Runway )</td>
+      <td>0.90</td>
+      <td>12.60</td>
+      <td>TRUE</td>
+      <td>108/512</td>
+      <td>16/512</td>
+      <td>1/12.6</td>
+      </tr>
+      <tr class="odd">
+      <td>HoldShortILS ( Hold Short, ILS )</td>
+      <td>0.45</td>
+      <td>12.00</td>
+      <td>TRUE</td>
+      <td>272/512</td>
+      <td>208/512</td>
+      <td>1/12</td>
+      </tr>
+      <tr class="even">
+      <td>HoldShortTaxiway ( Hold Short, Taxiway )</td>
+      <td>0.45</td>
+      <td>12.60</td>
+      <td>TRUE</td>
+      <td>108/512</td>
+      <td>90/512</td>
+      <td>1/12.6</td>
+      </tr>
+      <tr class="odd">
+      <td>ServiceCenterDashed ( Dashed Service CenterLine )</td>
+      <td>0.225</td>
+      <td>22</td>
+      <td>TRUE</td>
+      <td>365 / 512</td>
+      <td>349 / 512</td>
+      <td>1/22</td>
+      </tr>
+      <tr class="even">
+      <td>ServiceEdgeSolid ( Solid Service EdgeLine )</td>
+      <td>0.30</td>
+      <td>25</td>
+      <td>TRUE</td>
+      <td>459 / 512</td>
+      <td>452 / 512</td>
+      <td>1 / 25</td>
+      </tr>
+      <tr class="odd">
+      <td>ServiceEdgeDashed ( Dashed Service EdgeLine )</td>
+      <td>0.6098</td>
+      <td>4.8780</td>
+      <td>TRUE</td>
+      <td>368 / 512</td>
+      <td>324 / 512</td>
+      <td>1/4.8780</td>
+      </tr>
+      <tr class="even">
+      <td>WideYellowLine ( Wide Yellow Line )</td>
+      <td>1.05</td>
+      <td>25</td>
+      <td>TRUE</td>
+      <td>30 / 512</td>
+      <td>17 / 512</td>
+      <td>1 / 25</td>
+      </tr>
+      <tr class="odd">
+      <td>WideWhiteLine ( Wide White Line )</td>
+      <td>1.05</td>
+      <td>25</td>
+      <td>TRUE</td>
+      <td>459 / 512</td>
+      <td>452 / 512</td>
+      <td>1 / 25</td>
+      </tr>
+      <tr class="even">
+      <td>NonMovementBoundaryLine ( Non Movement Boundary Line )</td>
+      <td>0.90</td>
+      <td>25</td>
+      <td>TRUE</td>
+      <td>82 / 512</td>
+      <td>36 / 512</td>
+      <td>1 / 25</td>
+      </tr>
+      <tr class="odd">
+      <td>EnhancedCenter ( Enhanced Center Line )</td>
+      <td>1.20</td>
+      <td>25.62</td>
+      <td>TRUE</td>
+      <td>314 / 512</td>
+      <td>282 / 512</td>
+      <td>1 / 25.62</td>
+      </tr>
+      <tr class="even">
+      <td>WideRedLine ( Colored Red Wide Line )</td>
+      <td>1.05</td>
+      <td>25</td>
+      <td>TRUE</td>
+      <td>956 / 1024</td>
+      <td>956 / 1024</td>
+      <td>1 / 25</td>
+      </tr>
+      <tr class="odd">
+      <td>SlimRedLine ( Colored Red Slim Line )</td>
+      <td>0.30</td>
+      <td>25</td>
+      <td>TRUE</td>
+      <td>956 / 1024</td>
+      <td>956 / 1024</td>
+      <td>1 / 25</td>
+      </tr>
+      <tr class="even">
+      <td>SlimBlackLine ( Colored Black Slim Line )</td>
+      <td>0.30</td>
+      <td>25</td>
+      <td>TRUE</td>
+      <td>924 / 1024</td>
+      <td>924 / 1024</td>
+      <td>1 / 25</td>
+      </tr>
+      <tr class="odd">
+      <td>SlimYellowLine ( Colored Yellow Slim Line )</td>
+      <td>0.30</td>
+      <td>25</td>
+      <td>TRUE</td>
+      <td>940 / 1024</td>
+      <td>940 / 1024</td>
+      <td>1 / 25</td>
+      </tr>
+      </tbody>
+      </table>
+      <h3 id="paintedhatchedarea">PaintedHatchedArea</h3>
+      <table>
+      <colgroup>
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      <col style="width: 25%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Attribute</th>
+      <th>Description</th>
+      <th>Type</th>
+      <th>Required</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>heading</code></td>
+      <td>Direction of the hatches</td>
+      <td><a href="#specific-types">HatchedAreaHeading</a></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="even">
+      <td><code>spacing</code></td>
+      <td>Distance between the centers of two hatches</td>
+      <td><a href="#specific-types">Distance</a></td>
+      <td>Yes</td>
+      </tr>
+      <tr class="odd">
+      <td><code>type</code></td>
+      <td>Type of line to be used for the drawing</td>
+      <td>Enum</td>
+      <td>Yes</td>
+      </tr>
+      </tbody>
+      </table>
+      <h2 id="specific-types">Specific Types</h2>
+      <!-- Keep in alphabetical order -->
+      <table>
+      <colgroup>
+      <col style="width: 33%">
+      <col style="width: 33%">
+      <col style="width: 33%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Type</th>
+      <th>Base Type</th>
+      <th>Description</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td><code>Altitude</code></td>
+      <td>Float</td>
+      <td>Same as <code>Distance</code> but without the possibility to use Nautical Miles.</td>
+      </tr>
+      <tr class="even">
+      <td><code>AngleDeg</code></td>
+      <td>Float</td>
+      <td>Angle value in degrees between -360.0° and 360.0°</td>
+      </tr>
+      <tr class="odd">
+      <td><code>ColorComponent</code></td>
+      <td>Integer</td>
+      <td>Component value between 0 and 255</td>
+      </tr>
+      <tr class="even">
+      <td><code>Distance</code></td>
+      <td>Float</td>
+      <td>Without suffix it is treated as a value in meter. The addition of the suffixes “M”, “F” or “N” can respectively change the value in Meters, Feet or Nautical Miles. For example “13F” or “5.0N” are valid values</td>
+      </tr>
+      <tr class="odd">
+      <td><code>HatchedAreaHeading</code></td>
+      <td>Float</td>
+      <td>Angle value in degrees between -90.0° and 90.0°</td>
+      </tr>
+      <tr class="even">
+      <td><code>Latitude</code></td>
+      <td>Float</td>
+      <td>Angle value in degrees between -90.0° and 90.0° <!-- TODO : other way to write latitudes --></td>
+      </tr>
+      <tr class="odd">
+      <td><code>Longitude</code></td>
+      <td>Float</td>
+      <td>Angle value in degrees between -180.0° and 180.0° <!-- TODO : other way to write latitudes --></td>
+      </tr>
+      <tr class="even">
+      <td><code>Surface</code></td>
+      <td>String</td>
+      <td></td>
+      </tr>
+      </tbody>
+      </table>
+      <h2 id="enumerations">Enumerations</h2>
+      <h3 id="runway-numbers">Runway Numbers</h3>
+      <h3 id="runway-designator">Runway Designator</h3>
+      <h3 id="approach-light-systems">Approach Light Systems</h3>
+      <h3 id="vasi-systems">VASI Systems</h3>
+      <h3 id="taxiway-path-types">Taxiway Path Types</h3>
+      <h3 id="painted-line-types">Painted Line Types</h3>
+    </article>
+  </div>
+  <script>
+	function detectIE() {
+	  var ua = window.navigator.userAgent;
+
+	  // Test values; Uncomment to check result …
+
+	  // IE 10
+	  // ua = 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)';
+
+	  // IE 11
+	  // ua = 'Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko';
+
+	  // Edge 12 (Spartan)
+	  // ua = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36 Edge/12.0';
+
+	  // Edge 13
+	  // ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Safari/537.36 Edge/13.10586';
+
+	  var msie = ua.indexOf('MSIE ');
+	  if (msie > 0) {
+		// IE 10 or older => return version number
+		return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+	  }
+
+	  var trident = ua.indexOf('Trident/');
+	  if (trident > 0) {
+		// IE 11 => return version number
+		var rv = ua.indexOf('rv:');
+		return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+	  }
+
+	  var edge = ua.indexOf('Edge/');
+	  if (edge > 0) {
+		// Edge (IE 12+) => return version number
+		return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+	  }
+
+	  // other browser
+	  return false;
+	}
+
+	var bIsIE = (detectIE() !== false);
+
+	function setData(name, value)
+	{
+		if (bIsIE)
+		{
+			if (localStorage !== undefined)
+			{
+				if (value === null)
+					localStorage.removeItem(name);
+				else
+					localStorage.setItem(name, value);
+			}
+			/*var d = new Date();
+			d.setTime(d.getTime() + (24*60*60));
+			var expires = "expires="+ d.toUTCString();
+			document.cookie = name + "=" + value + ";" + expires + ";path=/";
+			*/
+		}
+		else
+		{
+			if (value === null)
+				sessionStorage.removeItem(name);
+			else
+				sessionStorage.setItem(name, value);
+		}
+	}
+	
+	function getData(name)
+	{
+		var value = null;
+		if (bIsIE)
+		{
+			/*var cname = name + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for(var i = 0; i <ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) == ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(cname) == 0) {
+					return c.substring(cname.length, c.length);
+				}
+			}
+			return null;*/
+			if (localStorage !== undefined)
+			{
+				value = localStorage.getItem(name);
+			}
+			if (value === 'undefined')
+				value = null;
+		}
+		else
+		{
+			value = sessionStorage.getItem(name);
+			if (value === 'undefined')
+				value = null;
+		}
+		return value;
+	}
+	
+    // FROM http://purecss.io/js/ui.js
+    (function (window, document) {
+
+	
+      var content = document.getElementById('main'),
+		layout = document.getElementById('layout'),
+        menu = document.getElementById('menu'),
+        menuLink = document.getElementById('menuLink');
+		
+      function toggleClass(element, className) {
+        var classes = element.className.split(/\s+/),
+          length = classes.length,
+          i = 0;
+
+        for (; i < length; i++) {
+          if (classes[i] === className) {
+            classes.splice(i, 1);
+            break;
+          }
+        }
+        // The className is not found
+        if (length === classes.length) {
+          classes.push(className);
+        }
+
+        element.className = classes.join(' ');
+      }
+
+      function hasClass(element, className) {
+        var classes = element.className.split(/\s+/),
+          length = classes.length,
+          i = 0;
+
+        for (; i < length; i++) {
+          if (classes[i] === className) {
+            return true;
+          }
+        }
+		return false;
+      }
+
+      menuLink.onclick = function (e) {
+        var active = 'active';
+
+        e.preventDefault();
+		toggleClass(content, active);
+        toggleClass(layout, active);
+        toggleClass(menu, active);
+        toggleClass(menuLink, active);
+      };
+	  
+	  // Save menu scroll level when user click on link
+	  var a_links = document.getElementsByTagName('a');
+	  for (var i = 0 ; i < a_links.length ; i++) {
+	    var link = a_links[i];
+		if(menu.contains(link)) {
+			link.onclick = function () {
+				try {
+					setData('navScroll', link.offsetTop - link.getBoundingClientRect().top);
+					var root = menu.getElementsByTagName('ul')[0];
+					var li_elems = root.getElementsByTagName('li');
+					for (var i = 0; i<li_elems.length; i++)
+					{
+						if (!hasClass(li_elems[i],'collapsed'))
+							setData('liexp' + i, true);
+						else
+							setData('liexp' + i);
+					}
+					setData('liexp', true);
+				}
+				catch (error) {
+					console.error(error);
+				}
+				return true;
+			};
+		}
+	  };
+	  
+		var root = menu.getElementsByTagName('ul')[0];
+		// Remove empty ul
+		var ul_elems = root.getElementsByTagName('ul');
+		for (var i = ul_elems.length-1; i>=0; i--)
+		{
+			if (ul_elems[i].childElementCount == 0)
+			{
+				ul_elems[i].parentNode.removeChild(ul_elems[i]);
+			}
+		}
+		// Restore side menu state
+		var saved_state = (getData('liexp')!== null);
+		var li_elems = root.getElementsByTagName('li');
+		for (var i = 0; i<li_elems.length; i++)
+		{
+			var l = li_elems[i];
+			if (hasClass(l,'heading'))
+				toggleClass(l,'heading');
+			if ((l.nextElementSibling) && (l.nextElementSibling.nodeName=="UL"))
+			{
+				toggleClass(l,'collapsible');
+				var collapser = document.createElement('span');
+				var inserted = l.insertBefore(collapser, l.firstChild);
+				toggleClass(inserted,'collapser');
+				var inserted = l.insertBefore(collapser, l.firstChild);
+				inserted.addEventListener('click', function() { toggleClass(this.parentNode, 'collapsed') });
+				if (saved_state)
+				{
+					if (getData('liexp' + i) === null)
+					{
+						toggleClass(l,'collapsed');
+					}
+				}
+				else
+				{
+					if (l.parentNode != root)
+					{
+						toggleClass(l,'collapsed');
+					}
+				}
+			}
+		}
+		// Restore menu scroll level if defined
+		if(getData('navScroll') != null)
+			document.getElementById('menu').scrollTop = getData('navScroll');
+
+   }(this, this.document));
+  </script>
+
+
+</body></html>

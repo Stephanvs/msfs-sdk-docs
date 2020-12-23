@@ -1,0 +1,2798 @@
+<!DOCTYPE html><html><head>
+  <style>
+    /*! ADAPTED
+    Typeplate : Starter Kit
+    URL ........... http://typeplate.com
+    Version ....... 3.0.2
+    Github ........ https://github.com/typeplate/starter-kit
+    Authors ....... Dennis Gaebel (@gryghostvisuals) & Zachary Kain (@zakkain)
+    License ....... Creative Commmons Attribution 3.0
+    License URL ... https://github.com/typeplate/starter-kit/blob/master/license.txt
+    */
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      text-rendering: optimizeLegibility;
+      line-height: 1;
+      margin-top: 0;
+      color: #222;
+    }
+
+    blockquote+figcaption cite {
+      display: block;
+      font-size: inherit;
+      text-align: right;
+    }
+
+    body {
+      word-wrap: break-word;
+    }
+
+    pre code {
+      word-wrap: normal;
+    }
+
+    body {
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+      hyphens: auto;
+      color: #444;
+    }
+	
+	figcaption {
+		text-align: center;
+	}
+
+    h1 {
+      font-size: 2em;
+      /* 2*16 = 32 */
+    }
+
+    h2 {
+      font-size: 1.5em;
+      /* 1.5*16 = 24 */
+    }
+
+    h3 {
+      font-size: 1.17em;
+      /* 1.17*16 = 18.72 */
+    }
+
+    h4 {
+      font-size: 1em;
+      /* 1*16 = 16 */
+    }
+
+    h5 {
+      font-size: 0.83em;
+      /* 0.83*16 = 13.28 */
+    }
+
+    h6 {
+      font-size: 0.75em;
+      /* 0.75*16 = 12 */
+    }
+
+    h1 {
+      margin: 2.42424rem 0 1.454544rem;
+    }
+
+    h2 {
+      margin: 2.0202rem 0 1.21212rem;
+    }
+
+    h3 {
+      margin: 1.61616rem 0 1rem;
+    }
+
+    h4 {
+      margin: 1.21212rem 0 1;
+    }
+
+    h5 {
+      margin: 0.80808rem 0;
+    }
+
+    h6 {
+      margin: 0.70707rem 0;
+    }
+
+    p {
+      margin: auto auto 1.5rem;
+    }
+
+    small {
+      font-size: 65%;
+    }
+
+    input,
+    abbr,
+    acronym,
+    blockquote,
+    code,
+    kbd,
+    q,
+    samp,
+    var {
+      -webkit-hyphens: none;
+      -ms-hyphens: none;
+      hyphens: none;
+    }
+
+    pre {
+      white-space: pre;
+    }
+
+    pre code {
+      white-space: -moz-pre-wrap;
+      white-space: pre-wrap;
+    }
+
+    code {
+      white-space: pre;
+      font-family: SF Mono, Consolas, Dejavu Sans Mono, Menlo, monospace;
+    }
+
+    abbr {
+      -webkit-font-variant: small-caps;
+      -moz-font-variant: small-caps;
+      -ms-font-variant: small-caps;
+      font-variant: small-caps;
+      font-weight: 600;
+      text-transform: lowercase;
+      color: gray;
+    }
+
+    abbr[title]:hover {
+      cursor: help;
+    }
+
+    /* FROM http://purecss.io/layouts/side-menu/  adapted to remove pure classes*/
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      color: #444;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: auto;
+    }
+
+    code,
+    pre {
+      background-color: #f5f5f5;
+      color: #444;
+      border-radius: 2px;
+      text-shadow: 0px 1px 0px white;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    }
+
+    pre code {
+      border: none;
+      box-shadow: none;
+    }
+
+    pre {
+      padding: 0.5em;
+    }
+
+    code {
+      display: inline-block;
+      padding: 0 0.5em;
+      line-height: 1.4;
+      font-size: 0.9em;
+    }
+
+    table {
+      border-spacing: 0;
+      margin-bottom: 1.5rem;
+    }
+
+    table th,
+    table td {
+      padding: 0.3em 0.7em;
+    }
+
+    table th {
+      background-color: #f4f4f4;
+      border-bottom: 2px solid #444;
+    }
+
+    table td {
+      border: 1px solid #f5f5f5;
+    }
+
+    /* Add transition to containers so they can push in and out. */
+
+    #layout,
+    #menu,
+    .menu-link {
+      -webkit-transition: all 0.2s ease-out;
+      -moz-transition: all 0.2s ease-out;
+      -ms-transition: all 0.2s ease-out;
+      -o-transition: all 0.2s ease-out;
+      transition: all 0.2s ease-out;
+    }
+
+    /* This is the parent `<div>` that contains the menu and the content area. */
+
+    #layout {
+      position: relative;
+      padding-left: 0;
+    }
+
+    #layout.active #menu {
+      left: 300px;
+      width: 300px;
+    }
+
+    #layout.active .menu-link {
+      left: 300px;
+    }
+
+    /* The content `<div>` is where all your content goes. */
+
+    .content {
+      margin: 50px auto;
+      padding: 0;
+      max-width: 60%;
+      line-height: 1.6em;
+    }
+
+    /*
+    The `#menu` `<div>` is the parent `<div>` that contains the menu that
+    appears on the left side of the page.
+    */
+
+    #menu {
+      margin-left: -300px;
+      /* "#menu" width */
+      width: 300px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 1000;
+      /* so the menu or its navicon stays above all content */
+      background: #f4f4f4;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      font-size: 0.9em;
+    }
+
+    a,
+    a * {
+      text-decoration: none;
+      color: #2483cc;
+    }
+
+    a:visited {
+      text-decoration: none;
+      color: #2483cc;
+    }
+
+    /* All anchors inside the menu should be styled like this. */
+
+    #menu a {
+      display: inline-block;
+      padding: 0.1em 0.5em;
+    }
+
+    #menu a:first-letter {
+      text-transform: capitalize;
+    }
+
+    #menu ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0em 0.5em;
+    }
+
+    #menu ul ul {
+      margin-top: 0em;
+      margin-left: 0.6em;
+      border-left: 1px dotted rgb(64, 64, 64);
+	  padding-left: 0.5em;
+    }
+
+    /* Change color of the anchor links on hover/focus. */
+
+    #menu li a:hover,
+    #menu li a:focus {
+      background: rgba(255, 255, 255, 0.4);
+    }
+
+    /* This styles the selected menu item `<li>`. */
+
+    #menu li a.active {
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    /* This styles a link within a selected menu item `<li>`. */
+
+    #menu li a.active {
+      color: #222;
+    }
+
+    /* This styles the menu heading. */
+
+    #menu li.heading {
+      font-size: 0.9em;
+      /*text-transform: uppercase;*/
+      color: #000;
+    }
+
+    #menu li.heading>* {
+      padding: 0.1em 0.5em;
+      display: block;
+    }
+
+    #menu li.heading a {
+      color: #0c68af;
+    }
+
+    /* -- Dynamic Button For Responsive Menu -------------------------------------*/
+
+    /*
+    `.menu-link` represents the responsive menu toggle that shows/hides on
+    small screens.
+    */
+
+    .menu-link {
+      position: fixed;
+      display: block;
+      /* show this only on small screens */
+      top: 0;
+      left: 0;
+      /* "#menu width" */
+      background: #f4f4f4;
+      font-size: 10px;
+      /* change this value to increase/decrease button size */
+      z-index: 10;
+      width: 2em;
+      height: auto;
+      padding: 1.6em 1.2em;
+      border-radius: 0 2px 2px 0;
+    }
+
+    .menu-link:hover {
+      background: /* #f4f4f4 * 0.8 */
+      #eee;
+    }
+
+    .menu-link span {
+      position: relative;
+      display: block;
+    }
+
+    .menu-link span,
+    .menu-link span:before,
+    .menu-link span:after {
+      background-color: #555;
+      width: 100%;
+      height: 0.2em;
+      border-radius: 1em;
+    }
+
+    .menu-link span:before,
+    .menu-link span:after {
+      position: absolute;
+      margin-top: -0.6em;
+      content: " ";
+    }
+
+    .menu-link span:after {
+      margin-top: 0.6em;
+    }
+
+    @media (max-width: 1300px) {       
+	  .content.active {
+		  margin-left: 310px;
+	  }
+    }
+	
+	@media (max-width: 800px) {
+		.content {
+		  max-width: 98%;
+	  }
+	}
+
+	#menu li span {
+		padding: 0.1em 0.5em;
+	}
+	
+	li.collapsible {
+		cursor: pointer;
+		font-weight:bold;
+	}
+	
+	li.collapsible span.collapser:before {
+		display:inline-block;
+		width:0.5em;
+	}
+	
+	li.collapsible span.collapser:before {
+		content: "-";
+	}
+	
+	li.collapsed span.collapser:before {
+		content: "+";
+	}
+	
+	li.collapsed + ul {
+		display:none;
+	}
+
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <!--script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script-->
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <div id="layout" class="active">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link active">
+      <!-- Hamburger icon -->
+      <span></span>
+    </a>
+    <nav id="menu" class="active">
+<ul>
+<li class="heading"><a href="..\..\index.html">Home</a></li>
+<li class="heading"><a href="..\..\01-Getting_Started\index.html">Getting Started</a></li>
+<ul>
+<li class="heading"><a href="..\..\01-Getting_Started\01-SDK_Overview.html">SDK Overview</a></li>
+<li class="heading"><a href="..\..\01-Getting_Started\02-FAQ.html">FAQ</a></li>
+<li class="heading"><a href="..\..\01-Getting_Started\03-Roadmap.html">Roadmap</a></li>
+<li class="heading"><span>Samples</span></li>
+<ul>
+<li class="heading"><a href="..\..\01-Getting_Started\Samples\Aircraft\index.html">Aircraft</a></li>
+<ul>
+<li class="heading"><a href="..\..\01-Getting_Started\Samples\Aircraft\GaugeAircraft\index.html">GaugeAircraft</a></li>
+<li class="heading"><a href="..\..\01-Getting_Started\Samples\Aircraft\GdiplusAircraft\index.html">GdiplusAircraft</a></li>
+<li class="heading"><a href="..\..\01-Getting_Started\Samples\Aircraft\MouseAircraft\index.html">MouseAircraft</a></li>
+<li class="heading"><a href="..\..\01-Getting_Started\Samples\Aircraft\SimpleAircraft\index.html">SimpleAircraft</a></li>
+</ul>
+<li class="heading"><a href="..\..\01-Getting_Started\Samples\SimpleAerial\index.html">SimpleAerial</a></li>
+<li class="heading"><a href="..\..\01-Getting_Started\Samples\SimpleAirport\index.html">SimpleAirport</a></li>
+<li class="heading"><a href="..\..\01-Getting_Started\Samples\SimpleBiomes\index.html">SimpleBiomes</a></li>
+<li class="heading"><a href="..\..\01-Getting_Started\Samples\SimpleNavData\index.html">SimpleNavData</a></li>
+<li class="heading"><a href="..\..\01-Getting_Started\Samples\SimpleScenery\index.html">SimpleScenery</a></li>
+<li class="heading"><a href="..\..\01-Getting_Started\Samples\SimvarWatcher\index.html">SimvarWatcher</a></li>
+<li class="heading"><a href="..\..\01-Getting_Started\Samples\WwiseSampleProject\index.html">WwiseSampleProject</a></li>
+</ul>
+<li class="heading"><span>Tutorials</span></li>
+<ul>
+<li class="heading"><a href="..\..\01-Getting_Started\Tutorials\01-Placing_An_Add-on_Airport\index.html">Placing An Add-on Airport</a></li>
+<li class="heading"><a href="..\..\01-Getting_Started\Tutorials\02-Flight_model_definition\index.html">Flight model definition</a></li>
+</ul>
+</ul>
+<li class="heading"><span>Asset Creation</span></li>
+<ul>
+<li class="heading"><a href="..\..\02-Asset_Creation\3D_Models\index.html">3D Models</a></li>
+<ul>
+<li class="heading"><span>Modeling Practices</span></li>
+<ul>
+<li class="heading"><a href="..\..\02-Asset_Creation\3D_Models\Modeling_Practices\01-Aircraft_Modeling.html">Aircraft Modeling</a></li>
+<li class="heading"><a href="..\..\02-Asset_Creation\3D_Models\Modeling_Practices\02-Levels_of_Detail.html">Levels of Detail</a></li>
+<li class="heading"><a href="..\..\02-Asset_Creation\3D_Models\Modeling_Practices\03-Aircraft_Texture_Mapping.html">Aircraft Texture Mapping</a></li>
+<li class="heading"><a href="..\..\02-Asset_Creation\3D_Models\Modeling_Practices\04-Collisions.html">Collisions</a></li>
+</ul>
+</ul>
+<li class="heading"><a href="..\..\02-Asset_Creation\Lighting_Model\index.html">Lighting Model</a></li>
+<li class="heading"><a href="..\..\02-Asset_Creation\Sounds\index.html">Sounds</a></li>
+<ul>
+<li class="heading"><a href="..\..\02-Asset_Creation\Sounds\01-Master_Mixer_Hierarchy.html">Master Mixer Hierarchy</a></li>
+<li class="heading"><a href="..\..\02-Asset_Creation\Sounds\02-Shared_Game_Parameters.html">Shared Game Parameters</a></li>
+<li class="heading"><a href="..\..\02-Asset_Creation\Sounds\03-Shared_States_and_Switches.html">Shared States and Switches</a></li>
+<li class="heading"><a href="..\..\02-Asset_Creation\Sounds\04-Shared_Attenuation_Shareset.html">Shared Attenuation Shareset</a></li>
+<li class="heading"><a href="..\..\02-Asset_Creation\Sounds\05-Mix_your_Aircraft.html">Mix your Aircraft</a></li>
+</ul>
+<li class="heading"><a href="..\..\02-Asset_Creation\Textures\index.html">Textures</a></li>
+<li class="heading"><a href="..\..\02-Asset_Creation\glTF_Materials.html">glTF Materials</a></li>
+</ul>
+<li class="heading"><span>Content Configuration</span></li>
+<ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\Cameras\index.html">Cameras</a></li>
+<ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\Cameras\Camera_Configuration.html">Camera Configuration</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\Cameras\RTC\index.html">RTC</a></li>
+<ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\Cameras\RTC\Examples.html">Examples</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\Cameras\RTC\Using_RTCs.html">Using RTCs</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\Cameras\RTC\XML_Definition.html">XML Definition</a></li>
+</ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\Cameras\Wow-effect.html">Wow-effect</a></li>
+</ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\Environment\index.html">Environment</a></li>
+<ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\Environment\Airports_And_Facilities\index.html">Airports And Facilities</a></li>
+<ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\Environment\Airports_And_Facilities\Airports.html">Airports</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\Environment\Airports_And_Facilities\Jetways.html">Jetways</a></li>
+</ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\Environment\File_Formats\index.html">File Formats</a></li>
+<ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\Environment\File_Formats\BGL.html">BGL</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\Environment\File_Formats\CGL.html">CGL</a></li>
+</ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\Environment\Living_World\index.html">Living World</a></li>
+<ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\Environment\Living_World\AirportServices\index.html">AirportServices</a></li>
+<ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\Environment\Living_World\AirportServices\XMLdefs.html">XMLdefs</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\Environment\Living_World\AirportServices\examples.html">examples</a></li>
+</ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\Environment\Living_World\LivingWorld_Config\index.html">LivingWorld Config</a></li>
+<ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\Environment\Living_World\LivingWorld_Config\XMLdefs.html">XMLdefs</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\Environment\Living_World\LivingWorld_Config\examples.html">examples</a></li>
+</ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\Environment\Living_World\Traffic\index.html">Traffic</a></li>
+</ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\Environment\Scenery_Objects\index.html">Scenery Objects</a></li>
+<ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\Environment\Scenery_Objects\Effects.html">Effects</a></li>
+</ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\Environment\Terrain\index.html">Terrain</a></li>
+<ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\Environment\Terrain\Aerial_Imagery\index.html">Aerial Imagery</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\Environment\Terrain\DEM\index.html">DEM</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\Environment\Terrain\Vector_Shapes\index.html">Vector Shapes</a></li>
+</ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\Environment\Vegetation\index.html">Vegetation</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\Environment\Weather\index.html">Weather</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\Environment\World_Positioning_Systems\index.html">World Positioning Systems</a></li>
+<ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\Environment\World_Positioning_Systems\Bing_Maps_Tile_System.html">Bing Maps Tile System</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\Environment\World_Positioning_Systems\Lat_Long_Alt.html">Lat Long Alt</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\Environment\World_Positioning_Systems\QMID.html">QMID</a></li>
+</ul>
+</ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\Flights_And_Missions\index.html">Flights And Missions</a></li>
+<ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\Flights_And_Missions\Flight_Files.html">Flight Files</a></li>
+</ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\Localization\index.html">Localization</a></li>
+<li class="heading"><span>SimObjects</span></li>
+<ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\00-Aircraft\index.html">Aircraft</a></li>
+<ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\00-Aircraft\Aircraft_Configuration\index.html">Aircraft Configuration</a></li>
+<ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\00-Aircraft\Aircraft_Configuration\00-General.html">General</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\00-Aircraft\Aircraft_Configuration\AI.html">AI</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\00-Aircraft\Aircraft_Configuration\Cameras.html">Cameras</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\00-Aircraft\Aircraft_Configuration\Cockpit.html">Cockpit</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\00-Aircraft\Aircraft_Configuration\Engines.html">Engines</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\00-Aircraft\Aircraft_Configuration\Flight_Model.html">Flight Model</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\00-Aircraft\Aircraft_Configuration\Gameplay.html">Gameplay</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\00-Aircraft\Aircraft_Configuration\InteractivePoints.html">InteractivePoints</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\00-Aircraft\Aircraft_Configuration\Systems_Configuration_File.html">Systems Configuration File</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\00-Aircraft\Aircraft_Configuration\Target_Performances_Configuration_File.html">Target Performances Configuration File</a></li>
+</ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\00-Aircraft\Flight_Model.html">Flight Model</a></li>
+</ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\01-Other_SimObjects\index.html">Other SimObjects</a></li>
+<ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\01-Other_SimObjects\Animals.html">Animals</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\01-Other_SimObjects\Boats.html">Boats</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\01-Other_SimObjects\GroundVehicles\index.html">GroundVehicles</a></li>
+<ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\01-Other_SimObjects\GroundVehicles\BaggageCart.html">BaggageCart</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\01-Other_SimObjects\GroundVehicles\BaggageLoader.html">BaggageLoader</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\01-Other_SimObjects\GroundVehicles\BoardingRamp.html">BoardingRamp</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\01-Other_SimObjects\GroundVehicles\CateringTruck.html">CateringTruck</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\01-Other_SimObjects\GroundVehicles\FuelTruck.html">FuelTruck</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\01-Other_SimObjects\GroundVehicles\GroundPowerUnit.html">GroundPowerUnit</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\01-Other_SimObjects\GroundVehicles\Pushback.html">Pushback</a></li>
+</ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\01-Other_SimObjects\Humans.html">Humans</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\01-Other_SimObjects\SimObject_Configuration.html">SimObject Configuration</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\01-Other_SimObjects\StaticObjects.html">StaticObjects</a></li>
+</ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\Checklists\index.html">Checklists</a></li>
+<ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\Checklists\01-Examples.html">Examples</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\Checklists\02-XML_Definition.html">XML Definition</a></li>
+</ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\Instruments\index.html">Instruments</a></li>
+<ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\Instruments\3D_Instruments\index.html">3D Instruments</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\Instruments\C_Gauges\index.html">C Gauges</a></li>
+<ul>
+<li class="heading"><span>Graphics</span></li>
+<ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\Instruments\C_Gauges\Graphics\GDI_Plus.html">GDI Plus</a></li>
+</ul>
+</ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\Instruments\HTML_Gauges\index.html">HTML Gauges</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\Instruments\Panels.html">Panels</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\Instruments\XML_Gauges\index.html">XML Gauges</a></li>
+</ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\Models\index.html">Models</a></li>
+<ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\Models\AnimGraph.html">AnimGraph</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\Models\Levels_of_Detail_(LODs).html">Levels of Detail (LODs)</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\Models\Model_Behaviors\index.html">Model Behaviors</a></li>
+<ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\Models\Model_Behaviors\XML_Definition.html">XML Definition</a></li>
+</ul>
+</ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\Sounds\index.html">Sounds</a></li>
+<ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\Sounds\backwards_compatibility.html">backwards compatibility</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\Sounds\sound_categories.html">sound categories</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\Sounds\xml_definition.html">xml definition</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\Sounds\xml_wavedata.html">xml wavedata</a></li>
+</ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\SimObjects\Textures\index.html">Textures</a></li>
+</ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\UI\index.html">UI</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\Variable_Lists\index.html">Variable Lists</a></li>
+<ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\Variable_Lists\Event_IDs.html">Event IDs</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\Variable_Lists\Misc_Enums.html">Misc Enums</a></li>
+<li class="heading"><a href="..\..\03-Content_Configuration\Variable_Lists\Simulation_Variables.html">Simulation Variables</a></li>
+</ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\Visual_Effects\index.html">Visual Effects</a></li>
+<ul>
+<li class="heading"><a href="..\..\03-Content_Configuration\Visual_Effects\visual_fx_file.html">visual fx file</a></li>
+</ul>
+</ul>
+<li class="heading"><a href="..\index.html">Developer Tools</a></li>
+<ul>
+<li class="heading"><a href="..\00-Developer_Mode\index.html">Developer Mode</a></li>
+<li class="heading"><span>3DS Max Tools</span></li>
+<ul>
+<li class="heading"><a href="..\3DS_Max_Tools\FlightSim_Lights.html">FlightSim Lights</a></li>
+<li class="heading"><a href="..\3DS_Max_Tools\FlightSim_Material.html">FlightSim Material</a></li>
+<li class="heading"><a href="..\3DS_Max_Tools\FlightSim_multiExporter.html">FlightSim multiExporter</a></li>
+<li class="heading"><a href="..\3DS_Max_Tools\FlightSim_versionDifferences.html">FlightSim versionDifferences</a></li>
+<li class="heading"><a href="..\3DS_Max_Tools\glTF_Exporter.html">glTF Exporter</a></li>
+</ul>
+<li class="heading"><a href="..\Aircraft_Editor\index.html">Aircraft Editor</a></li>
+<ul>
+<li class="heading"><a href="..\Aircraft_Editor\Debug_Windows.html">Debug Windows</a></li>
+</ul>
+<li class="heading"><a href="..\Command_Line_Interface.html">Command Line Interface</a></li>
+<li class="heading"><a href="..\Launcher_Tool\index.html">Launcher Tool</a></li>
+<li class="heading"><a href="..\Material_Editor\index.html">Material Editor</a></li>
+<li class="heading"><a href="..\Mission_Editor\index.html">Mission Editor</a></li>
+<li class="heading"><a href="..\Package_Tool\index.html">Package Tool</a></li>
+<ul>
+<li class="heading"><a href="..\Package_Tool\Concepts.html">Concepts</a></li>
+<li class="heading"><a href="..\Package_Tool\XMLReference.html">XMLReference</a></li>
+</ul>
+<li class="heading"><a href="..\Project_editor\index.html">Project editor</a></li>
+<ul>
+<li class="heading"><a href="..\Project_editor\Content_Manager_Data.html">Content Manager Data</a></li>
+<li class="heading"><a href="..\Project_editor\Export_Window.html">Export Window</a></li>
+<li class="heading"><a href="..\Project_editor\Marketplace_Data.html">Marketplace Data</a></li>
+</ul>
+<li class="heading"><a href="..\Scenery_Editor\index.html">Scenery Editor</a></li>
+<li class="heading"><a href=".\index.html">SimConnect</a></li>
+<ul>
+<li class="heading"><a href=".\SimConnect_Reference.html">SimConnect Reference</a></li>
+<li class="heading"><a href=".\SimConnect_Status_of_Functions.html">SimConnect Status of Functions</a></li>
+<li class="heading"><a href=".\SimConnect_Status_of_Input_Events.html">SimConnect Status of Input Events</a></li>
+<li class="heading"><a href=".\SimConnect_Status_of_SimEvents.html">SimConnect Status of SimEvents</a></li>
+<li class="heading"><a href=".\SimConnect_Status_of_Simulation_Variables.html">SimConnect Status of Simulation Variables</a></li>
+<li class="heading"><a href=".\SimConnect_Status_of_System_Events.html">SimConnect Status of System Events</a></li>
+</ul>
+<li class="heading"><a href="..\WebAssembly\index.html">WebAssembly</a></li>
+<ul>
+<li class="heading"><a href="..\WebAssembly\01-Platform_Toolset.html">Platform Toolset</a></li>
+<li class="heading"><a href="..\WebAssembly\02-Gauge_API.html">Gauge API</a></li>
+<li class="heading"><a href="..\WebAssembly\Graphics\index.html">Graphics</a></li>
+<ul>
+<li class="heading"><a href="..\WebAssembly\Graphics\GDI_Plus.html">GDI Plus</a></li>
+<li class="heading"><a href="..\WebAssembly\Graphics\Low_Level_API.html">Low Level API</a></li>
+</ul>
+</ul>
+</ul>
+<li class="heading"><span>Scripting Languages</span></li>
+<ul>
+<li class="heading"><a href="..\..\05-Scripting_Languages\CFG.html">CFG</a></li>
+<li class="heading"><a href="..\..\05-Scripting_Languages\Reverse_Polish_Notation.html">Reverse Polish Notation</a></li>
+</ul>
+</ul>
+    </nav>
+    <article id="main" class="content active">
+      <blockquote>
+      <h1 id="note-this-section-of-the-documentation-is-still-a-work-in-progress"><strong><em>Note</em></strong> This section of the documentation is still a Work in Progress.</h1>
+      </blockquote>
+      <h1 id="status-of-input-events">Status of Input Events</h1>
+      <h2 id="notes">Notes</h2>
+      <ul>
+      <li><strong>“Num_x”</strong> refer to the numpad keys when <em>Num Lock</em> is not active (e.g., <em>“Num_9”</em> maps to <em>VK_PRIOR</em>). For the numeric keys, please use <strong>VK_NUMPADx</strong>.</li>
+      <li>In order to use modifier keys (<em>“Shift”</em>, <em>“Ctrl”</em> and <em>“alt”</em>), it is required to explicitly use their left or right versions.</li>
+      </ul>
+      <h2 id="known-issues">Known issues</h2>
+      <ul>
+      <li>Unsubscribing from an input event and pressing that key during cleanup raises an exception.</li>
+      <li>The client events outlive the SimConnect client session.</li>
+      </ul>
+      <h2 id="status">Status</h2>
+      <table style="width:100%;">
+      <colgroup>
+      <col style="width: 7%">
+      <col style="width: 12%">
+      <col style="width: 3%">
+      <col style="width: 72%">
+      <col style="width: 4%">
+      </colgroup>
+      <thead>
+      <tr class="header">
+      <th>Key Strings (FSX)</th>
+      <th><a href="https://docs.microsoft.com/en-us/windows/win32/inputdev/virtual-key-codes">Virtual Key (Windows)</a></th>
+      <th>Hexadecimal</th>
+      <th>Description</th>
+      <th style="text-align: center;">Status</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="odd">
+      <td>“VK_0x00”</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_LBUTTON”</td>
+      <td>VK_LBUTTON</td>
+      <td>0x01</td>
+      <td>Left mouse button</td>
+      <td style="text-align: center;">Not supported</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_RBUTTON”</td>
+      <td>VK_RBUTTON</td>
+      <td>0x02</td>
+      <td>Right mouse button</td>
+      <td style="text-align: center;">Not supported</td>
+      </tr>
+      <tr class="even">
+      <td>“Scroll_Lock”</td>
+      <td>VK_CANCEL</td>
+      <td>0x03</td>
+      <td>Control-break processing</td>
+      <td style="text-align: center;">Not supported</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_MBUTTON”</td>
+      <td>VK_MBUTTON</td>
+      <td>0x04</td>
+      <td>Middle mouse button (three-button mouse)</td>
+      <td style="text-align: center;">Not supported</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_XBUTTON1”</td>
+      <td>VK_XBUTTON1</td>
+      <td>0x05</td>
+      <td>X1 mouse button</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_XBUTTON2”</td>
+      <td>VK_XBUTTON2</td>
+      <td>0x06</td>
+      <td>X2 mouse button</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_0x07”</td>
+      <td>-</td>
+      <td>0x07</td>
+      <td>Undefined</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“Backspace”</td>
+      <td>VK_BACK</td>
+      <td>0x08</td>
+      <td>BACKSPACE key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“Tab”</td>
+      <td>VK_TAB</td>
+      <td>0x09</td>
+      <td>TAB key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_0x0A”</td>
+      <td>-</td>
+      <td>0x0A</td>
+      <td>Reserved</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_0x0B”</td>
+      <td>-</td>
+      <td>0x0B</td>
+      <td>Reserved</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“Num_5”</td>
+      <td>VK_CLEAR</td>
+      <td>0x0C</td>
+      <td>CLEAR key. <em>For the numpad numeric value, use</em> <strong>VK_NUMPAD5</strong></td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“Enter”</td>
+      <td>VK_RETURN</td>
+      <td>0x0D</td>
+      <td>ENTER key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_0x0E”</td>
+      <td>-</td>
+      <td>0x0E</td>
+      <td>Undefined</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_0x0F”</td>
+      <td>-</td>
+      <td>0x0F</td>
+      <td>Undefined</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“Shift”</td>
+      <td>VK_SHIFT</td>
+      <td>0x10</td>
+      <td>SHIFT key. Please use <strong><em>VK_LSHIFT</em></strong> (0xA0) and <strong><em>VK_RSHIFT</em></strong> (0xA1) instead.</td>
+      <td style="text-align: center;">Not supported</td>
+      </tr>
+      <tr class="even">
+      <td>“Ctrl”</td>
+      <td>VK_CONTROL</td>
+      <td>0x11</td>
+      <td>CTRL key. Please use <strong><em>VK_LCONTROL</em></strong> (0xA2) and <strong><em>VK_RCONTROL</em></strong> (0xA3) instead.</td>
+      <td style="text-align: center;">Not supported</td>
+      </tr>
+      <tr class="odd">
+      <td>“Alt”</td>
+      <td>VK_MENU</td>
+      <td>0x12</td>
+      <td>ALT key . Please use <strong><em>VK_LMENU</em></strong> (0xA4) and <strong><em>VK_RMENU</em></strong> (0xA5) instead.</td>
+      <td style="text-align: center;">Not supported</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_PAUSE”</td>
+      <td>VK_PAUSE</td>
+      <td>0x13</td>
+      <td>PAUSE key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“Caps_Lock”</td>
+      <td>VK_CAPITAL</td>
+      <td>0x14</td>
+      <td>CAPS LOCK key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_KANA”</td>
+      <td>VK_KANA</td>
+      <td>0x15</td>
+      <td>IME Kana mode</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td></td>
+      <td>VK_HANGUEL</td>
+      <td>0x15</td>
+      <td>IME Hanguel mode (maintained for compatibility; use VK_HANGUL)</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td></td>
+      <td>VK_HANGUL</td>
+      <td>0x15</td>
+      <td>IME Hangul mode</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_0x16”</td>
+      <td>VK_IME_ON</td>
+      <td>0x16</td>
+      <td>IME On</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_JUNJA”</td>
+      <td>VK_JUNJA</td>
+      <td>0x17</td>
+      <td>IME Junja mode</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_FINAL”</td>
+      <td>VK_FINAL</td>
+      <td>0x18</td>
+      <td>IME final mode</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_KANJI”</td>
+      <td>VK_HANJA</td>
+      <td>0x19</td>
+      <td>IME Hanja mode</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td></td>
+      <td>VK_KANJI</td>
+      <td>0x19</td>
+      <td>IME Kanji mode</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_0x1A”</td>
+      <td>VK_IME_OFF</td>
+      <td>0x1A</td>
+      <td>IME Off</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“Esc”</td>
+      <td>VK_ESCAPE</td>
+      <td>0x1B</td>
+      <td>ESC key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_CONVERT”</td>
+      <td>VK_CONVERT</td>
+      <td>0x1C</td>
+      <td>IME convert</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_NONCONVERT”</td>
+      <td>VK_NONCONVERT</td>
+      <td>0x1D</td>
+      <td>IME nonconvert</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_ACCEPT”</td>
+      <td>VK_ACCEPT</td>
+      <td>0x1E</td>
+      <td>IME accept</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_MODECHANGE”</td>
+      <td>VK_MODECHANGE</td>
+      <td>0x1F</td>
+      <td>IME mode change request</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“Space”</td>
+      <td>VK_SPACE</td>
+      <td>0x20</td>
+      <td>SPACEBAR</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“Num_9”</td>
+      <td>VK_PRIOR</td>
+      <td>0x21</td>
+      <td>PAGE UP key. <em>For the numpad numeric value, use</em> <strong>VK_NUMPAD9</strong></td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“Num_3”</td>
+      <td>VK_NEXT</td>
+      <td>0x22</td>
+      <td>PAGE DOWN key. <em>For the numpad numeric value, use</em> <strong>VK_NUMPAD3</strong></td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“Num_1”</td>
+      <td>VK_END</td>
+      <td>0x23</td>
+      <td>END key. <em>For the numpad numeric value, use</em> <strong>VK_NUMPAD1</strong></td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“Num_7”</td>
+      <td>VK_HOME</td>
+      <td>0x24</td>
+      <td>HOME key. <em>For the numpad numeric value, use</em> <strong>VK_NUMPAD7</strong></td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“Num_4”</td>
+      <td>VK_LEFT</td>
+      <td>0x25</td>
+      <td>LEFT ARROW key. <em>For the numpad numeric value, use</em> <strong>VK_NUMPAD4</strong></td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“Num_8”</td>
+      <td>VK_UP</td>
+      <td>0x26</td>
+      <td>UP ARROW key. <em>For the numpad numeric value, use</em> <strong>VK_NUMPAD8</strong></td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“Num_6”</td>
+      <td>VK_RIGHT</td>
+      <td>0x27</td>
+      <td>RIGHT ARROW key. <em>For the numpad numeric value, use</em> <strong>VK_NUMPAD6</strong></td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“Num_2”</td>
+      <td>VK_DOWN</td>
+      <td>0x28</td>
+      <td>DOWN ARROW key. <em>For the numpad numeric value, use</em> <strong>VK_NUMPAD2</strong></td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_SELECT”</td>
+      <td>VK_SELECT</td>
+      <td>0x29</td>
+      <td>SELECT key</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_PRINT”</td>
+      <td>VK_PRINT</td>
+      <td>0x2A</td>
+      <td>PRINT key</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_EXECUTE”</td>
+      <td>VK_EXECUTE</td>
+      <td>0x2B</td>
+      <td>EXECUTE key</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“Sys_Req”</td>
+      <td>VK_SNAPSHOT</td>
+      <td>0x2C</td>
+      <td>PRINT SCREEN key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“Num_0”</td>
+      <td>VK_INSERT</td>
+      <td>0x2D</td>
+      <td>INS key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“Num_Del”</td>
+      <td>VK_DELETE</td>
+      <td>0x2E</td>
+      <td>DEL key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_HELP”</td>
+      <td>VK_HELP</td>
+      <td>0x2F</td>
+      <td>HELP key</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“0”</td>
+      <td></td>
+      <td>0x30</td>
+      <td>0 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“1”</td>
+      <td></td>
+      <td>0x31</td>
+      <td>1 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“2”</td>
+      <td></td>
+      <td>0x32</td>
+      <td>2 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“3”</td>
+      <td></td>
+      <td>0x33</td>
+      <td>3 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“4”</td>
+      <td></td>
+      <td>0x34</td>
+      <td>4 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“5”</td>
+      <td></td>
+      <td>0x35</td>
+      <td>5 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“6”</td>
+      <td></td>
+      <td>0x36</td>
+      <td>6 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“7”</td>
+      <td></td>
+      <td>0x37</td>
+      <td>7 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“8”</td>
+      <td></td>
+      <td>0x38</td>
+      <td>8 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“9”</td>
+      <td></td>
+      <td>0x39</td>
+      <td>9 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_0x3A”</td>
+      <td>-</td>
+      <td>0x3A</td>
+      <td>Undefined</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_0x3B”</td>
+      <td>-</td>
+      <td>0x3B</td>
+      <td>Undefined</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_0x3C”</td>
+      <td>-</td>
+      <td>0x3C</td>
+      <td>Undefined</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_0x3D”</td>
+      <td>-</td>
+      <td>0x3D</td>
+      <td>Undefined</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_0x3E”</td>
+      <td>-</td>
+      <td>0x3E</td>
+      <td>Undefined</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_0x3F”</td>
+      <td>-</td>
+      <td>0x3F</td>
+      <td>Undefined</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_0x40”</td>
+      <td>-</td>
+      <td>0x40</td>
+      <td>Undefined</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“A”</td>
+      <td></td>
+      <td>0x41</td>
+      <td>A key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“B”</td>
+      <td></td>
+      <td>0x42</td>
+      <td>B key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“C”</td>
+      <td></td>
+      <td>0x43</td>
+      <td>C key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“D”</td>
+      <td></td>
+      <td>0x44</td>
+      <td>D key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“E”</td>
+      <td></td>
+      <td>0x45</td>
+      <td>E key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“F”</td>
+      <td></td>
+      <td>0x46</td>
+      <td>F key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“G”</td>
+      <td></td>
+      <td>0x47</td>
+      <td>G key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“H”</td>
+      <td></td>
+      <td>0x48</td>
+      <td>H key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“I”</td>
+      <td></td>
+      <td>0x49</td>
+      <td>I key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“J”</td>
+      <td></td>
+      <td>0x4A</td>
+      <td>J key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“K”</td>
+      <td></td>
+      <td>0x4B</td>
+      <td>K key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“L”</td>
+      <td></td>
+      <td>0x4C</td>
+      <td>L key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“M”</td>
+      <td></td>
+      <td>0x4D</td>
+      <td>M key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“N”</td>
+      <td></td>
+      <td>0x4E</td>
+      <td>N key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“O”</td>
+      <td></td>
+      <td>0x4F</td>
+      <td>O key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“P”</td>
+      <td></td>
+      <td>0x50</td>
+      <td>P key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“Q”</td>
+      <td></td>
+      <td>0x51</td>
+      <td>Q key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“R”</td>
+      <td></td>
+      <td>0x52</td>
+      <td>R key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“S”</td>
+      <td></td>
+      <td>0x53</td>
+      <td>S key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“T”</td>
+      <td></td>
+      <td>0x54</td>
+      <td>T key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“U”</td>
+      <td></td>
+      <td>0x55</td>
+      <td>U key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“V”</td>
+      <td></td>
+      <td>0x56</td>
+      <td>V key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“W”</td>
+      <td></td>
+      <td>0x57</td>
+      <td>W key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“X”</td>
+      <td></td>
+      <td>0x58</td>
+      <td>X key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“Y”</td>
+      <td></td>
+      <td>0x59</td>
+      <td>Y key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“Z”</td>
+      <td></td>
+      <td>0x5A</td>
+      <td>Z key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_LWIN”</td>
+      <td>VK_LWIN</td>
+      <td>0x5B</td>
+      <td>Left Windows key (Natural keyboard)</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_RWIN”</td>
+      <td>VK_RWIN</td>
+      <td>0x5C</td>
+      <td>Right Windows key (Natural keyboard)</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_APPS”</td>
+      <td>VK_APPS</td>
+      <td>0x5D</td>
+      <td>Applications key (Natural keyboard)</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_0x5E”</td>
+      <td>-</td>
+      <td>0x5E</td>
+      <td>Reserved</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_SLEEP”</td>
+      <td>VK_SLEEP</td>
+      <td>0x5F</td>
+      <td>Computer Sleep key</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_NUMPAD0”</td>
+      <td>VK_NUMPAD0</td>
+      <td>0x60</td>
+      <td>Numeric keypad 0 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_NUMPAD1”</td>
+      <td>VK_NUMPAD1</td>
+      <td>0x61</td>
+      <td>Numeric keypad 1 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_NUMPAD2”</td>
+      <td>VK_NUMPAD2</td>
+      <td>0x62</td>
+      <td>Numeric keypad 2 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_NUMPAD3”</td>
+      <td>VK_NUMPAD3</td>
+      <td>0x63</td>
+      <td>Numeric keypad 3 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_NUMPAD4”</td>
+      <td>VK_NUMPAD4</td>
+      <td>0x64</td>
+      <td>Numeric keypad 4 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_NUMPAD5”</td>
+      <td>VK_NUMPAD5</td>
+      <td>0x65</td>
+      <td>Numeric keypad 5 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_NUMPAD6”</td>
+      <td>VK_NUMPAD6</td>
+      <td>0x66</td>
+      <td>Numeric keypad 6 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_NUMPAD7”</td>
+      <td>VK_NUMPAD7</td>
+      <td>0x67</td>
+      <td>Numeric keypad 7 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_NUMPAD8”</td>
+      <td>VK_NUMPAD8</td>
+      <td>0x68</td>
+      <td>Numeric keypad 8 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_NUMPAD9”</td>
+      <td>VK_NUMPAD9</td>
+      <td>0x69</td>
+      <td>Numeric keypad 9 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_MULTIPLY”</td>
+      <td>VK_MULTIPLY</td>
+      <td>0x6A</td>
+      <td>Multiply key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_ADD”</td>
+      <td>VK_ADD</td>
+      <td>0x6B</td>
+      <td>Add key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_SEPARATOR”</td>
+      <td>VK_SEPARATOR</td>
+      <td>0x6C</td>
+      <td>Separator key (never generated by keyboard)</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_SUBTRACT”</td>
+      <td>VK_SUBTRACT</td>
+      <td>0x6D</td>
+      <td>Subtract key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_DECIMAL”</td>
+      <td>VK_DECIMAL</td>
+      <td>0x6E</td>
+      <td>Decimal key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_DIVIDE”</td>
+      <td>VK_DIVIDE</td>
+      <td>0x6F</td>
+      <td>Divide key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“F1”</td>
+      <td>VK_F1</td>
+      <td>0x70</td>
+      <td>F1 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“F2”</td>
+      <td>VK_F2</td>
+      <td>0x71</td>
+      <td>F2 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“F3”</td>
+      <td>VK_F3</td>
+      <td>0x72</td>
+      <td>F3 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“F4”</td>
+      <td>VK_F4</td>
+      <td>0x73</td>
+      <td>F4 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“F5”</td>
+      <td>VK_F5</td>
+      <td>0x74</td>
+      <td>F5 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“F6”</td>
+      <td>VK_F6</td>
+      <td>0x75</td>
+      <td>F6 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“F7”</td>
+      <td>VK_F7</td>
+      <td>0x76</td>
+      <td>F7 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“F8”</td>
+      <td>VK_F8</td>
+      <td>0x77</td>
+      <td>F8 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“F9”</td>
+      <td>VK_F9</td>
+      <td>0x78</td>
+      <td>F9 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“F10”</td>
+      <td>VK_F10</td>
+      <td>0x79</td>
+      <td>F10 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“F11”</td>
+      <td>VK_F11</td>
+      <td>0x7A</td>
+      <td>F11 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“F12”</td>
+      <td>VK_F12</td>
+      <td>0x7B</td>
+      <td>F12 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“F13”</td>
+      <td>VK_F13</td>
+      <td>0x7C</td>
+      <td>F13 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“F14”</td>
+      <td>VK_F14</td>
+      <td>0x7D</td>
+      <td>F14 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“F15”</td>
+      <td>VK_F15</td>
+      <td>0x7E</td>
+      <td>F15 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“F16”</td>
+      <td>VK_F16</td>
+      <td>0x7F</td>
+      <td>F16 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“F17”</td>
+      <td>VK_F17</td>
+      <td>0x80</td>
+      <td>F17 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“F18”</td>
+      <td>VK_F18</td>
+      <td>0x81</td>
+      <td>F18 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“F19”</td>
+      <td>VK_F19</td>
+      <td>0x82</td>
+      <td>F19 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“F20”</td>
+      <td>VK_F20</td>
+      <td>0x83</td>
+      <td>F20 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“F21”</td>
+      <td>VK_F21</td>
+      <td>0x84</td>
+      <td>F21 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“F22”</td>
+      <td>VK_F22</td>
+      <td>0x85</td>
+      <td>F22 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“F23”</td>
+      <td>VK_F23</td>
+      <td>0x86</td>
+      <td>F23 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“F24”</td>
+      <td>VK_F24</td>
+      <td>0x87</td>
+      <td>F24 key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_0x88”</td>
+      <td>-</td>
+      <td>0x88</td>
+      <td>Unassigned</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_0x89”</td>
+      <td>-</td>
+      <td>0x89</td>
+      <td>Unassigned</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_0x8A”</td>
+      <td>-</td>
+      <td>0x8A</td>
+      <td>Unassigned</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_0x8B”</td>
+      <td>-</td>
+      <td>0x8B</td>
+      <td>Unassigned</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_0x8C”</td>
+      <td>-</td>
+      <td>0x8C</td>
+      <td>Unassigned</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_0x8D”</td>
+      <td>-</td>
+      <td>0x8D</td>
+      <td>Unassigned</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_0x8E”</td>
+      <td>-</td>
+      <td>0x8E</td>
+      <td>Unassigned</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_0x8F”</td>
+      <td>-</td>
+      <td>0x8F</td>
+      <td>Unassigned</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“Pause”</td>
+      <td>VK_NUMLOCK</td>
+      <td>0x90</td>
+      <td>NUM LOCK key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_SCROLL”</td>
+      <td>VK_SCROLL</td>
+      <td>0x91</td>
+      <td>SCROLL LOCK key</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_OEM_FJ_JISHO”</td>
+      <td>-</td>
+      <td>0x92</td>
+      <td>OEM specific</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_OEM_FJ_MASSHOU”</td>
+      <td>-</td>
+      <td>0x93</td>
+      <td>OEM specific</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_OEM_FJ_TOUROKU”</td>
+      <td>-</td>
+      <td>0x94</td>
+      <td>OEM specific</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_OEM_FJ_LOYA”</td>
+      <td>-</td>
+      <td>0x95</td>
+      <td>OEM specific</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_OEM_FJ_ROYA”</td>
+      <td>-</td>
+      <td>0x96</td>
+      <td>OEM specific</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_0x97”</td>
+      <td>-</td>
+      <td>0x97</td>
+      <td>Unassigned</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_0x98”</td>
+      <td>-</td>
+      <td>0x98</td>
+      <td>Unassigned</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_0x99”</td>
+      <td>-</td>
+      <td>0x99</td>
+      <td>Unassigned</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_0x9A”</td>
+      <td>-</td>
+      <td>0x9A</td>
+      <td>Unassigned</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_0x9B”</td>
+      <td>-</td>
+      <td>0x9B</td>
+      <td>Unassigned</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_0x9C”</td>
+      <td>-</td>
+      <td>0x9C</td>
+      <td>Unassigned</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_0x9D”</td>
+      <td>-</td>
+      <td>0x9D</td>
+      <td>Unassigned</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_0x9E”</td>
+      <td>-</td>
+      <td>0x9E</td>
+      <td>Unassigned</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_0x9F”</td>
+      <td>-</td>
+      <td>0x9F</td>
+      <td>Unassigned</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_LSHIFT”</td>
+      <td>VK_LSHIFT</td>
+      <td>0xA0</td>
+      <td>Left SHIFT key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_RSHIFT”</td>
+      <td>VK_RSHIFT</td>
+      <td>0xA1</td>
+      <td>Right SHIFT key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_LCONTROL”</td>
+      <td>VK_LCONTROL</td>
+      <td>0xA2</td>
+      <td>Left CONTROL key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_RCONTROL”</td>
+      <td>VK_RCONTROL</td>
+      <td>0xA3</td>
+      <td>Right CONTROL key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_LMENU”</td>
+      <td>VK_LMENU</td>
+      <td>0xA4</td>
+      <td>Left MENU key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_RMENU”</td>
+      <td>VK_RMENU</td>
+      <td>0xA5</td>
+      <td>Right MENU key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_BROWSER_BACK”</td>
+      <td>VK_BROWSER_BACK</td>
+      <td>0xA6</td>
+      <td>Browser Back key</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_BROWSER_FORWARD”</td>
+      <td>VK_BROWSER_FORWARD</td>
+      <td>0xA7</td>
+      <td>Browser Forward key</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_BROWSER_REFRESH”</td>
+      <td>VK_BROWSER_REFRESH</td>
+      <td>0xA8</td>
+      <td>Browser Refresh key</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_BROWSER_STOP”</td>
+      <td>VK_BROWSER_STOP</td>
+      <td>0xA9</td>
+      <td>Browser Stop key</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_BROWSER_SEARCH”</td>
+      <td>VK_BROWSER_SEARCH</td>
+      <td>0xAA</td>
+      <td>Browser Search key</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_BROWSER_FAVORITES”</td>
+      <td>VK_BROWSER_FAVORITES</td>
+      <td>0xAB</td>
+      <td>Browser Favorites key</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_BROWSER_HOME”</td>
+      <td>VK_BROWSER_HOME</td>
+      <td>0xAC</td>
+      <td>Browser Start and Home key</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_VOLUME_MUTE”</td>
+      <td>VK_VOLUME_MUTE</td>
+      <td>0xAD</td>
+      <td>Volume Mute key</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_VOLUME_DOWN”</td>
+      <td>VK_VOLUME_DOWN</td>
+      <td>0xAE</td>
+      <td>Volume Down key</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_VOLUME_UP”</td>
+      <td>VK_VOLUME_UP</td>
+      <td>0xAF</td>
+      <td>Volume Up key</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_MEDIA_NEXT_TRACK”</td>
+      <td>VK_MEDIA_NEXT_TRACK</td>
+      <td>0xB0</td>
+      <td>Next Track key</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_MEDIA_PREV_TRACK”</td>
+      <td>VK_MEDIA_PREV_TRACK</td>
+      <td>0xB1</td>
+      <td>Previous Track key</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_MEDIA_STOP”</td>
+      <td>VK_MEDIA_STOP</td>
+      <td>0xB2</td>
+      <td>Stop Media key</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_MEDIA_PLAY_PAUSE”</td>
+      <td>VK_MEDIA_PLAY_PAUSE</td>
+      <td>0xB3</td>
+      <td>Play/Pause Media key</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_LAUNCH_MAIL”</td>
+      <td>VK_LAUNCH_MAIL</td>
+      <td>0xB4</td>
+      <td>Start Mail key</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_LAUNCH_MEDIA_SELECT”</td>
+      <td>VK_LAUNCH_MEDIA_SELECT</td>
+      <td>0xB5</td>
+      <td>Select Media key</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_LAUNCH_APP1”</td>
+      <td>VK_LAUNCH_APP1</td>
+      <td>0xB6</td>
+      <td>Start Application 1 key</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_LAUNCH_APP2”</td>
+      <td>VK_LAUNCH_APP2</td>
+      <td>0xB7</td>
+      <td>Start Application 2 key</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_0xB8”</td>
+      <td>-</td>
+      <td>0xB8</td>
+      <td>Reserved</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_0xB9”</td>
+      <td>-</td>
+      <td>0xB9</td>
+      <td>Reserved</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_SEMICOLON”</td>
+      <td>VK_OEM_1</td>
+      <td>0xBA</td>
+      <td>Used for miscellaneous characters; it can vary by keyboard. For the US standard keyboard, the ‘;:’ key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_PLUS”</td>
+      <td>VK_OEM_PLUS</td>
+      <td>0xBB</td>
+      <td>For any country/region, the ‘+’ key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_COMMA”</td>
+      <td>VK_OEM_COMMA</td>
+      <td>0xBC</td>
+      <td>For any country/region, the ‘,’ key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_MINUS”</td>
+      <td>VK_OEM_MINUS</td>
+      <td>0xBD</td>
+      <td>For any country/region, the ‘-’ key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_PERIOD”</td>
+      <td>VK_OEM_PERIOD</td>
+      <td>0xBE</td>
+      <td>For any country/region, the ‘.’ key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_SLASH”</td>
+      <td>VK_OEM_2</td>
+      <td>0xBF</td>
+      <td>Used for miscellaneous characters; it can vary by keyboard. For the US standard keyboard, the ‘/?’ key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_TILDE”</td>
+      <td>VK_OEM_3</td>
+      <td>0xC0</td>
+      <td>Used for miscellaneous characters; it can vary by keyboard. For the US standard keyboard, the ‘`~’ key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_0xC1”</td>
+      <td>-</td>
+      <td>0xC1</td>
+      <td>Reserved</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_0xC2”</td>
+      <td>-</td>
+      <td>0xC2</td>
+      <td>Reserved</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_0xC3”</td>
+      <td>-</td>
+      <td>0xC3</td>
+      <td>Reserved</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_0xC4”</td>
+      <td>-</td>
+      <td>0xC4</td>
+      <td>Reserved</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_0xC5”</td>
+      <td>-</td>
+      <td>0xC5</td>
+      <td>Reserved</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_0xC6”</td>
+      <td>-</td>
+      <td>0xC6</td>
+      <td>Reserved</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_0xC7”</td>
+      <td>-</td>
+      <td>0xC7</td>
+      <td>Reserved</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_0xC8”</td>
+      <td>-</td>
+      <td>0xC8</td>
+      <td>Reserved</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_0xC9”</td>
+      <td>-</td>
+      <td>0xC9</td>
+      <td>Reserved</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_0xCA”</td>
+      <td>-</td>
+      <td>0xC10</td>
+      <td>Reserved</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_0xCB”</td>
+      <td>-</td>
+      <td>0xC11</td>
+      <td>Reserved</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_0xCC”</td>
+      <td>-</td>
+      <td>0xC12</td>
+      <td>Reserved</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_0xCD”</td>
+      <td>-</td>
+      <td>0xC13</td>
+      <td>Reserved</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_0xCE”</td>
+      <td>-</td>
+      <td>0xC14</td>
+      <td>Reserved</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_0xCF”</td>
+      <td>-</td>
+      <td>0xC15</td>
+      <td>Reserved</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_0xD0”</td>
+      <td>-</td>
+      <td>0xD0</td>
+      <td>Reserved</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_0xD1”</td>
+      <td>-</td>
+      <td>0xD1</td>
+      <td>Reserved</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_0xD2”</td>
+      <td>-</td>
+      <td>0xD2</td>
+      <td>Reserved</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_0xD3”</td>
+      <td>-</td>
+      <td>0xD3</td>
+      <td>Reserved</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_0xD4”</td>
+      <td>-</td>
+      <td>0xD4</td>
+      <td>Reserved</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_0xD5”</td>
+      <td>-</td>
+      <td>0xD5</td>
+      <td>Reserved</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_0xD6”</td>
+      <td>-</td>
+      <td>0xD6</td>
+      <td>Reserved</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_0xD7”</td>
+      <td>-</td>
+      <td>0xD7</td>
+      <td>Reserved</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_0xD8”</td>
+      <td>-</td>
+      <td>0xD8</td>
+      <td>Unassigned</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_0xD9”</td>
+      <td>-</td>
+      <td>0xD9</td>
+      <td>Unassigned</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_0xDA”</td>
+      <td>-</td>
+      <td>0xDA</td>
+      <td>Unassigned</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_LBRACKET”</td>
+      <td>VK_OEM_4</td>
+      <td>0xDB</td>
+      <td>Used for miscellaneous characters; it can vary by keyboard. For the US standard keyboard, the ‘[{’ key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_BACKSLASH”</td>
+      <td>VK_OEM_5</td>
+      <td>0xDC</td>
+      <td>Used for miscellaneous characters; it can vary by keyboard. For the US standard keyboard, the ‘|’ key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_RBRACKET”</td>
+      <td>VK_OEM_6</td>
+      <td>0xDD</td>
+      <td>Used for miscellaneous characters; it can vary by keyboard. For the US standard keyboard, the ‘]}’ key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_QUOTE”</td>
+      <td>VK_OEM_7</td>
+      <td>0xDE</td>
+      <td>Used for miscellaneous characters; it can vary by keyboard. For the US standard keyboard, the ‘single-quote/double-quote’ key</td>
+      <td style="text-align: center;">OK</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_0xDF”</td>
+      <td>VK_OEM_8</td>
+      <td>0xDF</td>
+      <td>Used for miscellaneous characters; it can vary by keyboard.</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_0xE0”</td>
+      <td>-</td>
+      <td>0xE0</td>
+      <td>Reserved</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_OEM_AX”</td>
+      <td></td>
+      <td>0xE1</td>
+      <td>OEM specific</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_OEM_102”</td>
+      <td>VK_OEM_102</td>
+      <td>0xE2</td>
+      <td>Either the angle bracket key or the backslash key on the RT 102-key keyboard</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_ICO_HELP”</td>
+      <td></td>
+      <td>0xE3-E4</td>
+      <td>OEM specific</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_ICO_00”</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_PROCESSKEY”</td>
+      <td>VK_PROCESSKEY</td>
+      <td>0xE5</td>
+      <td>IME PROCESS key</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_ICO_CLEAR”</td>
+      <td></td>
+      <td>0xE6</td>
+      <td>OEM specific</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_PACKET”</td>
+      <td>VK_PACKET</td>
+      <td>0xE7</td>
+      <td>Used to pass Unicode characters as if they were keystrokes. The VK_PACKET key is the low word of a 32-bit Virtual Key value used for non-keyboard input methods. For more information, see Remark in KEYBDINPUT, SendInput, WM_KEYDOWN, and WM_KEYUP</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_0xE8”</td>
+      <td>-</td>
+      <td>0xE8</td>
+      <td>Unassigned</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_OEM_RESET”</td>
+      <td>-</td>
+      <td>0xE9</td>
+      <td>OEM specific</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_OEM_JUMP”</td>
+      <td>-</td>
+      <td>0xEA</td>
+      <td>OEM specific</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_OEM_PA1”</td>
+      <td>-</td>
+      <td>0xEB</td>
+      <td>OEM specific</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_OEM_PA2”</td>
+      <td>-</td>
+      <td>0xEC</td>
+      <td>OEM specific</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_OEM_PA3”</td>
+      <td>-</td>
+      <td>0xED</td>
+      <td>OEM specific</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_OEM_WSCTRL”</td>
+      <td>-</td>
+      <td>0xEE</td>
+      <td>OEM specific</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_OEM_CUSEL”</td>
+      <td>-</td>
+      <td>0xEF</td>
+      <td>OEM specific</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_OEM_ATTN”</td>
+      <td>-</td>
+      <td>0xF0</td>
+      <td>OEM specific</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_OEM_FINISH”</td>
+      <td>-</td>
+      <td>0xF1</td>
+      <td>OEM specific</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_OEM_COPY”</td>
+      <td>-</td>
+      <td>0xF2</td>
+      <td>OEM specific</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_OEM_AUTO”</td>
+      <td>-</td>
+      <td>0xF3</td>
+      <td>OEM specific</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_OEM_ENLW”</td>
+      <td>-</td>
+      <td>0xF4</td>
+      <td>OEM specific</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_OEM_BACKTAB”</td>
+      <td>-</td>
+      <td>0xF5</td>
+      <td>OEM specific</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_ATTN”</td>
+      <td>VK_ATTN</td>
+      <td>0xF6</td>
+      <td>Attn key</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_CRSEL”</td>
+      <td>VK_CRSEL</td>
+      <td>0xF7</td>
+      <td>CrSel key</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_EXSEL”</td>
+      <td>VK_EXSEL</td>
+      <td>0xF8</td>
+      <td>ExSel key</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_EREOF”</td>
+      <td>VK_EREOF</td>
+      <td>0xF9</td>
+      <td>Erase EOF key</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_PLAY”</td>
+      <td>VK_PLAY</td>
+      <td>0xFA</td>
+      <td>Play key</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_ZOOM”</td>
+      <td>VK_ZOOM</td>
+      <td>0xFB</td>
+      <td>Zoom key</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_NONAME”</td>
+      <td>VK_NONAME</td>
+      <td>0xFC</td>
+      <td>Reserved</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_PA1”</td>
+      <td>VK_PA1</td>
+      <td>0xFD</td>
+      <td>PA1 key</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="even">
+      <td>“VK_OEM_CLEAR”</td>
+      <td>VK_OEM_CLEAR</td>
+      <td>0xFE</td>
+      <td>Clear key</td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      <tr class="odd">
+      <td>“VK_0xFF”</td>
+      <td></td>
+      <td>0xFF</td>
+      <td></td>
+      <td style="text-align: center;">Not tested</td>
+      </tr>
+      </tbody>
+      </table>
+    </article>
+  </div>
+  <script>
+	function detectIE() {
+	  var ua = window.navigator.userAgent;
+
+	  // Test values; Uncomment to check result …
+
+	  // IE 10
+	  // ua = 'Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0)';
+
+	  // IE 11
+	  // ua = 'Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko';
+
+	  // Edge 12 (Spartan)
+	  // ua = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.71 Safari/537.36 Edge/12.0';
+
+	  // Edge 13
+	  // ua = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Safari/537.36 Edge/13.10586';
+
+	  var msie = ua.indexOf('MSIE ');
+	  if (msie > 0) {
+		// IE 10 or older => return version number
+		return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+	  }
+
+	  var trident = ua.indexOf('Trident/');
+	  if (trident > 0) {
+		// IE 11 => return version number
+		var rv = ua.indexOf('rv:');
+		return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+	  }
+
+	  var edge = ua.indexOf('Edge/');
+	  if (edge > 0) {
+		// Edge (IE 12+) => return version number
+		return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+	  }
+
+	  // other browser
+	  return false;
+	}
+
+	var bIsIE = (detectIE() !== false);
+
+	function setData(name, value)
+	{
+		if (bIsIE)
+		{
+			if (localStorage !== undefined)
+			{
+				if (value === null)
+					localStorage.removeItem(name);
+				else
+					localStorage.setItem(name, value);
+			}
+			/*var d = new Date();
+			d.setTime(d.getTime() + (24*60*60));
+			var expires = "expires="+ d.toUTCString();
+			document.cookie = name + "=" + value + ";" + expires + ";path=/";
+			*/
+		}
+		else
+		{
+			if (value === null)
+				sessionStorage.removeItem(name);
+			else
+				sessionStorage.setItem(name, value);
+		}
+	}
+	
+	function getData(name)
+	{
+		var value = null;
+		if (bIsIE)
+		{
+			/*var cname = name + "=";
+			var decodedCookie = decodeURIComponent(document.cookie);
+			var ca = decodedCookie.split(';');
+			for(var i = 0; i <ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) == ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(cname) == 0) {
+					return c.substring(cname.length, c.length);
+				}
+			}
+			return null;*/
+			if (localStorage !== undefined)
+			{
+				value = localStorage.getItem(name);
+			}
+			if (value === 'undefined')
+				value = null;
+		}
+		else
+		{
+			value = sessionStorage.getItem(name);
+			if (value === 'undefined')
+				value = null;
+		}
+		return value;
+	}
+	
+    // FROM http://purecss.io/js/ui.js
+    (function (window, document) {
+
+	
+      var content = document.getElementById('main'),
+		layout = document.getElementById('layout'),
+        menu = document.getElementById('menu'),
+        menuLink = document.getElementById('menuLink');
+		
+      function toggleClass(element, className) {
+        var classes = element.className.split(/\s+/),
+          length = classes.length,
+          i = 0;
+
+        for (; i < length; i++) {
+          if (classes[i] === className) {
+            classes.splice(i, 1);
+            break;
+          }
+        }
+        // The className is not found
+        if (length === classes.length) {
+          classes.push(className);
+        }
+
+        element.className = classes.join(' ');
+      }
+
+      function hasClass(element, className) {
+        var classes = element.className.split(/\s+/),
+          length = classes.length,
+          i = 0;
+
+        for (; i < length; i++) {
+          if (classes[i] === className) {
+            return true;
+          }
+        }
+		return false;
+      }
+
+      menuLink.onclick = function (e) {
+        var active = 'active';
+
+        e.preventDefault();
+		toggleClass(content, active);
+        toggleClass(layout, active);
+        toggleClass(menu, active);
+        toggleClass(menuLink, active);
+      };
+	  
+	  // Save menu scroll level when user click on link
+	  var a_links = document.getElementsByTagName('a');
+	  for (var i = 0 ; i < a_links.length ; i++) {
+	    var link = a_links[i];
+		if(menu.contains(link)) {
+			link.onclick = function () {
+				try {
+					setData('navScroll', link.offsetTop - link.getBoundingClientRect().top);
+					var root = menu.getElementsByTagName('ul')[0];
+					var li_elems = root.getElementsByTagName('li');
+					for (var i = 0; i<li_elems.length; i++)
+					{
+						if (!hasClass(li_elems[i],'collapsed'))
+							setData('liexp' + i, true);
+						else
+							setData('liexp' + i);
+					}
+					setData('liexp', true);
+				}
+				catch (error) {
+					console.error(error);
+				}
+				return true;
+			};
+		}
+	  };
+	  
+		var root = menu.getElementsByTagName('ul')[0];
+		// Remove empty ul
+		var ul_elems = root.getElementsByTagName('ul');
+		for (var i = ul_elems.length-1; i>=0; i--)
+		{
+			if (ul_elems[i].childElementCount == 0)
+			{
+				ul_elems[i].parentNode.removeChild(ul_elems[i]);
+			}
+		}
+		// Restore side menu state
+		var saved_state = (getData('liexp')!== null);
+		var li_elems = root.getElementsByTagName('li');
+		for (var i = 0; i<li_elems.length; i++)
+		{
+			var l = li_elems[i];
+			if (hasClass(l,'heading'))
+				toggleClass(l,'heading');
+			if ((l.nextElementSibling) && (l.nextElementSibling.nodeName=="UL"))
+			{
+				toggleClass(l,'collapsible');
+				var collapser = document.createElement('span');
+				var inserted = l.insertBefore(collapser, l.firstChild);
+				toggleClass(inserted,'collapser');
+				var inserted = l.insertBefore(collapser, l.firstChild);
+				inserted.addEventListener('click', function() { toggleClass(this.parentNode, 'collapsed') });
+				if (saved_state)
+				{
+					if (getData('liexp' + i) === null)
+					{
+						toggleClass(l,'collapsed');
+					}
+				}
+				else
+				{
+					if (l.parentNode != root)
+					{
+						toggleClass(l,'collapsed');
+					}
+				}
+			}
+		}
+		// Restore menu scroll level if defined
+		if(getData('navScroll') != null)
+			document.getElementById('menu').scrollTop = getData('navScroll');
+
+   }(this, this.document));
+  </script>
+
+
+</body></html>
