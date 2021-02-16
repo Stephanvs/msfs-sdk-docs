@@ -721,7 +721,10 @@
       <li><a href="#launching-the-tool">Launching the tool</a></li>
       <li><a href="#camera">Camera</a></li>
       <li><a href="#loading">Loading</a></li>
-      <li><a href="#scenery-objects">Scenery objects</a></li>
+      <li><a href="#scenery-objects">Scenery objects</a>
+      <ul>
+      <li><a href="#scenery-groups">Scenery Groups</a></li>
+      </ul></li>
       <li><a href="#polygons">Polygons</a>
       <ul>
       <li><a href="#water-polygons">Water Polygons</a></li>
@@ -737,6 +740,15 @@
       <li><a href="#taxiway-signs">Taxiway signs</a></li>
       <li><a href="#jetways">Jetways</a></li>
       <li><a href="#projected-meshes">Projected meshes</a></li>
+      <li><a href="#airport-groups">Airport Groups</a></li>
+      </ul></li>
+      <li><a href="#airport-hierarchy-system">Airport hierarchy system</a>
+      <ul>
+      <li><a href="#reordering-airport-components">Reordering airport components</a></li>
+      <li><a href="#renaming-objects">Renaming objects</a></li>
+      <li><a href="#sorting-options">Sorting Options</a></li>
+      <li><a href="#showhide-and-lockunlock-buttons">Show/Hide and Lock/Unlock buttons</a></li>
+      <li><a href="#edition-line">Edition Line</a></li>
       </ul></li>
       </ul>
       <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -783,6 +795,13 @@
       <li>The One-click placing mode allows to place the same object several times on the ground by left-clicking. Hold <code>Ctrl</code> key and move the mouse to choose the desired rotation. Hold <code>Shift</code> to control the scale.</li>
       </ol></li>
       </ul>
+      <h3 id="scenery-groups">Scenery Groups</h3>
+      <p>Scenery objects can be groupped together using the <code>Group With...</code> button, this will open the following popup.</p>
+      <figure>
+      <img src="images/hierarchy/scenery_groups_popup.png" alt=""><figcaption>Scenery groups popup</figcaption>
+      </figure>
+      <p>From this you can either create a new group with all the selected scenery objects, orr move them to an already existing group.</p>
+      <p>Groups can then be moved/rotated/scaled/duplicated/etc.</p>
       <h2 id="polygons">Polygons</h2>
       <figure>
       <img src="images/polygon_ui1.png" alt=""><figcaption>Scenery polygon UI</figcaption>
@@ -833,6 +852,7 @@
       <li>Towers</li>
       <li>Windsocks</li>
       <li>Projected meshes</li>
+      <li>Airport Groups</li>
       </ul>
       <p>After selecting them, they can be moved and rotated with a gizmo. Other parameters like surface type, width, or markings need to be edited in the property box.</p>
       <h3 id="runways">Runways</h3>
@@ -916,6 +936,56 @@
       <blockquote>
       <p>Only materials that contain these texture combinations can be used: * albedo * albedo + metal roughness AO * albedo + normal map * albedo + normal map + metal roughness AO <!-- * albedo + normal roughness metal --> <strong>Note:</strong> When they are present, metal and AO components are not used.</p>
       </blockquote>
+      <h3 id="airport-groups">Airport Groups</h3>
+      <p>Groups that can contain other airport components, including another airport group (cannot group jetways as they need to be child of a parking). This is not to be confused with Scenery Groups which are only for scenery objects.</p>
+      <p>Group airports components together by selecting them and click on the <code>Group With...</code> button at the bottom of the list or in the right-click menu. This will open the following popup.</p>
+      <figure>
+      <img src="images/hierarchy/airport_groups_popup.png" alt=""><figcaption>Airport Groups popup</figcaption>
+      </figure>
+      <ol type="1">
+      <li>Creates a new group with the given name and inside the <code>Target Group</code>.<br>
+      </li>
+      <li>Moves the selected components to the <code>Target Group</code>.<br>
+      </li>
+      <li>Filtering options to help you find a specific target group. When the checkbox is checked, only the groups that are contained in the same parent group than the selected components will be shown.</li>
+      </ol>
+      <h2 id="airport-hierarchy-system">Airport hierarchy system</h2>
+      <p>This system was implemented to make the Scenery Editor more flexible and closer to a real editor. Allowing to make their own airport hierarchy should improove the workflow as one can regroup items by location and rename them with explicit names instead of having a huge list of “Apron”, “TawixayPath”, etc. This should make it easier to find a specific item in the list, as well as working on a particular region of the airport as we can lock/hide all of the other items much more easily.</p>
+      <h3 id="reordering-airport-components">Reordering airport components</h3>
+      <figure>
+      <img src="images/hierarchy/moving_arrows.png" alt=""><figcaption>Arrow buttons</figcaption>
+      </figure>
+      <p>Airport components can also be reordered using the <code>Arrow buttons</code> at the bottom of the list, or directly in the right-click menu with <code>Move To -&gt; Top/Bottom of the group</code>. Moving several objects at once is only possible if they all are from the same parent group.</p>
+      <h3 id="renaming-objects">Renaming objects</h3>
+      <figure>
+      <img src="images/hierarchy/rename_button.png" alt=""><figcaption>Rename button</figcaption>
+      </figure>
+      <p>All objects (not just airport components) can be renamed using the <code>Rename</code> button, or directly from the <code>Properties</code> window.</p>
+      <h3 id="sorting-options">Sorting Options</h3>
+      <figure>
+      <img src="images/hierarchy/sorting.png" alt=""><figcaption>Sorting Options</figcaption>
+      </figure>
+      <p>Airports Components can be sorted by <code>Custom</code>, by <code>Type</code> or by <code>Alphabetical</code> order using the dropdown list at the top.</p>
+      <p>Airport components can be reordered <strong>ONLY IN <code>CUSTOM</code> MODE</strong>. When sorting in <code>Type</code> or <code>Alphabetical</code> order, the hierarchy can be saved as custom to then be able to edit the order.<br>
+      While sorting by <code>Type</code> you can also hit the <code>Create Hierarchy</code> button that will erase your current hierarchy (groups and order) and group the objects by type (one group with all <code>Aprons</code>, one group with all <code>Runways</code>, etc).</p>
+      <p>While in <code>Custom</code> mode, you can directly sort one Airport group or Airport using the <code>Sort by</code> option in the right-click menu.</p>
+      <figure>
+      <img src="images/hierarchy/sort_by_menu.png" alt=""><figcaption>Sort by menu</figcaption>
+      </figure>
+      <h3 id="showhide-and-lockunlock-buttons">Show/Hide and Lock/Unlock buttons</h3>
+      <figure>
+      <img src="images/hierarchy/hide_lock_buttons.png" alt=""><figcaption>Hide and Lock buttons</figcaption>
+      </figure>
+      <p>In front of each line there are 2 buttons.<br>
+      _ The first one is to <strong>Hide</strong> the object (the object will not be rendered anymore)<br>
+      _ The second one is to <strong>Lock</strong> it (the object cannot be edited/moved anymore).</p>
+      <p>When an item is hidden, it is also locked by default so you can’t select it or move it by accident when it is invisible.</p>
+      <p>Hiding/Showing and Locking/Unlocking a group will apply the same effect to all of its components.</p>
+      <h3 id="edition-line">Edition Line</h3>
+      <figure>
+      <img src="images/hierarchy/edition_lines_menu.png" alt=""><figcaption>Hiding Edition Lines</figcaption>
+      </figure>
+      <p>This menu is used to hide/show all edition lines of a specific type.</p>
     </article>
   </div>
   <script>

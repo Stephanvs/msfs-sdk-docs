@@ -722,6 +722,7 @@
       <ul>
       <li><a href="#release-notes">Release notes</a>
       <ul>
+      <li><a href="#sdk-release-0100">SDK release 0.10.0</a></li>
       <li><a href="#sdk-release-090">SDK release 0.9.0</a></li>
       <li><a href="#sdk-release-080">SDK release 0.8.0</a></li>
       <li><a href="#sdk-release-071">SDK release 0.7.1</a></li>
@@ -746,8 +747,56 @@
       </ul>
       <!-- END doctoc generated TOC please keep comment here to allow auto update -->
       <h2 id="release-notes">Release notes</h2>
-      <h3 id="sdk-release-090">SDK release 0.9.0</h3>
+      <h3 id="sdk-release-0100">SDK release 0.10.0</h3>
       <h4 id="sdk-changes">SDK changes</h4>
+      <ul>
+      <li>Samples:
+      <ul>
+      <li>Updated <a href="01-Getting_Started/Samples/SimpleBiomes/index.html">SimpleBiomes sample and documentation</a>.</li>
+      </ul></li>
+      <li>WASM:
+      <ul>
+      <li>Security vulnerabilities in the WASI layer have been reported and fixed.</li>
+      </ul></li>
+      </ul>
+      <h4 id="developer-mode-changes">Developer mode changes</h4>
+      <ul>
+      <li>Scenery Editor:
+      <ul>
+      <li>New airport light system.</li>
+      <li>Added a button in the airport properties to generate taxiway signs.</li>
+      <li>Improved heightmap edition.</li>
+      <li>Improved performance of Scenery Editor, especially while using Alphabetical sorting.</li>
+      <li>Fixed Moving/rotating/scaling of Scenery groups and Airports groups (undo now works).</li>
+      <li>Don’t lock runway profile extremity.</li>
+      <li>Fixed taxiway sign size (wasn’t correctly serialized in BGL).</li>
+      <li>Fixed freeze during saving.</li>
+      <li>Fixed projected mesh so they can be moved/rotated and scaled again.</li>
+      <li>Fixed Scenery groups so you can undo after moving/rotating/scaling them.</li>
+      <li>Fixed “Split Path” in the right-click menu of TaxiwayPoint (viewport and list were not updated properly).</li>
+      <li>Fixed children of Jetways can now be moved again.</li>
+      <li>Fixed renaming Landmark Location now keeps the “Landmark City/Fauna/POI” prefix. This avoids some BGL issues.</li>
+      <li>New Hierarchy System: Users can now create their own hierarchy for each airport thanks to several new features:
+      <ul>
+      <li><strong>Airport Groups</strong>: Group several airports components together into one group that can be moved/rotated/scaled/duplicated/etc. Groups can contain other groups. (NB: works only for airport components, not for other objects. Scenery object can already be grouped together using Scenery groups).<br>
+      </li>
+      <li><strong>Reorder items</strong>: Airport components can be reordered inside their hierarchy.<br>
+      </li>
+      <li><strong>Rename</strong>: All objects (not just airport components) can be given a display name and thus be renamed in the Scene list.</li>
+      <li>Added a <code>Create Hierarchy</code> Button next to <code>Save As Custom</code> while sorting by <code>Type</code> to create a default hierarchy like the old one whith one group for each Type of object.</li>
+      <li><strong>In order to use the new hierarchy system, all items should be named to avoid any misbehavior.</strong></li>
+      </ul>
+      See <a href="04-Developer_Tools/Scenery_Editor/index.html">Scenery Editor documentation</a> for more information on how to use these new features.</li>
+      </ul></li>
+      <li>Other fixes:
+      <ul>
+      <li>Mouse hover events are no longer sent to the sim UI while using DevMode windows.</li>
+      <li>Fixed a bug which caused the starter torque to increase exponentially when the piston’s power_scalar was &gt;1 without combustion. This may affect the speed at which planes with a power_scalar above or below 1 gain torque with the starter, and consequently the time it takes to get a combustion.</li>
+      <li>Fixed approach light saving (an approach light system is no more needed to have REIL, touchdown or end lights).</li>
+      </ul></li>
+      </ul>
+      <h3 id="sdk-release-090">SDK release 0.9.0</h3>
+      <h4 id="sdk-changes-1">SDK changes</h4>
       <ul>
       <li>Audio:
       <ul>
@@ -776,7 +825,7 @@
       <li>Update of <code>[WwiseSampleProject]</code> and <code>[DA62 Sample]</code>.</li>
       </ul></li>
       </ul>
-      <h4 id="developer-mode-changes">Developer mode changes</h4>
+      <h4 id="developer-mode-changes-1">Developer mode changes</h4>
       <ul>
       <li>Options:
       <ul>
@@ -803,7 +852,7 @@
       </ul></li>
       </ul>
       <h3 id="sdk-release-080">SDK release 0.8.0</h3>
-      <h4 id="sdk-changes-1">SDK changes</h4>
+      <h4 id="sdk-changes-2">SDK changes</h4>
       <ul>
       <li>Documentation:
       <ul>
@@ -815,7 +864,7 @@
       <li>Added <code>StandaloneModule</code> sample.</li>
       </ul></li>
       </ul>
-      <h4 id="developer-mode-changes-1">Developer mode changes</h4>
+      <h4 id="developer-mode-changes-2">Developer mode changes</h4>
       <ul>
       <li><strong>Project Editor:</strong>
       <ul>
@@ -853,7 +902,7 @@
       </ul></li>
       </ul>
       <h3 id="sdk-release-071">SDK release 0.7.1</h3>
-      <h4 id="sdk-changes-2">SDK changes</h4>
+      <h4 id="sdk-changes-3">SDK changes</h4>
       <ul>
       <li>Fixed potential crash on Steam version when building packages with <code>fspackagetool.exe</code>.</li>
       <li>WASM:
@@ -861,7 +910,7 @@
       <li>Mouse events are now forwarded to modules through a new mouse callback.</li>
       </ul></li>
       </ul>
-      <h4 id="developer-mode-changes-2">Developer mode changes</h4>
+      <h4 id="developer-mode-changes-3">Developer mode changes</h4>
       <ul>
       <li>General:
       <ul>
@@ -869,7 +918,7 @@
       </ul></li>
       </ul>
       <h3 id="sdk-release-070">SDK release 0.7.0</h3>
-      <h4 id="sdk-changes-3">SDK changes</h4>
+      <h4 id="sdk-changes-4">SDK changes</h4>
       <ul>
       <li>WASM:
       <ul>
@@ -883,7 +932,7 @@
       <li>Added Bears sample.</li>
       </ul></li>
       </ul>
-      <h4 id="developer-mode-changes-3">Developer mode changes</h4>
+      <h4 id="developer-mode-changes-4">Developer mode changes</h4>
       <ul>
       <li>Project Editor:
       <ul>
@@ -914,7 +963,7 @@
       </ul></li>
       </ul>
       <h3 id="sdk-release-061">SDK release 0.6.1</h3>
-      <h4 id="sdk-changes-4">SDK changes</h4>
+      <h4 id="sdk-changes-5">SDK changes</h4>
       <ul>
       <li>Documentation updates:
       <ul>
@@ -934,7 +983,7 @@
       <li>Fixed SimConnect_RequestFacilitiesList.</li>
       </ul></li>
       </ul>
-      <h4 id="developer-mode-changes-4">Developer mode changes</h4>
+      <h4 id="developer-mode-changes-5">Developer mode changes</h4>
       <ul>
       <li>Project Editor
       <ul>
@@ -952,7 +1001,7 @@
       </ul></li>
       </ul>
       <h3 id="sdk-release-060">SDK release 0.6.0</h3>
-      <h4 id="sdk-changes-5">SDK changes</h4>
+      <h4 id="sdk-changes-6">SDK changes</h4>
       <ul>
       <li>Documentation updates:
       <ul>
@@ -975,7 +1024,7 @@
       <li>The <code>GaugeDrawData</code> structure now provides local mouse coordinates.</li>
       </ul></li>
       </ul>
-      <h4 id="developer-mode-changes-5">Developer mode changes</h4>
+      <h4 id="developer-mode-changes-6">Developer mode changes</h4>
       <ul>
       <li>Scenery Editor:
       <ul>
@@ -998,7 +1047,7 @@
       </ul></li>
       </ul>
       <h3 id="sdk-release-051">SDK release 0.5.1</h3>
-      <h4 id="sdk-changes-6">SDK changes</h4>
+      <h4 id="sdk-changes-7">SDK changes</h4>
       <ul>
       <li>Documentation updates:
       <ul>
@@ -1009,7 +1058,7 @@
       <li>Fixed building of Static Libraries in MSFS Platform Toolset.</li>
       </ul></li>
       </ul>
-      <h4 id="developer-mode-changes-6">Developer mode changes</h4>
+      <h4 id="developer-mode-changes-7">Developer mode changes</h4>
       <ul>
       <li>SimConnect:
       <ul>
@@ -1017,7 +1066,7 @@
       </ul></li>
       </ul>
       <h3 id="sdk-release-050">SDK release 0.5.0</h3>
-      <h4 id="sdk-changes-7">SDK changes</h4>
+      <h4 id="sdk-changes-8">SDK changes</h4>
       <ul>
       <li>Documentation updates:
       <ul>
@@ -1028,7 +1077,7 @@
       <li>New <a href="01-Getting_Started/Samples/SimpleNavData/index.html">SimpleNavData sample</a> for navigation data.</li>
       <li>WASM: the parameter string from <code>panel.cfg</code> is now passed to the gauge callback through the <code>sGaugeInstallData</code> structure.</li>
       </ul>
-      <h4 id="developer-mode-changes-7">Developer mode changes</h4>
+      <h4 id="developer-mode-changes-8">Developer mode changes</h4>
       <ul>
       <li>Fixed profile editor in Scenery Tools</li>
       <li>Fixed saving from Aircraft Editor</li>
@@ -1042,13 +1091,13 @@
       </ul></li>
       </ul>
       <h3 id="sdk-release-041">SDK release 0.4.1</h3>
-      <h4 id="sdk-changes-8">SDK changes</h4>
+      <h4 id="sdk-changes-9">SDK changes</h4>
       <ul>
       <li>Updated <a href="04-Developer_Tools\SimConnect\index.html">SimConnect documentation</a>.</li>
       <li>New <a href="01-Getting_Started/Samples/SimpleNavData/index.html">SimpleNavData sample</a> for navigation data.</li>
       </ul>
       <h3 id="sdk-release-040">SDK release 0.4.0</h3>
-      <h4 id="sdk-changes-9">SDK changes</h4>
+      <h4 id="sdk-changes-10">SDK changes</h4>
       <ul>
       <li>The <a href="03-Content_Configuration\Environment\Living_World\LivingWorld_Config\index.html">LivingWorld Configuration</a> and <a href="03-Content_Configuration\Environment\Living_World\AirportServices\index.html">Airport Services</a> systems to use any package to override data (instead of only using MSFS default packages) is now working.</li>
       <li>Audio: New <a href="03-Content_Configuration/SimObjects/Sounds/sound_categories.html">WwisePackage element</a> in sound.xml to improve pc.pck management.</li>
@@ -1067,7 +1116,7 @@
       </ul></li>
       </ul>
       <h3 id="sdk-release-031">SDK release 0.3.1</h3>
-      <h4 id="sdk-changes-10">SDK changes</h4>
+      <h4 id="sdk-changes-11">SDK changes</h4>
       <ul>
       <li><p>New <a href="01-Getting_Started/Samples/SimpleBiomes/index.html">SimpleBiomes sample and documentation</a> for biomes.</p></li>
       <li><p>New <a href="03-Content_Configuration\Environment\Living_World\LivingWorld_Config\index.html">LivingWorld configuration sample and documentation</a> (Work In Progress).</p></li>
@@ -1082,7 +1131,7 @@
       <li>[FlightSim Material documentation][flightsim_material] updated.</li>
       </ul></li>
       </ul>
-      <h4 id="developer-mode-changes-8">Developer mode changes</h4>
+      <h4 id="developer-mode-changes-9">Developer mode changes</h4>
       <ul>
       <li>Project Editor:
       <ul>
@@ -1101,7 +1150,7 @@
       </ul></li>
       </ul>
       <h3 id="sdk-release-030">SDK release 0.3.0</h3>
-      <h4 id="sdk-changes-11">SDK changes</h4>
+      <h4 id="sdk-changes-12">SDK changes</h4>
       <blockquote>
       <p><strong>Note:</strong> This release contains breaking package changes, please rebuild your projects!</p>
       </blockquote>
@@ -1113,7 +1162,7 @@
       <li>New <a href="01-Getting_Started\Samples\SimpleAerial\index.html">SimpleAerial sample and documentation</a> for custom aerial image generation.</li>
       <li>A separate installer for the Diamond DA62 sample can be downloaded from the <a href="04-Developer_Tools\00-Developer_Mode\index.html">DevMode</a> help menu.</li>
       </ul>
-      <h4 id="developer-mode-changes-9">Developer mode changes</h4>
+      <h4 id="developer-mode-changes-10">Developer mode changes</h4>
       <ul>
       <li>Grey out inactive airport options.</li>
       <li>Project Editor:
@@ -1136,7 +1185,7 @@
       </ul></li>
       </ul>
       <h3 id="sdk-release-025">SDK release 0.2.5</h3>
-      <h4 id="sdk-changes-12">SDK changes</h4>
+      <h4 id="sdk-changes-13">SDK changes</h4>
       <blockquote>
       <p><strong>Note:</strong> This release contains breaking package changes, please rebuild your projects!</p>
       </blockquote>
@@ -1153,20 +1202,20 @@
       </ul></li>
       <li>The Samples use an updated directory structure.</li>
       </ul>
-      <h4 id="developer-mode-changes-10">Developer mode changes</h4>
+      <h4 id="developer-mode-changes-11">Developer mode changes</h4>
       <ul>
       <li>Switch gizmo’s modes (translate/rotate/scale) by using middle-mouse clicks on it.</li>
       <li>Enable legacy aircraft loading/saving in Aircraft Editor (from aircraft.cfg &amp; sim.air files).</li>
       <li>General stability &amp; performance improvements.</li>
       </ul>
       <h3 id="sdk-release-024">SDK release 0.2.4</h3>
-      <h4 id="sdk-changes-13">SDK changes</h4>
+      <h4 id="sdk-changes-14">SDK changes</h4>
       <ul>
       <li>Bug fix on 3DS Max plugins</li>
       <li>The 3DS Max Python tools now requires at least 3DS Max 2019 (SP3).</li>
       </ul>
       <h3 id="sdk-release-023">SDK release 0.2.3</h3>
-      <h4 id="sdk-changes-14">SDK changes</h4>
+      <h4 id="sdk-changes-15">SDK changes</h4>
       <ul>
       <li>New features:
       <ul>
@@ -1175,7 +1224,7 @@
       <li>The MSFS Platform Toolset for Visual Studio 2019 is now based on LLVM 10.</li>
       </ul>
       <h3 id="sdk-release-022">SDK release 0.2.2</h3>
-      <h4 id="sdk-changes-15">SDK changes</h4>
+      <h4 id="sdk-changes-16">SDK changes</h4>
       <ul>
       <li>New features:
       <ul>
@@ -1190,7 +1239,7 @@
       <li>The 3DS Max models used in the <a href="01-Getting_Started/Samples/SimpleAircraft/index.html">SimpleAircraft</a> and <a href="01-Getting_Started/Samples/GaugeAircraft/index.html">GaugeAircraft</a> samples are now provided in the Max 2016 format.</li>
       </ul>
       <h3 id="sdk-release-021">SDK release 0.2.1</h3>
-      <h4 id="sdk-changes-16">SDK changes</h4>
+      <h4 id="sdk-changes-17">SDK changes</h4>
       <ul>
       <li>New features:
       <ul>
@@ -1209,7 +1258,7 @@
       <li>The GDI+ compatibility layer built on top of NanoVG only covers a subset of the API.</li>
       </ul></li>
       </ul>
-      <h4 id="developer-mode-changes-11">Developer mode changes</h4>
+      <h4 id="developer-mode-changes-12">Developer mode changes</h4>
       <ul>
       <li>Required minimum game version: 1.2.10.0 (Alpha 2)</li>
       <li>Global Developer Mode improvements:
@@ -1245,7 +1294,7 @@
       </ul></li>
       </ul>
       <h3 id="sdk-release-020">SDK release 0.2.0</h3>
-      <h4 id="sdk-changes-17">SDK changes</h4>
+      <h4 id="sdk-changes-18">SDK changes</h4>
       <ul>
       <li>New features:
       <ul>
@@ -1257,7 +1306,7 @@
       <li>The <a href="01-Getting_Started/Samples/SimpleAircraft/index.html">SimpleAircraft sample</a> has been updated to work with the latest version of the game.</li>
       </ul></li>
       </ul>
-      <h4 id="developer-mode-changes-12">Developer mode changes</h4>
+      <h4 id="developer-mode-changes-13">Developer mode changes</h4>
       <ul>
       <li>Required minimum game version: 1.2.5.0 (Alpha 2)</li>
       <li>Breaking changes:
@@ -1286,7 +1335,7 @@
       </ul></li>
       </ul>
       <h3 id="sdk-release-0110">SDK release 0.1.10</h3>
-      <h4 id="sdk-changes-18">SDK changes</h4>
+      <h4 id="sdk-changes-19">SDK changes</h4>
       <ul>
       <li>New features:
       <ul>
@@ -1298,7 +1347,7 @@
       </ul></li>
       </ul>
       <h3 id="sdk-release-019">SDK release 0.1.9</h3>
-      <h4 id="sdk-changes-19">SDK changes</h4>
+      <h4 id="sdk-changes-20">SDK changes</h4>
       <ul>
       <li>New features
       <ul>
