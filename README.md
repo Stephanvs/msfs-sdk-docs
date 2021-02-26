@@ -1,5 +1,9 @@
 # msfs-sdk-docs
 
-These are the official Microsoft Flight Simulator SDK documentation, hosted on Netlify for easy access.
+Since this repository was created, Microsoft and Asobo have totally revamped and publically hosted the new Microsoft Flight Simulator documentation.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/43c85f7d-a15e-4f5c-8879-4c5d0446db5d/deploy-status)](https://app.netlify.com/sites/msfs-sdk-docs/deploys)
+This completely removes the need for this repository and corresponding site hosted at Netlify.
+
+This repository is now archived, and no longer needed.
+
+To visit the official Flight Simulator docs go here: https://docs.flightsimulator.com
